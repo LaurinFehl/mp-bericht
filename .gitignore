@@ -1,0 +1,23 @@
+# LaTeX-Build
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.bbl
+*.bbl-SAVE-ERROR
+*.blg
+*.bcf
+*.run.xml
+*.glsdefs
+*.ist
+*.acn
+*.acr
+*.alg
+*.glo
+*.gls
+*.glg
