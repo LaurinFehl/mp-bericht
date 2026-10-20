@@ -19,6 +19,78 @@
 
 \refsection{0}
   \datalist[entry]{nyt/global//global/global/global}
+    \entry{beermann_veranderungen_2020}{article}{}{}
+      \name{author}{6}{}{%
+        {{hash=f12614a671d3fe960dc814435d507b5e}{%
+           family={Beermann},
+           familyi={B\bibinitperiod},
+           given={Beate},
+           giveni={B\bibinitperiod}}}%
+        {{hash=28746865cbd233366e12559c12915968}{%
+           family={Backhaus},
+           familyi={B\bibinitperiod},
+           given={Nils},
+           giveni={N\bibinitperiod}}}%
+        {{hash=b86564be4e953fedcd3bef7f4b7b049b}{%
+           family={Hünefeld},
+           familyi={H\bibinitperiod},
+           given={Lena},
+           giveni={L\bibinitperiod}}}%
+        {{hash=7806608d9f6c9516b16f714a66c6ec42}{%
+           family={Janda},
+           familyi={J\bibinitperiod},
+           given={Valentin},
+           giveni={V\bibinitperiod}}}%
+        {{hash=def8520279979052a0e64922894a5ddb}{%
+           family={Schmitt-Howe},
+           familyi={S\bibinithyphendelim H\bibinitperiod},
+           given={Britta},
+           giveni={B\bibinitperiod}}}%
+        {{hash=90f7c2d6170bca1013a3afca3c0974ee}{%
+           family={Sommer},
+           familyi={S\bibinitperiod},
+           given={Sabine},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {de}%
+      }
+      \strng{namehash}{095c24b7d12c6b5a49ae3a7b7dd3a385}
+      \strng{fullhash}{e55fe412f24d7ca46db5ef0f3a0616fa}
+      \strng{fullhashraw}{e55fe412f24d7ca46db5ef0f3a0616fa}
+      \strng{bibnamehash}{095c24b7d12c6b5a49ae3a7b7dd3a385}
+      \strng{authorbibnamehash}{095c24b7d12c6b5a49ae3a7b7dd3a385}
+      \strng{authornamehash}{095c24b7d12c6b5a49ae3a7b7dd3a385}
+      \strng{authorfullhash}{e55fe412f24d7ca46db5ef0f3a0616fa}
+      \strng{authorfullhashraw}{e55fe412f24d7ca46db5ef0f3a0616fa}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Veränderungen in der {Arbeitswelt} - {Reflexion} des {Arbeitsschutzsystems}}
+      \field{year}{2020}
+      \true{nocite}
+      \field{pages}{10}
+      \range{pages}{1}
+    \endentry
+    \entry{noauthor_bericht_nodate}{misc}{}{}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Planungs- und Realisierungsprozess des Neubauprojektes „Wohnen am Campus I“ in Berlin Adlershof}
+      \field{title}{Bericht „{Wohnen} am {Campus} {I}“}
+      \field{urlday}{11}
+      \field{urlmonth}{1}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.adlershof.de/fileadmin/user_upload/ebooks/WaC/index.html#p=36
+      \endverb
+      \verb{url}
+      \verb https://www.adlershof.de/fileadmin/user_upload/ebooks/WaC/index.html#p=36
+      \endverb
+    \endentry
     \entry{friese_handbuch_2020}{book}{}{}
       \name{author}{4}{}{%
         {{hash=d3f555323f0d8aa46ce9dbfc4bd1b972}{%
@@ -66,7 +138,162 @@
       \field{note}{Google-Books-ID: rRDUDwAAQBAJ}
       \field{title}{Handbuch {Soziale} {Praktiken} und {Digitale} {Alltagswelten}}
       \field{year}{2020}
+      \true{nocite}
       \keyw{Social Science / Media Studies,Social Science / Sociology / General,Social Science / Sociology of Religion}
+    \endentry
+    \entry{gauger_arbeitswelten_2020}{report}{}{}
+      \name{author}{3}{}{%
+        {{hash=b4175971e463802883b8d34082986c02}{%
+           family={Gauger},
+           familyi={G\bibinitperiod},
+           given={Felix},
+           giveni={F\bibinitperiod}}}%
+        {{hash=7f4b5b976dd2242a0f45f1e9fa5be84c}{%
+           family={Pfnür},
+           familyi={P\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod}}}%
+        {{hash=af3402dc93a5928d0faf309ea408b25c}{%
+           family={Skarabi},
+           familyi={S\bibinitperiod},
+           given={Jan},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Technische Universität Darmstadt, Forschungscenter Betriebliche Immobilienwirtschaft}%
+      }
+      \list{language}{1}{%
+        {ger}%
+      }
+      \list{location}{1}{%
+        {Darmstadt}%
+      }
+      \strng{namehash}{5699a528bbc16ba4dd7efaaf3d4bc79b}
+      \strng{fullhash}{5699a528bbc16ba4dd7efaaf3d4bc79b}
+      \strng{fullhashraw}{5699a528bbc16ba4dd7efaaf3d4bc79b}
+      \strng{bibnamehash}{5699a528bbc16ba4dd7efaaf3d4bc79b}
+      \strng{authorbibnamehash}{5699a528bbc16ba4dd7efaaf3d4bc79b}
+      \strng{authornamehash}{5699a528bbc16ba4dd7efaaf3d4bc79b}
+      \strng{authorfullhash}{5699a528bbc16ba4dd7efaaf3d4bc79b}
+      \strng{authorfullhashraw}{5699a528bbc16ba4dd7efaaf3d4bc79b}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Die nachfolgende Zusammenfassung der Studie "Nutzerpräferenzen von Coworking Spaces" zeigt die Bedeutung von Flexible Office Space auf und arbeitet präferierte Charakteristiken und Attribute der flexiblen Arbeitsplätze heraus. Die Ergebnisse wurden über eine empirische Befragung in deutschen Coworking Spaces im Frühjahr 2019 erhoben und anschließend wissenschaftlich ausgewertet.}
+      \field{number}{39}
+      \field{title}{Arbeitswelten im {Wandel}: {Coworking} {Spaces}. {Eine} empirische {Befragung} der {Eigenschaften} und {Nutzerpräferenzen} von {Coworking} {Spaces}}
+      \field{type}{Arbeitspapiere zur immobilienwirtschaftlichen {Forschung} und {Praxis}}
+      \field{year}{2020}
+      \true{nocite}
+      \verb{urlraw}
+      \verb http://hdl.handle.net/10419/223375
+      \endverb
+      \verb{url}
+      \verb http://hdl.handle.net/10419/223375
+      \endverb
+      \keyw{650,Arbeitsgestaltung,Arbeitsgruppe,Arbeitsplatz,Befragung}
+    \endentry
+    \entry{libbe_memorandum_2020}{report}{}{}
+      \name{author}{16}{}{%
+        {{hash=5fcf113fdae78325b5850234c24133f3}{%
+           family={Libbe},
+           familyi={L\bibinitperiod},
+           given={Jens},
+           giveni={J\bibinitperiod}}}%
+        {{hash=983a74d5adf58264a242c3c9ff157ddc}{%
+           family={Bendlin},
+           familyi={B\bibinitperiod},
+           given={Lena},
+           giveni={L\bibinitperiod}}}%
+        {{hash=855ea6b9ef95c42055750ca4de7863dc}{%
+           family={Riechel},
+           familyi={R\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+        {{hash=a4afbfb7027e86d1267942bea53b5ce7}{%
+           family={Bartke},
+           familyi={B\bibinitperiod},
+           given={Stephan},
+           giveni={S\bibinitperiod}}}%
+        {{hash=7acda647f05e2d1bb4167291a838071a}{%
+           family={Eckert},
+           familyi={E\bibinitperiod},
+           given={Karl},
+           giveni={K\bibinitperiod}}}%
+        {{hash=efc079b98954bc81e652fbe161cea337}{%
+           family={Fahrenkrug},
+           familyi={F\bibinitperiod},
+           given={Katrin},
+           giveni={K\bibinitperiod}}}%
+        {{hash=4375ba92539445bcbc71b0a03a91e9c5}{%
+           family={Melzer},
+           familyi={M\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=627dab50a4b43ac44cb31494c9b8e8d8}{%
+           family={Blecken},
+           familyi={B\bibinitperiod},
+           given={Lutke},
+           giveni={L\bibinitperiod}}}%
+        {{hash=c6658a7a3eab49eec938536e64f39a5b}{%
+           family={Reiss},
+           familyi={R\bibinitperiod},
+           given={Julia},
+           giveni={J\bibinitperiod}}}%
+        {{hash=417e17300a48521d899ed37617fee3b9}{%
+           family={Bock},
+           familyi={B\bibinitperiod},
+           given={Stephanie},
+           giveni={S\bibinitperiod}}}%
+        {{hash=2a97cdadd0203226d1f2334156d866b9}{%
+           family={Abt},
+           familyi={A\bibinitperiod},
+           given={Jan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=8b44caf9b05b206657be79a0292c9d1a}{%
+           family={Diringer},
+           familyi={D\bibinitperiod},
+           given={Julia},
+           giveni={J\bibinitperiod}}}%
+        {{hash=042184aadc5a647decf8e86c4f7b23e6}{%
+           family={Wendler},
+           familyi={W\bibinitperiod},
+           given={Katja},
+           giveni={K\bibinitperiod}}}%
+        {{hash=230af52c5cb354b9a252e45fb2285db8}{%
+           family={Koller},
+           familyi={K\bibinitperiod},
+           given={Michaela},
+           giveni={M\bibinitperiod}}}%
+        {{hash=347b1fe0517750e43a8745f999c9e01d}{%
+           family={Gräbe},
+           familyi={G\bibinitperiod},
+           given={Gudrun},
+           giveni={G\bibinitperiod}}}%
+        {{hash=a481250d70465139219920b6a2bd45e7}{%
+           family={Ferber},
+           familyi={F\bibinitperiod},
+           given={Uwe},
+           giveni={U\bibinitperiod}}}%
+      }
+      \strng{namehash}{ea8e0a481b59399910dfff0483b6fec9}
+      \strng{fullhash}{36ca807815f7e26a7b828dea30e3e868}
+      \strng{fullhashraw}{36ca807815f7e26a7b828dea30e3e868}
+      \strng{bibnamehash}{ea8e0a481b59399910dfff0483b6fec9}
+      \strng{authorbibnamehash}{ea8e0a481b59399910dfff0483b6fec9}
+      \strng{authornamehash}{ea8e0a481b59399910dfff0483b6fec9}
+      \strng{authorfullhash}{36ca807815f7e26a7b828dea30e3e868}
+      \strng{authorfullhashraw}{36ca807815f7e26a7b828dea30e3e868}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{7}
+      \field{title}{Memorandum {Post}-{Corona}-{Stadt}; {Für} eine suffiziente und resiliente {Entwicklung} von {Städten} und {Regionen}}
+      \field{type}{techreport}
+      \field{year}{2020}
+      \true{nocite}
     \endentry
     \entry{oneclickVDIUnd2019}{online}{}{}
       \name{author}{1}{}{%
@@ -96,11 +323,34 @@
       \field{year}{2019}
       \field{dateera}{ce}
       \field{urldateera}{ce}
+      \true{nocite}
       \verb{urlraw}
       \verb https://oneclick-cloud.com/de/blog/trends/vdi-und-daas-vor-und-nachteile/
       \endverb
       \verb{url}
       \verb https://oneclick-cloud.com/de/blog/trends/vdi-und-daas-vor-und-nachteile/
+      \endverb
+    \endentry
+    \entry{noauthor_studie_nodate}{misc}{}{}
+      \list{language}{1}{%
+        {de}%
+      }
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Laut einer Studie war der Umstieg aufs Homeoffice zu Beginn der Coronakrise für 59 Prozent der Befragten Neuland. Neben technischen Schwierigkeiten hätten viele Beschäftigte aber ein viel größeres Problem gehabt, sagte Laura Seinsche von der Universität zu Köln im Dlf: ihre Chefs.}
+      \field{journaltitle}{Deutschlandfunk}
+      \field{title}{Studie zu {Homeoffice} und {Corona} - {Beschäftigte} fürchten um {Karrierechancen}}
+      \field{urlday}{1}
+      \field{urlmonth}{12}
+      \field{urlyear}{2021}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.deutschlandfunk.de/studie-zu-homeoffice-und-corona-beschaeftigte-fuerchten-um-100.html
+      \endverb
+      \verb{url}
+      \verb https://www.deutschlandfunk.de/studie-zu-homeoffice-und-corona-beschaeftigte-fuerchten-um-100.html
       \endverb
     \endentry
   \enddatalist
