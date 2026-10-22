@@ -1,13 +1,22 @@
-\chapter{Entwickelte Methode: Supereffiziente Methode zur Erstellung von optimierten xyz}
-\chaptermark{Entwickelte Mathode}  % short form for headlines on pages
-\label{ch:EntwickelteMethode}
+\chapter{Entwickelte Methoden}
+\label{ch:Methoden}
 
-\section{Verfahren A: ein neues Verfahren zur Steuerung von ...}
-\sectionmark{Methode A} % short form for headlines on pages
+\section{Anforderungen}
+\label{sec:Anforderungen}
+\subsection{Anforderungen an den Frame}      % Masse, Steifigkeit, Druckbarkeit, Wartbarkeit
+\subsection{Anforderungen an die Statusanzeige}  % ERC-Regeln, Sichtbarkeit, Zustände
 
-\newpage
+\section{Konstruktion des 3D-gedruckten Frames}
+\label{sec:Frame}
+\subsection{Konstruktionskonzept und Designentscheidungen}
+\subsection{Auslegung für den FDM-Druck}     % Druckorientierung, Wandstärken, Stützstrukturen
+\subsection{Materialwahl}
+\subsection{Integration der Komponenten}     % Flugcontroller, Raspberry Pi, Akku, Motoren, Landebeine
+\subsection{Fertigung und Montage}           % Druckparameter, Nachbearbeitung
 
-As we see ...
-
-
-
+\section{LED-Statusanzeige}
+\label{sec:LED}
+\subsection{Konzept und Zustandsdefinition}  % welcher Flugmodus = welche Farbe/Muster
+\subsection{Hardware}                        % LEDs, Ansteuerung, Verkabelung, Position im Frame
+\subsection{Software: Zustandsautomat auf dem Companion Computer}
+\subsection{Anbindung an den Flugcontroller} % Abfrage des Flugmodus (MAVLink/ROS 2)

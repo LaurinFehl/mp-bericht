@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.3.11)  20 OCT 2026 13:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.3.11)  22 OCT 2026 17:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1530,42 +1530,46 @@ Package pdftex.def Info: Figures/000-misc/unterschrift.jpg  used on input line 8
 (pdftex.def)             Requested size: 142.26378pt x 32.75092pt.
 ) [2.2
 
-{C:/Users/Laurin-Laptop/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rmtt.enc} <./Figures/000-misc/unterschrift.jpg>] (thesis.toc)
+{C:/Users/Laurin-Laptop/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rmtt.enc} <./Figures/000-misc/unterschrift.jpg>] (thesis.toc [1.3
+
+])
 \tf@toc=\write9
 \openout9 = `thesis.toc'.
 
- [1.3
-
-] (thesis.lof)
+Package babel Info: 'ngerman' activates 'german' shorthands.
+(babel)             Reported on input line 334.
+File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
+<use Figures/000-misc/fra-uas_logo.pdf>
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 334.
+(pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
+ [2.4] (thesis.lof)
 \tf@lof=\write10
 \openout10 = `thesis.lof'.
 
- [2.4
+ [3.5
 
 
 ] (thesis.lot)
 \tf@lot=\write11
 \openout11 = `thesis.lot'.
 
- [3.5
+ [4.6
 
 
 ]
 No file thesis.acr.
-Package babel Info: 'ngerman' activates 'german' shorthands.
-(babel)             Reported on input line 344.
 File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
 <use Figures/000-misc/fra-uas_logo.pdf>
 Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 344.
 (pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
-[4.6
+[5.7
 
 ] (TeXFiles/010_Kurzfassung.tex) (TeXFiles/100_Einfuehrung.tex
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.1 \chapter
-            {Einführung} [1.7
+            {Einführung} [1.8
 
 
 ]
@@ -1575,51 +1579,46 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has b
 <to be read again> 
                    \relax 
 l.1 \chapter
-            {Hintergrund} [2.8
+            {Hintergrund} [2.9
 
 ]
 chapter 2.
-) (TexFiles/300_StandDerTechnik.tex [3.9
+) (TexFiles/300_StandDerTechnik.tex [3.10
 
 ]
 chapter 3.
-) (TexFiles/400_EntwickelteMethoden.tex [4.10
+) (TexFiles/400_EntwickelteMethoden.tex [4.11
 
 ]
 chapter 4.
-[5.11
+) (TexFiles/500_Evaluation.tex [5.12
 
-]) (TexFiles/500_Evaluation.tex
-File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
-<use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 1.
-(pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
- [6.12]
+]
 chapter 5.
-) (TeXFiles/600_Ergebnisse.tex [7.13
+) (TeXFiles/600_Ergebnisse.tex [6.13
 
 ]
 chapter 6.
-) (TeXFiles/700_Zusammenfassung.tex [8.14
+) (TeXFiles/700_Zusammenfassung.tex [7.14
 
 ]
 chapter 7.
-) [9.15
+) [8.15
 
 ]
 chapter without number
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <10.95> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 368.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 367.
 
 LaTeX Font Warning: Font shape `OT1/lmss/m/sc' in size <10.95> not available
-(Font)              Font shape `OT1/lmr/m/sc' tried instead on input line 368.
+(Font)              Font shape `OT1/lmr/m/sc' tried instead on input line 367.
 
-(TeXFiles/900_Anhang.tex [10.16
+(TeXFiles/900_Anhang.tex [9.16
 
 
 {C:/Users/Laurin-Laptop/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rmsc.enc}]
 chapter A.
-) [11.17
+) [10.17
 
 ] (thesis.aux)
  ***********
@@ -1631,17 +1630,29 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 51196 strings out of 467867
- 1096408 string characters out of 5414462
- 2049332 words of memory out of 5000000
- 79267 multiletter control sequences out of 15000+600000
+ 51519 strings out of 467867
+ 1100866 string characters out of 5414462
+ 2060009 words of memory out of 5000000
+ 79524 multiletter control sequences out of 15000+600000
  671220 words of font info for 69 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 108i,17n,108p,11263b,2465s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,17n,108p,11263b,3008s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{glo:daedalus} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{glo:erc} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{glo:frauas} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{glo:frost} has been referenced but does not exist, replaced by a fixed one
+
 <C:/Users/Laurin-Laptop/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/Laurin-Laptop/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss10.pfb><C:/Users/Laurin-Laptop/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss12.pfb><C:/Users/Laurin-Laptop/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/Laurin-Laptop/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso10.pfb><C:/Users/Laurin-Laptop/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb>
-Output written on thesis.pdf (17 pages, 241764 bytes).
+Output written on thesis.pdf (17 pages, 291868 bytes).
 PDF statistics:
- 224 PDF objects out of 1000 (max. 8388607)
- 44 named destinations out of 1000 (max. 500000)
- 143 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 558 PDF objects out of 1000 (max. 8388607)
+ 110 named destinations out of 1000 (max. 500000)
+ 639 words of extra memory for PDF output out of 10000 (max. 10000000)
 

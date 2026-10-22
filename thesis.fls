@@ -579,6 +579,9 @@ INPUT .\thesis.toc
 INPUT .\thesis.toc
 INPUT thesis.toc
 OUTPUT thesis.toc
+INPUT .\Figures\000-misc\fra-uas_logo.pdf
+INPUT .\Figures\000-misc\fra-uas_logo.pdf
+INPUT .\Figures\000-misc\fra-uas_logo.pdf
 INPUT .\thesis.lof
 INPUT .\thesis.lof
 INPUT thesis.lof
@@ -621,9 +624,6 @@ INPUT .\TexFiles\500_Evaluation.tex
 INPUT .\TexFiles\500_Evaluation.tex
 INPUT .\TexFiles\500_Evaluation.tex
 INPUT TexFiles\500_Evaluation.tex
-INPUT .\Figures\000-misc\fra-uas_logo.pdf
-INPUT .\Figures\000-misc\fra-uas_logo.pdf
-INPUT .\Figures\000-misc\fra-uas_logo.pdf
 INPUT .\TeXFiles\600_Ergebnisse.tex
 INPUT .\TeXFiles\600_Ergebnisse.tex
 INPUT .\TeXFiles\600_Ergebnisse.tex
