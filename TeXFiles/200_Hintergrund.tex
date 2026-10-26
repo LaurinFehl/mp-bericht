@@ -1,29 +1,78 @@
 \chapter{Hintergrund}
 \label{ch:Hintergrund}
 
-Um einen Überblick der Motivation, Aufbauweise und Integration zu geben, werden im folgenden die wichtigsten Punkte ausführlich beschrieben.
+Um einen Überblick der Motivation, Aufbauweise und Integration zu geben, werden im folgenden die wichtigsten Punkte ausführlich beschrieben. Dabei werden der Wettbewerb, das \gls{frost}-Labor, die Drohne und die Grundlagen behandelt.
 
 
-\section{European Rover Challenge}
+\section{Die \glsentrylong{erc}}
 \label{sec:ERC}
-\subsection{Wettbewerb und Aufgaben}
-\subsection{Rolle der Drohne (Droning Sub-Task)}
-\subsection{Relevante Anforderungen}      % Masse, Sicherheit, Statusanzeige
 
-\section{Das FRoST-Team}
-\label{sec:FRoST}
-\subsection{Team und Organisation}
-\subsection{Rover EROS}                   % kurz, nur als Kontext
-\subsection{Mechatronik-Projekt}          % dein Rahmen an der Hochschule
+Jedes Jahr im September veranstaltet die AGH-University of Kraków in Kollaboration mit der European-Space-Foundation die \glsentrylong{erc}. Dabei treten aus 124 Registrierungen aus 29 Ländern die besten 25 Teams gegeneinander an. Aufgeteilt in sieben Aufgaben wird das können der Teams mit ihrem Rover und der Drohne getestet.
+\subsection{Die Aufgaben des Wettbewerbs}
+\begin{description}[style=nextline]
+    \item[Traverse Sub-Task] Der Rover navigiert autonom entlang mehrerer Wegpunkte, ohne dass dem Operator Kamerabilder zur Verfügung stehen. Die Steuerung erfolgt allein über Telemetrie. Der autonome Modus muss durch ein eigenes Anzeigemuster der Statusleuchte erkennbar sein, und nach der Aktivierung darf sich der Rover erst nach einer kurzen Wartezeit bewegen. Während der Fahrt ist der Eingriff des Operators gesperrt.
 
-\section{Die Drohne}
-\label{sec:Drohne}
-\subsection{Vorgänger ICARUS}
-\subsection{Aktueller Stand: DAEDALUS}    % Komponenten, Systemarchitektur
-\subsection{Bisheriger Frame}             % Aufbau, Masse, Schwächen
+    \item[Droning Sub-Task] Als Luftaufklärung für den Rover erkundet die Drohne autonom mehrere Sektoren eines Drohnenkäfigs. Anhand von ArUco-Markern bestimmt sie, in welchem Bereich sie sich befindet und bestimmt mit Bilderkennung wo vordefinierte Proben auf den Boden liegen und markiert diese. Diese Aufklärung darf drei mal innerhalb der gesetzten Zeit wiederholt werden.
+          nes Drehschalters, das
+    \item[Maintenance Task] Der Rover bedient mit seinem Manipulator ein Wartungspanel. Zu den Aufgaben gehören das Betätigen eines Hebel- und eiBedienen eines elektromagnetischen Schlosses und das vollständige Einstecken eines Netzsteckers in eine Buchse.
 
-\section{Grundlagen}
+    \item[Probing Task] Der Rover greift die vorgegebenen Probenobjekte (Probes), hält sie sicher und gibt sie kontrolliert wieder frei.
+
+    \item[Surface Sampling] Der Rover nimmt Regolith und Gesteinsproben auf und lagert sie in getrennten Behältern. Das Gewicht der Proben wird an Bord automatisch und möglichst genau bestimmt, ohne dass der Operator manuell eingreift. Anschließend werden die Proben ohne Verlust zur Ziellinie transportiert.
+
+    \item[Deep Sampling] Eine Bohreinheit entnimmt Bodenmaterial aus größerer Tiefe unterhalb der Oberfläche. Die entnommene Probenmenge muss eine Mindestmasse erreichen, die ebenfalls automatisch an Bord gemessen wird.
+
+    \item[Astro-Bio Sub-Task] Der Rover handhabt einen Flüssigkeitsbehälter ohne Verschütten und positioniert ein pH-Messgerät an einer vorgegebenen Messstelle.
+\end{description}
+
+\subsection{Anforderung und Rolle der Drohne}
+Beim Wettbewerb fliegt die Drohne in dem sogenannten Drohnenkäfig, ein 10x10x4 meter großer, mit Netzen an der Seite und einem Dach, abgeschirmten Quader. Durch EU-Richtlinien darf die Drohne nur in diesem Käfig autonom fliegen und sich frei bewegen. Der Drohnenpilot muss durchgehend Sichtkontakt halten und kann jederzeit eingreifen. Bei einem Notfallsignal oder Verbindungsverlust muss die Drohne selbstständig landen. Während der Akku zwischen den drei Versuchen getauscht werden darf, profitiert das Team von einem leichten und stabilen Aufbau des Frames um so Zeit zu sparen.
+
+Aus den Regeln des Wettbewerbs ergeben sich für die Drohne die in Tabelle~\ref{tab:ERC_Anforderungen} zusammengefassten Anforderungen.
+
+\begin{table}[htbp]
+    \centering
+    \caption{Aus den ERC-Regeln abgeleitete Anforderungen an die Drohne}
+    \label{tab:ERC_Anforderungen}
+    \begin{tabularx}{\textwidth}{l X X}
+        \toprule
+        \textbf{Thema} & \textbf{Anforderung}                                             & \textbf{Konsequenz für diese Arbeit}        \\
+        \midrule
+        Sicherheit     & Pilot kann jederzeit eingreifen; automatische Landung im Notfall & Zugänglichkeit der Elektronik im Frame      \\
+        Anzeige        & Zustand vor Bewegung und im autonomen Modus erkennbar            & LED-Statusanzeige (Abschnitt~\ref{sec:LED}) \\
+        Masse          & Obergrenze für die Gesamtmasse                                   & Leichtbau-Frame im FDM-Druck                \\
+        Betrieb        & Einsatz im Drohnenkäfig, wechselnde Lichtverhältnisse            & Sichtbarkeit der LEDs, robuste Konstruktion \\
+        \bottomrule
+    \end{tabularx}
+\end{table}
+
+
+\section{Das FRoST-Labor}
+\label{sec:frost}
+
+Wie in Kapitel \ref{ch:Einfuehrung} erklärt, ermöglicht \gls{frost} ein erarbeiten von Projekten für Module der Studiengänge. Studierende profitieren dabei von der bereitgestellten Hardware und der Möglichkeit vor Ort mit anderen Kommilitonen zu arbeiten.
+
+Der Vorgänger \gls{icarus} diente zum entdecken und experimentieren neuer Technik und Software. Der alte Frame wurde aus geschnittenen Karbonplatten und -rohren zusammengebaut. Durch das große und schwere Design wurde jedoch ein neuer Frame benötigt der als Mechatronik-Projekt ausgeschrieben wurde.
+
+\section{Grundlagen 3D-Druck}
 \label{sec:Grundlagen}
-\subsection{FDM-3D-Druck}
-\subsection{Filamente und Materialeigenschaften}
-\subsection{Zustandsanzeige und Flugmodi}  % nur falls nicht in Stand der Technik
+
+
+Beim 3D-Druck wird ein Bauteil nicht aus einem Block herausgearbeitet, sondern
+Schicht für Schicht aufgebaut. Man spricht deshalb auch von additiver
+Fertigung. Aus einem digitalen \gls{cad}-Modell berechnet eine Software die
+einzelnen Schichten, die der Drucker anschließend nacheinander herstellt.
+
+In dieser Arbeit kommt das \gls{fdm}-Verfahren zum Einsatz. Dabei wird ein
+Kunststoffdraht (Filament) in einem beheizten Druckkopf geschmolzen und in
+dünnen Bahnen auf eine Bauplattform aufgetragen. Das Material kühlt ab, erstarrt
+und verbindet sich mit der darunterliegenden Schicht. Das Verfahren ist
+vergleichsweise günstig und erlaubt es, auch komplexe Formen und Hohlräume
+herzustellen, die sich klassisch nur schwer fertigen lassen. Zudem können
+Bauteile schnell geändert und neu gedruckt werden, was für die
+Weiterentwicklung eines Drohnenframes vorteilhaft ist.
+
+Gedruckte Teile haben jedoch Eigenheiten, die bei der Konstruktion beachtet
+werden müssen. Ihre Festigkeit hängt unter anderem vom verwendeten Material und
+von der Ausrichtung beim Drucken ab. Auf diese Aspekte wird im
+Kapitel~\ref{ch:StandDerTechnik} genauer eingegangen.
