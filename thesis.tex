@@ -62,6 +62,7 @@
 \usepackage{float}
 \usepackage{booktabs}
 \usepackage{siunitx}
+\sisetup{locale=DE, mode=text} % Dezimalkomma und Zahlen in Textschrift
 \usepackage[table]{xcolor}
 %%%%% Package Kommentare:
 
@@ -154,28 +155,31 @@
 
 %%%%%% Gestaltung von Kopf- und Fusszeilen:
 % https://tex.stackexchange.com/questions/344241/logo-as-header-using-fancyhdr-package
-\usepackage{fancyhdr}
-\pagestyle{fancy}  % Eigener Seitenstil
-\fancyhf{}         % Alle Kopf- und Fußzeilenfelder bereinigen
-%\fancyhead[L]{} % Kopfzeile links
-\fancyhead[l]{\leftmark
+% KOMA-Script-Paket statt fancyhdr (passt zur Klasse scrreprt)
+\usepackage[
+  headsepline=0.4pt,   % Obere Trennlinie
+  footsepline=0.4pt,   % Untere Trennlinie
+  autooneside=false    % \leftmark/\rightmark auch bei einseitigem Satz
+]{scrlayer-scrpage}
+\clearpairofpagestyles % Alle Kopf- und Fußzeilenfelder bereinigen
+\setkomafont{pageheadfoot}{\normalfont} % nicht kursiv (wie vorher bei fancyhdr)
+\automark[section]{chapter} % \leftmark = Kapitel, \rightmark = Abschnitt
+\ihead{\leftmark
    %\makebox[0.3\textwidth]{\includegraphics[width=0.3\textwidth]{Figures/xxx.png}}
-}  
-\fancyhead[c]{\hspace*{0.15\textwidth}\rightmark}
-%\fancyhead[C]{\usebox\headbox}                        % Zentrierte Kopfzeile
-\fancyhead[R]{
+}
+\chead{\hspace*{0.15\textwidth}\rightmark}
+%\chead{\usebox\headbox}                        % Zentrierte Kopfzeile
+\ohead{
   \makebox[0.2\textwidth]{\raisebox{-1ex}{\hspace*{14ex}\includegraphics[width=0.1\textwidth]{\unilogo}}}
 }
-\renewcommand{\headrulewidth}{0.4pt} % Obere Trennlinie
-%\fancyfoot[L]{\today}
-\fancyfoot[C]{\ThesisTitleShort} 
-%\fancyfoot[R]{Seite \thepage ~von \ref{TotPages}}  % Seitennummer
-\fancyfoot[R]{\thepage} % Seitennummer 
-\renewcommand{\footrulewidth}{0.4pt} % Untere Trennlinie
+%\ifoot{\today}
+\cfoot[\pagemark]{\ThesisTitleShort} % [..] = Kapitelanfangsseiten (plain)
+%\ofoot{Seite \thepage ~von \ref{TotPages}}  % Seitennummer
+\ofoot{\pagemark} % Seitennummer
 \setlength{\mytopmargin}{\totalheightof{\usebox\headbox} +2cm}
-%Unterschied zwischen geraden/ungeraden Seiten:
-%\fancyhead[OR]{} % "O" steht für "odd", also ungerade Seiten
-%\fancyhead[ER]{} % "E" für "even", also gerade Seiten.
+%Unterschied zwischen geraden/ungeraden Seiten (nur mit twoside):
+%\rehead{} % "e" für "even", also gerade Seiten
+%\rohead{} % "o" steht für "odd", also ungerade Seiten
 
 
 
@@ -325,9 +329,8 @@
 %\clearpage
 
 %\pagestyle{headings} 
-\pagestyle{fancy}   % Seite mit Kopf- und Fusszeilen darstellen
+\pagestyle{scrheadings}   % Seite mit Kopf- und Fusszeilen darstellen
 \pagenumbering{roman}  % Umschalten auf Seitenzahlen in römischer Darstellung
-%\fancyfoot[R]{i}  % Seitennummer
 %roemisch 1, hier per Hand eingetragen, weil es anders nicht funktioniert hat - hat sich erledigt
 
 
@@ -349,17 +352,15 @@
 % neue Sektionen immer auf einer neuen Seite
 %\input{TeXFiles/Abstract}
 
-\fancyfoot[R]{\thepage}  % Seitennummer
-
 
 %\myName
 %\input{TexFiles/005_Acronyms}
 \input{TeXFiles/010_Kurzfassung}
 \input{TeXFiles/100_Einfuehrung}
-\input{TexFiles/200_Hintergrund}
-\input{TexFiles/300_StandDerTechnik}
-\input{TexFiles/400_EntwickelteMethoden}
-\input{TexFiles/500_Evaluation}
+\input{TeXFiles/200_Hintergrund}
+\input{TeXFiles/300_StandDerTechnik}
+\input{TeXFiles/400_EntwickelteMethoden}
+\input{TeXFiles/500_Evaluation}
 \input{TeXFiles/600_Ergebnisse}
 \input{TeXFiles/700_Zusammenfassung}
 

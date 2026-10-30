@@ -19,6 +19,39 @@
 
 \refsection{0}
   \datalist[entry]{nyt/global//global/global/global}
+    \entry{adobestockMotorOrderDiagrams}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=c0a397526cf9a35dd7cf043d6b6f96b0}{%
+           family={{Adobe Stock}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{c0a397526cf9a35dd7cf043d6b6f96b0}
+      \strng{fullhash}{c0a397526cf9a35dd7cf043d6b6f96b0}
+      \strng{fullhashraw}{c0a397526cf9a35dd7cf043d6b6f96b0}
+      \strng{bibnamehash}{c0a397526cf9a35dd7cf043d6b6f96b0}
+      \strng{authorbibnamehash}{c0a397526cf9a35dd7cf043d6b6f96b0}
+      \strng{authornamehash}{c0a397526cf9a35dd7cf043d6b6f96b0}
+      \strng{authorfullhash}{c0a397526cf9a35dd7cf043d6b6f96b0}
+      \strng{authorfullhashraw}{c0a397526cf9a35dd7cf043d6b6f96b0}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{american}
+      \field{note}{Bild-ID 243287639}
+      \field{title}{Motor Order Diagrams of the Quad Drone or Quadcopter. Set of Vector Infographics of Airframes and Types Quad X, Quad H, Quad V and Quad P}
+      \field{urlday}{30}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://stock.adobe.com/vn/images/motor-order-diagrams-of-the-quad-drone-or-quadcopter-set-of-vector-infographics-of-airframes-and-types-quad-x-quad-h-quad-v-and-quad-p/243287639
+      \endverb
+      \verb{url}
+      \verb https://stock.adobe.com/vn/images/motor-order-diagrams-of-the-quad-drone-or-quadcopter-set-of-vector-infographics-of-airframes-and-types-quad-x-quad-h-quad-v-and-quad-p/243287639
+      \endverb
+    \endentry
     \entry{beermann_veranderungen_2020}{article}{}{}
       \name{author}{6}{}{%
         {{hash=f12614a671d3fe960dc814435d507b5e}{%
@@ -295,6 +328,46 @@
       \field{year}{2020}
       \true{nocite}
     \endentry
+    \entry{mishraDifferentTypesDrone2021}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=dc7a4705c851606ae70566c08d8b0668}{%
+           family={Mishra},
+           familyi={M\bibinitperiod},
+           given={Ashish},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Circuit Digest}%
+      }
+      \strng{namehash}{dc7a4705c851606ae70566c08d8b0668}
+      \strng{fullhash}{dc7a4705c851606ae70566c08d8b0668}
+      \strng{fullhashraw}{dc7a4705c851606ae70566c08d8b0668}
+      \strng{bibnamehash}{dc7a4705c851606ae70566c08d8b0668}
+      \strng{authorbibnamehash}{dc7a4705c851606ae70566c08d8b0668}
+      \strng{authornamehash}{dc7a4705c851606ae70566c08d8b0668}
+      \strng{authorfullhash}{dc7a4705c851606ae70566c08d8b0668}
+      \strng{authorfullhashraw}{dc7a4705c851606ae70566c08d8b0668}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{27}
+      \field{langid}{american}
+      \field{month}{12}
+      \field{title}{Different Types of Drone Frames: Monocopter to Octocopter}
+      \field{urlday}{30}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://circuitdigest.com/article/different-types-of-drone-frames-monocopter-to-octocopter
+      \endverb
+      \verb{url}
+      \verb https://circuitdigest.com/article/different-types-of-drone-frames-monocopter-to-octocopter
+      \endverb
+    \endentry
     \entry{oneclickVDIUnd2019}{online}{}{}
       \name{author}{1}{}{%
         {{hash=c72772e8853acf38054708c98e89a9b5}{%
@@ -331,6 +404,81 @@
       \verb https://oneclick-cloud.com/de/blog/trends/vdi-und-daas-vor-und-nachteile/
       \endverb
     \endentry
+    \entry{petersonQuadcopterVsHexacopter}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=01445191c1ead0abb05ab9727b48dad8}{%
+           family={Peterson},
+           familyi={P\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Rc Things}%
+      }
+      \strng{namehash}{01445191c1ead0abb05ab9727b48dad8}
+      \strng{fullhash}{01445191c1ead0abb05ab9727b48dad8}
+      \strng{fullhashraw}{01445191c1ead0abb05ab9727b48dad8}
+      \strng{bibnamehash}{01445191c1ead0abb05ab9727b48dad8}
+      \strng{authorbibnamehash}{01445191c1ead0abb05ab9727b48dad8}
+      \strng{authornamehash}{01445191c1ead0abb05ab9727b48dad8}
+      \strng{authorfullhash}{01445191c1ead0abb05ab9727b48dad8}
+      \strng{authorfullhashraw}{01445191c1ead0abb05ab9727b48dad8}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{american}
+      \field{title}{Quadcopter vs Hexacopter}
+      \field{urlday}{30}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://rcthing.com/quadcopter-vs-hexacopter/
+      \endverb
+      \verb{url}
+      \verb https://rcthing.com/quadcopter-vs-hexacopter/
+      \endverb
+    \endentry
+    \entry{rineyHexacopterVsQuadcopter2026}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=774659b3f285b6c08f2d848cec956707}{%
+           family={Riney},
+           familyi={R\bibinitperiod},
+           given={Glenn},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Extreme Fliers}%
+      }
+      \strng{namehash}{774659b3f285b6c08f2d848cec956707}
+      \strng{fullhash}{774659b3f285b6c08f2d848cec956707}
+      \strng{fullhashraw}{774659b3f285b6c08f2d848cec956707}
+      \strng{bibnamehash}{774659b3f285b6c08f2d848cec956707}
+      \strng{authorbibnamehash}{774659b3f285b6c08f2d848cec956707}
+      \strng{authornamehash}{774659b3f285b6c08f2d848cec956707}
+      \strng{authorfullhash}{774659b3f285b6c08f2d848cec956707}
+      \strng{authorfullhashraw}{774659b3f285b6c08f2d848cec956707}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{16}
+      \field{langid}{american}
+      \field{month}{9}
+      \field{title}{Hexacopter vs Quadcopter: What's the Difference and How to Choose?}
+      \field{urlday}{30}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.extremefliers.com/hexacopter-vs-quadcopter/
+      \endverb
+      \verb{url}
+      \verb https://www.extremefliers.com/hexacopter-vs-quadcopter/
+      \endverb
+    \endentry
     \entry{noauthor_studie_nodate}{misc}{}{}
       \list{language}{1}{%
         {de}%
@@ -351,6 +499,38 @@
       \endverb
       \verb{url}
       \verb https://www.deutschlandfunk.de/studie-zu-homeoffice-und-corona-beschaeftigte-fuerchten-um-100.html
+      \endverb
+    \endentry
+    \entry{unmannedtechQuadcopterFrameDesign}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=160c6c0a0170778396a66e2dde77baf7}{%
+           family={{Unmanned Tech}},
+           familyi={U\bibinitperiod}}}%
+      }
+      \strng{namehash}{160c6c0a0170778396a66e2dde77baf7}
+      \strng{fullhash}{160c6c0a0170778396a66e2dde77baf7}
+      \strng{fullhashraw}{160c6c0a0170778396a66e2dde77baf7}
+      \strng{bibnamehash}{160c6c0a0170778396a66e2dde77baf7}
+      \strng{authorbibnamehash}{160c6c0a0170778396a66e2dde77baf7}
+      \strng{authornamehash}{160c6c0a0170778396a66e2dde77baf7}
+      \strng{authorfullhash}{160c6c0a0170778396a66e2dde77baf7}
+      \strng{authorfullhashraw}{160c6c0a0170778396a66e2dde77baf7}
+      \field{sortinit}{U}
+      \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{american}
+      \field{title}{Quadcopter Frame Design: H-Frame vs X-Frame vs True-X Configuration}
+      \field{urlday}{30}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.unmannedtechshop.co.uk/de/blogs/knowledge-base/quadcopter-frame-design-h-frame-vs-x-frame-vs-true-x-configuration
+      \endverb
+      \verb{url}
+      \verb https://www.unmannedtechshop.co.uk/de/blogs/knowledge-base/quadcopter-frame-design-h-frame-vs-x-frame-vs-true-x-configuration
       \endverb
     \endentry
   \enddatalist

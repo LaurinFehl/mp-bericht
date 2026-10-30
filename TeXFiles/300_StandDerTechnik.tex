@@ -1,27 +1,73 @@
 \chapter{Stand der Technik}
 \label{ch:StandDerTechnik}
 
-Dieses Kapitel bearbeitet den aktuellen Stand der Technik in den Bereichen, die für diese Arbeit relevant sind. Zunächst werden Bauformen und Konstruktionsweisen betrachtet.
+Dieses Kapitel bearbeitet den aktuellen Stand der Technik in den Bereichen, die für diese Arbeit relevant sind. Zunächst werden Bauformen und Konstruktionsweisen von FMD 3D-Druck-Bauteilen betrachet, sowie eine Zustandsaufnahme der Software der Drohne um die Ausmaße der benötigten Arbeit abzuleiten.
 
-\section{Drohnenplattformen und Frames}
-\label{sec:SdT_Drohnen}
-\subsection{Bauformen von Multicoptern}        % Quad, Hex, X- vs. H-Frame
-\subsection{Kommerzielle Frames und Bausätze}  % Carbon-Frames, Frame-Kits
-\subsection{3D-gedruckte Drohnenframes}        % Open-Source-Projekte, Forschung
-\subsection{Vergleich und Bewertung}           % Tabelle: Masse, Steifigkeit, Kosten
 
-\section{Fertigung mit FDM-3D-Druck}
-\label{sec:SdT_Fertigung}
-\subsection{Funktionsprinzip FDM}
-\subsection{Materialien für den Leichtbau}     % PETG, PA-CF, PLA-CF, TPU
-\subsection{Konstruktionsrichtlinien}          % Wandstärke, Orientierung, Stützstrukturen, Anisotropie
-\subsection{Schwächen und Grenzen}             % Schichthaftung, Vibration, Temperatur
+    \section{Drohnenplattformen und Frames}
+    \label{sec:SdT_Drohnen}
 
-\section{Zustandsanzeigen bei Drohnen}
-\label{sec:SdT_LED}
-\subsection{Statusanzeige und Statemachine}
-\subsection{LED-Systeme und Ansteuerung}       % NeoPixel, I2C/NCP5623, Pi-GPIO
-\subsection{Anforderungen und Normen}          % ERC-Anforderung, Sichtbarkeit
+    Der Markt von selbst gebauten Drohnen ist in den letzten Jahren stetig gewachsen. Flight Controller und ESC Boards werden von Jahr zu Jahr günstiger, variantenreicher und leistungsstärker. In dieser Sektion werden die wichtigsten Faktoren von selbstgebauten Drohnen erarbeitet und analysiert. Dabei werden von \gls{frost} vorher bestimmte Möglichkeiten bearbeitet. 
 
-\section{Zusammenfassung und Ableitung}
-\label{sec:SdT_Fazit}
+        \subsection{Bauformen von Multicoptern}        % Quad, Hex, X- vs. H-Frame
+
+        Konträr zu dem ready-to-fly kaufbaren Drohnen kann bei einem selbst gebauten Design die freie Wahl getroffen werden. Dabei muss auf den Zielnutzen geachtet werden, da verschiedene Konfigurationen unterschiedliche Vor- und Nachteile besitzen. Die Framekonfiguration definiert wie die einzelnen Motoren zueinander positioniert sind. Bei der Auswahl der Framekonfiguration ist es auch wichtig zu beachten wie viele Motoren benutzt werden. Die Anzahl der Propeller entscheidet über wichtige Charakteristika für den Zielnutzen. Im Folgenden werden die beiden für diese Arbeit relevanten Bauformen, der Hexacopter und der Quadcopter, in Anlehnung an \cite{petersonQuadcopterVsHexacopter} gegenübergestellt.
+
+        
+        \begin{description}[style=nextline]
+            \item[Hexacopter] Das Hex im Namen steht für die Zahl sechs und damit für die Anzahl der Motoren. Die Last der Drohne verteilt sich gleichmäßig auf sechs Propeller, wodurch jeder einzelne Rotor weniger belastet wird. Mit einem Eigengewicht von etwa \SIrange{2,3}{6,8}{\kilo\gram} kann ein Hexacopter eine Nutzlast von etwa \SIrange{2,3}{4,5}{\kilo\gram} tragen und eignet sich damit für schwere Ausrüstung wie professionelle Kamerasysteme. Durch die zusätzlichen Rotoren liegt er auch bei Wind ruhig in der Luft. Der größte Vorteil ist die Ausfallsicherheit: Fällt ein Rotor aus, verliert der Hexacopter nur etwa \SI{16}{\percent} seines Schubs und kann in der Regel noch sicher zurückfliegen. Dem stehen eine mit etwa \SIrange{10}{20}{\minute} eher kurze Flugzeit ohne Last, eine geringere Agilität sowie höhere Anschaffungs- und Ersatzteilkosten gegenüber. Hexacopter werden daher vor allem im professionellen Bereich eingesetzt.
+
+            \item[Quadcopter] Beim Quadcopter verteilt sich die Last auf nur vier Propeller, sodass jeder Rotor einen größeren Anteil tragen muss. Dafür ist er mit etwa \SIrange{0,5}{1,4}{\kilo\gram} deutlich leichter als ein Hexacopter, kann allerdings auch nur eine entsprechend geringere Nutzlast aufnehmen. Durch das geringere Gewicht erreicht er mit etwa \SIrange{20}{30}{\minute} eine längere Flugzeit und ist schneller und wendiger. Bei Wind ist er dagegen unruhiger als ein Hexacopter. Der entscheidende Nachteil liegt in der fehlenden Redundanz: Der Ausfall eines Rotors bedeutet einen Schubverlust von \SI{25}{\percent} und führt meist zum Absturz. Im Gegenzug sind Quadcopter günstiger in der Anschaffung, Ersatzteile sind preiswert und leicht erhältlich, und Reparaturen lassen sich meist selbst durchführen. Zudem ist ein Quadcopter einfacher zu fliegen.
+        \end{description}
+
+    \subsection{Vergleich von Quadcopter Framekonfigurationen}
+
+        \begin{table}[htbp]
+            \centering
+            \caption{Vergleich der Quadcopter-Konfigurationen H, Plus und X, in Anlehnung an \cite{mishraDifferentTypesDrone2021}}
+            \label{tab:Quad_Konfigurationen}
+            \renewcommand{\arraystretch}{1.3} % etwas mehr Zeilenabstand
+            \begin{tabularx}{\textwidth}{l *{3}{>{\raggedright\arraybackslash}X}}
+                \toprule
+                                    & \textbf{Quad H}                            & \textbf{Quad +}                        & \textbf{Quad X} \\
+                \midrule
+                Armanordnung        & Zwei Querträger an einem Längsrumpf        & Arme in und quer zur Flugrichtung      & Arme diagonal zur Flugrichtung \\
+                Stabilität          & \multicolumn{3}{l}{Alle Konfigurationen stabil im Vorwärtsflug} \\
+                Giersteuerung       & \multicolumn{3}{l}{Bei allen Konfigurationen gleich} \\
+                Nick-/Rollsteuerung & Geringer als bei X                         & Geringer als bei X                     & Ca.\ \SI{30}{\percent} höher \\
+                Besonderheiten      & Breite Basis, ruhiges Rollverhalten, geschützter Akku, viel Bauraum & --- & --- \\
+                Typischer Einsatz   & FPV-Racing, meist Carbonrahmen             & ---                                    & --- \\
+                \bottomrule
+            \end{tabularx}
+        \end{table}
+
+        \begin{figure}[htbp]
+            \centering
+            \includegraphics[width=0.8\textwidth]{Figures/300-sdt/quad_konfigurationen.png}
+            \caption{Quadcopter-Konfigurationen H, Plus und X mit Drehrichtung der Motoren \cite{mishraDifferentTypesDrone2021}}
+            \label{fig:Quad_Konfigurationen}
+        \end{figure}
+
+
+        
+
+
+        \subsection{Kommerzielle Frames und Bausätze}  % Carbon-Frames, Frame-Kits
+        \subsection{3D-gedruckte Drohnenframes}        % Open-Source-Projekte, Forschung
+        \subsection{Vergleich und Bewertung}           % Tabelle: Masse, Steifigkeit, Kosten
+
+    \section{Fertigung mit FDM-3D-Druck}
+    \label{sec:SdT_Fertigung}
+        \subsection{Funktionsprinzip FDM}
+        \subsection{Materialien für den Leichtbau}     % PETG, PA-CF, PLA-CF, TPU
+        \subsection{Konstruktionsrichtlinien}          % Wandstärke, Orientierung, Stützstrukturen, Anisotropie
+        \subsection{Schwächen und Grenzen}             % Schichthaftung, Vibration, Temperatur
+
+    \section{Zustandsanzeigen bei Drohnen}
+    \label{sec:SdT_LED}
+        \subsection{Statusanzeige und Statemachine}
+        \subsection{LED-Systeme und Ansteuerung}       % NeoPixel, I2C/NCP5623, Pi-GPIO
+        \subsection{Anforderungen und Normen}          % ERC-Anforderung, Sichtbarkeit
+
+    \section{Zusammenfassung und Ableitung}
+    \label{sec:SdT_Fazit}

@@ -12,58 +12,59 @@
 \contentsline {chapter}{\numberline {3}Stand der Technik}{6}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Drohnenplattformen und Frames}{6}{section.3.1}%
 \contentsline {subsection}{\numberline {3.1.1}Bauformen von Multicoptern}{6}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Kommerzielle Frames und Bausätze}{6}{subsection.3.1.2}%
-\contentsline {subsection}{\numberline {3.1.3}3D-gedruckte Drohnenframes}{6}{subsection.3.1.3}%
-\contentsline {subsection}{\numberline {3.1.4}Vergleich und Bewertung}{6}{subsection.3.1.4}%
-\contentsline {section}{\numberline {3.2}Fertigung mit FDM-3D-Druck}{6}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Funktionsprinzip FDM}{6}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Materialien für den Leichtbau}{6}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}Konstruktionsrichtlinien}{6}{subsection.3.2.3}%
-\contentsline {subsection}{\numberline {3.2.4}Schwächen und Grenzen}{6}{subsection.3.2.4}%
-\contentsline {section}{\numberline {3.3}Zustandsanzeigen bei Drohnen}{6}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Statusanzeige und Statemachine}{6}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}LED-Systeme und Ansteuerung}{6}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}Anforderungen und Normen}{6}{subsection.3.3.3}%
-\contentsline {section}{\numberline {3.4}Zusammenfassung und Ableitung}{6}{section.3.4}%
-\contentsline {chapter}{\numberline {4}Entwickelte Methoden}{7}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Anforderungen}{7}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Anforderungen an den Frame}{7}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Anforderungen an die Statusanzeige}{7}{subsection.4.1.2}%
-\contentsline {section}{\numberline {4.2}Konstruktion des 3D-gedruckten Frames}{7}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Konstruktionskonzept und Designentscheidungen}{7}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Auslegung für den FDM-Druck}{7}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Materialwahl}{7}{subsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.2.4}Integration der Komponenten}{7}{subsection.4.2.4}%
-\contentsline {subsection}{\numberline {4.2.5}Fertigung und Montage}{7}{subsection.4.2.5}%
-\contentsline {section}{\numberline {4.3}LED-Statusanzeige}{7}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Konzept und Zustandsdefinition}{7}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Hardware}{7}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Software: Zustandsautomat auf dem Companion Computer}{7}{subsection.4.3.3}%
-\contentsline {subsection}{\numberline {4.3.4}Anbindung an den Flugcontroller}{7}{subsection.4.3.4}%
-\contentsline {chapter}{\numberline {5}Evaluation}{8}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Evaluationsmethodik}{8}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Evaluation des Frames}{8}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Masse und Geometrie}{8}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Mechanische Tests}{8}{subsection.5.2.2}%
-\contentsline {subsection}{\numberline {5.2.3}Druckqualität und Reproduzierbarkeit}{8}{subsection.5.2.3}%
-\contentsline {subsection}{\numberline {5.2.4}Flugtests}{8}{subsection.5.2.4}%
-\contentsline {section}{\numberline {5.3}Evaluation der Statusanzeige}{8}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Funktionstest der Zustandsübergänge}{8}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}Sichtbarkeitstest}{8}{subsection.5.3.2}%
-\contentsline {subsection}{\numberline {5.3.3}Test im Flugbetrieb}{8}{subsection.5.3.3}%
-\contentsline {chapter}{\numberline {6}Ergebnisse}{9}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Ergebnisse des Frames}{9}{section.6.1}%
-\contentsline {subsection}{\numberline {6.1.1}Masse und Vergleich mit dem bisherigen Frame}{9}{subsection.6.1.1}%
-\contentsline {subsection}{\numberline {6.1.2}Mechanische und flugtechnische Ergebnisse}{9}{subsection.6.1.2}%
-\contentsline {subsection}{\numberline {6.1.3}Fertigungsergebnisse}{9}{subsection.6.1.3}%
-\contentsline {section}{\numberline {6.2}Ergebnisse der Statusanzeige}{9}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Diskussion}{9}{section.6.3}%
-\contentsline {subsection}{\numberline {6.3.1}Erfüllung der Anforderungen}{9}{subsection.6.3.1}%
-\contentsline {subsection}{\numberline {6.3.2}Probleme und Grenzen}{9}{subsection.6.3.2}%
-\contentsline {chapter}{\numberline {7}Zusammenfassung und Ausblick}{10}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Zusammenfassung}{10}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Ausblick}{10}{section.7.2}%
-\contentsline {chapter}{\nonumberline Literatur}{11}{chapter*.8}%
+\contentsline {subsection}{\numberline {3.1.2}Vergleich von Quadcopter Framekonfigurationen}{7}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Kommerzielle Frames und Bausätze}{8}{subsection.3.1.3}%
+\contentsline {subsection}{\numberline {3.1.4}3D-gedruckte Drohnenframes}{8}{subsection.3.1.4}%
+\contentsline {subsection}{\numberline {3.1.5}Vergleich und Bewertung}{8}{subsection.3.1.5}%
+\contentsline {section}{\numberline {3.2}Fertigung mit FDM-3D-Druck}{8}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Funktionsprinzip FDM}{8}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Materialien für den Leichtbau}{8}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Konstruktionsrichtlinien}{8}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}Schwächen und Grenzen}{8}{subsection.3.2.4}%
+\contentsline {section}{\numberline {3.3}Zustandsanzeigen bei Drohnen}{8}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Statusanzeige und Statemachine}{8}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}LED-Systeme und Ansteuerung}{8}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Anforderungen und Normen}{8}{subsection.3.3.3}%
+\contentsline {section}{\numberline {3.4}Zusammenfassung und Ableitung}{8}{section.3.4}%
+\contentsline {chapter}{\numberline {4}Entwickelte Methoden}{9}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Anforderungen}{9}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Anforderungen an den Frame}{9}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Anforderungen an die Statusanzeige}{9}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}Konstruktion des 3D-gedruckten Frames}{9}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Konstruktionskonzept und Designentscheidungen}{9}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Auslegung für den FDM-Druck}{9}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Materialwahl}{9}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Integration der Komponenten}{9}{subsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.2.5}Fertigung und Montage}{9}{subsection.4.2.5}%
+\contentsline {section}{\numberline {4.3}LED-Statusanzeige}{9}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Konzept und Zustandsdefinition}{9}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Hardware}{9}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Software: Zustandsautomat auf dem Companion Computer}{9}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}Anbindung an den Flugcontroller}{9}{subsection.4.3.4}%
+\contentsline {chapter}{\numberline {5}Evaluation}{10}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Evaluationsmethodik}{10}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Evaluation des Frames}{10}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Masse und Geometrie}{10}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Mechanische Tests}{10}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Druckqualität und Reproduzierbarkeit}{10}{subsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.2.4}Flugtests}{10}{subsection.5.2.4}%
+\contentsline {section}{\numberline {5.3}Evaluation der Statusanzeige}{10}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Funktionstest der Zustandsübergänge}{10}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Sichtbarkeitstest}{10}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}Test im Flugbetrieb}{10}{subsection.5.3.3}%
+\contentsline {chapter}{\numberline {6}Ergebnisse}{11}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Ergebnisse des Frames}{11}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Masse und Vergleich mit dem bisherigen Frame}{11}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}Mechanische und flugtechnische Ergebnisse}{11}{subsection.6.1.2}%
+\contentsline {subsection}{\numberline {6.1.3}Fertigungsergebnisse}{11}{subsection.6.1.3}%
+\contentsline {section}{\numberline {6.2}Ergebnisse der Statusanzeige}{11}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Diskussion}{11}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Erfüllung der Anforderungen}{11}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}Probleme und Grenzen}{11}{subsection.6.3.2}%
+\contentsline {chapter}{\numberline {7}Zusammenfassung und Ausblick}{12}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Zusammenfassung}{12}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Ausblick}{12}{section.7.2}%
+\contentsline {chapter}{\nonumberline Literatur}{13}{chapter*.10}%
 \def \@chapapp {\appendixname }
-\contentsline {chapter}{\numberline {A}Anhang}{12}{appendix.A}%
+\contentsline {chapter}{\numberline {A}Anhang}{14}{appendix.A}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
