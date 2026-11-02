@@ -52,6 +52,38 @@
       \verb https://stock.adobe.com/vn/images/motor-order-diagrams-of-the-quad-drone-or-quadcopter-set-of-vector-infographics-of-airframes-and-types-quad-x-quad-h-quad-v-and-quad-p/243287639
       \endverb
     \endentry
+    \entry{alliedcnWhatIsFDM3DPrinting}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=1a09fa06b090db9a80320f6fbed8c4b1}{%
+           family={{Allied}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{1a09fa06b090db9a80320f6fbed8c4b1}
+      \strng{fullhash}{1a09fa06b090db9a80320f6fbed8c4b1}
+      \strng{fullhashraw}{1a09fa06b090db9a80320f6fbed8c4b1}
+      \strng{bibnamehash}{1a09fa06b090db9a80320f6fbed8c4b1}
+      \strng{authorbibnamehash}{1a09fa06b090db9a80320f6fbed8c4b1}
+      \strng{authornamehash}{1a09fa06b090db9a80320f6fbed8c4b1}
+      \strng{authorfullhash}{1a09fa06b090db9a80320f6fbed8c4b1}
+      \strng{authorfullhashraw}{1a09fa06b090db9a80320f6fbed8c4b1}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{american}
+      \field{title}{What is FDM 3D Printing?}
+      \field{urlday}{30}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://alliedcn.com/what-is-fdm-3d-printing/
+      \endverb
+      \verb{url}
+      \verb https://alliedcn.com/what-is-fdm-3d-printing/
+      \endverb
+    \endentry
     \entry{beermann_veranderungen_2020}{article}{}{}
       \name{author}{6}{}{%
         {{hash=f12614a671d3fe960dc814435d507b5e}{%
@@ -122,6 +154,37 @@
       \endverb
       \verb{url}
       \verb https://www.adlershof.de/fileadmin/user_upload/ebooks/WaC/index.html#p=36
+      \endverb
+    \endentry
+    \entry{bonvaeroQuadcopterDrones}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=47ec1bd73bf9d047c1a73e7e5e0dcf84}{%
+           family={{Bonvaero}},
+           familyi={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{47ec1bd73bf9d047c1a73e7e5e0dcf84}
+      \strng{fullhash}{47ec1bd73bf9d047c1a73e7e5e0dcf84}
+      \strng{fullhashraw}{47ec1bd73bf9d047c1a73e7e5e0dcf84}
+      \strng{bibnamehash}{47ec1bd73bf9d047c1a73e7e5e0dcf84}
+      \strng{authorbibnamehash}{47ec1bd73bf9d047c1a73e7e5e0dcf84}
+      \strng{authornamehash}{47ec1bd73bf9d047c1a73e7e5e0dcf84}
+      \strng{authorfullhash}{47ec1bd73bf9d047c1a73e7e5e0dcf84}
+      \strng{authorfullhashraw}{47ec1bd73bf9d047c1a73e7e5e0dcf84}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{american}
+      \field{title}{Quadcopter Drones: The Ultimate Guide}
+      \field{urlday}{30}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://bonvaero.com/quadcopter-drones/
+      \endverb
+      \verb{url}
+      \verb https://bonvaero.com/quadcopter-drones/
       \endverb
     \endentry
     \entry{friese_handbuch_2020}{book}{}{}
@@ -531,6 +594,38 @@
       \endverb
       \verb{url}
       \verb https://www.unmannedtechshop.co.uk/de/blogs/knowledge-base/quadcopter-frame-design-h-frame-vs-x-frame-vs-true-x-configuration
+      \endverb
+    \endentry
+    \entry{wermaSignalsaeulen}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=2e2b40fa7d134e2e0eb8ad9362caaf40}{%
+           family={{WERMA Signaltechnik GmbH + Co. KG}},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{2e2b40fa7d134e2e0eb8ad9362caaf40}
+      \strng{fullhash}{2e2b40fa7d134e2e0eb8ad9362caaf40}
+      \strng{fullhashraw}{2e2b40fa7d134e2e0eb8ad9362caaf40}
+      \strng{bibnamehash}{2e2b40fa7d134e2e0eb8ad9362caaf40}
+      \strng{authorbibnamehash}{2e2b40fa7d134e2e0eb8ad9362caaf40}
+      \strng{authornamehash}{2e2b40fa7d134e2e0eb8ad9362caaf40}
+      \strng{authorfullhash}{2e2b40fa7d134e2e0eb8ad9362caaf40}
+      \strng{authorfullhashraw}{2e2b40fa7d134e2e0eb8ad9362caaf40}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{german}
+      \field{title}{Signalisierungslösungen für Maschinen und Anlagen}
+      \field{urlday}{30}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.werma.com/produkte/signalsaeulen/
+      \endverb
+      \verb{url}
+      \verb https://www.werma.com/produkte/signalsaeulen/
       \endverb
     \endentry
   \enddatalist

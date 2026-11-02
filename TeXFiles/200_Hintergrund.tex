@@ -58,21 +58,10 @@ Der Vorgänger \gls{icarus} diente zum entdecken und experimentieren neuer Techn
 \label{sec:Grundlagen}
 
 
-Beim 3D-Druck wird ein Bauteil nicht aus einem Block herausgearbeitet, sondern
-Schicht für Schicht aufgebaut. Man spricht deshalb auch von additiver
-Fertigung. Aus einem digitalen \gls{cad}-Modell berechnet eine Software die
-einzelnen Schichten, die der Drucker anschließend nacheinander herstellt.
+Beim 3D-Druck wird ein Bauteil nicht aus einem Block herausgearbeitet, sondern Schicht für Schicht aufgebaut. Man spricht deshalb auch von additiver Fertigung. Aus einem digitalen \gls{cad}-Modell berechnet eine Software die einzelnen Schichten, die der Drucker anschließend nacheinander herstellt.
 
-In dieser Arbeit kommt das \gls{fdm}-Verfahren zum Einsatz. Dabei wird ein
-Kunststoffdraht (Filament) in einem beheizten Druckkopf geschmolzen und in
-dünnen Bahnen auf eine Bauplattform aufgetragen. Das Material kühlt ab, erstarrt
-und verbindet sich mit der darunterliegenden Schicht. Das Verfahren ist
-vergleichsweise günstig und erlaubt es, auch komplexe Formen und Hohlräume
-herzustellen, die sich klassisch nur schwer fertigen lassen. Zudem können
-Bauteile schnell geändert und neu gedruckt werden, was für die
-Weiterentwicklung eines Drohnenframes vorteilhaft ist.
+In dieser Arbeit kommt das \gls{fdm}-Verfahren zum Einsatz. Dabei wird ein Kunststoffdraht (Filament) in einem beheizten Druckkopf geschmolzen und in dünnen Bahnen auf eine Bauplattform aufgetragen. Das Material kühlt ab, erstarrt und verbindet sich mit der darunterliegenden Schicht. Das Verfahren ist vergleichsweise günstig und erlaubt es, auch komplexe Formen und Hohlräume herzustellen, die sich klassisch nur schwer fertigen lassen. Zudem können Bauteile schnell geändert und neu gedruckt werden, was für die Weiterentwicklung eines Drohnenframes vorteilhaft ist. 
 
-Gedruckte Teile haben jedoch Eigenheiten, die bei der Konstruktion beachtet
-werden müssen. Ihre Festigkeit hängt unter anderem vom verwendeten Material und
-von der Ausrichtung beim Drucken ab. Auf diese Aspekte wird im
-Kapitel~\ref{ch:StandDerTechnik} genauer eingegangen.
+Vor jedem Drucken muss das \gls{cad}-Modell in einer Slicer-Software in einzelne Schichten zerlegt werden. Dabei werden Parameter wie Schichthöhe, Füllung, Wandstärke und Stützstrukturen festgelegt. Die Software erzeugt daraus einen G-Code, der die Bewegungen des Druckkopfes, der Bauplattform und die Extrusion des Materials steuert.
+
+Gedruckte Teile haben jedoch Eigenheiten, die bei der Konstruktion beachtet werden müssen. Ihre Festigkeit hängt unter anderem vom verwendeten Material und von der Ausrichtung beim Drucken ab. Auf diese Aspekte wird im Kapitel~\ref{ch:StandDerTechnik} genauer eingegangen.
