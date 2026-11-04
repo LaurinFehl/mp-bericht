@@ -81,7 +81,7 @@ Dieses Kapitel bearbeitet den aktuellen Stand der Technik in den Bereichen, die 
             
             \item[PLA] Der Kunststoff PLA, Polylactid acid, ist ein Kunststoff welcher aus nachwachsenden Rohstoffen wie Maisstärke ode Zuckerrohr hergestellt wird. PLA ist ein sehr einfacher Kunststoff, welcher sich für den Einstieg in den 3D-Druck eignet, da dieser besonders leicht zu drucken ist. Seine leichtigkeit im Druck macht es jedoch zu einem nicht besonders temperaturbeständigen Kunststoff. PLA ist zudem ein spröder Kunststoff, welcher bei Belastung schnell bricht.
             \item[PET-G] Der Kunststoff PET-G, Polyethylenterephthalat Glycol, ist der beliebte Kunststoff PET mit dem Zusatz Glycol. Dieser Zusatz macht den Kunststoff zäher und weniger spröde. Er ist ein wenig aufwendiger zu drucken als PLA, jedoch genauso beliebt und weit verbreitet. 
-            \item[ABS] Der Kunststoff ABS, Acrylonitrile Butadiene Styrene, ist ein sehr beliebter Kunststoff der Industrie. Er ist zäh und temperaturbeständiger als PLA und PETG, jedoch auch weitaus schwieriger zu drucken, da sich der Kunststoff beim Abkühlen stark zusammenzieht und sich verzieht. ABS schwach gegenüber UV-Strahlung und kann bei längerer Sonneneinstrahlung spröde werden. Auch ist der Kunststoff gesundheitlich bedenklich, da beim Drucken giftige Dämpfe entstehen.
+            \item[ABS] Der Kunststoff ABS, Acrylonitrile Butadiene Styrene, ist ein sehr beliebter Kunststoff der Industrie. Er ist zäh und temperaturbeständiger als PLA und PETG, jedoch auch weitaus schwieriger zu drucken, da sich der Kunststoff beim Abkühlen stark zusammenzieht und sich verzieht. ABS ist schwach gegenüber UV-Strahlung und kann bei längerer Sonneneinstrahlung spröde werden. Auch ist der Kunststoff gesundheitlich bedenklich, da beim Drucken giftige Dämpfe entstehen.
             \item[ASA] Der Kunststoff ASA, Acrylonitrile Styrene Acrylate, ist ein Kunststoff der dem ABS sehr ähnlich ist, jedoch UV-beständiger und besser für den Außeneinsatz sich eignet. Es ist genau so fast genauso schwierig zu drucken wie ABS. ASA ist genau wie ABS gesundheitlich bedenklich, da beim Drucken giftige Dämpfe entstehen.
             \item[PA] Der Kunststoff PA, Polyamide, ist ein sehr stabiler und temperaturbeständiger Kunststoff. Er ist besonders geeignet für Anwendungen, bei denen hohe mechanische Belastungen auftreten. Da dieser Kunststoff sehr hygroskopisch ist, muss er vor dem Drucken getrocknet werden. Zudem ist im Hobbybereich oft nur PA Zusätzen wie Kohlenstofffasern pder Glasfasern erhältlich, da PA sich auch beim abkühlen stark zusammenzieht, sogar schon während des Druckens. 
             \item[TPU] Der Kunststoff TPU, Thermoplastic Polyurethane, ist ein sehr flexibler Kunststoff, welcher sich für Anwendungen eignet, bei denen Elastizität und Flexibilität benötigt wird. TPU ist ein sehr schwieriger Kunststoff zu drucken. TPU nimmt auch sehr schnell Feuchtigkeit auf, sodass dieser vor dem Drucken getrocknet werden muss. 
@@ -98,6 +98,8 @@ Dieses Kapitel bearbeitet den aktuellen Stand der Technik in den Bereichen, die 
 
         Durch die erarbeiten Materialcharakteristika in \ref{subsec:filamenttypen} können die Schwächen und Grenzen der Filamente beim Konstruieren berücksichtigt werden. Schichtrichtung und Wandstärke sind eintscheidene Faktoren für die Festigkeit eines Bauteils. Zudem ist es wichtig, die Belastungspunkte des Bauteils zu kennen, um die Schichten in der richtigen Richtung auszurichten. Beim konstruieren und nicht beachten dieser Faktoren kann es zu den typischen Schwächen von \gls{fdm}-3D-Druck-Bauteilen kommen. Dazu gehören eine schlechte Schichthaftung, Vibrationen und Temperaturbeständigkeit. 
 
+     Im \gls{frost}-Labor standen zum Zeitpunkt dieser Arbeit zwei 3D-Drucker vom Typ Bambu Lab X1-Carbon zur Verfügung. Ihre maximale Drucktemperatur beträgt \SI{300}{\celsius}, eine aktive Bauraumheizung ist nicht vorhanden. Daraus ergibt sich eine weitere Schwäche: Bei zu niedriger Temperatur können Schwachstellen im Druck entstehen.
+
     \section{Zustandsanzeigen bei Drohnen}
     \label{sec:SdT_LED}
 
@@ -109,6 +111,7 @@ Dieses Kapitel bearbeitet den aktuellen Stand der Technik in den Bereichen, die 
         \begin{minipage}[c]{0.62\textwidth}
             In der Industrie werden Maschinen und Anlagen oft mit Statusanzeigen ausgestattet, um den Zustand der Maschine anzuzeigen. Oft werden dabei Maschinenampel, auch Signalsäulen genannt, wie im Bild \ref{fig:maschinenampel} benutzt. Diese bestehen aus mehreren Leuchten, welche eine bestimmte Farbe und Blinkfrequenz für einen bestimmten Zustand der Maschine darstellen. Die Drohne ist nicht gleichzusetzen mit einer Maschine, jedoch ist es sinnvoll, die gleiche Logik zu verwenden. Die Drohne kann in verschiedene Zustände wechseln, welche durch die Statusanzeige dargestellt werden. Dabei ist es wichtig, dass die Zustände eindeutig und leicht verständlich sind. Der Companion Computer der Drohne bestimmt die Zuständer und steuert die Statusanzeige. Die Zustände der Drohne werden in einer Statemachine dargestellt, welche die Zustände und Übergänge zwischen den Zuständen definiert. 
 
+
         \end{minipage}
         \hfill
         \begin{minipage}[c]{0.33\textwidth}
@@ -119,13 +122,18 @@ Dieses Kapitel bearbeitet den aktuellen Stand der Technik in den Bereichen, die 
             \label{fig:maschinenampel}
         \end{minipage}
 
+
         \subsection{LED-Systeme und Ansteuerung}       % NeoPixel, I2C/NCP5623, Pi-GPIO
 
         Moderne LED-Systeme wie NeoPixel oder WS2812B ermöglichen es, eine Vielzahl von Farben und Effekten mit nur einem Datenpin zu steuern, wodurch eine einfache Darstellung von Zuständen und Warnungen möglich ist. Die Ansteuerung  erfolgt über den Companion Computer der Drohne, wo durch eine eigenene Controllersoftware die LEDS ansteuern kann, um unterschiedliche Zustände der Drohne darzustellen.
 
-        Die LED-Streifen von WS2812B benötigen nur drei Pins für die Ansteuerung: einen für die Datenleitung, einen für die Stromversorgung und einen für die Masse. Ein Vorteil von LED-Streifen ist, dass nur eine Seite verbunden werden muss, um die gesamte Kette zu steuern. Die Datenleitung wird von LED zu LED weitergegeben, wodurch eine einfache Verkabelung möglich ist. Diese Streifen werden auch aRGB genannt, a für addressable, um jede einzelne LED individuell ansteuern zu können. 
+        Die LED-Streifen von WS2812B benötigen nur drei Pins für die Ansteuerung: einen für die Datenleitung, einen für die Stromversorgung und einen für die Masse. Ein Vorteil von LED-Streifen ist, dass nur eine Seite verbunden werden muss, um die gesamte Kette zu steuern. Die Datenleitung wird von LED zu LED weitergegeben, wodurch eine einfache Verkabelung möglich ist. Diese Streifen werden auch aRGB genannt, a für addressable, um jede einzelne LED individuell ansteuern zu können.      
 
         \subsection{Anforderungen und Normen}          % ERC-Anforderung, Sichtbarkeit
 
+        Die Anforderungen an die Statusanzeige der Drohne ergeben sich aus den Regeln des \gls{erc}-Wettbewerbs, welche in Tabelle \ref{tab:ERC_Anforderungen} im Kapitel \ref{ch:Hintergrund} zusammengefasst sind. Die Anzeige muss den Zustand der Drohne eindeutig darstellen, sodass der Operator jederzeit erkennen kann, in welchem Zustand sich die Drohne befindet. Zudem wurden eigene Anforderungen definiert, wie dedizierte LEDS, welche links grün und rechts rot leuchten sollen, um so die Orientierung der Drohne leichter erkennen zu können. 
+
     \section{Zusammenfassung und Ableitung}
     \label{sec:SdT_Fazit}
+
+    Durch ein aufarbeiten der vorhanden Technik und Mittel die zur Verfügung stehen, kann so in einem festgelegten Rahmen die Arbeit durchgeführt werden um klare Ergbenisse erarbeiten zu können. Durch Befunde aber auch während der Entwicklung werden altenativ Lösungen gesucht die auch das Ziel erfüllen würden. 

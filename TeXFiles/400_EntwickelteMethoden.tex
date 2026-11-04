@@ -1,22 +1,61 @@
 \chapter{Entwickelte Methoden}
 \label{ch:Methoden}
 
-\section{Anforderungen}
-\label{sec:Anforderungen}
-\subsection{Anforderungen an den Frame}      % Masse, Steifigkeit, Druckbarkeit, Wartbarkeit
-\subsection{Anforderungen an die Statusanzeige}  % ERC-Regeln, Sichtbarkeit, Zustände
+In diesem Kapitel werden die Entwickelten Methoden aufgearbeitet und im Detail beschrieben. Zuerst wird auf die Konstruktion des neuen Frames eingegangen. Welche Design entscheidungen getroffen wurden und wie diese Umgesetzt wurden. Danach wird die Entwicklung des LED-Controllers beschrieben, sowie die Einbindung der Software.
 
-\section{Konstruktion des 3D-gedruckten Frames}
-\label{sec:Frame}
-\subsection{Konstruktionskonzept und Designentscheidungen}
-\subsection{Auslegung für den FDM-Druck}     % Druckorientierung, Wandstärken, Stützstrukturen
-\subsection{Materialwahl}
-\subsection{Integration der Komponenten}     % Flugcontroller, Raspberry Pi, Akku, Motoren, Landebeine
-\subsection{Fertigung und Montage}           % Druckparameter, Nachbearbeitung
+% \section{Anforderungen}
+% \label{sec:Anforderungen}
+% \subsection{Anforderungen an den Frame}      % Masse, Steifigkeit, Druckbarkeit, Wartbarkeit
+% \subsection{Anforderungen an die Statusanzeige}  % ERC-Regeln, Sichtbarkeit, Zustände
 
-\section{LED-Statusanzeige}
-\label{sec:LED}
-\subsection{Konzept und Zustandsdefinition}  % welcher Flugmodus = welche Farbe/Muster
-\subsection{Hardware}                        % LEDs, Ansteuerung, Verkabelung, Position im Frame
-\subsection{Software: Zustandsautomat auf dem Companion Computer}
-\subsection{Anbindung an den Flugcontroller} % Abfrage des Flugmodus (MAVLink/ROS 2)
+    \section{Konstruktion des 3D-gedruckten Frames}
+    \label{sec:Frame}
+
+    Die Konstruktion des neuen Frames erfolgte im \gls{cad}-Programm Autodesk Inventor. Die Vorgängerversion \gls{icarus} liegt ebenfalls als Baugruppendatei in diesem Programm vor und diente als Referenz für bestehende Maße sowie für Komponenten mit festgelegten Abmessungen, wie beispielsweise die Batterie oder den Flightcontroller. Die einzelnen Bauteile wurden jeweils als .ipt-Dateien erstellt und gespeichert und anschließend zu einer Baugruppe zusammengefügt, wie in Abbildung \ref{fig:dronerender} dargestellt.
+
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[width=0.6\textwidth]{\dronerender}
+        \caption{Render der Baugruppenansicht des neuen Drohnenframes}
+        \label{fig:dronerender}
+    \end{figure}
+
+    \begin{table}[htbp]
+        \centering
+        \caption{Übersicht der gedruckten Bauteile des Frames}
+        \label{tab:Bauteile}
+        \begin{tabularx}{\textwidth}{l X}
+            \toprule
+            \textbf{Bauteil} & \textbf{Beschreibung} \\
+            \midrule
+            \texttt{Abdeckung} & Beschreibung \\
+            \texttt{baseplate\_link\_bottom} & Beschreibung \\
+            \texttt{baseplate\_link\_top} & Beschreibung \\
+            \texttt{baseplate\_roundframe} & Beschreibung \\
+            \texttt{fc\_plus\_pi\_mount\_v2} & Beschreibung \\
+            \texttt{gps\_adapter\_mount} & Beschreibung \\
+            \texttt{layout\_battery\_holder} & Beschreibung \\
+            \texttt{motor\_foot\_v3} & Beschreibung \\
+            \texttt{motor\_halter\_v2} & Beschreibung \\
+            \texttt{motor\_plate} & Beschreibung \\
+            \texttt{motor\_link\_left} & Beschreibung \\
+            \texttt{motor\_link\_right} & Beschreibung \\
+            \texttt{optical\_plus\_picam\_mount} & Beschreibung \\
+            \texttt{optical\_solo\_mount} & Beschreibung \\
+            \texttt{PiCamMount} & Beschreibung \\
+            \bottomrule
+        \end{tabularx}
+    \end{table}
+
+    \subsection{Konstruktionskonzept und Designentscheidungen}
+    \subsection{Auslegung für den FDM-Druck}     % Druckorientierung, Wandstärken, Stützstrukturen
+    \subsection{Materialwahl}
+    \subsection{Integration der Komponenten}     % Flugcontroller, Raspberry Pi, Akku, Motoren, Landebeine
+    \subsection{Fertigung und Montage}           % Druckparameter, Nachbearbeitung
+
+    \section{LED-Statusanzeige}
+    \label{sec:LED}
+    \subsection{Konzept und Zustandsdefinition}  % welcher Flugmodus = welche Farbe/Muster
+    \subsection{Hardware}                        % LEDs, Ansteuerung, Verkabelung, Position im Frame
+    \subsection{Software: Zustandsautomat auf dem Companion Computer}
+    \subsection{Anbindung an den Flugcontroller} % Abfrage des Flugmodus (MAVLink/ROS 2)
