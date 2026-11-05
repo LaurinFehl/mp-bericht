@@ -26,40 +26,40 @@
 \contentsline {section}{\numberline {3.4}Zusammenfassung und Ableitung}{10}{section.3.4}%
 \contentsline {chapter}{\numberline {4}Entwickelte Methoden}{11}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Konstruktion des 3D-gedruckten Frames}{11}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Konstruktionskonzept und Designentscheidungen}{12}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Auslegung für den FDM-Druck}{12}{subsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.1.3}Materialwahl}{12}{subsection.4.1.3}%
-\contentsline {subsection}{\numberline {4.1.4}Integration der Komponenten}{12}{subsection.4.1.4}%
-\contentsline {subsection}{\numberline {4.1.5}Fertigung und Montage}{12}{subsection.4.1.5}%
-\contentsline {section}{\numberline {4.2}LED-Statusanzeige}{12}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Konzept und Zustandsdefinition}{12}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Hardware}{12}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Software: Zustandsautomat auf dem Companion Computer}{12}{subsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.2.4}Anbindung an den Flugcontroller}{12}{subsection.4.2.4}%
-\contentsline {chapter}{\numberline {5}Evaluation}{13}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Evaluationsmethodik}{13}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Evaluation des Frames}{13}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Masse und Geometrie}{13}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Mechanische Tests}{13}{subsection.5.2.2}%
-\contentsline {subsection}{\numberline {5.2.3}Druckqualität und Reproduzierbarkeit}{13}{subsection.5.2.3}%
-\contentsline {subsection}{\numberline {5.2.4}Flugtests}{13}{subsection.5.2.4}%
-\contentsline {section}{\numberline {5.3}Evaluation der Statusanzeige}{13}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Funktionstest der Zustandsübergänge}{13}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}Sichtbarkeitstest}{13}{subsection.5.3.2}%
-\contentsline {subsection}{\numberline {5.3.3}Test im Flugbetrieb}{13}{subsection.5.3.3}%
-\contentsline {chapter}{\numberline {6}Ergebnisse}{14}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Ergebnisse des Frames}{14}{section.6.1}%
-\contentsline {subsection}{\numberline {6.1.1}Masse und Vergleich mit dem bisherigen Frame}{14}{subsection.6.1.1}%
-\contentsline {subsection}{\numberline {6.1.2}Mechanische und flugtechnische Ergebnisse}{14}{subsection.6.1.2}%
-\contentsline {subsection}{\numberline {6.1.3}Fertigungsergebnisse}{14}{subsection.6.1.3}%
-\contentsline {section}{\numberline {6.2}Ergebnisse der Statusanzeige}{14}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Diskussion}{14}{section.6.3}%
-\contentsline {subsection}{\numberline {6.3.1}Erfüllung der Anforderungen}{14}{subsection.6.3.1}%
-\contentsline {subsection}{\numberline {6.3.2}Probleme und Grenzen}{14}{subsection.6.3.2}%
-\contentsline {chapter}{\numberline {7}Zusammenfassung und Ausblick}{15}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Zusammenfassung}{15}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Ausblick}{15}{section.7.2}%
-\contentsline {chapter}{\nonumberline Literatur}{16}{chapter*.14}%
+\contentsline {subsection}{\numberline {4.1.1}Konstruktionskonzept und Designentscheidungen}{11}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Auslegung für den FDM-Druck}{13}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Materialwahl}{13}{subsection.4.1.3}%
+\contentsline {subsection}{\numberline {4.1.4}Integration der Komponenten}{14}{subsection.4.1.4}%
+\contentsline {subsection}{\numberline {4.1.5}Fertigung und Montage}{14}{subsection.4.1.5}%
+\contentsline {section}{\numberline {4.2}LED-Statusanzeige}{14}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Konzept und Zustandsdefinition}{14}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Hardware}{14}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Software: Zustandsautomat auf dem Companion Computer}{14}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Anbindung an den Flugcontroller}{14}{subsection.4.2.4}%
+\contentsline {chapter}{\numberline {5}Evaluation}{15}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Evaluationsmethodik}{15}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Evaluation des Frames}{15}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Masse und Geometrie}{15}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Mechanische Tests}{15}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Druckqualität und Reproduzierbarkeit}{15}{subsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.2.4}Flugtests}{15}{subsection.5.2.4}%
+\contentsline {section}{\numberline {5.3}Evaluation der Statusanzeige}{15}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Funktionstest der Zustandsübergänge}{15}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Sichtbarkeitstest}{15}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}Test im Flugbetrieb}{15}{subsection.5.3.3}%
+\contentsline {chapter}{\numberline {6}Ergebnisse}{16}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Ergebnisse des Frames}{16}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Masse und Vergleich mit dem bisherigen Frame}{16}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}Mechanische und flugtechnische Ergebnisse}{16}{subsection.6.1.2}%
+\contentsline {subsection}{\numberline {6.1.3}Fertigungsergebnisse}{16}{subsection.6.1.3}%
+\contentsline {section}{\numberline {6.2}Ergebnisse der Statusanzeige}{16}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Diskussion}{16}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Erfüllung der Anforderungen}{16}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}Probleme und Grenzen}{16}{subsection.6.3.2}%
+\contentsline {chapter}{\numberline {7}Zusammenfassung und Ausblick}{17}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Zusammenfassung}{17}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Ausblick}{17}{section.7.2}%
+\contentsline {chapter}{\nonumberline Literatur}{18}{chapter*.15}%
 \def \@chapapp {\appendixname }
-\contentsline {chapter}{\numberline {A}Anhang}{17}{appendix.A}%
+\contentsline {chapter}{\numberline {A}Anhang}{19}{appendix.A}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

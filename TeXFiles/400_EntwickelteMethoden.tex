@@ -20,38 +20,109 @@ In diesem Kapitel werden die Entwickelten Methoden aufgearbeitet und im Detail b
         \label{fig:dronerender}
     \end{figure}
 
+    In Tabelle \ref{tab:Bauteile} sind alle konstruierten Bauteile aufgelistet und kurz erklärt. Für die Teile baseplate\_top und baseplate\_bottom, sowie motor\_link\_left und motor\_link\_right wurden Zeichnungen als Vorlage zum Ableiten der Teile benutzt. So konnte durch die Änderung einer Bemaßung in nur einer Zeichnung, beide Bauteile automatisch neu anpassen. 
+
+
     \begin{table}[htbp]
         \centering
         \caption{Übersicht der gedruckten Bauteile des Frames}
         \label{tab:Bauteile}
+        \renewcommand{\tabularxcolumn}[1]{p{#1}} % Text oben bündig mit dem Bauteilnamen
+        \newcommand{\bauteilrule}{\arrayrulecolor{black!30}\specialrule{0.4pt}{2pt}{2pt}\arrayrulecolor{black}} % dünne graue Linie zwischen den Bauteilen
         \begin{tabularx}{\textwidth}{l X}
             \toprule
             \textbf{Bauteil} & \textbf{Beschreibung} \\
             \midrule
-            \texttt{Abdeckung} & Beschreibung \\
-            \texttt{baseplate\_link\_bottom} & Beschreibung \\
-            \texttt{baseplate\_link\_top} & Beschreibung \\
-            \texttt{baseplate\_roundframe} & Beschreibung \\
-            \texttt{fc\_plus\_pi\_mount\_v2} & Beschreibung \\
-            \texttt{gps\_adapter\_mount} & Beschreibung \\
-            \texttt{layout\_battery\_holder} & Beschreibung \\
-            \texttt{motor\_foot\_v3} & Beschreibung \\
-            \texttt{motor\_halter\_v2} & Beschreibung \\
-            \texttt{motor\_plate} & Beschreibung \\
-            \texttt{motor\_link\_left} & Beschreibung \\
-            \texttt{motor\_link\_right} & Beschreibung \\
-            \texttt{optical\_plus\_picam\_mount} & Beschreibung \\
-            \texttt{optical\_solo\_mount} & Beschreibung \\
-            \texttt{PiCamMount} & Beschreibung \\
+            \multicolumn{2}{l}{\textbf{Baseplate}} \\
+            \texttt{cover} & Die Elektronik, also Flight Controller und Raspberry Pi, mussten durch fliegende Teile oder Spritzwasser geschützt werden. Die Abdeckung ist kein strukturelles Bauteil und wird deshalb nur mit Magneten an dem Roundframe befestigt.\\
+            \bauteilrule
+            \texttt{roundframe} & Um an der Drohne weitere Bauteile und Komponenten zu befestigen, wurde ein Ring um die Grundplatte gelegt, welcher zu jeder der vier Seiten, vier Einschmelzgewinde bietet. So können je nach Designentscheidung bis zu zwei Komponenten extra an einer Seite befestigt werden.\\
+            \bauteilrule
+            \texttt{link\_bottom} & Um die Verbindungen zu den Motoren stabil zu designen, musste ein oberer und untere Link konstruiert werden. Der untere Link benutzt Einschmelzgewinde um mit dem oberen Link zusammengeschraubt zu werden.\\
+            \bauteilrule
+            \texttt{link\_top} & Der obere Link besitzt Löcher für versenkte Zylinderkopfschrauben damit die Halterung für den Link symmetrisch bleibt.\\
+            \bauteilrule
+            \texttt{gps\_mount} & Das vorhande GPS-Modul besitzt eine Halterung welche die sensiblen Sensoren mit mehr Abstand montiert. Dieses Bauteil wurde auf die existierende Halterung angepasst.\\
+            \bauteilrule
+            \texttt{battery\_holder} & Die Batteriehalterung ist ein Bauteil welches doppelt gedruckt werden kann, da es symmetrisch designed wurde. Zum Festhalten der Batterie werden zwei Klettverschlusslaschen benutzt, welche durch einfache Durchführungen im Bauteil sich halten.\\
+            \bauteilrule
+            \texttt{optical\_mount} & Die halterung für den Optical-Flow-Sensor ist besonders stabil designed, da durch ein verfälschen der Werte dieses Sensor, die Flugstabilität deutlich beinflusst werden würde.\\
+            \bauteilrule
+            \texttt{picam\_mount} & Die Halterung für die Raspberry Pi Kamera wurde extra für eine seitliche Montage der Drohne designed, da vorne und hinten schon durch den Optical-Flow-Sensor und dem GPS blockiert war. Eine bestimmte Ausrichtung oder Orientierung der Kamera ist nicht nötig, da durch Software alles korrigiert werden kann.\\
+            \midrule
+            \multicolumn{2}{l}{\textbf{Motor}} \\
+            \texttt{motor\_plate} & Durch den stark erwärmenden Motor, wurde eine Platte zum dazwischen legen konstruiert, welche die Halterung des Motors schützen sollte.\\
+            \bauteilrule
+            \texttt{motor\_mount} & Die Halterung des Motors ist eins der wichtigsten und am meisten belasteten Bauteile. Dadurch wurde eine stabile Konstruktion erfordert, welche auch bei Belastung nicht direkt brechen würde.\\
+            \bauteilrule
+            \texttt{motor\_foot} & Die Füße der Drohne sind direkt unter dem Motoren befestigt. Das gebogene Design kann Energie im Fall einer harten Landung aufnehmen. Zudem sind auf der Innenseite Kanäle konstruiert umd LED-Streifen mit durchsichtigem doppelseitigen Klebeband zu befestigen für die Statusanzeige der Drohne über LEDS.\\
+            \midrule
+            \multicolumn{2}{l}{\textbf{Verbindung}} \\
+            \texttt{motor\_link\_left} & Die linke Version der Verbindungsarme von der baseplate zu den motor\_mounts beinhaltet Löcher für versenkte Zylinderkopfschrauben an der Motorenseite.\\
+            \bauteilrule
+            \texttt{motor\_link\_right} & Die rechte Version beinhaltet die Löcher für die Einschmelzgewinde an der Motorseite. Beide \\
             \bottomrule
         \end{tabularx}
     \end{table}
 
-    \subsection{Konstruktionskonzept und Designentscheidungen}
-    \subsection{Auslegung für den FDM-Druck}     % Druckorientierung, Wandstärken, Stützstrukturen
-    \subsection{Materialwahl}
-    \subsection{Integration der Komponenten}     % Flugcontroller, Raspberry Pi, Akku, Motoren, Landebeine
-    \subsection{Fertigung und Montage}           % Druckparameter, Nachbearbeitung
+        \subsection{Konstruktionskonzept und Designentscheidungen}
+
+        Um die ersten Teile konstruieren zu können, musste eine Zielmaß, bzw. eine gewünschte Größe ausgesucht werden, welche die Drohne haben sollte. Das Ziel des neuen Frames war auch neben der Verbesserung des Gewichtes, eine Reduzierung des Fußabdruckes der Drohne. Der Abstand zwischen den Propellerblättern wurde verringert auf ein angemessenes Minimun. Durch eine Verkleinerung des Abstand beider Motorverbindungen von der baseplate zu den Motorhaltern hin, ergibt sich eine Schräge welche passend auf den Abstand der Motoren ausgerechnet wurde. Wie in Abbildung (hier ref) zu sehen ist, ergibt sich aus der Symmetrielinie der Arme ein Dreieck wo der Winkel $\alpha$ durch den Sinus berechnet werden kann. Abbildung (hier ref) zeigt das entstandene Dreieck und Formel (hier ref) berechnet den Winkel in Grad. Beim Anpassen der Motorarme, also eine Veränderung der Hypetnuse des Dreiecks, musste dann in der Ableitungsskizze der base\_link top und bottom, sowie in der Motorhalterung geändert werden. 
+
+        % hier bild von cad der drohne
+        % hier bild von dreieck zeichnung
+        % hier formel
+
+
+        \subsection{Auslegung für den FDM-Druck}     % Druckorientierung, Wandstärken, Stützstrukturen
+
+        Die Auslegung der Bauteile um die optimale Stabilität der vorgegebenen 3D-Druck-Geometrie führte zu sorgfältig ausgewählten besonderen Designentscheidungen. Diese Entscheidung können an drei Beispielen besonders klar dargstellt werden.
+
+        \begin{description}[style=nextline]
+            \item[Motorarme:] Die Motorarme wurden im Vergleich zu den anderen Bauteilen liegend gedruckt, damit die Schichtlinien nicht in Richtung der am meisten aufzunehmenden Kraft liegen. Dadurch konnten auch Löcher für Schrauben so ausgelegt werden, dass die meiste Kraftaufnahme den Vorteil der Schichtrichtung nutzen konnte. (hier vielleicht zeichnung von cad screenshot und wirkende kräfte)
+            \item[Motorhalter:] Bei den Motorhaltern wurde ein spezieller Designtrick benutzt um den Stabilitätspin, an der Stelle zum montieren der Füße, besonders bruchsicher zu gestalten. Dazu wurde nicht normal ein Kreis von der Fläche aus extruiert, sondern davor ein größere Kreis ausgeschnitten um 2 mm. In diesem Auschnitt wurde der Pin dann extruiert und mit Rundungen die Kanten abgerundet. Durch die Konstruktionsbedingte Richtung für die Befestigung der Motoren, entstehen im schlimmsten Fall an diesem Stabilitätspin Scherkräfte. (hier noch bild von schnittansicht)
+            \item[Motorfuß:] Der Motorfuß ist im Vorfeld schon auf ein bestimmtes Material bedacht designed worden. Durch die Aufgabe, die Energie bei einer härteren Landung aufnehmen zu müssen, aber auch diese Energie nicht wieder zurückzugeben, ist das Material TPU ausgewählt worden. Ein durchsichtiges TPU war zur Zeit der Konstruktion im Bestand des \gls{frost}-Labors, weshalb entschieden wurde dieses zu benutzen und davon ab zu designen.  
+        \end{description}
+
+        \subsection{Materialwahl}
+
+        Die in Abschnitt~\ref{subsec:filamenttypen} erarbeiteten Materialien dienten als Grundlage, um das passende Filament zu finden. Die Auswahl wurde mit einem morphologischen Kasten getroffen, der in Tabelle~\ref{tab:Morph_Kasten} zu sehen ist. Er ordnet jedes Filament je Merkmal einer Ausprägung zu. Eine hohe Ausprägung ist dabei nicht immer ein Vorteil, zum Beispiel bei Materialkosten oder Druckaufwand. Die drei hervorgehobenen Filamente bilden die Lösungsvarianten.
+
+        \begin{table}[H]
+            \centering
+            \caption{Morphologischer Kasten der Filamente mit den Lösungsvarianten PET-G (grün), ASA (blau) und PA (orange)}
+            \label{tab:Morph_Kasten}
+            \newcommand{\vPETG}{\textcolor[HTML]{00795A}{\textbf{PET-G}}}
+            \newcommand{\vASA}{\textcolor[HTML]{0072B2}{\textbf{ASA}}}
+            \newcommand{\vPA}{\textcolor[HTML]{C2510A}{\textbf{PA}}}
+            \renewcommand{\arraystretch}{1.3} % etwas mehr Zeilenabstand
+            \begin{tabularx}{\textwidth}{l X X X}
+                \toprule
+                \textbf{Merkmal}            & \textbf{Gering}       & \textbf{Mittel}       & \textbf{Hoch} \\
+                \midrule
+                Mechanische Belastbarkeit   & PLA, TPU              & \vPETG                & ABS, \vASA, \vPA \\
+                Zähigkeit                   & PLA                   & \vPETG, ABS, \vASA    & \vPA, TPU \\
+                Temperaturbeständigkeit     & PLA, TPU              & \vPETG                & ABS, \vASA, \vPA \\
+                UV-Beständigkeit            & PLA, ABS              & \vPETG, \vPA, TPU     & \vASA \\
+                Feuchtigkeitsaufnahme       & PLA, ABS, \vASA       & \vPETG                & \vPA, TPU \\
+                Dichte                      & ABS, \vASA, \vPA      & TPU                   & PLA, \vPETG \\
+                Druckaufwand                & PLA, \vPETG           & ABS, \vASA            & \vPA, TPU \\
+                Emissionen beim Druck       & PLA, \vPETG, TPU      & \vPA                  & ABS, \vASA \\
+                Materialkosten              & PLA, \vPETG           & ABS, \vASA, TPU       & \vPA \\
+                \bottomrule
+            \end{tabularx}
+        \end{table}
+
+        Aus dem morphologischen Kasten gehen drei Lösungsvarianten für unterschiedliche Anforderungen hervor:
+
+        \begin{description}[style=nextline]
+            \item[PET-G: günstige Abdeckungen] PET-G eignet sich am besten für Abdeckungen und andere nicht tragende Bauteile. Es ist günstig und einfach zu drucken und dabei zäher und temperaturbeständiger als PLA. Für den gesamten Frame reichen seine mechanische Belastbarkeit und Temperaturbeständigkeit jedoch nicht aus.
+            \item[ASA: günstiger und stabiler Frame] ASA ist die beste günstige Lösung für den gesamten Drohnenframe. Es verbindet eine hohe Belastbarkeit und Temperaturbeständigkeit mit geringer Dichte und mittleren Materialkosten. Gegenüber dem ähnlichen ABS ist es deutlich UV-beständiger. Wegen der Emissionen muss beim Druck auf eine gute Belüftung geachtet werden.
+            \item[PA: bester, aber teurer Frame] PA ist die leistungsstärkste Lösung für den gesamten Drohnenframe, da es hohe Belastbarkeit, Zähigkeit und Temperaturbeständigkeit vereint. Dem stehen hohe Materialkosten und ein hoher Druckaufwand gegenüber. Zudem nimmt PA stark Feuchtigkeit auf und muss vor dem Druck getrocknet werden.
+        \end{description}
+
+        \subsection{Integration der Komponenten}     % Flugcontroller, Raspberry Pi, Akku, Motoren, Landebeine
+        \subsection{Fertigung und Montage}           % Druckparameter, Nachbearbeitung
 
     \section{LED-Statusanzeige}
     \label{sec:LED}

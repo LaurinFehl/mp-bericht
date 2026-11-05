@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/TeX Live for SUSE Linux) (preloaded format=pdflatex 2026.10.27)  4 NOV 2026 18:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/TeX Live for SUSE Linux) (preloaded format=pdflatex 2026.10.27)  5 NOV 2026 16:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1571,7 +1571,7 @@ chapter 3.
 [6.13
 
 ]
-<Figures/300-sdt/quad_konfigurationen.png, id=252, 752.8125pt x 280.04625pt>
+<Figures/300-sdt/quad_konfigurationen.png, id=255, 752.8125pt x 280.04625pt>
 File: Figures/300-sdt/quad_konfigurationen.png Graphic file (type png)
 <use Figures/300-sdt/quad_konfigurationen.png>
 Package pdftex.def Info: Figures/300-sdt/quad_konfigurationen.png  used on input line 48.
@@ -1581,7 +1581,7 @@ File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
 Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 63.
 (pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
  [7.14 <./Figures/300-sdt/quad_konfigurationen.png>]
-<Figures/300-sdt/fdm_printing.jpg, id=270, 903.375pt x 451.6875pt>
+<Figures/300-sdt/fdm_printing.jpg, id=273, 903.375pt x 451.6875pt>
 File: Figures/300-sdt/fdm_printing.jpg Graphic file (type jpg)
 <use Figures/300-sdt/fdm_printing.jpg>
 Package pdftex.def Info: Figures/300-sdt/fdm_printing.jpg  used on input line 70.
@@ -1600,7 +1600,7 @@ File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
 Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 107.
 (pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
  [9.16{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}]
-<Figures/300-sdt/maschinenampel.png, id=289, 401.5pt x 501.875pt>
+<Figures/300-sdt/maschinenampel.png, id=292, 401.5pt x 501.875pt>
 File: Figures/300-sdt/maschinenampel.png Graphic file (type png)
 <use Figures/300-sdt/maschinenampel.png>
 Package pdftex.def Info: Figures/300-sdt/maschinenampel.png  used on input line 119.
@@ -1612,29 +1612,39 @@ Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 1
 (pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
  [10.17 <./Figures/300-sdt/maschinenampel.png>]
 chapter 4.
-<Figures/400-em/drone_render.png, id=303, 1445.4pt x 813.0375pt>
+<Figures/400-em/drone_render.png, id=306, 1445.4pt x 813.0375pt>
 File: Figures/400-em/drone_render.png Graphic file (type png)
 <use Figures/400-em/drone_render.png>
 Package pdftex.def Info: Figures/400-em/drone_render.png  used on input line 18.
 (pdftex.def)             Requested size: 290.2211pt x 163.24973pt.
-) (./TeXFiles/500_Evaluation.tex [11.18
+[11.18
 
- <./Figures/400-em/drone_render.png>]
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc} <./Figures/400-em/drone_render.png>]
+File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
+<use Figures/000-misc/fra-uas_logo.pdf>
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 71.
+(pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
+ [12.19]
+File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
+<use Figures/000-misc/fra-uas_logo.pdf>
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 115.
+(pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
+ [13.20]) (./TeXFiles/500_Evaluation.tex
 File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
 <use Figures/000-misc/fra-uas_logo.pdf>
 Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 1.
 (pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
- [12.19]
+ [14.21]
 chapter 5.
-) (./TeXFiles/600_Ergebnisse.tex [13.20
+) (./TeXFiles/600_Ergebnisse.tex [15.22
 
 ]
 chapter 6.
-) (./TeXFiles/700_Zusammenfassung.tex [14.21
+) (./TeXFiles/700_Zusammenfassung.tex [16.23
 
 ]
 chapter 7.
-) [15.22
+) [17.24
 
 ]
 chapter without number
@@ -1644,12 +1654,12 @@ LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <10.95> not available
 LaTeX Font Warning: Font shape `OT1/lmss/m/sc' in size <10.95> not available
 (Font)              Font shape `OT1/lmr/m/sc' tried instead on input line 369.
 
-(./TeXFiles/900_Anhang.tex [16.23
+(./TeXFiles/900_Anhang.tex [18.25
 
 
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rmsc.enc}]
 chapter A.
-) [17.24
+) [19.26
 
 ] (./thesis.aux)
  ***********
@@ -1661,13 +1671,13 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 53062 strings out of 467525
- 1131681 string characters out of 5428467
- 2193291 words of memory out of 5000000
- 81081 multiletter control sequences out of 15000+600000
+ 53072 strings out of 467525
+ 1131780 string characters out of 5428467
+ 2193428 words of memory out of 5000000
+ 81087 multiletter control sequences out of 15000+600000
  671590 words of font info for 70 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 108i,25n,113p,11240b,3601s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,25n,114p,11240b,3601s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): name{glo:esc} has been referenced but does not exist, replaced by a fixed one
 
@@ -1692,11 +1702,11 @@ pdfTeX warning (dest): name{glo:frost} has been referenced but does not exist, r
 
 pdfTeX warning (dest): name{glo:fdm} has been referenced but does not exist, replaced by a fixed one
 
-</usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb>
-Output written on thesis.pdf (24 pages, 1023275 bytes).
+</usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb>
+Output written on thesis.pdf (26 pages, 1035610 bytes).
 PDF statistics:
- 621 PDF objects out of 1000 (max. 8388607)
- 564 compressed objects within 6 object streams
- 121 named destinations out of 1000 (max. 500000)
+ 643 PDF objects out of 1000 (max. 8388607)
+ 582 compressed objects within 6 object streams
+ 124 named destinations out of 1000 (max. 500000)
  539 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -660,6 +660,13 @@ INPUT ./Figures/400-em/drone_render.png
 INPUT ./Figures/400-em/drone_render.png
 INPUT ./Figures/400-em/drone_render.png
 INPUT ./Figures/400-em/drone_render.png
+INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc
+INPUT ./Figures/000-misc/fra-uas_logo.pdf
+INPUT ./Figures/000-misc/fra-uas_logo.pdf
+INPUT ./Figures/000-misc/fra-uas_logo.pdf
+INPUT ./Figures/000-misc/fra-uas_logo.pdf
+INPUT ./Figures/000-misc/fra-uas_logo.pdf
+INPUT ./Figures/000-misc/fra-uas_logo.pdf
 INPUT ./TeXFiles/500_Evaluation.tex
 INPUT ./TeXFiles/500_Evaluation.tex
 INPUT ./TeXFiles/500_Evaluation.tex
@@ -690,6 +697,7 @@ INPUT thesis.aux
 INPUT thesis.run.xml
 OUTPUT thesis.run.xml
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb
+INPUT /usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmss10.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmss12.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb
