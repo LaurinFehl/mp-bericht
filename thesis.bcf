@@ -2378,7 +2378,10 @@
     <bcf:citekey order="4" intorder="1">bonvaeroQuadcopterDrones</bcf:citekey>
     <bcf:citekey order="5" intorder="1">mishraDifferentTypesDrone2021</bcf:citekey>
     <bcf:citekey order="6" intorder="1">mishraDifferentTypesDrone2021</bcf:citekey>
-    <bcf:citekey order="7" intorder="1" nocite="1">*</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">ws2812btds</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">item24signale</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">ws2812btds</bcf:citekey>
+    <bcf:citekey order="10" intorder="1" nocite="1">*</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">

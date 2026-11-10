@@ -19,6 +19,14 @@
 
 \refsection{0}
   \datalist[entry]{nyt/global//global/global/global}
+    \entry{item24signale}{online}{}{}
+      \field{sortinit}{}
+      \field{sortinithash}{495dc9894017a8b12cafa9c619d10c0c}
+    \endentry
+    \entry{ws2812btds}{online}{}{}
+      \field{sortinit}{}
+      \field{sortinithash}{495dc9894017a8b12cafa9c619d10c0c}
+    \endentry
     \entry{adobestockMotorOrderDiagrams}{online}{}{}
       \name{author}{1}{}{%
         {{hash=c0a397526cf9a35dd7cf043d6b6f96b0}{%

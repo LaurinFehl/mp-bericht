@@ -1,15 +1,18 @@
 [0] Config.pm:328> INFO - This is Biber 2.21
 [0] Config.pm:331> INFO - Logfile is 'thesis.blg'
-[73] biber:344> INFO - === Do Nov  5, 2026, 16:48:30
-[88] Biber.pm:421> INFO - Reading 'thesis.bcf'
-[159] Biber.pm:999> INFO - Using all citekeys in bib section 0
-[173] Biber.pm:4487> INFO - Processing section 0
-[182] Biber.pm:4678> INFO - Looking for bibtex file 'bibliography.bib' for section 0
-[183] bibtex.pm:1713> INFO - LaTeX decoding ...
-[194] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliography.bib'
-[335] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[335] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[335] Biber.pm:4307> INFO - Sorting list 'nyt/global//global/global/global' of type 'entry' with template 'nyt' and locale 'en-US'
-[335] Biber.pm:4313> INFO - No sort tailoring available for locale 'en-US'
-[351] bbl.pm:677> INFO - Writing 'thesis.bbl' with encoding 'UTF-8'
-[356] bbl.pm:780> INFO - Output to thesis.bbl
+[33] biber:344> INFO - === Di Nov 10, 2026, 12:32:58
+[41] Biber.pm:421> INFO - Reading 'thesis.bcf'
+[78] Biber.pm:999> INFO - Using all citekeys in bib section 0
+[86] Biber.pm:4487> INFO - Processing section 0
+[91] Biber.pm:4678> INFO - Looking for bibtex file 'bibliography.bib' for section 0
+[91] bibtex.pm:1713> INFO - LaTeX decoding ...
+[97] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliography.bib'
+[167] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[167] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[167] Biber.pm:4307> INFO - Sorting list 'nyt/global//global/global/global' of type 'entry' with template 'nyt' and locale 'en-US'
+[167] Biber.pm:4313> INFO - No sort tailoring available for locale 'en-US'
+[175] bbl.pm:677> INFO - Writing 'thesis.bbl' with encoding 'UTF-8'
+[178] bbl.pm:780> INFO - Output to thesis.bbl
+[178] Biber.pm:132> WARN - BibTeX subsystem: /tmp/biber_tmp_13vk/f4d088b3f9f145b5c3058da33afd57d4_28047.utf8, line 147, warning: 101 characters of junk seen at toplevel
+[178] Biber.pm:132> WARN - BibTeX subsystem: /tmp/biber_tmp_13vk/f4d088b3f9f145b5c3058da33afd57d4_28047.utf8, line 152, warning: 75 characters of junk seen at toplevel
+[179] Biber.pm:134> INFO - WARNINGS: 2

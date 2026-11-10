@@ -11,7 +11,7 @@ In diesem Kapitel werden die Entwickelten Methoden aufgearbeitet und im Detail b
     \section{Konstruktion des 3D-gedruckten Frames}
     \label{sec:Frame}
 
-    Die Konstruktion des neuen Frames erfolgte im \gls{cad}-Programm Autodesk Inventor. Die Vorgängerversion \gls{icarus} liegt ebenfalls als Baugruppendatei in diesem Programm vor und diente als Referenz für bestehende Maße sowie für Komponenten mit festgelegten Abmessungen, wie beispielsweise die Batterie oder den Flightcontroller. Die einzelnen Bauteile wurden jeweils als .ipt-Dateien erstellt und gespeichert und anschließend zu einer Baugruppe zusammengefügt, wie in Abbildung \ref{fig:dronerender} dargestellt.
+    Die erste Aufgabe dieser Arbeit ist die Entwicklung eines neuen Frames für die dDrohne. Die Konstruktion des neuen Frames erfolgte im \gls{cad}-Programm Autodesk Inventor. Die Vorgängerversion \gls{icarus} liegt ebenfalls als Baugruppendatei in diesem Programm vor und diente als Referenz für bestehende Maße sowie für Komponenten mit festgelegten Abmessungen, wie beispielsweise die Batterie oder den Flightcontroller. Die einzelnen Bauteile wurden jeweils als .ipt-Dateien erstellt und gespeichert und anschließend zu einer Baugruppe zusammengefügt, wie in Abbildung \ref{fig:dronerender} dargestellt.
 
     \begin{figure}[htbp]
         \centering
@@ -121,12 +121,336 @@ In diesem Kapitel werden die Entwickelten Methoden aufgearbeitet und im Detail b
             \item[PA: bester, aber teurer Frame] PA ist die leistungsstärkste Lösung für den gesamten Drohnenframe, da es hohe Belastbarkeit, Zähigkeit und Temperaturbeständigkeit vereint. Dem stehen hohe Materialkosten und ein hoher Druckaufwand gegenüber. Zudem nimmt PA stark Feuchtigkeit auf und muss vor dem Druck getrocknet werden.
         \end{description}
 
+        Nach dem morphologischen Kasten eignen sich sowohl ASA als auch PA für den Drohnenframe. Gewählt wurde schließlich ein carbonfaserverstärktes PA11-Filament (PA11-CF-SL) der Firma Xenia, welches als Sponsoring zur Verfügung gestellt wurde. Damit entfällt der größte Nachteil, die hohen MAterialksoten, von PA. PA11 unterscheidet sich von anderen Polyamiden wie PA6 oder PA12 dadurch, dass es nicht auf Erdöl basiert, sondern pflanzlich aus Rizinusöl hergestellt wird. Die eingearbeiteten Carbonfasern erhöhen die Steifigkeit des Materials und verringern zugleich das in Abschnitt~\ref{subsec:filamenttypen} beschriebene starke Schrumpfen von PA beim Abkühlen. Damit lassen sich auch größere Bauteile wie die Baseplate maßhaltig drucken.
+
+        Ein weiterer Vorteil des Filaments ist seine geringe Dichte. Durch die \glqq UltraLite\grqq{}-Rezeptur von Xenia erreicht das Filament eine Dichte von nur \SI[per-mode=symbol]{0,99}{\gram\per\centi\metre\cubed}, während ASA mit \SI[per-mode=symbol]{1,07}{\gram\per\centi\metre\cubed} etwa \SI{8}{\percent} schwerer ist. Bei gleichem Bauteilvolumen ist der Frame aus PA11-CF damit leichter als ein vergleichbarer Frame aus ASA. Für eine Drohne ist jedes eingesparte Gramm relevant, da sich ein geringeres Gewicht direkt auf Flugzeit auswirkt. Die übrigen Nachteile von PA bleiben jedoch bestehen: Das Filament nimmt schnell Feuchtigkeit auf und muss vor dem Druck getrocknet werden. Zudem wirken die Carbonfasern abrasiv, weshalb eine gehärtete Düse benötigt wird. Dies konnte jedoch im \gls{frost}-Labor mit den bestehenden Druckern und Filamenttrockern, ohne extra Arbeit umgesetzt werden.
+
         \subsection{Integration der Komponenten}     % Flugcontroller, Raspberry Pi, Akku, Motoren, Landebeine
+
+        Der Flightcontroller und der Raspberry Pi wurden auf der Platte mit einer Halterung befestigt, welche besonders Platzsparend konstruiert wurde. So wurde der Raspberry Pi über den FC in einem kleinen Winkel angebracht, sodass die USB-Anschlüsse an der Hinterseite leichter zugänglich waren. 
+
         \subsection{Fertigung und Montage}           % Druckparameter, Nachbearbeitung
+
+        Durch die Absprache mit Xenia als Filamentsponsor, konnten Druckparameter und -profile ausgestauscht und übernommen werden. Es wurde jeglich die Düsentemperatur erhöht, da diese bei jedem Drucker selber angepasst werden muss. 
+
+        Zur Nachbearbeitung der 3D-Druck-Teile gehörte das Installieren von Einschmelzgewinden. Diese wurden mit einem speziellen Aufsatz für diese in die dafür vorgesehen Löcher eingesetzt. Dabei muss auf eine ordentliche und vorsichtige installation geachtet werden, da ein schief eingeschmozlenes Gewinde, keine Schraube annehmen kann. 
 
     \section{LED-Statusanzeige}
     \label{sec:LED}
-    \subsection{Konzept und Zustandsdefinition}  % welcher Flugmodus = welche Farbe/Muster
-    \subsection{Hardware}                        % LEDs, Ansteuerung, Verkabelung, Position im Frame
-    \subsection{Software: Zustandsautomat auf dem Companion Computer}
-    \subsection{Anbindung an den Flugcontroller} % Abfrage des Flugmodus (MAVLink/ROS 2)
+
+    Neben dem Frame ist die zweite Aufgabe dieser Arbeit eine Statusanzeige, die den Zustand der Drohne von außen erkennbar macht. Dazu wurden an den vier Landebeinen adressierbare \glspl{led} angebracht, die vom Companion Computer der Drohne angesteuert werden. In diesem Abschnitt werden zunächst das Anzeigekonzept und die Hardware beschrieben, anschließend die Software auf dem Companion Computer und die Anbindung an den Flugcontroller. Abschließend wird eine \gls{sil}-Testumgebung vorgestellt, mit der die Anzeige ohne Flugbetrieb geprüft werden kann.
+
+        \subsection{Konzept und Zustandsdefinition}
+        \label{sec:LED_Konzept}
+
+            \subsubsection{Anforderungen aus dem Regelwerk}
+            \label{sec:LED_Anforderungen}
+
+            Die zentrale Anforderung an die Anzeige stammt aus dem Regelwerk der \gls{erc}. REQ-FUN-070 fordert:
+
+            \begin{quote}
+                \glqq The rover and the drone shall emit visible signals when performing autonomy operations that are different from the signals emitted when being controlled by the team.\grqq{} % TODO: \cite ERC Requirements Rev.2
+            \end{quote}
+
+            Gefordert ist damit ein unterscheidbares Signal zwischen autonomem Betrieb und Steuerung durch das Team. Eine bestimmte Farbe schreibt das Regelwerk nicht vor. Die verwendeten WS2812B-LEDs besitzen eine Farbtiefe von \SI{24}{bit} und können damit etwa 16,7 Millionen Mischfarben darstellen~\cite{ws2812btds}. Um eine klare Unterscheidung auch aus größerer Entfernung zu gewährleisten, wurde die Anzeige dennoch auf wenige, deutlich verschiedene Farben beschränkt. Für den Zustand der Drohne werden die bekannten Farben industrieller Maschinenampeln übernommen: Grün für einen sicheren, normalen Betrieb, Gelb für Zustände, in denen gleich etwas passiert oder jemand handeln muss, und Rot für gefährliche Zustände und Fehler~\cite{item24signale}. Für die Autonomie blieb damit die Farbe Blau, die mit keinem dieser Zustände verwechselt werden kann. Da das Autonomiesignal gerade in kritischen Situationen gebraucht wird, muss es auch während eines Fehlers jederzeit ablesbar bleiben. Weitere Anforderungen ergänzen diese Vorgabe:
+
+            \begin{description}[style=nextline]
+                \item[REQ-DES-150] Die wichtigsten Systeme sollen redundant ausgeführt sein. Daraus folgt, dass jedes der vier Landebeine einen eigenen, unabhängigen LED-Streifen erhält.
+                \item[REQ-OPS-090 und REQ-OPS-100] Nach dem Einschalten des Indikators bzw. nach dem Befehl zum autonomen Betrieb müssen jeweils \SI{5}{\second} vergehen, bevor die Drohne aktiv wird. Die Einhaltung dieser Wartezeit ist Aufgabe der Zustandsmaschine. Die Anzeige muss lediglich bereits leuchten, sobald der autonome Betrieb kommandiert ist. Zusätzlich macht der Statuskanal dieses Wartefenster sichtbar: Im Zustand \texttt{ARMED}, in dem die Motoren scharf geschaltet sind und die Drohne noch am Boden steht, leuchtet er gelb. Blinkt gleichzeitig der Autonomiekanal blau, steht ein autonomer Start unmittelbar bevor.
+                \item[REQ-ENV-040] Die Drohne muss auch bei Kunstlicht oder Dunkelheit betrieben werden können. Selbstleuchtende LEDs erfüllen diese Anforderung grundsätzlich.
+                \item[REQ-DES-060] Die Indikatorlampe soll bei Tageslicht aus \SI{10}{\metre} Entfernung erkennbar sein. Formal gilt diese Anforderung nur für den Rover, sie wird für die Drohne aber als Designziel übernommen.
+            \end{description}
+
+            \subsubsection{Zwei-Kanal-Modell}
+            \label{sec:LED_ZweiKanal}
+
+            Ein erster Entwurf ordnete jedem Zustand genau eine Farbe zu, ein Fehler hätte beispielsweise alle LEDs rot gefärbt. Damit würde das Autonomiesignal genau dann verschwinden, wenn es am wichtigsten ist, nämlich bei einem Notfall im autonomen Flug. Dies widerspricht REQ-FUN-070. Die Anzeige wurde deshalb in zwei unabhängige Kanäle aufgeteilt, die auf getrennten LEDs dargestellt werden und sich gegenseitig nicht überdecken können:
+
+            \begin{description}[style=nextline]
+                \item[Autonomiekanal] Zeigt an, ob die Drohne autonom fliegt oder vom Team gesteuert wird.
+                \item[Statuskanal] Zeigt die aktuelle Flugphase und mögliche Fehler in den Farben Grün, Gelb und Rot an.
+            \end{description}
+
+            Jeder der vier Streifen besteht aus fünf LEDs, deren Belegung Abbildung~\ref{fig:LED_Belegung} zeigt. LED~0 dient als Navigationslicht und leuchtet dauerhaft, am linken Bein grün und am rechten Bein rot. LED~1 und LED~2 bilden den Autonomiekanal, LED~3 und LED~4 den Statuskanal. Da beide Kanäle auf jedem Bein vorhanden sind, kostet der Ausfall eines Streifens zwar Helligkeit, aber keine Information. Einzige Ausnahme ist das Lauflicht im Zustand \texttt{READY}, das bewusst über die Beine wandert (siehe Abschnitt~\ref{sec:LED_Zuordnung}).
+
+            \begin{figure}[htbp]
+                \centering
+                \input{\ledBelegung}
+                \caption{Belegung eines LED-Streifens am Beispiel eines linken Beins im autonomen Flug ohne Fehler. LED~0 zeigt die Seite an (links grün, rechts rot), LED~1--2 den Autonomiekanal, LED~3--4 den Statuskanal.}
+                \label{fig:LED_Belegung}
+            \end{figure}
+
+            Der Nutzen der Trennung zeigt sich an zwei Situationen, die bei einer einfachen Farbzuordnung gleich aussehen würden. Bei einer Notlandung im autonomen Flug blinkt der Statuskanal rot, während der Autonomiekanal weiterhin blau blinkt. Bei einem Systemfehler, während der Pilot fliegt, blinkt der Statuskanal ebenfalls rot, der Autonomiekanal bleibt jedoch aus. Beobachter können also auch im Fehlerfall erkennen, wer die Drohne steuert.
+
+            \subsubsection{Zuordnung von Zuständen zu Anzeigemustern}
+            \label{sec:LED_Zuordnung}
+
+            Die beiden Kanäle werden aus unterschiedlichen Informationen abgeleitet. Der Autonomiekanal richtet sich nach dem Flugmodus des Flugcontrollers, auf dem die Software PX4 läuft, und nicht nach der Flugphase der Zustandsmaschine. Der Flugmodus beantwortet direkt die Frage, wer den Regelkreis schließt. In den Modi \texttt{OFFBOARD} und \texttt{AUTO.*} fliegen der Companion Computer bzw. der Autopilot, und der Kanal blinkt blau. In Modi wie \texttt{MANUAL} oder \texttt{POSCTL} befindet sich der Pilot in der Regelschleife, und der Kanal bleibt aus. Eine Flugphase wie \texttt{HOVER} sagt darüber nichts aus. Alle 14 Flugmodi sind ausdrücklich einer der beiden Klassen zugeordnet. Kommen Daten an, ist der Modus aber keiner Klasse zugeordnet, blinkt der Kanal schnell rot.
+
+            Der Statuskanal wird aus der Flugphase der Zustandsmaschine und zwei Fehlerfeldern abgeleitet. Dabei gilt eine feste Prüfreihenfolge, in der die erste zutreffende Bedingung entscheidet:
+
+            \begin{description}[style=nextline]
+                \item[Keine Verbindung] Besteht keine Verbindung zum Flugcontroller oder meldet die Zustandsmaschine den Systemfehler \texttt{FC\_ERROR}, blitzt der ganze Streifen (siehe Abschnitt~\ref{sec:LED_Fehlerfall}).
+                \item[Fehler] Ein anderer Systemfehler oder der Missionsfehler \texttt{EMERGENCY} führt zu schnellem rotem Blinken.
+                \item[Unterbrechung] Die Missionsfehler \texttt{ABORT} und \texttt{NAVIGATION\_ERROR} führen zu gelbem Blinken mit \SI{1}{\hertz}.
+                \item[Flugphase] Andernfalls entscheidet die Flugphase nach Tabelle~\ref{tab:LED_Zuordnung}.
+            \end{description}
+
+            Die 13 Flugphasen der Zustandsmaschine werden auf acht Muster abgebildet. Zwei Zustände teilen sich ein Muster, wenn der Beobachter gleich reagieren soll oder der Kontext sie ohnehin unterscheidet. So sind \texttt{HOVER} und \texttt{APPROACHING} beide normaler Flug, ob die Drohne steht oder ein Ziel anfliegt, ist an der Drohne selbst zu sehen. \texttt{STOP} und \texttt{LOST} bedeuten beide, dass die Mission unterbrochen ist, aber noch keine Gefahr besteht und jemand handeln muss. \texttt{EMERGENCY\_LANDING} und die beiden Systemfehlerzustände verlangen dieselbe Reaktion, nämlich Abstand zu halten. Die Übergänge zwischen Boden und Flug erhalten eigene Muster: \texttt{TAKEOFF} wechselt zwischen dem Gelb von \texttt{ARMED} und dem Grün des Flugs, \texttt{LANDING} blinkt grün.
+
+            Für den Zustand \texttt{READY} wurde ein grünes Lauflicht gewählt. Ein dunkler Statuskanal würde genauso aussehen wie im Ruhezustand \texttt{REST}. Das Lauflicht zeigt dagegen, dass das System läuft und bereit, aber nicht scharf geschaltet ist, ohne mit einem Flugzustand verwechselt werden zu können. Es läuft von oben gesehen im Uhrzeigersinn über die Beine, von vorne links über vorne rechts und hinten rechts nach hinten links, mit \SI{0,25}{\second} pro Bein. Der Missionsfehler \texttt{ABORT} wird direkt ausgewertet, da die Zustandsmaschine ihn etwa \SI{100}{\milli\second} vor dem Wechsel nach \texttt{STOP} setzt. Die Anzeige bleibt so über diesen Zwischenschritt stabil gelb. Ein unbekannter Zustand führt bewusst zu Rot und nicht zu einer dunklen Anzeige, da diese nicht von einer fehlerfreien, unbewaffneten Drohne zu unterscheiden wäre.
+
+            \begin{table}[htbp]
+                \centering
+                \caption{Zuordnung von Drohnenzustand zu Anzeigemuster je Kanal}
+                \label{tab:LED_Zuordnung}
+                \begin{tabularx}{\textwidth}{l X l}
+                    \toprule
+                    \textbf{Kanal} & \textbf{Bedingung} & \textbf{Muster} \\
+                    \midrule
+                    Autonomie (LED 1--2) & PX4-Modus \texttt{OFFBOARD} oder \texttt{AUTO.*} & blau, \SI{1}{\hertz} \\
+                                         & PX4-Modus mit Pilot (\texttt{MANUAL}, \texttt{POSCTL}, \dots) & aus \\
+                                         & Modus unbekannt & rot, ca.\ \SI{3,3}{\hertz} \\
+                    \midrule
+                    Status (LED 3--4)    & \texttt{REST}, \texttt{EXIT} & aus \\
+                                         & \texttt{READY} & grünes Lauflicht \\
+                                         & \texttt{ARMED} & gelb, statisch \\
+                                         & \texttt{TAKEOFF} & grün/gelb im Wechsel \\
+                                         & \texttt{LANDING} & grün, \SI{1}{\hertz} \\
+                                         & \texttt{HOVER}, \texttt{APPROACHING} & grün, statisch \\
+                                         & \texttt{STOP}, \texttt{LOST}, Missionsfehler \texttt{ABORT} & gelb, \SI{1}{\hertz} \\
+                                         & \texttt{EMERGENCY\_LANDING}, Systemfehler, Missionsfehler \texttt{EMERGENCY} & rot, ca.\ \SI{3,3}{\hertz} \\
+                    \midrule
+                    Navigation (LED 0)   & immer & links grün, rechts rot \\
+                    \midrule
+                    ganzer Streifen      & keine Daten, keine Verbindung zum Flugcontroller & rot, alle LEDs, \SI{5}{\hertz} \\
+                    \bottomrule
+                \end{tabularx}
+            \end{table}
+
+            Tabelle~\ref{tab:LED_Muster} zeigt das Zeitverhalten der einzelnen Muster. Innerhalb einer Farbe unterscheiden sich die Muster durch ihre Bewegung, also statisch, blinkend, im Wechsel oder als Lauflicht. Blau blinkt mit \SI{1}{\hertz}, damit das Blinken auch aus der Entfernung klar erkennbar ist. Rot blinkt mit etwa \SI{3,3}{\hertz} deutlich schneller und wirkt dadurch alarmierend. Gelb wird nicht als gleiche Mischung aus Rot und Grün erzeugt, sondern mit einem geringeren Grünanteil, da der grüne Chip der WS2812B deutlich heller leuchtet als der rote. Bei gleichen Anteilen würde Gelb gelbgrün wirken und wäre von den grünen Mustern schwer zu unterscheiden.
+
+            \begin{table}[htbp]
+                \centering
+                \caption{Zeitverhalten der Anzeigemuster}
+                \label{tab:LED_Muster}
+                \begin{tabularx}{\textwidth}{l l X}
+                    \toprule
+                    \textbf{Muster} & \textbf{Farbe(n)} & \textbf{Zeitverhalten} \\
+                    \midrule
+                    statisch          & grün oder gelb      & dauernd an \\
+                    blinkend          & grün, gelb oder blau & \SI{1}{\hertz} (\SI{0,5}{\second} an, \SI{0,5}{\second} aus) \\
+                    Wechsel           & grün und gelb       & je \SI{0,5}{\second}, ohne Dunkelphase \\
+                    Lauflicht         & grün                & \SI{0,25}{\second} pro Bein, eine Runde pro Sekunde \\
+                    schnell blinkend  & rot                 & ca.\ \SI{3,3}{\hertz} (\SI{0,15}{\second} an, \SI{0,15}{\second} aus) \\
+                    Streifen blitzt   & rot, alle fünf LEDs & \SI{5}{\hertz} (\SI{0,1}{\second} an, \SI{0,1}{\second} aus) \\
+                    \bottomrule
+                \end{tabularx}
+            \end{table}
+
+            \subsubsection{Verhalten bei fehlenden oder ungültigen Daten}
+            \label{sec:LED_Fehlerfall}
+
+            Für fehlende oder ungültige Daten gilt der Grundsatz, dass die Anzeige nie etwas behaupten darf, das sie nicht weiß. Ist der Flugmodus unbekannt, obwohl Daten ankommen, blinkt der Autonomiekanal deshalb schnell rot. Blau würde in diesem Fall einen autonomen Betrieb behaupten, der nicht bestätigt ist. Eine dunkle Anzeige würde dagegen behaupten, dass ein Mensch fliegt, und wäre damit die gefährlichere Fehlaussage.
+
+            Kommen gar keine gültigen Daten an, blitzt der ganze Streifen einschließlich des Navigationslichts mit \SI{5}{\hertz} rot. Für diesen Fall wurde bewusst ein eigenes Signal gewählt, da sich \glqq Fehler\grqq{} und \glqq keine Daten\grqq{} inhaltlich unterscheiden. Bei einem Fehler weiß die Drohne, dass etwas nicht stimmt, und meldet dies. Die Navigationslichter leuchten dann ruhig, und nur der Statuskanal blinkt rot. Bei fehlenden Daten ist dagegen nichts über den Zustand bekannt. Das Blitzen des gesamten Streifens kann von keinem Zustand erzeugt werden, den die Drohne tatsächlich meldet, und ist damit eindeutig. Tabelle~\ref{tab:LED_Fehlerfall} zeigt die Reaktion der Anzeige in den einzelnen Fällen.
+
+            \begin{table}[htbp]
+                \centering
+                \caption{Verhalten der Anzeige bei fehlenden oder ungültigen Daten}
+                \label{tab:LED_Fehlerfall}
+                \begin{tabularx}{\textwidth}{X l}
+                    \toprule
+                    \textbf{Situation} & \textbf{Reaktion} \\
+                    \midrule
+                    Nach dem Start, noch keine gültige Nachricht & ganzer Streifen blitzt \\
+                    Einzelne fehlerhafte Nachricht & ignorieren, letztes Muster halten \\
+                    \SI{1}{\second} lang keine gültige Nachricht (10 verpasste bei \SI{10}{\hertz}) & ganzer Streifen blitzt \\
+                    Keine Verbindung zum Flugcontroller (\texttt{connected = False}) & ganzer Streifen blitzt \\
+                    Daten des Flugcontrollers veraltet (\texttt{sys\_error = FC\_ERROR}) & ganzer Streifen blitzt \\
+                    Beenden des LED-Knotens & alle LEDs aus \\
+                    \bottomrule
+                \end{tabularx}
+            \end{table}
+
+            Ob die Zustandsmaschine ausgefallen ist oder nur fehlerhafte Nachrichten ankommen, kann die Anzeige nicht unterscheiden. Beide Fälle werden deshalb durch denselben Timeout von \SI{1}{\second} abgedeckt. Der Systemfehler \texttt{FC\_ERROR} wird wie eine fehlende Verbindung behandelt. Die Zustandsmaschine setzt ihn, wenn die Daten des Flugcontrollers älter als \SI{1,2}{\second} sind, keine Verbindung besteht oder PX4 sich noch in der Initialisierung befindet. In allen drei Fällen ist der gemeldete Flugmodus nicht mehr verlässlich. Andere Systemfehler lassen den Autonomiekanal dagegen unverändert, da die Verbindung zum Flugcontroller dann noch besteht und der Modus weiterhin stimmt.
+
+        \subsection{Hardware}
+        \label{sec:LED_Hardware}
+
+            \subsubsection{LED-Streifen und Anordnung an den Landebeinen}
+
+            Die Anzeige besteht aus 20 adressierbaren RGB-LEDs vom Typ WS2812B, aufgeteilt auf vier Streifen mit je fünf LEDs, also einen Streifen pro Landebein. Die Streifen werden in den dafür vorgesehenen Kanälen auf der Innenseite der Motorfüße befestigt (siehe Tabelle~\ref{tab:Bauteile}). Jede LED erwartet drei Byte Farbdaten in der Reihenfolge Grün, Rot, Blau. Farbreihenfolge und Pinbelegung wurden mit einem eigenen Inbetriebnahmewerkzeug (\texttt{led\_selftest}) an der Drohne bestätigt. Tabelle~\ref{tab:LED_GPIO} zeigt die Zuordnung der Beine zu den \gls{gpio}-Pins des Raspberry Pi.
+
+            % TODO: power supply (5 V source), cable routing, photo of a mounted strip
+
+            \begin{table}[htbp]
+                \centering
+                \caption{Zuordnung der Landebeine zu den GPIO-Pins (BCM-Nummerierung)}
+                \label{tab:LED_GPIO}
+                \begin{tabular}{l c l}
+                    \toprule
+                    \textbf{Bein} & \textbf{GPIO} & \textbf{Navigationslicht} \\
+                    \midrule
+                    vorne links   & 22 & grün \\
+                    hinten links  & 27 & grün \\
+                    vorne rechts  & 23 & rot \\
+                    hinten rechts & 24 & rot \\
+                    \bottomrule
+                \end{tabular}
+            \end{table}
+
+            Der Raspberry Pi gibt seine Datensignale mit \SI{3,3}{\volt} aus. Das liegt unter der Schaltschwelle, die das Datenblatt der LEDs bei einer Versorgung mit \SI{5}{\volt} angibt~\cite{ws2812btds}. Ein Pegelwandler vom Typ 74AHCT125 mit einem Gatter pro Bein ist deshalb vorgesehen, zum Zeitpunkt dieser Arbeit aber noch nicht verbaut (siehe Abschnitt~\ref{sec:Erg_LED}).
+
+            \subsubsection{Ansteuerung über den PIO-Block des RP1}
+
+            Die Ansteuerung der LEDs ist auf dem Raspberry Pi 5 nicht auf dem naheliegenden Weg möglich. Der Raspberry Pi 5 verwendet einen neuen Ein- und Ausgabe-Chip, den RP1. Die verbreitete Bibliothek \texttt{rpi\_ws281x} erzeugt das zeitkritische Signal über das DMA- und PWM-Timing der älteren Modelle und funktioniert deshalb auf dem Raspberry Pi 5 nicht. SPI-basierte Treiber sind zwar verfügbar, bedienen aber nur einen einzelnen Streifen am MOSI-Pin. Vier Streifen ließen sich damit nur hintereinandergeschaltet betreiben, was der angestrebten Fehlerisolation widerspricht.
+
+            Gewählt wurde deshalb der \gls{pio}-Block des RP1, angesprochen über die Bibliothek \texttt{Adafruit-Blinka-Raspberry-Pi5-Neopixel}. Der \gls{pio}-Block kann jeden \gls{gpio}-Pin bedienen und erzeugt das zeitkritische Bitmuster in Hardware. Die Bibliothek nutzt dabei nur eine \gls{pio}-State-Machine und schaltet diese bei jedem Aufruf auf den jeweiligen Pin um. Die vier Beine werden also nacheinander beschrieben, wofür insgesamt etwa \SIrange{3}{4}{\milli\second} benötigt werden. Bei einer Renderperiode von \SI{50}{\milli\second} ist das unkritisch, und der Versatz zwischen den Beinen ist mit bloßem Auge nicht sichtbar.
+
+            Voraussetzung für diesen Weg ist, dass der Kernel den Treiber \texttt{rp1-pio} enthält, der das Gerät \texttt{/dev/pio0} bereitstellt. Wie in Abschnitt~\ref{sec:LED_SIL} beschrieben, hat diese Voraussetzung direkte Folgen für den Testaufbau.
+
+            \subsubsection{Fehlerisolation durch getrennte Datenleitungen}
+
+            Jeder Streifen ist an einen eigenen \gls{gpio}-Pin angeschlossen, die Streifen sind also nicht hintereinandergeschaltet. Eine fehlerhafte Lötstelle oder ein abgerissenes Kabel an einem Bein kann dadurch die übrigen drei Beine nicht beeinträchtigen. Die Software setzt dieses Prinzip fort, indem jedes Bein ein eigenes Treiberobjekt besitzt und Schreibfehler für jedes Bein einzeln abgefangen werden (siehe Abschnitt~\ref{sec:LED_Software}).
+
+        \subsection{Software: Zustandsautomat auf dem Companion Computer}
+        \label{sec:LED_Software}
+
+        Die Software der Anzeige ist selbst kein Zustandsautomat. Sie liest den Zustand der bestehenden Zustandsmaschine des Teams aus und bildet ihn auf Anzeigemuster ab.
+
+            \subsubsection{Schichtenarchitektur}
+
+            Die Software ist als \gls{ros}~2-Paket (\texttt{icarus\_led\_controller}) in Python umgesetzt und läuft unter ROS~2 Jazzy. Sie ist in drei Schichten gegliedert:
+
+            \begin{description}[style=nextline]
+                \item[ROS-Schicht] Der LED-Knoten (\texttt{led\_node}) empfängt die Zustandsnachrichten, steuert die Zeitabläufe und legt fest, wie auf Fehler reagiert wird. Diese Schicht ist bewusst dünn gehalten.
+                \item[Logikschicht] Sie dekodiert die Nachrichten, ordnet ihnen Anzeigemuster zu und berechnet die Farben jedes Beins. Die Logikschicht ist reines Python und kommt ohne ROS und ohne Hardware aus.
+                \item[Hardwareschicht] Eine Treiberschnittstelle (\texttt{LedStripDriver}) mit genau einer Methode, \texttt{set\_pixels()}. Dahinter steht entweder der echte Treiber für den \gls{pio}-Block oder ein Platzhalter, der die Farben nur protokolliert.
+            \end{description}
+
+            Die Trennung verfolgt zwei Ziele. Zum einen lässt sich die gesamte Logik ohne Drohne, ohne Raspberry Pi und ohne ROS testen. Zum anderen kann der Hardwaretreiber ausgetauscht werden, etwa gegen eine SPI-Lösung oder einen Mikrocontroller, ohne dass sich an der Logik etwas ändert. Beim Start prüft der Knoten, ob die \gls{pio}-Bibliothek verfügbar ist, und wählt danach den echten Treiber oder den Platzhalter. Dadurch läuft dasselbe Paket unverändert auf einem Laptop und auf dem Raspberry Pi.
+
+            \subsubsection{Auslesen des Zustands-Topics}
+
+            Die Zustandsmaschine des Teams veröffentlicht ihren Zustand alle \SI{100}{\milli\second}, also mit \SI{10}{\hertz}, auf dem Topic \texttt{statemachine/state}. Dabei wird jeweils das komplette Zustandsobjekt mit 61 Feldern übertragen, darunter Flugphase, Fehler, Flugmodus, Position, Batterie und Missionsdaten. Das Objekt wird im binären Format \gls{cbor} serialisiert, einem JSON-ähnlichen Format nach RFC~8949. Da das Topic den Nachrichtentyp \texttt{std\_msgs/String} besitzt, werden die Bytes als Hexadezimaltext übertragen. Eine Nachricht ist etwa \SI{2,2}{\kilo\byte} groß. Aufzählungstypen (Enums) aus Python kennt \gls{cbor} nicht, sie werden deshalb als markierter Wert aus Name und Klassenname geschrieben.
+
+            Der LED-Knoten verarbeitet eine Nachricht in drei Schritten. Zuerst wandelt er den Hexadezimaltext zurück in Bytes. Anschließend dekodiert er die \gls{cbor}-Daten und baut dabei die Aufzählungstypen wieder auf. Ein unbekannter Aufzählungstyp wird dabei zu einfachem Text, statt die Dekodierung abzubrechen, sodass ein neuer Typ in einem Feld, das die Anzeige nicht benötigt, nicht stört. Zuletzt werden nur die fünf Felder übernommen, die die Anzeige benötigt, und streng auf ihren Typ geprüft (Tabelle~\ref{tab:LED_Felder}).
+
+            \begin{table}[htbp]
+                \centering
+                \caption{Vom LED-Knoten ausgewertete Felder des Zustandsobjekts}
+                \label{tab:LED_Felder}
+                \begin{tabularx}{\textwidth}{l l X}
+                    \toprule
+                    \textbf{Feld} & \textbf{Typ} & \textbf{Verwendung} \\
+                    \midrule
+                    \texttt{state}          & \texttt{SM\_States}          & Statuskanal (Flugphase) \\
+                    \texttt{mission\_error} & \texttt{SM\_Mission\_Errors} & Statuskanal \\
+                    \texttt{sys\_error}     & \texttt{SM\_System\_Errors}  & Statuskanal, \texttt{FC\_ERROR} auch für die Verbindung \\
+                    \texttt{current\_mode}  & \texttt{FC\_Modes}           & Autonomiekanal \\
+                    \texttt{connected}      & \texttt{bool}                & gibt an, ob \texttt{current\_mode} gültig ist \\
+                    \bottomrule
+                \end{tabularx}
+            \end{table}
+
+            Das Feld \texttt{connected} ist notwendig, weil das Zustandsobjekt für den Flugmodus den Standardwert \texttt{AUTO.LOITER} besitzt. Ohne Verbindung zum Flugcontroller stünde dort also ein autonomer Modus, obwohl nie ein Modus gemeldet wurde, und eine Drohne mit abgestecktem Flugcontroller würde blau blinken. Die strenge Typprüfung verhindert zudem, dass ein zu Text gewordener unbekannter Wert als gültiger Zustand durchrutscht. Jeder Fehler beim Dekodieren führt zu einer einzigen Ausnahme. Wie die Anzeige darauf reagiert, entscheidet der Knoten und nicht der Decoder. Das Auslesen der Daten und das Anzeigeverhalten sind damit voneinander getrennt.
+
+            Das Nachrichtenformat wurde bewusst nicht verändert, da die Bodenstationsoberfläche des Teams denselben Datenstrom liest und durch eine Formatänderung beeinträchtigt werden könnte. Der zusätzliche Aufwand für die Dekodierung ist vernachlässigbar: Auf einem x86-Rechner benötigt sie etwa \SI{0,05}{\milli\second} pro Nachricht.
+
+            \subsubsection{Zeitsteuerung und Blinkmuster}
+
+            Der LED-Knoten arbeitet mit zwei voneinander unabhängigen Abläufen. Beim Empfang einer Nachricht wird diese dekodiert, auf zwei Anzeigemuster abgebildet und zusammen mit der Empfangszeit gespeichert, ohne dass dabei LEDs beschrieben werden. Ein eigener Timer zeichnet die Anzeige mit \SI{20}{\hertz}. Er prüft zunächst, ob die Daten veraltet sind (siehe Abschnitt~\ref{sec:LED_Fehlerfall}), und beschreibt dann alle vier Beine. Die Trennung ist notwendig, weil die Blinkmuster auch dann weiterlaufen müssen, wenn keine Nachricht eintrifft, und die Anzeige gerade in diesem Fall auf \glqq keine Daten\grqq{} wechseln soll. Die Frequenz von \SI{20}{\hertz} ergibt sich aus der kürzesten Phase: Beim Blitzen des Streifens dauert eine Phase \SI{0,1}{\second}, sodass zwei Zeichenvorgänge in jede Phase fallen, beim roten Fehlerblinken sind es drei. Da ein Durchgang für alle vier Beine nur etwa \SI{4}{\milli\second} dauert, könnte die Rate bei Bedarf ohne Risiko erhöht werden.
+
+            Jedes Muster ist als kurze Folge von Farben $F_0, \dots, F_{n-1}$ hinterlegt, die mit einem festen Takt $\Delta t$ durchlaufen wird. Ein blaues Blinken besteht zum Beispiel aus der Folge (blau, aus) mit $\Delta t = \SI{0,5}{\second}$, der Wechsel bei \texttt{TAKEOFF} aus (grün, gelb). Welche Farbe eine LED gerade zeigt, wird nicht über einen internen Takt bestimmt, sondern als reine Funktion von Muster, aktueller Zeit $t$ und Bein berechnet:
+
+            \begin{equation}
+                k = \left\lfloor \frac{t}{\Delta t} \right\rfloor - s, \qquad \text{Farbe} = F_{k \bmod n}
+            \end{equation}
+
+            Dabei ist $s$ die Position des Beins in der Reihenfolge des Lauflichts. Für alle anderen Muster gilt $s = 0$. Da alle vier Beine denselben Zeitstempel erhalten, blinken sie garantiert synchron. Zudem lässt sich das Verhalten mit vorgegebenen Zeitstempeln testen. Das Lauflicht entsteht aus derselben Formel: Seine Farbfolge (grün, aus, aus, aus) hat genau einen grünen Schritt, und jedes Bein ist um seine Position $s$ verschoben. Zu jedem Zeitpunkt leuchtet deshalb genau ein Bein grün, und das grüne Bein wandert weiter. Als Kompromiss wird in Kauf genommen, dass die Phase frei gegenüber der absoluten Zeit läuft und nicht mit dem Musterwechsel beginnt. Ein Wechsel auf ein blinkendes Muster kann deshalb mit einer bis zu \SI{0,5}{\second} langen Dunkelphase beginnen.
+
+            \subsubsection{Robustheit im Betrieb}
+
+            \begin{description}[style=nextline]
+                \item[Fehlerisolation pro Bein] Tritt beim Beschreiben eines Beins ein Fehler auf, wird dieser abgefangen und nur einmal beim Übergang von funktionsfähig zu defekt protokolliert. Die übrigen drei Beine werden weiter angesteuert. Ohne diese Maßnahme hätte ein einzelner Schreibfehler den Knoten beendet, und alle vier Beine wären dunkel geblieben.
+                \item[Ausschalten beim Beenden] WS2812B-LEDs halten ihr letztes Bild unbegrenzt. Ein gestoppter Knoten würde deshalb zum Beispiel \glqq autonom, fehlerfrei\grqq{} stehen lassen. Beim Beenden des Knotens werden daher alle LEDs ausgeschaltet. Dies greift allerdings nur bei einem geordneten Beenden. Gegen einen Absturz des Knotens hilft nur ein Watchdog, der bisher nicht umgesetzt ist.
+                \item[Begrenzte Protokollierung] Wiederkehrende Warnungen, etwa zu fehlerhaften Nachrichten oder veralteten Daten, werden höchstens einmal pro Sekunde ausgegeben.
+            \end{description}
+
+        \subsection{Anbindung an den Flugcontroller}
+        \label{sec:LED_FC}
+
+            \subsubsection{Datenpfad vom Flugcontroller zum LED-Knoten}
+
+            Der LED-Knoten kommuniziert nicht direkt mit dem Flugcontroller, sondern ist ausschließlich an die Zustandsmaschine des Teams angebunden. Damit gibt es nur eine Stelle, an der der Zustand der Drohne bewertet wird, und die Anzeige zeigt genau den Zustand, von dem auch Zustandsmaschine und Bodenstation ausgehen. Der Datenpfad verläuft in folgenden Schritten:
+
+            \begin{description}[style=nextline]
+                \item[Flugcontroller] Der Flugcontroller, ein Pixhawk 6C mit PX4, sendet seine Daten über \gls{mavlink} per \gls{uart} an den Raspberry Pi.
+                \item[MAVROS] MAVROS, die Brücke zwischen \gls{mavlink} und ROS, veröffentlicht unter anderem Verbindungsstatus und Flugmodus auf dem Topic \texttt{/mavros/state}.
+                \item[Zustandsmaschine] Die Zustandsmaschine übernimmt diese Werte, ergänzt ihre eigene Flugphase sowie die Fehlerauswertung und veröffentlicht das Ergebnis mit \SI{10}{\hertz} auf \texttt{statemachine/state}.
+                \item[Bodenstation und LED-Knoten] Diesen Datenstrom lesen sowohl die Bodenstationsoberfläche als auch der LED-Knoten, der daraus die Anzeige der vier Streifen berechnet.
+            \end{description}
+
+            \subsubsection{Bestimmung des Autonomiezustands aus dem PX4-Flugmodus}
+
+            MAVROS meldet den PX4-Flugmodus als Text, zum Beispiel \texttt{POSCTL} oder \texttt{AUTO.LOITER}. Die Zustandsmaschine wandelt diesen Text in einen Aufzählungstyp mit 14 Werten um, den der LED-Knoten anschließend wie in Abschnitt~\ref{sec:LED_Zuordnung} beschrieben klassifiziert. Auch das Feld \texttt{connected} stammt aus \texttt{/mavros/state}.
+
+            Die Werte \texttt{connected} und \texttt{current\_mode} werden allerdings nur aktualisiert, wenn eine Nachricht von MAVROS ankommt. Stürzt MAVROS ab, sendet die Zustandsmaschine weiterhin mit \SI{10}{\hertz}, während \texttt{connected} auf \texttt{True} und der Flugmodus auf dem letzten Wert stehen bleiben. Der Timeout des LED-Knotens greift in diesem Fall nicht, da weiterhin gültige Nachrichten ankommen. In einer früheren Fassung zeigte der Autonomiekanal deshalb weiter den alten Modus an, nach \texttt{MANUAL} also eine dunkle Anzeige, obwohl nicht mehr bekannt war, wer die Drohne steuert. Gelöst wurde dies, indem der LED-Knoten den Systemfehler \texttt{FC\_ERROR} wie eine fehlende Verbindung behandelt. Die Zustandsmaschine setzt diesen Fehler nach etwa \SIrange{1,2}{1,7}{\second}, danach blitzt der ganze Streifen. Die Lösung kommt ohne Änderung an der Zustandsmaschine oder am Datenformat aus. Eine weitere bekannte Lücke im Datenpfad liegt außerhalb der LED-Software und wird in Abschnitt~\ref{sec:Erg_LED} behandelt.
+
+        \subsection{Software-in-the-Loop-Testumgebung}
+        \label{sec:LED_SIL}
+
+            \subsubsection{Motivation}
+
+            Der Software-Stack für den Flug, bestehend aus Ubuntu 24.04, ROS~2 Jazzy und MAVROS, läuft auf einem Ubuntu-Kernel, der den Treiber \texttt{rp1-pio} nicht enthält. Ohne das Gerät \texttt{/dev/pio0} lassen sich die LEDs dort nicht ansteuern. Auf einer zweiten SD-Karte mit Raspberry Pi OS Lite steht \texttt{/dev/pio0} zur Verfügung, dort fehlt jedoch der Flug-Stack. Die Anzeige sollte trotzdem mit echter Hardware und echtem Nachrichtenformat geprüft werden, und zwar für alle Zustandskombinationen, auch für gefährliche wie eine Notlandung, die man im Flug nicht absichtlich herbeiführt.
+
+            Die Lösung ist eine \gls{sil}-Testumgebung. LED-Knoten, Decoder, Zuordnung, Treiber und LEDs sind dabei echt, lediglich die Zustandsmaschine wird durch einen simulierten Zustandsgeber ersetzt. Gesteuert wird dieser über die Kommandozeile direkt auf dem Raspberry Pi, ohne zusätzliche Software auf einem Laptop. Im Team wird der Begriff \gls{sil} auch für die Simulation des gesamten Flugs mit Gazebo und PX4 verwendet. Hier ist dagegen eine Testumgebung für die Anzeige gemeint, bei der Anzeigesoftware und LEDs echt sind und nur die Quelle des Zustands simuliert wird.
+
+            \subsubsection{Aufbau}
+
+            Abbildung~\ref{fig:LED_SIL_Architektur} zeigt den Aufbau der Testumgebung. Auf dem Raspberry Pi läuft Raspberry Pi OS Lite, ROS~2 Jazzy wird in einem Docker-Container auf Basis des Images \texttt{ros:jazzy} ausgeführt. Der Container ist notwendig, weil ROS~2 Jazzy offiziell für Ubuntu 24.04 gepflegt wird und nicht für das auf Debian basierende Raspberry Pi OS. Der Container stellt die Ubuntu-Umgebung bereit, während der Kernel des Raspberry Pi OS das Gerät \texttt{/dev/pio0} liefert.
+            % TODO: describe how /dev/pio0 and the PIO library get into the container (Dockerfile only on the Pi)
+
+            \begin{figure}[htbp]
+                \centering
+                \input{\ledSilArchitektur}
+                \caption{Aufbau der Software-in-the-Loop-Testumgebung der LED-Statusanzeige}
+                \label{fig:LED_SIL_Architektur}
+            \end{figure}
+
+            Der ROS-Workspace liegt auf dem Raspberry Pi und ist in den Container eingebunden. Er enthält das LED-Paket, das gemeinsame Paket mit den Aufzählungstypen und das Paket der Zustandsmaschine, das nur wegen seines Encoders benötigt wird. Neuer Code gelangt so per \texttt{git pull} und anschließendem Bauen im Container auf den Raspberry Pi, ohne dass das Image neu erstellt werden muss. Hauptprozess des Containers ist eine Launch-Datei, die LED-Knoten und simulierten Zustandsgeber gemeinsam startet. Weder MAVROS noch die echte Zustandsmaschine werden dabei gestartet, sodass der Testaufbau den Flugcontroller grundsätzlich nicht ansteuern kann. Bedient wird die Testumgebung per SSH auf dem Raspberry Pi. Da keine ROS-Kommunikation über das WLAN läuft, spielen Netzwerkeinstellungen von ROS für den Test keine Rolle.
+
+            \subsubsection{Simulierter Zustandsgeber}
+
+            Der simulierte Zustandsgeber verwaltet genau die fünf Felder, die die Anzeige auswertet, sowie einen Schalter, mit dem das Senden ein- und ausgeschaltet wird. Er startet im Zustand \texttt{REST} im Flugmodus \texttt{POSCTL}, mit bestehender Verbindung und ohne Fehler, sodass zu Beginn nur die Navigationslichter leuchten. Rot oder ein blitzender Streifen bedeuten in der Testumgebung damit immer, dass dieser Zustand ausgewählt wurde oder keine Daten ankommen, und nie einen Standardwert.
+
+            Befehle erhält der Zustandsgeber als Textzeile mit Schlüssel-Wert-Paaren auf dem Topic \texttt{led\_sil/set}, zum Beispiel \texttt{state=HOVER mode=AUTO.LOITER}. Nicht angegebene Werte bleiben erhalten. Enthält ein Befehl einen ungültigen Teil, wird er vollständig verworfen, da ein nur teilweise angewendeter Befehl eine Kombination anzeigen würde, die niemand ausgewählt hat.
+
+            Aus diesen Werten erzeugt der Zustandsgeber ein echtes Zustandsobjekt und veröffentlicht es wie die echte Zustandsmaschine mit \SI{10}{\hertz} auf \texttt{statemachine/state}. Als Name trägt das Objekt \texttt{LED\_SIL}, damit Aufzeichnungen und Bodenstation simulierte Daten erkennen. Die wichtigste Designentscheidung ist, dass der Zustandsgeber den Encoder der echten Zustandsmaschine importiert, statt ihn zu kopieren. Eine Kopie könnte unbemerkt vom echten Format abweichen, und der Test würde weiterhin bestehen, ohne noch etwas zu beweisen. So durchläuft der LED-Knoten in der Testumgebung exakt denselben Codepfad wie im Flug. Zwei Schutzmechanismen ergänzen den Zustandsgeber:
+
+            \begin{description}[style=nextline]
+                \item[Zweiter Publisher] Erscheint ein weiterer Publisher auf \texttt{statemachine/state}, wahrscheinlich die echte Zustandsmaschine, verstummt der Zustandsgeber und meldet einen Fehler. Andernfalls würden sich echte und simulierte Daten mischen, und Anzeige sowie Bodenstation würden einen Zustand zeigen, in dem die Drohne nicht ist. Dies funktioniert unabhängig von der Startreihenfolge.
+                \item[Simulierter Ausfall] Über den Schalter kann das Senden unterbrochen werden, um eine ausgefallene Zustandsmaschine nachzubilden. Der LED-Knoten muss diesen Fall selbst erkennen, nach \SI{1}{\second} blitzt der ganze Streifen.
+            \end{description}
+
+            \subsubsection{Bedienung über die Kommandozeile}
+
+            Ein Test soll ohne zusätzliche Software auf dem Laptop möglich sein. Dazu meldet man sich per SSH am Raspberry Pi an und gibt zum Beispiel \texttt{sil state=ARMED mode=OFFBOARD} ein. Die LEDs reagieren sofort, und man kann direkt neben der Drohne stehen. Der Befehl \texttt{sil} ist eine Shell-Funktion, die auf dem Raspberry Pi selbst und nicht im Container hinterlegt ist. Sie bleibt dadurch auch erhalten, wenn der Container neu erstellt wird. Die Funktion arbeitet in drei Schritten:
+
+            \begin{description}[style=nextline]
+                \item[Container finden] Der laufende Container wird über sein Image gesucht und nicht über einen Namen. Das funktioniert auch nach einem Neuerstellen mit neuer Kennung.
+                \item[Befehl übergeben] Über \texttt{docker exec} wird der Befehl im Container einmalig auf dem Topic \texttt{led\_sil/set} veröffentlicht. Läuft der Zustandsgeber nicht, bricht die Funktion nach \SI{10}{\second} mit einer Meldung ab.
+                \item[Rückmeldung zeigen] Die Funktion gibt die letzte Meldung des Zustandsgebers aus. Ein Tippfehler wird dort mit der Liste der erlaubten Werte abgelehnt, und der vorherige Zustand bleibt erhalten.
+            \end{description}
+
+            Mit \texttt{sil reset} wird der Startzustand wiederhergestellt. Jeder Befehl ist damit reproduzierbar und kann direkt in ein Testprotokoll übernommen werden.
+            % TODO (optional): full command reference and code of the sil function for 900_Anhang
+
+            Ursprünglich wurde die Testumgebung über eine grafische Oberfläche auf dem Laptop bedient, die zusätzlich anzeigte, was die LEDs zeigen sollten. Diese benötigte jedoch ROS~2 auf dem Laptop, gleiche Netzwerkeinstellungen auf beiden Geräten und eine Freigabe in der Firewall. Außerdem sendete sie ihren Zustand jede Sekunde neu und überschrieb damit jeden anderen Befehl. Die Bedienung über die Kommandozeile hat sie deshalb ersetzt.
+
+            \subsubsection{Aussagekraft und Grenzen}
+
+            Die Testumgebung belegt, dass das echte Nachrichtenformat der Zustandsmaschine korrekt gelesen wird, dass Zuordnung und Blinkfrequenzen auf echter Hardware stimmen und dass die Anzeige bei ausbleibenden Daten und bei \texttt{FC\_ERROR} wie vorgesehen reagiert. Außerdem bestätigt sie Pinbelegung, Farbreihenfolge und \gls{pio}-Treiber an den echten Streifen sowie die Reihenfolge des Lauflichts passend zur tatsächlichen Lage der Beine.
+
+            Nicht belegt wird dagegen, ob die echte Zustandsmaschine die getesteten Kombinationen im Flug tatsächlich so erzeugt. Der Zustandsgeber erlaubt auch unrealistische Kombinationen wie die Flugphase \texttt{HOVER} im Flugmodus \texttt{MANUAL}. Ebenfalls nicht abgedeckt ist das Zeitverhalten der echten Zustandsmaschine unter Last. Bei einem Absturz von MAVROS wird nur die Reaktion der Anzeige geprüft, da \texttt{FC\_ERROR} in der Testumgebung direkt gesetzt wird. Dass die echte Zustandsmaschine diesen Fehler rechtzeitig setzt, ist nur aus ihrem Code abgeleitet. Die Bodenstationsoberfläche des Teams ist an der Testumgebung nicht beteiligt. Ein Test im Flugbetrieb ist derzeit nicht möglich, da kein Betriebssystem beides bietet: Raspberry Pi OS unterstützt den \gls{pio}-Block, besitzt aber keinen Flug-Stack, während Ubuntu den Flug-Stack, aber keinen \gls{pio}-Treiber bereitstellt.

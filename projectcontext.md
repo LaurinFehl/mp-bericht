@@ -89,7 +89,7 @@ Die Zustände "armed", "autonom" und "Notfall" werden im Final Report als Anzeig
 - Motoren: Holybro 2216-920KV, 10-Zoll-Propeller, 4S-LiPo
 - ESCs: derzeit wieder einzelne PWM-ESCs; das 4-in-1-ESC (Sequre Blueson A2, AM32, DShot) ist ohne Stromtelemetrie und vermutlich defekt, Ersatz gesucht
 - Sensorik: GPS/Magnetometer, RTK-GPS, Optical-Flow-Sensor, Pi-Kamera
-- LEDs: adressierbare SK6812 in den Landebeinen (Final Report: LED-Spotlighting im Landebein, Zustandsanzeige über Farben und Blinkmuster)
+- LEDs: adressierbare WS2812B in den Landebeinen (Final Report: LED-Spotlighting im Landebein, Zustandsanzeige über Farben und Blinkmuster)
 
 **Masse (Final Report, Stand geplante Konfiguration) [PRÜFEN]**
 
@@ -104,7 +104,7 @@ Frame 260 g, Motoren und Propeller 350 g, GPS 32 g, Flugcontroller 60 g, Raspber
 
 **Frame (3D-Druck)**
 
-- Aktueller Frame: strukturelles Redesign mit Ziel Masse minimieren, Bauraum nutzen, Ansprechverhalten verbessern. Gedruckt in einem leichten, aber robusten Filament, laut Team-Material PA11-CF Super Light (Xenia) plus Carbonstab.
+- Aktueller Frame: strukturelles Redesign mit Ziel Masse minimieren, Bauraum nutzen, Ansprechverhalten verbessern. Gedruckt in einem leichten, aber robusten Filament, laut Team-Material PA11-CF Super Light (Xenia).
 - Landefüße: TPU, 95A Shore, Empfehlung PolyFlex TPU95-HF, Gyroid-/Wabeninfill, hohle Strukturen. Drucker: Bambu Lab X1C.
 - Materialien, die verglichen wurden: ASA, ASA-CF, PETG, PP, PA11, PA11-CF, TPU-Varianten (jeweils Dichte, Steifigkeit, Schlagzähigkeit).
 - CAD: Autodesk Inventor. Auch Anforderungen an Zugänglichkeit: Akku und Stromkabel direkt erreichbar, leichter Austausch einzelner gedruckter Teile.
@@ -113,8 +113,8 @@ Frame 260 g, Motoren und Propeller 350 g, GPS 32 g, Flugcontroller 60 g, Raspber
 **LED-Statusanzeige (nur grober Rahmen, Details im Repo)**
 
 - Der Zustand wird über eine Zustandsmaschine (ROS 2) auf dem Raspberry Pi, dem Companion Computer des Flugcontrollers, ermittelt. Ein LED-Knoten abonniert die Zustände (Topic `SM_States`) und steuert die LEDs an.
-- Hardware: SK6812-Strips als Daisy-Chain (Sterntopologie ist nicht möglich), 74AHCT125 als Pegelwandler (3,3 V auf 5 V), Test mit Arduino Nano.
-- Pi 5: `rpi_ws281x` funktioniert wegen des RP1-Chips nicht, es sind PIO- oder SPI-basierte Wege nötig. Bei Versorgung über GPIO `usb_max_current_enable=1` setzen.
+- Hardware: WS2812B-Strips mit 4 einzelnen, für jedes Bein dedizierten, GPIO-Pins vom Pi. 
+- Die LED-Testung für diese Arbeit wurde beschränkt auf eine extra angelegtes Pi-OS Distro mit dem nötigen GPIO kernen treibern. Dort wurde ein System in the loop verfahren entwickelt um "fake"-states zu publishen von dem laptop aus um so die leds zu testen. 
 - Jury-Kriterium: Sichtbarkeit in 10 m bei Sonnenlicht, Aktivierung mindestens 5 s vor jeder Bewegung.
 - **[PRÜFEN]** Konkrete Zustandsdefinition (welcher Zustand = welche Farbe/Muster), Implementierungsstand und Testergebnisse bitte aus dem Repo ableiten.
 
