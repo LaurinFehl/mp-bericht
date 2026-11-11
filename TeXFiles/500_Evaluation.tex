@@ -1,18 +1,163 @@
 \chapter{Evaluation}
 \label{ch:Evaluation}
 
-\section{Evaluationsmethodik}
-\label{sec:Evaluationsmethodik}      % Kriterien aus den Anforderungen, Bewertungsansatz
+In diesem Kapitel werden die Entwickelten Methoden Evalutiert und Bewertet. Dabei wird die Evalutation des neuen Frames im Detail besprochen, sowie die Evaluation der Integration der Statusanzeige. 
 
-\section{Evaluation des Frames}
-\label{sec:Eval_Frame}
-\subsection{Masse und Geometrie}
-\subsection{Mechanische Tests}       % Steifigkeit, Bruchverhalten, Vibration
-\subsection{Druckqualität und Reproduzierbarkeit}
-\subsection{Flugtests}
+    \section{Vorgehen und Bewertungskriterien}
+    \label{sec:Evaluationsmethodik}
+    % From requirements to tests: table requirement | test method | acceptance criterion
+    % Types of verification: measurement, test, inspection, analysis
 
-\section{Evaluation der Statusanzeige}
-\label{sec:Eval_LED}
-\subsection{Funktionstest der Zustandsübergänge}
-\subsection{Sichtbarkeitstest}       % z. B. Tageslicht, Abstand wie bei den ERC-Anforderungen
-\subsection{Test im Flugbetrieb}
+    Nach der Konstruktion und dem 3D-Drucken der Bauteile, werden diese Bewertet anhand von verschiedenen Kriterien und Testmethoden. Dazu gehören Maßgenauigkeit, kein übermäßiges verziehen während des Drucks und der eingehaltenen TOleranz. Durch das natürliche Verhalten von Thermoplasten, sind Toleranzangaben großzügig gehalten um kein zu großen Ausschuss zu erzeugen. 
+
+    \section{Evaluation des Frames}
+    \label{sec:Eval_Frame}
+
+        \subsection{Masse}
+        \label{sec:Eval_Frame_Masse}
+        % Weigh single parts and full frame, scale and accuracy, comparison with ICARUS
+
+        Beim messen der Masse des neuen Frames können zwei Wege benutzt werden. Zum einen wird die komplette Drohne mitsamt Elektronik und Accessoires gewogen, zum anderen werden die Berechnungen der Slicersoftware benutzt. Eine im \gls{frost}-Labor verfügbare Waage war für das Abmessen des Gewichtes der gesamten Drohne. Bei der Berechnung in der Slicersoftware werden jedoch nur die neuen 3D-gedruckten Teile mit den alten Karbonplattenteilen verglichen um so das Gewicht von Schrauben, Einschmelzgewinden, Kabeln und sonstiger Elektronik zu vernachlässigen. Zudem werden die Filamente ASA und das gesponsorte PA11-CF-SL verglichen um weitere Vorteile des speziellen Filaments zu evaluieren. 
+
+        \subsection{Maßhaltigkeit und Montage}
+        \label{sec:Eval_Frame_Montage}
+        % Fit of holes, heat-set inserts and joints, warping of large parts (baseplate)
+
+        Die Maßhaltigkeit der gedruckten Bauteile wurde durch eine visuelle Prüfung auf Warping, bzw. Verzug nach dem Druck evaluiert. Das Einschmelzen der Gewinde, und die Genauigkeit davon, wurde durch ein anschließendes Einschrauben von passenden Schrauben geprüft, sowie ein testweises Zusammensetzen von zwei Komponenten. 
+
+        \subsection{Mechanische Belastbarkeit}
+        \label{sec:Eval_Frame_Mechanik}
+        % e.g. load test of motor mounts and arms, drop test of TPU feet
+
+        Die Evaluierung von 3D-gedruckten Teilen mittels FEM-Analysen gestaltet sich durch die Geometrie mit Wänden und Infill von sehr schwierig bis unmöglich. So können die fertigen Bauteile nicht in der Simulation sondern durch praktische Tests, eingebaut in der Drohne, getestet werden. Die Verbindungsarme von der baseplate zu den Motoren aus dem PA11-CF-SL Filament wurden in die Drohne, gemeinsam mit den TPU Füßen, eingebaut und mit Freifalltests aus definierten Höhen evaluiert. Dabei wurde auf die Landung geachtet, wie stark die Bauteile sich verbiegen und ob Schäden durch den Test entstanden sind. 
+
+        \subsection{Fertigungsaufwand}
+        \label{sec:Eval_Frame_Fertigung}
+        % Print time, material and support usage from the slicer, post-processing
+
+        Die Bewertung des Fertigungsaufwands wurde anhand der Nachbearbeitung der Bauteile festgelegt. Es wurde ermittelt, wie einfach oder einfach die Bauteile mit Einschmelzgewinden nachbearbeitet werden konnten. Ein gutes Erreichen von den Bohrungen für die Einschmelzgewinde, sowie die passende Größe dieser Bohrung, bedeutete eine einfache Nachbearbeitung. Druckspezifische Extrateile am Bauteil wie Supports, Mauseohren oder Brims verschlechtern jedoch die Bewertung, da es ein teils Zeitintensive Nachbearbeitung verlangt um das fertige Bauteil zu bekommen. 
+
+        \subsection{Wartbarkeit}
+        \label{sec:Eval_Frame_Wartung}
+        % Access to battery and electronics, replacing single printed parts
+
+        Die Wartbarkeit des neuen Frames ist durch die benötigte Zeit zum Austauschen der Bauteile bestimmt, sowie aber auch der nötige Aufwand Kabel oder andere Elektronik zu tauschen. USB-Anschlüsse für Pi und Flight Controller, sowie Kabelführung, -halterung und -position sind bestimmend wie gut der neue Frame wartbar ist. 
+
+        \subsection{Flugtests}
+        \label{sec:Eval_Frame_Flug}
+        % Hover flight, vibration from PX4 logs, flight time
+
+        Die Evalution der Stabilität der Drohne während des Fluges ist, im Unterschied zu der Visuelle Bewertung der Bauteile, durch die Python Bibliothek pyulog und der Website \texttt{\hyperlink{https://logs.px4.io/}{Flight Review}} umgesetzt worden. Die Flight Review Website bietet eine graphische Ausarbeitung der Log dateien an, während pyulog nur Werte der Logs zum verleichen Anzeigen kann. Eine Erweiterung der Flight Review Website ist die VS Code Erweiterung PX4 ULog Viewer. Dort können auch lokal über die Zeit geplottet die Werte der Motoren, der Sensoren und vieler weiterer angezeigt werden, während bei der Website die Logs hochgeladen werden müssen. 
+
+    \section{Evaluation der Statusanzeige}
+    \label{sec:Eval_LED}
+
+    Die Statusanzeige wird in mehreren Stufen evaluiert, die sich darin unterscheiden, wie viel vom späteren Einsatz sie abbilden. Automatisierte Tests prüfen die Anzeigelogik ohne Hardware. Der Funktionstest in der \gls{sil}-Testumgebung aus Abschnitt~\ref{sec:LED_SIL} prüft dieselbe Logik an den echten LEDs der Drohne. Ein Sichtbarkeitstest soll zeigen, ob die Muster aus der geforderten Entfernung erkennbar und unterscheidbar sind. Ein Test im Flugbetrieb ist derzeit nicht möglich, die Gründe dafür werden in Abschnitt~\ref{sec:Eval_LED_Flug} erläutert. Tabelle~\ref{tab:Eval_LED_Anforderungen} ordnet den Anforderungen aus Abschnitt~\ref{sec:LED_Anforderungen} die jeweilige Prüfung und das Abnahmekriterium zu.
+
+    \begin{table}[htbp]
+        \centering
+        \caption{Zuordnung der Anforderungen an die Statusanzeige zu Prüfung und Abnahmekriterium}
+        \label{tab:Eval_LED_Anforderungen}
+        \small
+        \begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{2.6cm} >{\raggedright\arraybackslash}p{4.0cm} X}
+            \toprule
+            \textbf{Anforderung} & \textbf{Prüfung} & \textbf{Abnahmekriterium} \\
+            \midrule
+            REQ-FUN-070 & automatisierte Tests, \gls{sil}-Matrix Zeilen 4, 6, 7, 10, 11 & Der Autonomiekanal blinkt genau in den autonomen Flugmodi blau, auch wenn gleichzeitig ein Fehler angezeigt wird. \\
+            REQ-DES-150 & automatisierte Tests (Fehlerisolation je Bein) & Ein Schreibfehler an einem Bein beeinträchtigt die übrigen Beine nicht. \\
+            REQ-OPS-090, REQ-OPS-100 & \gls{sil}-Matrix Zeile 4 & Das Autonomiesignal leuchtet bereits, bevor sich die Drohne bewegt. Die Wartezeit selbst einzuhalten ist Aufgabe der Zustandsmaschine. \\
+            REQ-DES-060 & Sichtbarkeitstest & Die Muster sind bei Tageslicht aus \SI{10}{\metre} Entfernung erkennbar. \\
+            REQ-ENV-040 & Sichtbarkeitstest & Die Muster sind bei Kunstlicht und Dunkelheit erkennbar und unterscheidbar. \\
+            \bottomrule
+        \end{tabularx}
+    \end{table}
+
+        \subsection{Automatisierte Tests der Anzeigelogik}
+        \label{sec:Eval_LED_Tests}
+
+        Die Anzeigelogik wird mit dem Testframework pytest geprüft. Die Tests laufen ohne Raspberry Pi, ohne LEDs und ohne laufendes \gls{ros}~2. Möglich wird das durch die Schichtenarchitektur aus Abschnitt~\ref{sec:LED_Software}: Die Logikschicht ist reines Python, und statt des echten Treibers wird eine Schreibfunktion eingesetzt, die die gesendeten Daten nur aufzeichnet. Damit lässt sich sogar prüfen, welche Bytes der Treiber an die LEDs senden würde. Die Tests sind auf zwei Dateien verteilt:
+
+        \begin{description}[style=nextline]
+            \item[\texttt{test\_led\_logic.py} (60 Testfunktionen)] Geprüft werden die Anzeigemuster und ihr Zeitverhalten sowie die Zuordnung von Zuständen zu Mustern. Für die Zuordnung wird nachgewiesen, dass jeder der 14 Flugmodi und jede der 13 Flugphasen genau einer Klasse zugeordnet ist, und jede Zeile von Tabelle~\ref{tab:LED_Zuordnung} wird einzeln getestet. Weitere Tests betreffen die Prüfreihenfolge der Fehler, den Decoder einschließlich fehlerhafter Nachrichten, die Fehlerisolation je Bein, das Ausschalten beim Beenden und das Datenformat des Treibers, also die Farbreihenfolge Grün, Rot, Blau und die Länge des Puffers.
+            \item[\texttt{test\_sil.py} (10 Testfunktionen)] Geprüft werden der Befehlsparser des simulierten Zustandsgebers und der vollständige Weg einer Nachricht durch den echten Encoder der Zustandsmaschine und zurück durch den Decoder des LED-Knotens.
+        \end{description}
+
+        Mit der Überarbeitung der Anzeigemuster kamen Tests für die neuen Muster hinzu. Sie prüfen die Laufrichtung des Lauflichts von vorne links über vorne rechts und hinten rechts nach hinten links, den Wechsel zwischen Grün und Gelb ohne Dunkelphase und das Signal für fehlende Daten. Dieses muss den ganzen Streifen erfassen und mit mindestens \SI{4}{\hertz} schneller blitzen als das rote Fehlerblinken. Außerdem wird geprüft, dass das Navigationslicht bei einem Fehler ruhig bleibt.
+
+        Viele Tests sind parametrisiert und laufen zum Beispiel einmal pro Zustand, die Zahl der ausgeführten Testfälle ist deshalb deutlich größer als die Zahl der Testfunktionen. Zwei Regressionstests sichern die beiden wichtigsten Designentscheidungen ab:
+
+        \begin{description}[style=nextline]
+            \item[\texttt{test\_error\_cannot\_hide\_\allowbreak the\_autonomy\_indicator}] Ein Fehler darf das Autonomiesignal nicht überdecken. Dieser Test sichert das Zwei-Kanal-Modell aus Abschnitt~\ref{sec:LED_ZweiKanal} und damit REQ-FUN-070 ab.
+            \item[\texttt{test\_fc\_error\_means\_no\_link\_\allowbreak even\_with\_connected\_frozen\_true}] Der Systemfehler \texttt{FC\_ERROR} wird auch dann als fehlende Verbindung gewertet, wenn \texttt{connected} eingefroren auf \texttt{True} steht. Dieser Test bildet den Absturz von MAVROS aus Abschnitt~\ref{sec:LED_FC} nach.
+        \end{description}
+
+        Die Ergebnisse der Testläufe sind in Abschnitt~\ref{sec:Erg_LED} zusammengefasst.
+
+        \subsection{Funktionstest an der Hardware}
+        \label{sec:Eval_LED_SIL}
+
+        Die automatisierten Tests belegen die Logik, aber nicht, dass die LEDs an der Drohne tatsächlich das berechnete Muster zeigen. Dafür wird die \gls{sil}-Testumgebung aus Abschnitt~\ref{sec:LED_SIL} verwendet. Vorab wurden die Pinbelegung und die Farbreihenfolge mit dem Inbetriebnahmewerkzeug \texttt{led\_selftest} an der Drohne bestätigt. Vor jedem Testlauf wird der aktuelle Stand der Software auf den Raspberry Pi gebracht. Dazu wird der Code per \texttt{git pull} aktualisiert, im Container mit \texttt{colcon build} gebaut und der Container anschließend neu gestartet.
+
+        Der Test folgt der Testmatrix in Tabelle~\ref{tab:Eval_LED_Matrix}. Jede Zeile beginnt im Ausgangszustand, der mit \texttt{sil reset} hergestellt wird. Danach wird der Befehl der Zeile per SSH auf dem Raspberry Pi eingegeben, und an der Drohne werden Autonomie- und Statuskanal mit dem erwarteten Muster verglichen. Da jeder Befehl reproduzierbar ist, kann ein Test jederzeit wiederholt werden, zum Beispiel nach einer Änderung an der Software.
+
+        \begin{table}[htbp]
+            \centering
+            \caption{Testmatrix für den Funktionstest der Statusanzeige in der \gls{sil}-Testumgebung}
+            \label{tab:Eval_LED_Matrix}
+            \footnotesize
+            \begin{tabularx}{\textwidth}{r X >{\raggedright\arraybackslash}p{2.6cm} >{\raggedright\arraybackslash}p{3.4cm}}
+                \toprule
+                \textbf{Nr.} & \textbf{Befehl} & \textbf{Autonomie erwartet (LED 1--2)} & \textbf{Status erwartet (LED 3--4)} \\
+                \midrule
+                1  & \texttt{sil reset} (\texttt{REST}, \texttt{POSCTL}, verbunden) & aus & aus, nur Navigationslicht \\
+                2  & \texttt{sil state=READY} & aus & grünes Lauflicht im Uhrzeigersinn \\
+                3  & \texttt{sil state=ARMED} & aus & gelb, statisch \\
+                4  & \texttt{sil state=ARMED mode=OFFBOARD} & blau, \SI{1}{\hertz} & gelb, statisch \\
+                5  & \texttt{sil state=TAKEOFF} & aus & grün/gelb im Wechsel \\
+                6  & \texttt{sil state=HOVER mode=AUTO.LOITER} & blau, \SI{1}{\hertz} & grün, statisch \\
+                7  & \texttt{sil state=APPROACHING mode=OFFBOARD} & blau, \SI{1}{\hertz} & grün, statisch \\
+                8  & \texttt{sil state=LANDING} & aus & grün, \SI{1}{\hertz} \\
+                9  & \texttt{sil state=STOP mission\_error=ABORT} & aus & gelb, \SI{1}{\hertz} \\
+                10 & \texttt{sil state=EMERGENCY\_LANDING mode=AUTO.LAND mission\_error=EMERGENCY} & blau, \SI{1}{\hertz} & rot, ca.\ \SI{3,3}{\hertz} \\
+                11 & \texttt{sil state=A\_SYS\_ERROR mode=MANUAL sys\_error=TOPIC\_ERROR} & aus & rot, ca.\ \SI{3,3}{\hertz}, Navigationslicht ruhig \\
+                12 & \texttt{sil sys\_error=FC\_ERROR} & \multicolumn{2}{l}{ganzer Streifen blitzt} \\
+                13 & \texttt{sil connected=false} & \multicolumn{2}{l}{ganzer Streifen blitzt} \\
+                14 & \texttt{sil publishing=false} & \multicolumn{2}{l}{ganzer Streifen blitzt nach höchstens \SI{1}{\second}} \\
+                15 & Testumgebung beenden (\texttt{docker stop}) & \multicolumn{2}{l}{alle LEDs aus, auch das Navigationslicht} \\
+                \bottomrule
+            \end{tabularx}
+        \end{table}
+        % TODO [PRÜFEN] row 15: only Ctrl-C on ros2 launch is confirmed to switch the LEDs off, check whether docker stop passes the signal to the LED node
+
+        Die Zeilen der Matrix sind so gewählt, dass jede Zeile eine bestimmte Eigenschaft der Anzeige belegt. Die Zeilen 1 bis 9 decken die Muster des Statuskanals im Normalbetrieb ab, einschließlich der Übergänge zwischen Boden und Flug. Zeile 4 zeigt das Wartefenster aus REQ-OPS-090 und REQ-OPS-100: Die Drohne ist scharf geschaltet und im autonomen Modus, steht aber noch, und das Autonomiesignal ist bereits sichtbar. Die Zeilen 10 und 11 belegen REQ-FUN-070 direkt. Beide sind Notfälle mit demselben roten Statusmuster, die Autonomie bleibt aber unterscheidbar, da der Autonomiekanal bei der Notlandung im Modus \texttt{AUTO.LAND} blau blinkt und beim Systemfehler im Modus \texttt{MANUAL} aus bleibt. Der Vergleich der Zeilen 11 und 12 belegt die Unterscheidung zwischen \glqq Fehler\grqq{} und \glqq keine Daten\grqq{} aus Abschnitt~\ref{sec:LED_Fehlerfall}. Die Zeilen 12 bis 14 prüfen die drei Wege, auf denen die Anzeige fehlende oder unzuverlässige Daten erkennt, also den Systemfehler \texttt{FC\_ERROR}, die fehlende Verbindung zum Flugcontroller und den Ausfall der Zustandsmaschine. Zeile 15 prüft schließlich, dass die LEDs beim Beenden ausgeschaltet werden und kein veraltetes Bild stehen bleibt.
+
+        Die beobachteten Muster je Zeile werden in Abschnitt~\ref{sec:Erg_LED} dem erwarteten Verhalten gegenübergestellt.
+
+        \subsection{Sichtbarkeit und Unterscheidbarkeit}
+        \label{sec:Eval_LED_Sicht}
+        % TODO: visibility test not carried out yet, add procedure details (distance, light conditions, observers) and move results to sec:Erg_LED
+
+        Der Funktionstest zeigt, dass die richtigen Muster angezeigt werden, aber nicht, ob ein Beobachter sie im Einsatz auch erkennt. Dies soll ein Sichtbarkeitstest prüfen. Als Maßstab dient REQ-DES-060, nach der eine Indikatorlampe bei Tageslicht aus \SI{10}{\metre} Entfernung erkennbar sein muss. Formal gilt diese Anforderung nur für den Rover, sie wird für die Drohne aber als Designziel übernommen. Ergänzend wird nach REQ-ENV-040 auch bei Kunstlicht und Dunkelheit geprüft.
+
+        Bewertet werden soll nicht nur, ob die LEDs leuchten, sondern ob sich die Muster voneinander unterscheiden lassen. Kritisch ist dabei vor allem Gelb. Gelb ist ein Mischton aus Rot und Grün, und sein Eindruck hängt von den LEDs und der Helligkeit ab. Ob Gelb bei Tageslicht von Grün unterscheidbar bleibt, ist deshalb ein eigener Prüfpunkt. Besonders wichtig ist das für die Muster von \texttt{LANDING} (grün, \SI{1}{\hertz}) und \texttt{STOP} (gelb, \SI{1}{\hertz}), die sich nur in der Farbe unterscheiden. Die übrigen Muster unterscheiden sich zusätzlich durch ihre Bewegung, also statisch, blinkend, im Wechsel oder als Lauflicht. Das hilft auch Beobachtern mit einer Rot-Grün-Sehschwäche, für die Grün, Gelb und Rot schwer zu unterscheiden sind.
+
+        Für die Bewertung sind folgende Randbedingungen festzuhalten. Jeder Kanal besteht aus zwei LEDs pro Bein, an der gesamten Drohne also aus acht LEDs pro Kanal. Ein Pegelwandler für die Datenleitungen ist nicht verbaut, die LEDs werden direkt mit dem \SI{3,3}{\volt}-Pegel des Raspberry Pi angesteuert.
+        % TODO [PRÜFEN] brightness during the test (full brightness 255 in operation?)
+        % TODO: test not carried out yet, results go to sec:Erg_LED
+
+        \subsection{Übertragbarkeit auf den Flugbetrieb}
+        \label{sec:Eval_LED_Flug}
+
+        Ein Test der Statusanzeige im Flugbetrieb wurde nicht durchgeführt und ist mit dem aktuellen Aufbau nicht möglich. Wie in Abschnitt~\ref{sec:LED_SIL} beschrieben, bietet derzeit kein Betriebssystem beides: Auf der SD-Karte für den Flug mit Ubuntu fehlt das Gerät \texttt{/dev/pio0}, auf der SD-Karte mit Raspberry Pi OS fehlt der Flug-Stack. Hinzu kommt, dass der LED-Knoten in keiner Startkonfiguration des Teams (\texttt{autonomy\_master}) eingetragen ist und im Flug deshalb nicht automatisch starten würde.
+
+        Für einen Flugtest wären deshalb zwei Schritte nötig. Zunächst müssen die LEDs auch unter dem Flug-Stack ansteuerbar sein. Dafür kommen drei Wege in Frage:
+
+        \begin{description}[style=nextline]
+            \item[SPI statt PIO] Die Datenleitungen werden auf die MOSI-Pins der SPI-Schnittstellen umgelötet, und es wird eine neue Treiberklasse geschrieben.
+            \item[Mikrocontroller] Ein Mikrocontroller, zum Beispiel ein RP2040, wird per USB zwischen Raspberry Pi und LEDs geschaltet und erzeugt das Signal für die Streifen.
+            \item[Flug-Stack auf Raspberry Pi OS] Der Flug-Stack wird ebenfalls per Docker auf Raspberry Pi OS betrieben, das den \gls{pio}-Treiber bereits enthält.
+        \end{description}
+
+        In allen drei Fällen ändert sich nur die Treiberklasse hinter der Schnittstelle \texttt{LedStripDriver}. Zuordnung, Decoder und LED-Knoten bleiben unverändert, sodass die Ergebnisse der automatisierten Tests und der Großteil des Funktionstests weiterhin gültig sind. Hier zeigt sich der Nutzen der Schichtenarchitektur aus Abschnitt~\ref{sec:LED_Software}. Im zweiten Schritt muss der LED-Knoten in die Startkonfiguration des Teams aufgenommen werden.
+
+        Ein Flugtest könnte anschließend genau die Lücken schließen, die die \gls{sil}-Testumgebung offen lässt. Er würde zeigen, ob die echte Zustandsmaschine die getesteten Kombinationen im Flug tatsächlich erzeugt, wie sich die Anzeige unter dem Zeitverhalten des echten Systems verhält und ob die Zustandsmaschine bei einem Absturz von MAVROS den Fehler \texttt{FC\_ERROR} rechtzeitig setzt.

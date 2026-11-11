@@ -68,6 +68,7 @@ Commands and shell concepts, logged on first use in this project.
 - `-E`: extended regex, so `a|b` means "a or b"
 - `-i`: ignore upper/lower case
 - `-c`: only count matches
+- `-q`: quiet, print nothing, only set the exit code (`0` = found), handy in `if`/`&&`
 **Example:** `grep -n -A3 "item24signale\|ws2812btds" bibliography.bib`
 **First used:** 2026-11-10, checking whether the bib entries from the markdown file exist.
 
@@ -171,3 +172,23 @@ E
 **What it does:** Calculates integers in the shell.
 **Example:** `echo $(( 33 + 1 ))` prints `34`
 **First used:** 2026-11-10, rendering one extra page after the LED section.
+
+## `head`
+**What it does:** Shows the beginning of a file or of a command's output. `-n 5` or just `head` (default: 10 lines). The counterpart of `tail`.
+**Example:** `grep -n "label" file.tex | head`
+**First used:** 2026-11-11, keeping the search output short while checking the build log for chapter 5.
+
+## `seq`
+**What it does:** Prints a sequence of numbers, one per line. `seq 1 43` prints 1 to 43. Often used in a `for` loop together with `$( )`.
+**Example:** `for i in $(seq 1 $N); do pdftotext -f $i -l $i thesis.pdf - | grep -q "sil reset" && echo "Seite $i"; done`
+**First used:** 2026-11-11, finding the PDF page with the LED test matrix by searching every page.
+
+## `which`
+**What it does:** Shows the full path of a program, i.e. checks whether a command is installed and where it lives. Prints nothing (and fails) if the command is not found.
+**Example:** `which makeglossaries` prints `/usr/bin/makeglossaries`
+**First used:** 2026-11-11, checking whether the tool for the list of acronyms is installed.
+
+## `tr`
+**What it does:** Translates (replaces) characters. `tr '\n' ' '` replaces every line break with a space, so a multi-line output becomes one line.
+**Example:** `pdftotext -f 7 -l 7 thesis.pdf - | head -3 | tr '\n' ' '`
+**First used:** 2026-11-11, printing the first lines of each PDF page on a single line to see where the list of acronyms appears.

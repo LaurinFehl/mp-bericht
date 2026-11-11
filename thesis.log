@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/TeX Live for SUSE Linux) (preloaded format=pdflatex 2026.10.27)  10 NOV 2026 19:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/TeX Live for SUSE Linux) (preloaded format=pdflatex 2026.10.27)  11 NOV 2026 18:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1552,13 +1552,9 @@ Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 3
  [4.6
 
 
-]
-No file thesis.acr.
-File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
-<use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 348.
-(pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
-[5.7
+] (./thesis.acr) [5.7
+
+
 
 ] (./TeXFiles/010_Kurzfassung.tex) (./TeXFiles/100_Einfuehrung.tex
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
@@ -1596,7 +1592,7 @@ chapter 3.
 [6.13
 
 ]
-<Figures/300-sdt/quad_konfigurationen.png, id=273, 752.8125pt x 280.04625pt>
+<Figures/300-sdt/quad_konfigurationen.png, id=380, 752.8125pt x 280.04625pt>
 File: Figures/300-sdt/quad_konfigurationen.png Graphic file (type png)
 <use Figures/300-sdt/quad_konfigurationen.png>
 Package pdftex.def Info: Figures/300-sdt/quad_konfigurationen.png  used on input line 48.
@@ -1606,7 +1602,7 @@ File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
 Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 63.
 (pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
  [7.14 <./Figures/300-sdt/quad_konfigurationen.png>]
-<Figures/300-sdt/fdm_printing.jpg, id=291, 903.375pt x 451.6875pt>
+<Figures/300-sdt/fdm_printing.jpg, id=396, 903.375pt x 451.6875pt>
 File: Figures/300-sdt/fdm_printing.jpg Graphic file (type jpg)
 <use Figures/300-sdt/fdm_printing.jpg>
 Package pdftex.def Info: Figures/300-sdt/fdm_printing.jpg  used on input line 70.
@@ -1625,7 +1621,7 @@ File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
 Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 107.
 (pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
  [9.16{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}]
-<Figures/300-sdt/maschinenampel.png, id=311, 401.5pt x 501.875pt>
+<Figures/300-sdt/maschinenampel.png, id=413, 401.5pt x 501.875pt>
 File: Figures/300-sdt/maschinenampel.png Graphic file (type png)
 <use Figures/300-sdt/maschinenampel.png>
 Package pdftex.def Info: Figures/300-sdt/maschinenampel.png  used on input line 119.
@@ -1637,7 +1633,7 @@ Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 1
 (pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
  [10.17 <./Figures/300-sdt/maschinenampel.png>]
 chapter 4.
-<Figures/400-em/drone_render.png, id=324, 1445.4pt x 813.0375pt>
+<Figures/400-em/drone_render.png, id=425, 1445.4pt x 813.0375pt>
 File: Figures/400-em/drone_render.png Graphic file (type png)
 <use Figures/400-em/drone_render.png>
 Package pdftex.def Info: Figures/400-em/drone_render.png  used on input line 18.
@@ -1725,25 +1721,66 @@ Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 1
 (pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
  [26.33]
 chapter 5.
-) (./TeXFiles/600_Ergebnisse.tex [27.34
+[27.34
 
 ]
+LaTeX Font Info:    Font shape `OT1/lmtt/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/lmtt/b/n' tried instead on input line 81.
+File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
+<use Figures/000-misc/fra-uas_logo.pdf>
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 82.
+(pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
+ [28.35]
+File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
+<use Figures/000-misc/fra-uas_logo.pdf>
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 102.
+(pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
+ [29.36]
+Underfull \hbox (badness 10000) in paragraph at lines 128--128
+[]|\OT1/lmtt/m/n/9 sil state=EMERGENCY[]LANDING mode=AUTO.LAND
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 128--128
+[]|\OT1/lmtt/m/n/9 sil state=A[]SYS[]ERROR mode=MANUAL
+ []
+
+File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
+<use Figures/000-misc/fra-uas_logo.pdf>
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 143.
+(pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
+[30.37]) (./TeXFiles/600_Ergebnisse.tex
+File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
+<use Figures/000-misc/fra-uas_logo.pdf>
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 1.
+(pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
+ [31.38]
 chapter 6.
-) (./TeXFiles/700_Zusammenfassung.tex [28.35
+[32.39
 
 ]
+File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
+<use Figures/000-misc/fra-uas_logo.pdf>
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 136.
+(pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
+ [33.40]) (./TeXFiles/700_Zusammenfassung.tex
+File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
+<use Figures/000-misc/fra-uas_logo.pdf>
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 1.
+(pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
+ [34.41]
 chapter 7.
-) [29.36
+) [35.42
 
 ]
 chapter without number
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <10.95> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 369.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 367.
 
 LaTeX Font Warning: Font shape `OT1/lmss/m/sc' in size <10.95> not available
-(Font)              Font shape `OT1/lmr/m/sc' tried instead on input line 369.
+(Font)              Font shape `OT1/lmr/m/sc' tried instead on input line 367.
 
-[30.37
+[36.43
 
 
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rmsc.enc}] (./TeXFiles/900_Anhang.tex
@@ -1751,9 +1788,9 @@ File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
 <use Figures/000-misc/fra-uas_logo.pdf>
 Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 1.
 (pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
- [31.38]
+ [37.44]
 chapter A.
-) [32.39
+) [38.45
 
 ] (./thesis.aux)
  ***********
@@ -1765,66 +1802,21 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 54602 strings out of 467525
- 1171224 string characters out of 5428467
- 2221503 words of memory out of 5000000
- 82529 multiletter control sequences out of 15000+600000
- 685816 words of font info for 77 fonts, out of 8000000 for 9000
+ 54585 strings out of 467525
+ 1170872 string characters out of 5428467
+ 2224383 words of memory out of 5000000
+ 82472 multiletter control sequences out of 15000+600000
+ 704421 words of font info for 96 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  108i,26n,117p,11240b,3601s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-pdfTeX warning (dest): name{glo:uart} has been referenced but does not exist, replaced by a fixed one
+pdfTeX warning (dest): name{https://logs.px4.io/} has been referenced but does not exist, replaced by a fixed one
 
-
-pdfTeX warning (dest): name{glo:mavlink} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{glo:cbor} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{glo:ros} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{glo:pio} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{glo:gpio} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{glo:sil} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{glo:led} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{glo:esc} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{glo:cad} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{glo:icarus} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{glo:daedalus} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{glo:erc} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{glo:frauas} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{glo:frost} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{glo:fdm} has been referenced but does not exist, replaced by a fixed one
-
-</usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss8.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt8.pfb>
-Output written on thesis.pdf (39 pages, 1186518 bytes).
+</usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss8.pfb></usr/share/texmf/fonts/type1/public/lm/lmss9.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtk10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt9.pfb>
+Output written on thesis.pdf (45 pages, 1291606 bytes).
 PDF statistics:
- 849 PDF objects out of 1000 (max. 8388607)
- 757 compressed objects within 8 object streams
- 174 named destinations out of 1000 (max. 500000)
- 547 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1050 PDF objects out of 1200 (max. 8388607)
+ 937 compressed objects within 10 object streams
+ 197 named destinations out of 1000 (max. 500000)
+ 627 words of extra memory for PDF output out of 10000 (max. 10000000)
 

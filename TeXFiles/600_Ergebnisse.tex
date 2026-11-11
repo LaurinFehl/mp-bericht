@@ -1,16 +1,143 @@
 \chapter{Ergebnisse}
 \label{ch:Ergebnisse}
 
-\section{Ergebnisse des Frames}
-\label{sec:Erg_Frame}
-\subsection{Masse und Vergleich mit dem bisherigen Frame}
-\subsection{Mechanische und flugtechnische Ergebnisse}
-\subsection{Fertigungsergebnisse}
+In diesem Kapitel werden die Ergebnisse der in Kapitel~\ref{ch:Evaluation} beschriebenen Prüfungen dargestellt. Die Gliederung folgt dabei der Evaluation, sodass jedem Abschnitt dort ein Abschnitt mit den Ergebnissen gegenübersteht. Abschließend werden die Ergebnisse den Anforderungen gegenübergestellt und die Grenzen der entwickelten Lösungen diskutiert.
 
-\section{Ergebnisse der Statusanzeige}
-\label{sec:Erg_LED}
+    \section{Ergebnisse des Frames}
+    \label{sec:Erg_Frame}
 
-\section{Diskussion}
-\label{sec:Diskussion}
-\subsection{Erfüllung der Anforderungen}   % am besten als Tabelle: Anforderung | Ergebnis | Status
-\subsection{Probleme und Grenzen}
+        \subsection{Masse}
+        \label{sec:Erg_Frame_Masse}
+        % Results of sec:Eval_Frame_Masse
+        % TODO: mass of the complete drone (scale), mass of the printed parts from the slicer vs. the old carbon plates
+        % TODO: comparison ASA vs. PA11-CF-SL, best as a table: part | ASA | PA11-CF-SL | carbon (old)
+
+        \subsection{Maßhaltigkeit und Montage}
+        \label{sec:Erg_Frame_Montage}
+        % Results of sec:Eval_Frame_Montage
+        % TODO: warping observed (which parts, how much), fit of heat-set inserts and screws, test assembly of two components
+
+        \subsection{Mechanische Belastbarkeit}
+        \label{sec:Erg_Frame_Mechanik}
+        % Results of sec:Eval_Frame_Mechanik
+        % TODO: drop heights, observed bending of the PA11-CF-SL arms and TPU feet, damage yes/no (photos)
+
+        \subsection{Fertigungsaufwand}
+        \label{sec:Erg_Frame_Fertigung}
+        % Results of sec:Eval_Frame_Fertigung
+        % TODO: post-processing per part (supports, mouse ears, brims), access to the holes for heat-set inserts; print time and material from the slicer if available
+
+        \subsection{Wartbarkeit}
+        \label{sec:Erg_Frame_Wartung}
+        % Results of sec:Eval_Frame_Wartung
+        % TODO: time to replace a part, access to USB ports of Pi and flight controller, cable routing
+
+        \subsection{Flugtests}
+        \label{sec:Erg_Frame_Flug}
+        % Results of sec:Eval_Frame_Flug
+        % TODO: hover flight, vibration and motor outputs from Flight Review / pyulog (plots), flight time
+
+    \section{Ergebnisse der Statusanzeige}
+    \label{sec:Erg_LED}
+
+        \subsection{Automatisierte Tests der Anzeigelogik}
+        \label{sec:Erg_LED_Tests}
+
+        Die Testsuite aus Abschnitt~\ref{sec:Eval_LED_Tests} wurde während der Entwicklung fortlaufend ausgeführt, insbesondere nach jeder größeren Änderung an der Anzeigelogik. Nach der letzten Überarbeitung der Anzeigemuster wurden von den ausgeführten Testfällen 292 bestanden, einer wurde übersprungen, und keiner ist fehlgeschlagen. Vor dieser Überarbeitung waren es 262 bestandene Testfälle. Die Differenz entspricht den Tests, die für die neuen Muster hinzugekommen sind. Beide Regressionstests für REQ-FUN-070 und für den Absturz von MAVROS wurden bestanden.
+
+        Übersprungen wurde ein Kompatibilitätstest mit dem Nachrichtenparser der Bodenstationsoberfläche des Teams. Dieser Test setzt voraus, dass das Paket der Oberfläche installiert ist, was auf dem Testrechner nicht der Fall war. Dass der LED-Knoten das Nachrichtenformat der Zustandsmaschine korrekt liest, ist davon unabhängig durch den Test mit dem echten Encoder belegt.
+
+        \subsection{Funktionstest an der Hardware}
+        \label{sec:Erg_LED_SIL}
+
+        Die Hardware wurde während der Arbeit schrittweise in Betrieb genommen und getestet. Zunächst wurden Pinbelegung und Farbreihenfolge mit \texttt{led\_selftest} an der Drohne bestätigt. Nach der Überarbeitung der Anzeigemuster wurde der neue Stand auf den Raspberry Pi gebracht und mit der Testmatrix aus Tabelle~\ref{tab:Eval_LED_Matrix} geprüft. Tabelle~\ref{tab:Erg_LED_Matrix} zeigt das Ergebnis je Zeile. Alle bisher geprüften Muster entsprachen dem erwarteten Verhalten, und das Lauflicht lief in der richtigen Richtung über die Beine.
+
+        \begin{table}[htbp]
+            \centering
+            \caption{Ergebnisse des Funktionstests in der \gls{sil}-Testumgebung, Zeilennummern nach Tabelle~\ref{tab:Eval_LED_Matrix}}
+            \label{tab:Erg_LED_Matrix}
+            \small
+            \begin{tabularx}{\textwidth}{r X l}
+                \toprule
+                \textbf{Nr.} & \textbf{Geprüfter Zustand} & \textbf{Ergebnis} \\
+                \midrule
+                1  & Ausgangszustand nach \texttt{sil reset} & wie erwartet \\
+                2  & \texttt{READY}, grünes Lauflicht & wie erwartet \\
+                3  & \texttt{ARMED} & wie erwartet \\
+                4  & \texttt{ARMED} im Modus \texttt{OFFBOARD} & offen \\
+                5  & \texttt{TAKEOFF} & wie erwartet \\
+                6  & \texttt{HOVER} im Modus \texttt{AUTO.LOITER} & offen \\
+                7  & \texttt{APPROACHING} im Modus \texttt{OFFBOARD} & offen \\
+                8  & \texttt{LANDING} & wie erwartet \\
+                9  & \texttt{STOP} mit Missionsfehler \texttt{ABORT} & wie erwartet \\
+                10 & Notlandung im Modus \texttt{AUTO.LAND} & offen \\
+                11 & Systemfehler im Modus \texttt{MANUAL} & offen \\
+                12 & Systemfehler \texttt{FC\_ERROR} & wie erwartet \\
+                13 & keine Verbindung zum Flugcontroller & offen \\
+                14 & Zustandsgeber verstummt & offen \\
+                15 & Beenden der Testumgebung & offen \\
+                \bottomrule
+            \end{tabularx}
+        \end{table}
+        % TODO (Laurin): test the open rows and update the table (only enter what was actually observed)
+
+        Laut Protokoll des LED-Knotens zeigte die Anzeige direkt nach dem Start einmal das Signal für fehlende Daten, da zu diesem Zeitpunkt noch keine Nachricht angekommen war. Danach stand sie ruhig im Zustand \texttt{REST}, und nur die Navigationslichter leuchteten. Auch das entspricht dem Verhalten aus Tabelle~\ref{tab:LED_Fehlerfall}.
+
+        Noch offen sind vor allem die Zeilen mit aktivem Autonomiekanal (4, 6, 7, 10) sowie Zeile 11. Gerade die Zeilen 10 und 11 belegen REQ-FUN-070 an der Hardware. In den automatisierten Tests ist dieses Verhalten bereits nachgewiesen, der Nachweis an den echten LEDs steht aber noch aus.
+
+        \subsection{Sichtbarkeit und Unterscheidbarkeit}
+        \label{sec:Erg_LED_Sicht}
+        % TODO: results of the visibility test (sec:Eval_LED_Sicht): recognisable at 10 m in daylight? darkness? yellow vs. green?
+
+        Der Sichtbarkeitstest wurde bisher nicht durchgeführt. Ob die Anzeige REQ-DES-060 und REQ-ENV-040 erfüllt und ob Gelb bei Tageslicht von Grün unterscheidbar bleibt, ist deshalb noch nicht belegt.
+
+        \subsection{Übertragbarkeit auf den Flugbetrieb}
+        \label{sec:Erg_LED_Flug}
+
+        Ein Test im Flugbetrieb wurde aus den in Abschnitt~\ref{sec:Eval_LED_Flug} genannten Gründen nicht durchgeführt. Alle Ergebnisse zur Statusanzeige stammen damit aus den automatisierten Tests und der \gls{sil}-Testumgebung. Sie belegen das Verhalten der Anzeige für die vorgegebenen Zustände, aber nicht, ob die echte Zustandsmaschine diese Zustände im Flug so erzeugt.
+
+    \section{Diskussion}
+    \label{sec:Diskussion}
+
+        \subsection{Erfüllung der Anforderungen}
+        \label{sec:Diskussion_Anforderungen}
+
+        Tabelle~\ref{tab:Erg_Anforderungen} fasst zusammen, inwieweit die Anforderungen nach dem aktuellen Stand der Tests erfüllt sind.
+        % TODO: add the frame requirements (requirements section in chapter 4 / 150_Zielstellung is still commented out)
+
+        \begin{table}[htbp]
+            \centering
+            \caption{Erfüllung der Anforderungen nach aktuellem Stand}
+            \label{tab:Erg_Anforderungen}
+            \small
+            \begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{2.6cm} X l}
+                \toprule
+                \textbf{Anforderung} & \textbf{Ergebnis} & \textbf{Status} \\
+                \midrule
+                % TODO: frame requirements
+                REQ-FUN-070 & In den automatisierten Tests nachgewiesen, an der Hardware stehen die Zeilen 10 und 11 noch aus & teilweise \\
+                REQ-DES-150 & Getrennte Datenleitungen je Bein, Fehlerisolation in den Tests nachgewiesen & erfüllt \\
+                REQ-OPS-090, REQ-OPS-100 & Zeile 4 der Testmatrix noch nicht geprüft & offen \\
+                REQ-DES-060 & Sichtbarkeitstest nicht durchgeführt & offen \\
+                REQ-ENV-040 & Sichtbarkeitstest nicht durchgeführt & offen \\
+                \bottomrule
+            \end{tabularx}
+        \end{table}
+
+        \subsection{Probleme und Grenzen}
+        \label{sec:Diskussion_Grenzen}
+
+        % TODO: problems and limits of the frame (warping, tolerances, material, ...)
+
+        Bei der Statusanzeige ist die wichtigste Grenze, dass sie bisher nicht im Flugbetrieb eingesetzt werden kann (Abschnitt~\ref{sec:Erg_LED_Flug}). Darüber hinaus wurden folgende Probleme festgestellt:
+
+        \begin{description}[style=nextline]
+            \item[Unbekannter Flugmodus wird als \texttt{AUTO.LOITER} gemeldet] Die Zustandsmaschine setzt einen PX4-Modus, den sie nicht kennt, auf \texttt{AUTO.LOITER}. An der Anzeige erscheint ein unbekannter Modus deshalb als autonom und nicht wie vorgesehen als unbekannt. Der rote Zweig des Autonomiekanals greift nur bei einem unbekannten Wert, den die Zustandsmaschine nie sendet. Auch die Übergangsbedingungen der Zustandsmaschine verlassen sich auf diesen falschen Wert und können nach \texttt{HOVER} wechseln. Eine Lösung wäre ein eigener Wert \texttt{MODE\_UNKNOWN} im gemeinsamen Paket mit den Aufzählungstypen. Am LED-Code wäre dafür keine Änderung nötig. Da das gemeinsame Paket nur in Abstimmung mit dem Verantwortlichen der Bodenstation geändert werden darf, ist diese Lösung noch offen.
+            \item[Fehlender Pegelwandler] Die LEDs werden direkt mit dem \SI{3,3}{\volt}-Pegel des Raspberry Pi angesteuert, obwohl für den Datenpegel mindestens \SI{3,5}{\volt} vorgesehen sind. In den bisherigen Tests funktionierte die Ansteuerung, eine sichere Übertragung ist so aber nicht gewährleistet.
+            \item[Unterscheidbarkeit der Farben] Die Muster von \texttt{LANDING} und \texttt{STOP} unterscheiden sich nur in der Farbe, Grün gegen Gelb. Für Menschen mit Rot-Grün-Sehschwäche hilft dort nur der Kontext, also ob die Drohne sinkt oder die Position hält.
+            \item[Kein automatischer Start] Der LED-Knoten ist in keiner Startkonfiguration des Teams eingetragen und würde im Flug nicht automatisch starten.
+            \item[Keine Überwachung des LED-Knotens] Es gibt keinen Watchdog. Stürzt der LED-Knoten ab, bleibt das letzte Bild auf den LEDs stehen.
+            \item[Lizenzen] Die verwendete \gls{pio}-Bibliothek steht unter der Lizenz GPL-2, das LED-Paket unter Apache-2.0. Vor einer Weitergabe des Pakets muss die Vereinbarkeit geklärt werden.
+        \end{description}
+
+        Die Aussagekraft der \gls{sil}-Testumgebung ist außerdem begrenzt, wie in Abschnitt~\ref{sec:LED_SIL} beschrieben. Sie belegt das Verhalten der Anzeige, aber nicht das Zusammenspiel mit der echten Zustandsmaschine im Flug.
