@@ -150,14 +150,6 @@ In diesem Kapitel werden die Entwickelten Methoden Evalutiert und Bewertet. Dabe
 
         Ein Test der Statusanzeige im Flugbetrieb wurde nicht durchgeführt und ist mit dem aktuellen Aufbau nicht möglich. Wie in Abschnitt~\ref{sec:LED_SIL} beschrieben, bietet derzeit kein Betriebssystem beides: Auf der SD-Karte für den Flug mit Ubuntu fehlt das Gerät \texttt{/dev/pio0}, auf der SD-Karte mit Raspberry Pi OS fehlt der Flug-Stack. Hinzu kommt, dass der LED-Knoten in keiner Startkonfiguration des Teams (\texttt{autonomy\_master}) eingetragen ist und im Flug deshalb nicht automatisch starten würde.
 
-        Für einen Flugtest wären deshalb zwei Schritte nötig. Zunächst müssen die LEDs auch unter dem Flug-Stack ansteuerbar sein. Dafür kommen drei Wege in Frage:
-
-        \begin{description}[style=nextline]
-            \item[SPI statt PIO] Die Datenleitungen werden auf die MOSI-Pins der SPI-Schnittstellen umgelötet, und es wird eine neue Treiberklasse geschrieben.
-            \item[Mikrocontroller] Ein Mikrocontroller, zum Beispiel ein RP2040, wird per USB zwischen Raspberry Pi und LEDs geschaltet und erzeugt das Signal für die Streifen.
-            \item[Flug-Stack auf Raspberry Pi OS] Der Flug-Stack wird ebenfalls per Docker auf Raspberry Pi OS betrieben, das den \gls{pio}-Treiber bereits enthält.
-        \end{description}
-
-        In allen drei Fällen ändert sich nur die Treiberklasse hinter der Schnittstelle \texttt{LedStripDriver}. Zuordnung, Decoder und LED-Knoten bleiben unverändert, sodass die Ergebnisse der automatisierten Tests und der Großteil des Funktionstests weiterhin gültig sind. Hier zeigt sich der Nutzen der Schichtenarchitektur aus Abschnitt~\ref{sec:LED_Software}. Im zweiten Schritt muss der LED-Knoten in die Startkonfiguration des Teams aufgenommen werden.
+        Für einen Flugtest müssen die LEDs zunächst auch unter dem Flug-Stack ansteuerbar sein, und der LED-Knoten muss in die Startkonfiguration des Teams aufgenommen werden. Die möglichen Wege dafür werden im Ausblick in Abschnitt~\ref{sec:Ausblick} beschrieben.
 
         Ein Flugtest könnte anschließend genau die Lücken schließen, die die \gls{sil}-Testumgebung offen lässt. Er würde zeigen, ob die echte Zustandsmaschine die getesteten Kombinationen im Flug tatsächlich erzeugt, wie sich die Anzeige unter dem Zeitverhalten des echten Systems verhält und ob die Zustandsmaschine bei einem Absturz von MAVROS den Fehler \texttt{FC\_ERROR} rechtzeitig setzt.

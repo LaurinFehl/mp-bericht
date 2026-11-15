@@ -192,3 +192,8 @@ E
 **What it does:** Translates (replaces) characters. `tr '\n' ' '` replaces every line break with a space, so a multi-line output becomes one line.
 **Example:** `pdftotext -f 7 -l 7 thesis.pdf - | head -3 | tr '\n' ' '`
 **First used:** 2026-11-11, printing the first lines of each PDF page on a single line to see where the list of acronyms appears.
+
+## `file`
+**What it does:** Looks at the content of a file (not its name) and says what type it really is, e.g. `PNG image data, 563 x 615`. Useful when an extension like `.png` might be wrong.
+**Example:** `file Figures/000-misc/platzhalter.png`
+**First used:** 2026-11-13, checking that the placeholder image is a real PNG before using it for the figures in chapter 6.

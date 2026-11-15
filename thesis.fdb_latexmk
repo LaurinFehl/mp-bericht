@@ -1,17 +1,17 @@
 # Fdb version 4
-["biber thesis"] 1794415861.58106 "thesis.bcf" "thesis.bbl" "thesis" 1794419823.49941 0
+["biber thesis"] 1794582021.24971 "thesis.bcf" "thesis.bbl" "thesis" 1794742287.04287 0
   "bibliography.bib" 1794305639.89859 7181 8077a533a1fa26e88da1474cd97e5e0d ""
-  "thesis.bcf" 1794419823.39299 109236 958236941b0fb32ea20a0dcbc83ae376 "pdflatex"
+  "thesis.bcf" 1794742286.93403 109236 958236941b0fb32ea20a0dcbc83ae376 "pdflatex"
   (generated)
   "thesis.bbl"
   "thesis.blg"
   (rewritten before read)
-["cusdep acn acr thesis"] 0 "thesis.acn" "thesis.acr" "thesis" 1794419823.49964 -1
-  "thesis.acn" 1794419823.39496 5898 5864f95cc2c5ea0e86726d14a54f7e54 "pdflatex"
+["cusdep acn acr thesis"] 1794742283.25042 "thesis.acn" "thesis.acr" "thesis" 1794742287.04311 0
+  "thesis.acn" 1794742286.93564 7302 f0cd195a2057faf180de9a8d02cc7037 "pdflatex"
   (generated)
   "thesis.acr"
   (rewritten before read)
-["pdflatex"] 1794419820.13276 "/home/laurin/Dokumente/bericht/thesis.tex" "thesis.pdf" "thesis" 1794419823.49968 0
+["pdflatex"] 1794742283.32377 "/home/laurin/Dokumente/bericht/thesis.tex" "thesis.pdf" "thesis" 1794742287.04315 0
   "/etc/texmf/web2c/texmf.cnf" 1741769514 44663 102a78e45f2ab8dc7d3c7458e09825b9 ""
   "/home/laurin/Dokumente/bericht/thesis.tex" 1794419816.56345 10489 b55f033e41840bcff25634c66763851d ""
   "/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc" 1202520719 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
@@ -56,6 +56,7 @@
   "/usr/share/texmf/fonts/tfm/public/lm/rm-lmtt8.tfm" 1254269338 1348 e9ce72e654d76f23fb9e1b8842e0576a ""
   "/usr/share/texmf/fonts/tfm/public/lm/rm-lmtt9.tfm" 1254269338 1340 95bafc1340b1c519d1b4b4bcc33f5afc ""
   "/usr/share/texmf/fonts/tfm/public/lm/ts1-lmss10.tfm" 1254269338 1576 dc39c0165a09a2dd2c8da4cbb869c2e7 ""
+  "/usr/share/texmf/fonts/tfm/public/lm/ts1-lmss8.tfm" 1254269338 1604 48051ef252c0ddf583dd76f1a193d4ae ""
   "/usr/share/texmf/fonts/tfm/public/wasy/wasy10.tfm" 1579560596 908 375dcd194b89b9cc9481ab62f2da0667 ""
   "/usr/share/texmf/fonts/tfm/public/wasy/wasy5.tfm" 1579560596 908 9b2ed8097703005e83b790aecb955a2f ""
   "/usr/share/texmf/fonts/tfm/public/wasy/wasy6.tfm" 1579560596 912 8da0595e5e615d33e0b2860959a58bf8 ""
@@ -67,6 +68,7 @@
   "/usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb" 1254269338 30388 702fae6a5f0e6e9c48a1d872b442ffcf ""
   "/usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb" 1254269338 30635 833ec815d446ec453a4913fc26d24cbc ""
   "/usr/share/texmf/fonts/type1/public/lm/lmr10.pfb" 1255129361 119235 f35b44530a1d90eb90fe15d9cba67ea0 ""
+  "/usr/share/texmf/fonts/type1/public/lm/lmr7.pfb" 1255129361 121145 68312a933e2c689ed40ec0aba373e279 ""
   "/usr/share/texmf/fonts/type1/public/lm/lmr8.pfb" 1255129361 122174 a7a08406857c9530a0320a2517f60370 ""
   "/usr/share/texmf/fonts/type1/public/lm/lmss10.pfb" 1255129361 97408 f595704ec2a07246c2d6f7b602587452 ""
   "/usr/share/texmf/fonts/type1/public/lm/lmss12.pfb" 1255129361 96107 daf52840b555e3b38f9679b629b5e2df ""
@@ -322,6 +324,7 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1793114553 5541242 ad45dcb304d5dcddf9e2f29c6ce59b75 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1793114472 3636359 7c459e0b8ce36d0513d41b2ca79556d9 ""
   "Figures/000-misc/fra-uas_logo.pdf" 1793107349.61254 48156 a7144bb102d1cba51c46ebb517adf05e ""
+  "Figures/000-misc/platzhalter.png" 1794236027.03636 168181 8ab716109e83abbfa221767f73ea44dd ""
   "Figures/000-misc/unterschrift.jpg" 1793107349.61254 5597 45b9af162f388bafe301470e43783686 ""
   "Figures/300-sdt/fdm_printing.jpg" 1793615666.68527 84723 b4432b1e6bfceedb518f7ac941fbfef2 ""
   "Figures/300-sdt/maschinenampel.png" 1793624812.98455 105348 af063c60ca3a541072f748503eba9537 ""
@@ -333,25 +336,25 @@
   "TeXFiles/001_Titlepage.tex" 1793107349.61412 1565 9dc34ff7b59a9eb0897e48188bc29e4a ""
   "TeXFiles/002_NDNotice.tex" 1793107349.61412 1085 9a2bbd160d129a6b678e7cab29ad05fc ""
   "TeXFiles/003_Declaration.tex" 1793107349.61412 3829 a42070ddf298f77e14ce3c3a7c5bddf3 ""
-  "TeXFiles/004_Figures.tex" 1794246582.04724 1343 ed799ff307de43c686e2f3564fb095e1 ""
-  "TeXFiles/005_Acronyms.tex" 1794419816.65184 1140 3eafaf79534deb51d6c2d679490537b1 ""
+  "TeXFiles/004_Figures.tex" 1794587611.11073 1452 4440fbdfb647a0ed43b06e893b889867 ""
+  "TeXFiles/005_Acronyms.tex" 1794582056.0071 1186 d62d0ad095e1aa9883a86196d3a3fcc1 ""
   "TeXFiles/010_Kurzfassung.tex" 1793107349.61412 370 97fc52e4e7d4fdca71436db97daa0c41 ""
   "TeXFiles/100_Einfuehrung.tex" 1793107349.61412 1566 0fe37ffcab8ae7f71289180441593783 ""
   "TeXFiles/200_Hintergrund.tex" 1793623507.04147 6609 c1f2f525a20ced3c442075a5dd6000f7 ""
   "TeXFiles/300_StandDerTechnik.tex" 1793802152.5662 17290 73cf010c9ce3e51a128b1f182bf28967 ""
   "TeXFiles/400_EntwickelteMethoden.tex" 1794418323.49761 55902 f425a4218d54948c7993935c30349d34 ""
-  "TeXFiles/500_Evaluation.tex" 1794417847.05646 19386 e395d323b739ff4d403aa7b7e3e1679f ""
-  "TeXFiles/600_Ergebnisse.tex" 1794418678.36231 11000 808ac975d2912385123cc274b4a0ae8c ""
-  "TeXFiles/700_Zusammenfassung.tex" 1793107349.61412 111 9a283f95b80d6b3a175be90d86a68e36 ""
+  "TeXFiles/500_Evaluation.tex" 1794742225.79726 18444 13863f9da27d69b43d0e89c43c87aa92 ""
+  "TeXFiles/600_Ergebnisse.tex" 1794587877.19985 28533 51609eb55084bae003b29041ad6b6c81 ""
+  "TeXFiles/700_Zusammenfassung.tex" 1794742279.37733 11151 a415b8d6f31cf15f8398d459f8e3291b ""
   "TeXFiles/900_Anhang.tex" 1793107349.61412 37 8737e38e165e7821bdc4e1aa8552e9cc ""
-  "thesis.acr" 1794419740.16203 3528 c62425ab835e2bb00e8c57b9a66d9b1f "cusdep acn acr thesis"
-  "thesis.aux" 1794419823.37899 51817 19d79304616460c3ea257720edd648ce "pdflatex"
-  "thesis.bbl" 1794415862.66753 26810 4ebfab5dcd0ae1f6cf34a85f4a21d73d "biber thesis"
-  "thesis.lof" 1794419823.39496 1356 b0ec5bfc5fe7116262d344a33f9cf62a "pdflatex"
-  "thesis.lot" 1794419823.39496 2220 bcf11b70e0ad9cb2817c39537edafdab "pdflatex"
-  "thesis.run.xml" 1794419823.39496 2448 9e7c051444d40e81c42370880157c234 "pdflatex"
+  "thesis.acr" 1794742283.31645 4043 d8fd087da0a22560ff1c95ab11089d98 "cusdep acn acr thesis"
+  "thesis.aux" 1794742286.91803 56668 60ea5a908c38686dd7fb692508228ea3 "pdflatex"
+  "thesis.bbl" 1794582022.50174 26810 4ebfab5dcd0ae1f6cf34a85f4a21d73d "biber thesis"
+  "thesis.lof" 1794742286.93564 1933 3e592b9feea287f742b378457251832a "pdflatex"
+  "thesis.lot" 1794742286.93564 2718 13f0dec5f892dae157155fdc3d6aae81 "pdflatex"
+  "thesis.run.xml" 1794742286.93564 2448 9e7c051444d40e81c42370880157c234 "pdflatex"
   "thesis.tex" 1794419816.56345 10489 b55f033e41840bcff25634c66763851d ""
-  "thesis.toc" 1794419823.39496 8644 d54d0cb8647e6747d4749f1bd81dda3e "pdflatex"
+  "thesis.toc" 1794742286.93564 8975 197019b48b41da563d938a39b2442773 "pdflatex"
   (generated)
   "thesis.acn"
   "thesis.aux"
