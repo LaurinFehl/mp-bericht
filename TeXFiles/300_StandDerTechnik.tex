@@ -1,44 +1,70 @@
 \chapter{Stand der Technik}
 \label{ch:StandDerTechnik}
 
-Dieses Kapitel bearbeitet den aktuellen Stand der Technik in den Bereichen, die für diese Arbeit relevant sind. Zunächst werden Bauformen und Konstruktionsweisen von \gls{fdm} -3D-Druck-Bauteilen betrachet, sowie eine Zustandsaufnahme der Software der Drohne um die Ausmaße der benötigten Arbeit abzuleiten.
-
+Dieses Kapitel fasst den Stand der Technik in den Bereichen zusammen, die für Frame und Statusanzeige wichtig sind.
+Das sind die Bauformen von Multicoptern, die Fertigung im \gls{fdm}-3D-Druck und Statusanzeigen mit LEDs.
 
     \section{Drohnenplattformen und Frames}
     \label{sec:SdT_Drohnen}
 
-    Der Markt von selbst gebauten Drohnen ist in den letzten Jahren stetig gewachsen. Flight Controller und ESC Boards werden von Jahr zu Jahr günstiger, variantenreicher und leistungsstärker. In dieser Sektion werden die wichtigsten Faktoren von selbstgebauten Drohnen erarbeitet und analysiert. Dabei werden von \gls{frost} vorher bestimmte Möglichkeiten bearbeitet. 
+    Der Markt für selbst gebaute Drohnen ist in den letzten Jahren stetig gewachsen. % [QUELLE?]
+    Flight Controller und \gls{esc}-Boards werden günstiger, variantenreicher und leistungsstärker.
+    Dieser Abschnitt vergleicht die Bauformen, die für das \gls{frost}-Team in Frage kamen.
 
-        \subsection{Bauformen von Multicoptern}        % Quad, Hex, X- vs. H-Frame
+        \subsection{Bauformen von Multicoptern}
+        \label{sec:SdT_Bauformen}
 
-        Konträr zu dem ready-to-fly kaufbaren Drohnen kann bei einem selbst gebauten Design die freie Wahl der Konfigurationen getroffen werden. Dabei muss auf den Zielnutzen geachtet werden, da verschiedene Konfigurationen unterschiedliche Vor- und Nachteile besitzen. Die Framekonfiguration definiert wie die einzelnen Motoren zueinander positioniert sind. Bei der Auswahl der Framekonfiguration ist es auch wichtig zu beachten wie viele Motoren benutzt werden. Die Anzahl der Propeller entscheidet über wichtige Charakteristika für den Zielnutzen. Im Folgenden werden die beiden für diese Arbeit relevanten Bauformen, der Hexacopter und der Quadcopter, in Anlehnung an \cite{petersonQuadcopterVsHexacopter} gegenübergestellt.
+        Anders als bei fertig gekauften Drohnen kann bei einem eigenen Aufbau die Konfiguration frei gewählt werden.
+        Die Konfiguration legt fest, wie viele Motoren verwendet werden und wie sie zueinander angeordnet sind.
+        Beides bestimmt wichtige Eigenschaften der Drohne und muss deshalb zum Einsatzzweck passen.
+        Im Folgenden werden Hexacopter und Quadcopter nach~\cite{petersonQuadcopterVsHexacopter} gegenübergestellt.
 
-        
-            \begin{description}[style=nextline]
-                \item[Hexacopter] Das Hex im Namen steht für die Zahl sechs und damit für die Anzahl der Motoren. Die Last der Drohne verteilt sich gleichmäßig auf sechs Propeller, wodurch jeder einzelne Rotor weniger belastet wird. Mit einem Eigengewicht von etwa \SIrange{2,3}{6,8}{\kilo\gram} kann ein Hexacopter eine Nutzlast von etwa \SIrange{2,3}{4,5}{\kilo\gram} tragen und eignet sich damit für schwere Ausrüstung wie professionelle Kamerasysteme. Durch die zusätzlichen Rotoren liegt er auch bei Wind ruhig in der Luft. Der größte Vorteil ist die Ausfallsicherheit: Fällt ein Rotor aus, verliert der Hexacopter nur etwa \SI{16}{\percent} seines Schubs und kann in der Regel noch sicher zurückfliegen. Dem stehen eine mit etwa \SIrange{10}{20}{\minute} eher kurze Flugzeit ohne Last, eine geringere Agilität sowie höhere Anschaffungs- und Ersatzteilkosten gegenüber. Hexacopter werden daher vor allem im professionellen Bereich eingesetzt.
+        \paragraph{Hexacopter}
+        Ein Hexacopter besitzt sechs Motoren.
+        Die Last verteilt sich auf sechs Propeller, wodurch jeder einzelne Rotor weniger belastet wird.
+        Mit einem Eigengewicht von etwa \SIrange{2,3}{6,8}{\kilo\gram} trägt ein Hexacopter etwa
+        \SIrange{2,3}{4,5}{\kilo\gram} Nutzlast.
+        Er eignet sich damit für schwere Ausrüstung wie professionelle Kamerasysteme.
+        Durch die zusätzlichen Rotoren liegt er auch bei Wind ruhig in der Luft.
+        Sein größter Vorteil ist die Ausfallsicherheit.
+        Fällt ein Rotor aus, verliert der Hexacopter nur etwa \SI{16}{\percent} seines Schubs und kann in der Regel
+        noch sicher zurückfliegen.
+        Dem stehen eine kurze Flugzeit von etwa \SIrange{10}{20}{\minute} ohne Last und eine geringere Agilität gegenüber.
+        Anschaffung und Ersatzteile sind teurer, daher werden Hexacopter vor allem im professionellen Bereich eingesetzt.
 
-                \item[Quadcopter] Beim Quadcopter verteilt sich die Last auf nur vier Propeller, sodass jeder Rotor einen größeren Anteil tragen muss. Dafür kann dieser deutlich leichter als ein Hexacopter sein, kann allerdings auch nur eine entsprechend geringere Nutzlast aufnehmen. Durch das geringere Gewicht kann er eine längere Flugzeit erreichen und ist meistens schneller und wendiger. Bei Wind ist er dagegen unruhiger als ein Hexacopter. Der entscheidende Nachteil liegt in der fehlenden Redundanz: Der Ausfall eines Rotors bedeutet einen Schubverlust von \SI{25}{\percent} und führt meist zum Absturz. Im Gegenzug sind Quadcopter günstiger in der Anschaffung, Ersatzteile sind preiswert und leicht erhältlich, und Reparaturen lassen sich meist selbst durchführen. Zudem ist ein Quadcopter einfacher zu fliegen.
-            \end{description}
+        \paragraph{Quadcopter}
+        Beim Quadcopter verteilt sich die Last auf vier Propeller, sodass jeder Rotor einen größeren Anteil trägt.
+        Dafür kann er deutlich leichter sein als ein Hexacopter, trägt aber auch weniger Nutzlast.
+        Durch das geringere Gewicht erreicht er meist eine längere Flugzeit und ist schneller und wendiger.
+        Bei Wind ist er dagegen unruhiger.
+        Sein größter Nachteil ist die fehlende Redundanz.
+        Der Ausfall eines Rotors bedeutet einen Schubverlust von \SI{25}{\percent} und führt meist zum Absturz.
+        Quadcopter sind dafür günstiger, Ersatzteile sind preiswert und leicht erhältlich.
+        Reparaturen lassen sich meist selbst durchführen, und ein Quadcopter ist einfacher zu fliegen.
 
-        \subsection{Vergleich von Quadcopter Framekonfigurationen}
+        \subsection{Vergleich von Quadcopter-Konfigurationen}
+        \label{sec:SdT_Konfigurationen}
 
-        FÜr die Drohne bei \gls{frost} wurde ein Quadcopter Design ausgwählt. Bei diesen jedoch gibt es die verschiedenen Framekonfigurationen Quad H, Quad + und Quad X. Der grundlegende Unterschied liegt in der Anordnung der Arme in Relation zum Körper der Drohne und den Motoren. Um einen Überblick über die Unterschiede zu geben, werden in Tabelle \ref{tab:Quad_Konfigurationen} die wichtigsten Unterschiede zusammengefasst. Für eine visuelle Stütze sind in Abbildung \ref{fig:Quad_Konfigurationen} die Konfigurationen dargestellt. Dabei wird sich auf die Artikel \cite{mishraDifferentTypesDrone2021} und \cite{bonvaeroQuadcopterDrones} bezogen.
-        
-            \begin{table}[htbp]
+        Für die Drohne des \gls{frost}-Teams wurde ein Quadcopter gewählt.
+        Quadcopter gibt es in den Konfigurationen Quad H, Quad + und Quad X.
+        Sie unterscheiden sich in der Anordnung der Arme relativ zum Rumpf und zur Flugrichtung.
+        Tabelle~\ref{tab:Quad_Konfigurationen} fasst die Unterschiede nach~\cite{mishraDifferentTypesDrone2021}
+        und~\cite{bonvaeroQuadcopterDrones} zusammen, Abbildung~\ref{fig:Quad_Konfigurationen} zeigt die drei Konfigurationen.
+
+            \begin{table}[H]
                 \centering
-                \caption{Vergleich der Quadcopter-Konfigurationen H, Plus und X}
+                \caption{Vergleich der Quadcopter-Konfigurationen H, Plus und X
+                nach~\cite{mishraDifferentTypesDrone2021, bonvaeroQuadcopterDrones}}
                 \label{tab:Quad_Konfigurationen}
-                \renewcommand{\arraystretch}{1.3} % etwas mehr Zeilenabstand
+                \renewcommand{\arraystretch}{1.3}
                 \begin{tabularx}{\textwidth}{l *{3}{>{\raggedright\arraybackslash}X}}
                     \toprule
                                         & \textbf{Quad H}                            & \textbf{Quad +}                        & \textbf{Quad X} \\
                     \midrule
                     Armanordnung        & Zwei Querträger an einem Längsrumpf        & Arme in und quer zur Flugrichtung      & Arme diagonal zur Flugrichtung \\
-                    %Stabilität          & \multicolumn{3}{l}{Alle Konfigurationen stabil im Vorwärtsflug} \\
-                    %Giersteuerung       & \multicolumn{3}{l}{Bei allen Konfigurationen gleich} \\
                     Nick-/Rollsteuerung & Geringer & Geringer & Ca.\ \SI{30}{\percent} höher \\
-                    Besonderheiten      & Lange Basis, mehr Platz für Akkus/Technik & Propeller im Sichtfeld von Kameras & Einfacher Zusammenbau und Reparatur \\
-                    Typischer Einsatz   & FPV-Racing & Bildung & Ready-to-Fly Drohnen \\
+                    Besonderheiten      & Lange Basis, mehr Platz für Akkus und Technik & Propeller im Sichtfeld von Kameras & Einfacher Zusammenbau und Reparatur \\
+                    Typischer Einsatz   & \gls{fpv}-Racing & Bildung & Ready-to-Fly-Drohnen \\
                     \bottomrule
                 \end{tabularx}
             \end{table}
@@ -46,94 +72,179 @@ Dieses Kapitel bearbeitet den aktuellen Stand der Technik in den Bereichen, die 
             \begin{figure}[htbp]
                 \centering
                 \includegraphics[width=0.8\textwidth]{\quadconfigs}
-                \caption{Quadcopter-Konfigurationen H, Plus und X mit Drehrichtung der Motoren \cite{mishraDifferentTypesDrone2021}}
+                \caption{Quadcopter-Konfigurationen H, Plus und X. Die Pfeile zeigen die Drehrichtung der
+                Motoren~\cite{mishraDifferentTypesDrone2021}.}
                 \label{fig:Quad_Konfigurationen}
             \end{figure}
 
-        \subsection{Kommerzielle Frames und Bausätze}  % Carbon-Frames, Frame-Kits
+        \subsection{Kommerzielle Frames und Bausätze}
+        \label{sec:SdT_Bausaetze}
 
-        Der Markt für selbst gebaute Drohnenkits ist in den letzen Jahren stark gewachsen. Auch wenn Kits eher in Richtung FPV-Racing und Hobbybereich gehen, gibt es weitere Standards "Development Kits" für den professionellen Bereich. Dort werden elektronische Komponenten wie Flight Controller, \gls{esc} und Motoren auf Leistung und Kompatibilität abgestimmt. Diese Frames benutzen meist Carbonplatten und -rohre, um ein möglichst leichtes und steifes Chassis zu erhalten. Für dei Drohne bei \gls{frost} wurde das "PX4 Development Kit - X500 v2" von Holy Bro augewählt. Die ist ein Quadcopter im Quad X-Design, welches viel Erweiterbar ist und eine gute Basis bietet. 
+        Auch der Markt für Bausätze von Drohnen ist in den letzten Jahren stark gewachsen. % [QUELLE?]
+        Die meisten Bausätze richten sich an \gls{fpv}-Racing und den Hobbybereich.
+        Daneben gibt es Development Kits für den professionellen Bereich.
+        Bei ihnen sind Flight Controller, \gls{esc} und Motoren in Leistung und Kompatibilität aufeinander abgestimmt.
+        Diese Frames bestehen meist aus Carbonplatten und -rohren, um ein leichtes und steifes Chassis zu erhalten.
+        Für die Drohne des \gls{frost}-Teams wurde das \enquote{PX4 Development Kit X500 v2} von Holybro
+        gewählt. % [QUELLE?] Holybro X500 V2
+        Es ist ein Quadcopter in Quad-X-Konfiguration, der sich gut erweitern lässt.
 
-        Bei FPV orientierten Drohnenkits sind 3D-gedruckte Frames oft eine günstigere Alternative zu Carbonrahmen und gewinnen an Beliebtheit. Dort werden oft brechende Teile wie Motorträger 3D-gedruckt, um einfache Ersatzteile zu haben. 
+        Bei \gls{fpv}-Drohnen sind 3D-gedruckte Frames oft eine günstigere Alternative zu Carbonrahmen. % [QUELLE?]
+        Häufig werden dort Teile, die oft brechen, wie Motorträger, gedruckt, um einfach Ersatz herstellen zu können.
 
-    \section{Fertigung mit \glsentryshort{fmd}-3D-Druck}
+    \section{Fertigung im FDM-3D-Druck}
     \label{sec:SdT_Fertigung}
 
-    \gls{fdm}-3D-Druck ist eine Fertigungstechnologie, welche in den letzten Jahren stark gewachsen ist, im Hobby- sowie industriellem Bereich. In dieser Sektion werden die Funktionsweise, die Materialien und die Konstruktionsrichtlinien für \gls{fdm}-3D-Druck-Bauteile betrachtet.
+    Der \gls{fdm}-3D-Druck hat sich in den letzten Jahren im Hobby- und im Industriebereich verbreitet. % [QUELLE?]
+    Dieser Abschnitt beschreibt das Verfahren, die verfügbaren Materialien und die Regeln für die Konstruktion.
 
-        \subsection{Funktionsprinzip \glsentryshort{fmd}}
+        \subsection{Funktionsprinzip}
+        \label{sec:SdT_FDM_Prinzip}
 
-        Das Kernprinzip der \gls{fdm}-Technologie ist das fertigen eines Werkstücks in vielen einzelnen Schichten, welche durch eine Düse aufgetragen werden. Dabei kann eine vielzahl an thermoplastischen Kunststoffen verwendet werden, welche in Filamentform, also als langen Faden, vorliegen. Dieses Filament wird durch einen Motor in die Düse gedrückt, dort erhitzt und auf die Bauplattform aufgetragen. Der \gls{fdm}-3D-Druck ist ein additives Fertigungsverfahren im Vergleich zu subtraktiven Verfahren wie Fräsen oder Drehen. Dies ermöglicht komplexe Geometrien und Hohlräume, die mit traditionellen Methoden schwer bis unmöglich herzustellen wären. Abbildung \ref{fig:fdm_printing} zeigt das Funktionsprinzip des \gls{fdm}-3D-Drucks. 
+        Beim 3D-Druck wird ein Bauteil nicht aus einem Block herausgearbeitet, sondern Schicht für Schicht aufgebaut.
+        Das Verfahren zählt deshalb zur additiven Fertigung, im Gegensatz zu subtraktiven Verfahren wie Fräsen oder Drehen.
+        Beim \gls{fdm}-Verfahren wird ein Kunststoffdraht, das sogenannte Filament, von einem Motor in eine beheizte
+        Düse gedrückt.
+        Dort schmilzt es und wird in dünnen Bahnen auf die Bauplattform aufgetragen.
+        Das Material kühlt ab, erstarrt und verbindet sich mit der darunterliegenden Schicht.
+        Abbildung~\ref{fig:fdm_printing} zeigt dieses Prinzip.
 
-        \begin{figure}[htbp]
+        \begin{figure}[H]
                 \centering
                 \includegraphics[width=0.8\textwidth]{\FDMPrinting}
-                \caption{Das Funktionsprinzip des \gls{fdm}-3D-Drucks}
+                \caption{Funktionsprinzip des \gls{fdm}-3D-Drucks~\cite{alliedcnWhatIsFDM3DPrinting}}
+                % [PRÜFEN] source of the figure
                 \label{fig:fdm_printing}
         \end{figure}
 
+        Vor dem Druck zerlegt eine Slicer-Software das \gls{cad}-Modell in einzelne Schichten.
+        Dabei werden Parameter wie Schichthöhe, Füllung, Wandstärke und Stützstrukturen festgelegt.
+        Die Software erzeugt daraus einen G-Code.
+        Er steuert die Bewegungen von Druckkopf und Bauplattform sowie die Extrusion des Materials.
+
+        Das Verfahren ist vergleichsweise günstig und erlaubt Hohlräume und Formen, die sich klassisch nur schwer
+        fertigen lassen.
+        Bauteile lassen sich außerdem schnell ändern und neu drucken.
+        Für die Weiterentwicklung eines Drohnenframes ist das ein Vorteil.
+
         \subsection{Materialien in Filamentform}
-        \label{subsec:filamenttypen}     % PETG, PA-CF, PLA-CF, TPU
+        \label{subsec:filamenttypen}
 
-        Durch den Einsatz von \gls{fdm}-3D-Druck auch im Hobbybereich, gibt es eine Vielzahl von Materialien, welche schon vorgefertig in Filamentform erhältlich sind. Diese reichen von einfachen und schwachen bis stabilen und temperaturresistenten Kunststoffen. Da jeder Kunststoff seine eigenen Eigenschaften hat, ist sinnvoll einen Überblick über die gängigsten Materialien sich zu verschaffen. 
+        Durch die Verbreitung im Hobbybereich sind viele Kunststoffe als fertiges Filament erhältlich.
+        Sie reichen von einfach zu druckenden, aber wenig belastbaren bis zu stabilen und temperaturbeständigen
+        Kunststoffen. % [QUELLE?] material properties
+        Die folgenden sechs Kunststoffe sind am weitesten verbreitet.
 
-        \begin{description}[style=nextline]
-            
-            \item[PLA] Der Kunststoff PLA, Polylactid acid, ist ein Kunststoff welcher aus nachwachsenden Rohstoffen wie Maisstärke ode Zuckerrohr hergestellt wird. PLA ist ein sehr einfacher Kunststoff, welcher sich für den Einstieg in den 3D-Druck eignet, da dieser besonders leicht zu drucken ist. Seine leichtigkeit im Druck macht es jedoch zu einem nicht besonders temperaturbeständigen Kunststoff. PLA ist zudem ein spröder Kunststoff, welcher bei Belastung schnell bricht.
-            \item[PET-G] Der Kunststoff PET-G, Polyethylenterephthalat Glycol, ist der beliebte Kunststoff PET mit dem Zusatz Glycol. Dieser Zusatz macht den Kunststoff zäher und weniger spröde. Er ist ein wenig aufwendiger zu drucken als PLA, jedoch genauso beliebt und weit verbreitet. 
-            \item[ABS] Der Kunststoff ABS, Acrylonitrile Butadiene Styrene, ist ein sehr beliebter Kunststoff der Industrie. Er ist zäh und temperaturbeständiger als PLA und PETG, jedoch auch weitaus schwieriger zu drucken, da sich der Kunststoff beim Abkühlen stark zusammenzieht und sich verzieht. ABS ist schwach gegenüber UV-Strahlung und kann bei längerer Sonneneinstrahlung spröde werden. Auch ist der Kunststoff gesundheitlich bedenklich, da beim Drucken giftige Dämpfe entstehen.
-            \item[ASA] Der Kunststoff ASA, Acrylonitrile Styrene Acrylate, ist ein Kunststoff der dem ABS sehr ähnlich ist, jedoch UV-beständiger und besser für den Außeneinsatz sich eignet. Es ist genau so fast genauso schwierig zu drucken wie ABS. ASA ist genau wie ABS gesundheitlich bedenklich, da beim Drucken giftige Dämpfe entstehen.
-            \item[PA] Der Kunststoff PA, Polyamide, ist ein sehr stabiler und temperaturbeständiger Kunststoff. Er ist besonders geeignet für Anwendungen, bei denen hohe mechanische Belastungen auftreten. Da dieser Kunststoff sehr hygroskopisch ist, muss er vor dem Drucken getrocknet werden. Zudem ist im Hobbybereich oft nur PA Zusätzen wie Kohlenstofffasern pder Glasfasern erhältlich, da PA sich auch beim abkühlen stark zusammenzieht, sogar schon während des Druckens. 
-            \item[TPU] Der Kunststoff TPU, Thermoplastic Polyurethane, ist ein sehr flexibler Kunststoff, welcher sich für Anwendungen eignet, bei denen Elastizität und Flexibilität benötigt wird. TPU ist ein sehr schwieriger Kunststoff zu drucken. TPU nimmt auch sehr schnell Feuchtigkeit auf, sodass dieser vor dem Drucken getrocknet werden muss. 
-        \end{description}
+        \paragraph{PLA}
+        PLA (Polylactid) wird aus nachwachsenden Rohstoffen wie Maisstärke oder Zuckerrohr hergestellt.
+        Es lässt sich besonders leicht drucken und eignet sich deshalb für den Einstieg.
+        Dafür ist es wenig temperaturbeständig und spröde, sodass es unter Belastung schnell bricht.
 
-        \subsection{Konstruktionsrichtlinien}          % Wandstärke, Orientierung, Stützstrukturen, Anisotropie
+        \paragraph{PET-G}
+        PET-G (Polyethylenterephthalat-Glykol) ist PET mit einem Zusatz von Glykol.
+        Der Zusatz macht den Kunststoff zäher und weniger spröde.
+        PET-G ist etwas aufwendiger zu drucken als PLA, aber ähnlich weit verbreitet.
 
-        Bedingend der Schichtbauweise des \gls{fdm}-3D-Drucks, haben Bauteile eine Anisotropie, also unterschiedliche mechanische Eigenschaften in verschiedenen Richtungen. Die Festigkeit eines Bauteils hängt stark von der Ausrichtung der Schichten ab. Daher ist es wichtig, die Orientierung des Bauteils während des Druckens zu berücksichtigen, um die gewünschte Festigkeit zu erreichen. Zudem müssen Einstellungen im Slicer wie Wandstärke, Füllung und Stützstrukturen beachtet werden, um ein qualitativ hochwertiges Bauteil zu erhalten. 
+        \paragraph{ABS}
+        ABS (Acrylnitril-Butadien-Styrol) ist ein in der Industrie verbreiteter Kunststoff.
+        Er ist zäh und temperaturbeständiger als PLA und PET-G.
+        Beim Drucken ist er schwieriger, da er sich beim Abkühlen stark zusammenzieht und verzieht.
+        Unter \gls{uv}-Strahlung kann ABS bei längerer Sonneneinstrahlung spröde werden.
+        Beim Drucken entstehen gesundheitlich bedenkliche Dämpfe.
 
-        Die Orientierung des Bauteils ist auch schon während der Konstruktion zu berücksichtigen, um so keine Flächen zu erzeugen, welche nur schwer oder gar nicht zu drucken sind. Zudem ist es wichtig, die Belastungspunkte des Bauteils zu kennen, um die Schichten in der richtigen Richtung auszurichten. 
+        \paragraph{ASA}
+        ASA (Acrylnitril-Styrol-Acrylat) ist ABS sehr ähnlich, aber \gls{uv}-beständiger und deshalb besser für den
+        Außeneinsatz geeignet.
+        Es ist fast genauso schwierig zu drucken wie ABS, und auch hier entstehen beim Drucken bedenkliche Dämpfe.
 
+        \paragraph{PA}
+        PA (Polyamid) ist sehr stabil und temperaturbeständig.
+        Es eignet sich besonders für Anwendungen mit hoher mechanischer Belastung.
+        PA ist stark hygroskopisch und muss deshalb vor dem Drucken getrocknet werden.
+        Da es sich beim Abkühlen und schon während des Drucks stark zusammenzieht, ist es im Hobbybereich meist nur
+        mit Zusätzen wie Carbon- oder Glasfasern erhältlich.
 
-        \subsection{Schwächen und Grenzen}             % Schichthaftung, Vibration, Temperatur
+        \paragraph{TPU}
+        TPU (thermoplastisches Polyurethan) ist sehr flexibel und eignet sich für Bauteile, die elastisch sein müssen.
+        Es ist schwierig zu drucken und nimmt schnell Feuchtigkeit auf, sodass es vor dem Drucken getrocknet werden muss.
 
-        Durch die erarbeiten Materialcharakteristika in \ref{subsec:filamenttypen} können die Schwächen und Grenzen der Filamente beim Konstruieren berücksichtigt werden. Schichtrichtung und Wandstärke sind eintscheidene Faktoren für die Festigkeit eines Bauteils. Zudem ist es wichtig, die Belastungspunkte des Bauteils zu kennen, um die Schichten in der richtigen Richtung auszurichten. Beim konstruieren und nicht beachten dieser Faktoren kann es zu den typischen Schwächen von \gls{fdm}-3D-Druck-Bauteilen kommen. Dazu gehören eine schlechte Schichthaftung, Vibrationen und Temperaturbeständigkeit. 
+        \subsection{Konstruktionsrichtlinien}
+        \label{sec:SdT_Konstruktion}
 
-     Im \gls{frost}-Labor standen zum Zeitpunkt dieser Arbeit zwei 3D-Drucker vom Typ Bambu Lab X1-Carbon zur Verfügung. Ihre maximale Drucktemperatur beträgt \SI{300}{\celsius}, eine aktive Bauraumheizung ist nicht vorhanden. Daraus ergibt sich eine weitere Schwäche: Bei zu niedriger Temperatur können Schwachstellen im Druck entstehen.
+        Durch den schichtweisen Aufbau sind \gls{fdm}-Bauteile anisotrop.
+        Ihre mechanischen Eigenschaften hängen also von der Richtung ab.
+        Die Festigkeit eines Bauteils hängt stark von der Ausrichtung der Schichten ab. % [QUELLE?]
+        Die Druckrichtung muss deshalb schon bei der Konstruktion festgelegt werden.
+        Dazu müssen die Belastungspunkte des Bauteils bekannt sein, damit die Schichten passend zur Last liegen.
+        Außerdem sollte die Konstruktion keine Flächen enthalten, die sich nur schwer oder gar nicht drucken lassen.
+        Im Slicer beeinflussen Wandstärke, Füllung und Stützstrukturen die Qualität des Bauteils.
+
+        \subsection{Schwächen und Grenzen}
+        \label{sec:SdT_Grenzen}
+
+        Werden Druckrichtung und Wandstärke bei der Konstruktion nicht beachtet, treten typische Schwächen von
+        \gls{fdm}-Bauteilen auf.
+        Dazu gehören eine schlechte Haftung zwischen den Schichten, Anfälligkeit für Vibrationen und eine begrenzte
+        Temperaturbeständigkeit.
+        Die Eigenschaften der Materialien aus Abschnitt~\ref{subsec:filamenttypen} bestimmen, wie stark diese Schwächen
+        ausfallen.
+
+        Im \gls{frost}-Labor standen zum Zeitpunkt dieser Arbeit zwei 3D-Drucker vom Typ Bambu Lab X1-Carbon zur
+        Verfügung. % [QUELLE?] printer specifications
+        Ihre maximale Drucktemperatur beträgt \SI{300}{\celsius}, eine aktive Bauraumheizung ist nicht vorhanden.
+        Bei Materialien, die einen warmen Bauraum benötigen, können dadurch Schwachstellen im Druck entstehen.
 
     \section{Zustandsanzeigen bei Drohnen}
     \label{sec:SdT_LED}
 
-    Gemäß den Anforderungen des \gls{erc} Wettbewerbs muss die Drohne eine Möglichkeit besitzen, welche den Status und Zustand anzeigt. In dieser Sektion werden die Möglichkeiten der Statusanzeige betrachtet und die Anforderungen an diese abgeleitet. 
+    Nach dem Regelwerk der \gls{erc} muss die Drohne ihren Zustand nach außen anzeigen (Abschnitt~\ref{sec:Anforderungen}).
+    Dieser Abschnitt stellt vor, wie Maschinen ihren Zustand anzeigen und welche LED-Systeme dafür in Frage kommen.
 
-        \subsection{Statusanzeige und Statemachine}
-        
+        \subsection{Statusanzeigen und Zustandsmaschinen}
+        \label{sec:SdT_Statusanzeige}
+
         \noindent
         \begin{minipage}[c]{0.62\textwidth}
-            In der Industrie werden Maschinen und Anlagen oft mit Statusanzeigen ausgestattet, um den Zustand der Maschine anzuzeigen. Oft werden dabei Maschinenampel, auch Signalsäulen genannt, wie im Bild \ref{fig:maschinenampel} benutzt. Diese bestehen aus mehreren Leuchten, welche eine bestimmte Farbe und Blinkfrequenz für einen bestimmten Zustand der Maschine darstellen. Die Drohne ist nicht gleichzusetzen mit einer Maschine, jedoch ist es sinnvoll, die gleiche Logik zu verwenden. Die Drohne kann in verschiedene Zustände wechseln, welche durch die Statusanzeige dargestellt werden. Dabei ist es wichtig, dass die Zustände eindeutig und leicht verständlich sind. Der Companion Computer der Drohne bestimmt die Zuständer und steuert die Statusanzeige. Die Zustände der Drohne werden in einer Statemachine dargestellt, welche die Zustände und Übergänge zwischen den Zuständen definiert. 
-
-
+            In der Industrie werden Maschinen und Anlagen oft mit Statusanzeigen ausgestattet.
+            Häufig sind das Maschinenampeln, auch Signalsäulen genannt, wie in Abbildung~\ref{fig:maschinenampel}.
+            Sie bestehen aus mehreren Leuchten, deren Farbe und Blinkfrequenz jeweils einen Zustand der Maschine
+            darstellen.
+            Eine Drohne ist keine Maschine im industriellen Sinn, die Logik lässt sich aber übertragen.
+            Die Drohne wechselt zwischen verschiedenen Zuständen, die die Anzeige eindeutig und leicht verständlich
+            darstellen muss.
+            Die Zustände und die Übergänge zwischen ihnen werden in einer Zustandsmaschine festgelegt.
+            Auf der Drohne bestimmt der Companion Computer die Zustände und steuert die Anzeige.
         \end{minipage}
         \hfill
         \begin{minipage}[c]{0.33\textwidth}
             \centering
             \includegraphics[width=0.6\linewidth]{\maschinenampel}
-            \captionsetup{format=plain, justification=centering} % kein hängender Einzug in der schmalen Spalte
-            \captionof{figure}{Beispielabbildung einer Maschinenampel}
+            \captionsetup{format=plain, justification=centering}
+            \captionof{figure}{Maschinenampel mit mehreren Signalfarben~\cite{wermaSignalsaeulen}}
+            % [PRÜFEN] source of the figure
             \label{fig:maschinenampel}
         \end{minipage}
 
+        \subsection{LED-Systeme und Ansteuerung}
+        \label{sec:SdT_LED_Systeme}
 
-        \subsection{LED-Systeme und Ansteuerung}       % NeoPixel, I2C/NCP5623, Pi-GPIO
+        Adressierbare RGB-LEDs wie der Typ WS2812B, auch unter dem Namen NeoPixel bekannt, lassen sich einzeln in Farbe
+        und Helligkeit steuern~\cite{ws2812btds}.
+        Dafür genügt ein einziger Datenpin, sodass sich Zustände und Warnungen einfach darstellen lassen.
+        Ein LED-Streifen dieses Typs benötigt drei Anschlüsse, nämlich Daten, Versorgung und Masse.
+        Er muss nur an einem Ende angeschlossen werden.
+        Die Daten werden von LED zu LED weitergegeben, was die Verkabelung vereinfacht.
+        Solche Streifen werden auch als aRGB-Streifen bezeichnet, wobei das a für adressierbar steht.
+        Auf einer Drohne kann der Companion Computer die Streifen mit einer eigenen Software ansteuern.
 
-        Moderne LED-Systeme wie NeoPixel oder WS2812B ermöglichen es, eine Vielzahl von Farben und Effekten mit nur einem Datenpin zu steuern, wodurch eine einfache Darstellung von Zuständen und Warnungen möglich ist. Die Ansteuerung  erfolgt über den Companion Computer der Drohne, wo durch eine eigenene Controllersoftware die LEDS ansteuern kann, um unterschiedliche Zustände der Drohne darzustellen.
-
-        Die LED-Streifen von WS2812B benötigen nur drei Pins für die Ansteuerung: einen für die Datenleitung, einen für die Stromversorgung und einen für die Masse. Ein Vorteil von LED-Streifen ist, dass nur eine Seite verbunden werden muss, um die gesamte Kette zu steuern. Die Datenleitung wird von LED zu LED weitergegeben, wodurch eine einfache Verkabelung möglich ist. Diese Streifen werden auch aRGB genannt, a für addressable, um jede einzelne LED individuell ansteuern zu können.      
-
-        \subsection{Anforderungen und Normen}          % ERC-Anforderung, Sichtbarkeit
-
-        Die Anforderungen an die Statusanzeige der Drohne ergeben sich aus den Regeln des \gls{erc}-Wettbewerbs, welche in Tabelle \ref{tab:ERC_Anforderungen} im Kapitel \ref{ch:Hintergrund} zusammengefasst sind. Die Anzeige muss den Zustand der Drohne eindeutig darstellen, sodass der Operator jederzeit erkennen kann, in welchem Zustand sich die Drohne befindet. Zudem wurden eigene Anforderungen definiert, wie dedizierte LEDS, welche links grün und rechts rot leuchten sollen, um so die Orientierung der Drohne leichter erkennen zu können. 
-
-    \section{Zusammenfassung und Ableitung}
+    \section{Fazit und Ableitung}
     \label{sec:SdT_Fazit}
 
-    Durch ein aufarbeiten der vorhanden Technik und Mittel die zur Verfügung stehen, kann so in einem festgelegten Rahmen die Arbeit durchgeführt werden um klare Ergbenisse erarbeiten zu können. Durch Befunde aber auch während der Entwicklung werden altenativ Lösungen gesucht die auch das Ziel erfüllen würden. 
+    Für die Drohne ist mit dem Holybro X500 V2 die Konfiguration als Quadcopter in Quad-X-Anordnung festgelegt.
+    Der neue Frame behält diese Konfiguration bei.
+    Für den Druck kommen nach Abschnitt~\ref{subsec:filamenttypen} vor allem ASA und PA in Frage.
+    Bei beiden muss die Anisotropie durch eine passende Druckrichtung berücksichtigt werden.
+    Die Drucker des Labors haben keine Bauraumheizung, was die Wahl des Materials zusätzlich einschränkt.
+    Für die Statusanzeige bieten sich adressierbare WS2812B-Streifen an, deren Farben und Muster sich an
+    Maschinenampeln orientieren.
+    Die Auswahl des Materials und die Umsetzung der Anzeige werden in Kapitel~\ref{ch:Methoden} beschrieben.

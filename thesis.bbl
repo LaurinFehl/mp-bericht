@@ -18,386 +18,81 @@
 
 
 \refsection{0}
-  \datalist[entry]{nyt/global//global/global/global}
-    \entry{item24signale}{online}{}{}
-      \field{sortinit}{}
-      \field{sortinithash}{495dc9894017a8b12cafa9c619d10c0c}
-    \endentry
-    \entry{ws2812btds}{online}{}{}
-      \field{sortinit}{}
-      \field{sortinithash}{495dc9894017a8b12cafa9c619d10c0c}
-    \endentry
-    \entry{adobestockMotorOrderDiagrams}{online}{}{}
-      \name{author}{1}{}{%
-        {{hash=c0a397526cf9a35dd7cf043d6b6f96b0}{%
-           family={{Adobe Stock}},
-           familyi={A\bibinitperiod}}}%
+  \datalist[entry]{none/global//global/global/global}
+    \entry{ercRules2026}{manual}{}{}
+      \list{organization}{1}{%
+        {European Space Foundation}%
       }
-      \strng{namehash}{c0a397526cf9a35dd7cf043d6b6f96b0}
-      \strng{fullhash}{c0a397526cf9a35dd7cf043d6b6f96b0}
-      \strng{fullhashraw}{c0a397526cf9a35dd7cf043d6b6f96b0}
-      \strng{bibnamehash}{c0a397526cf9a35dd7cf043d6b6f96b0}
-      \strng{authorbibnamehash}{c0a397526cf9a35dd7cf043d6b6f96b0}
-      \strng{authornamehash}{c0a397526cf9a35dd7cf043d6b6f96b0}
-      \strng{authorfullhash}{c0a397526cf9a35dd7cf043d6b6f96b0}
-      \strng{authorfullhashraw}{c0a397526cf9a35dd7cf043d6b6f96b0}
-      \field{sortinit}{A}
-      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
-      \field{labelnamesource}{author}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labeltitlesource}{title}
-      \field{langid}{american}
-      \field{note}{Bild-ID 243287639}
-      \field{title}{Motor Order Diagrams of the Quad Drone or Quadcopter. Set of Vector Infographics of Airframes and Types Quad X, Quad H, Quad V and Quad P}
-      \field{urlday}{30}
-      \field{urlmonth}{10}
-      \field{urlyear}{2026}
-      \field{urldateera}{ce}
-      \true{nocite}
-      \verb{urlraw}
-      \verb https://stock.adobe.com/vn/images/motor-order-diagrams-of-the-quad-drone-or-quadcopter-set-of-vector-infographics-of-airframes-and-types-quad-x-quad-h-quad-v-and-quad-p/243287639
-      \endverb
-      \verb{url}
-      \verb https://stock.adobe.com/vn/images/motor-order-diagrams-of-the-quad-drone-or-quadcopter-set-of-vector-infographics-of-airframes-and-types-quad-x-quad-h-quad-v-and-quad-p/243287639
-      \endverb
-    \endentry
-    \entry{alliedcnWhatIsFDM3DPrinting}{online}{}{}
-      \name{author}{1}{}{%
-        {{hash=1a09fa06b090db9a80320f6fbed8c4b1}{%
-           family={{Allied}},
-           familyi={A\bibinitperiod}}}%
-      }
-      \strng{namehash}{1a09fa06b090db9a80320f6fbed8c4b1}
-      \strng{fullhash}{1a09fa06b090db9a80320f6fbed8c4b1}
-      \strng{fullhashraw}{1a09fa06b090db9a80320f6fbed8c4b1}
-      \strng{bibnamehash}{1a09fa06b090db9a80320f6fbed8c4b1}
-      \strng{authorbibnamehash}{1a09fa06b090db9a80320f6fbed8c4b1}
-      \strng{authornamehash}{1a09fa06b090db9a80320f6fbed8c4b1}
-      \strng{authorfullhash}{1a09fa06b090db9a80320f6fbed8c4b1}
-      \strng{authorfullhashraw}{1a09fa06b090db9a80320f6fbed8c4b1}
-      \field{sortinit}{A}
-      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{langid}{american}
-      \field{title}{What is FDM 3D Printing?}
-      \field{urlday}{30}
-      \field{urlmonth}{10}
-      \field{urlyear}{2026}
-      \field{urldateera}{ce}
-      \true{nocite}
-      \verb{urlraw}
-      \verb https://alliedcn.com/what-is-fdm-3d-printing/
-      \endverb
-      \verb{url}
-      \verb https://alliedcn.com/what-is-fdm-3d-printing/
-      \endverb
-    \endentry
-    \entry{beermann_veranderungen_2020}{article}{}{}
-      \name{author}{6}{}{%
-        {{hash=f12614a671d3fe960dc814435d507b5e}{%
-           family={Beermann},
-           familyi={B\bibinitperiod},
-           given={Beate},
-           giveni={B\bibinitperiod}}}%
-        {{hash=28746865cbd233366e12559c12915968}{%
-           family={Backhaus},
-           familyi={B\bibinitperiod},
-           given={Nils},
-           giveni={N\bibinitperiod}}}%
-        {{hash=b86564be4e953fedcd3bef7f4b7b049b}{%
-           family={Hünefeld},
-           familyi={H\bibinitperiod},
-           given={Lena},
-           giveni={L\bibinitperiod}}}%
-        {{hash=7806608d9f6c9516b16f714a66c6ec42}{%
-           family={Janda},
-           familyi={J\bibinitperiod},
-           given={Valentin},
-           giveni={V\bibinitperiod}}}%
-        {{hash=def8520279979052a0e64922894a5ddb}{%
-           family={Schmitt-Howe},
-           familyi={S\bibinithyphendelim H\bibinitperiod},
-           given={Britta},
-           giveni={B\bibinitperiod}}}%
-        {{hash=90f7c2d6170bca1013a3afca3c0974ee}{%
-           family={Sommer},
-           familyi={S\bibinitperiod},
-           given={Sabine},
-           giveni={S\bibinitperiod}}}%
-      }
-      \list{language}{1}{%
-        {de}%
-      }
-      \strng{namehash}{095c24b7d12c6b5a49ae3a7b7dd3a385}
-      \strng{fullhash}{e55fe412f24d7ca46db5ef0f3a0616fa}
-      \strng{fullhashraw}{e55fe412f24d7ca46db5ef0f3a0616fa}
-      \strng{bibnamehash}{095c24b7d12c6b5a49ae3a7b7dd3a385}
-      \strng{authorbibnamehash}{095c24b7d12c6b5a49ae3a7b7dd3a385}
-      \strng{authornamehash}{095c24b7d12c6b5a49ae3a7b7dd3a385}
-      \strng{authorfullhash}{e55fe412f24d7ca46db5ef0f3a0616fa}
-      \strng{authorfullhashraw}{e55fe412f24d7ca46db5ef0f3a0616fa}
-      \field{sortinit}{B}
-      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Veränderungen in der {Arbeitswelt} - {Reflexion} des {Arbeitsschutzsystems}}
-      \field{year}{2020}
-      \true{nocite}
-      \field{pages}{10}
-      \range{pages}{1}
-    \endentry
-    \entry{noauthor_bericht_nodate}{misc}{}{}
-      \field{sortinit}{B}
-      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Planungs- und Realisierungsprozess des Neubauprojektes „Wohnen am Campus I“ in Berlin Adlershof}
-      \field{title}{Bericht „{Wohnen} am {Campus} {I}“}
-      \field{urlday}{11}
-      \field{urlmonth}{1}
-      \field{urlyear}{2022}
-      \field{urldateera}{ce}
-      \true{nocite}
-      \verb{urlraw}
-      \verb https://www.adlershof.de/fileadmin/user_upload/ebooks/WaC/index.html#p=36
-      \endverb
-      \verb{url}
-      \verb https://www.adlershof.de/fileadmin/user_upload/ebooks/WaC/index.html#p=36
-      \endverb
-    \endentry
-    \entry{bonvaeroQuadcopterDrones}{online}{}{}
-      \name{author}{1}{}{%
-        {{hash=47ec1bd73bf9d047c1a73e7e5e0dcf84}{%
-           family={{Bonvaero}},
-           familyi={B\bibinitperiod}}}%
-      }
-      \strng{namehash}{47ec1bd73bf9d047c1a73e7e5e0dcf84}
-      \strng{fullhash}{47ec1bd73bf9d047c1a73e7e5e0dcf84}
-      \strng{fullhashraw}{47ec1bd73bf9d047c1a73e7e5e0dcf84}
-      \strng{bibnamehash}{47ec1bd73bf9d047c1a73e7e5e0dcf84}
-      \strng{authorbibnamehash}{47ec1bd73bf9d047c1a73e7e5e0dcf84}
-      \strng{authornamehash}{47ec1bd73bf9d047c1a73e7e5e0dcf84}
-      \strng{authorfullhash}{47ec1bd73bf9d047c1a73e7e5e0dcf84}
-      \strng{authorfullhashraw}{47ec1bd73bf9d047c1a73e7e5e0dcf84}
-      \field{sortinit}{B}
-      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{langid}{american}
-      \field{title}{Quadcopter Drones: The Ultimate Guide}
-      \field{urlday}{30}
-      \field{urlmonth}{10}
-      \field{urlyear}{2026}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://bonvaero.com/quadcopter-drones/
-      \endverb
-      \verb{url}
-      \verb https://bonvaero.com/quadcopter-drones/
-      \endverb
-    \endentry
-    \entry{friese_handbuch_2020}{book}{}{}
-      \name{author}{4}{}{%
-        {{hash=d3f555323f0d8aa46ce9dbfc4bd1b972}{%
-           family={Friese},
-           familyi={F\bibinitperiod},
-           given={Heidrun},
-           giveni={H\bibinitperiod}}}%
-        {{hash=1d85ec8a8b4c297107541e9a40a9092e}{%
-           family={Nolden},
-           familyi={N\bibinitperiod},
-           given={Marcus},
-           giveni={M\bibinitperiod}}}%
-        {{hash=db62ed345d6f391887e9d007edb121dd}{%
-           family={Rebane},
-           familyi={R\bibinitperiod},
-           given={Gala},
-           giveni={G\bibinitperiod}}}%
-        {{hash=71ac6df11f078007a3976bf03b050628}{%
-           family={Schreiter},
-           familyi={S\bibinitperiod},
-           given={Miriam},
-           giveni={M\bibinitperiod}}}%
-      }
-      \list{language}{1}{%
-        {de}%
-      }
-      \list{publisher}{1}{%
-        {Springer-Verlag}%
-      }
-      \strng{namehash}{f0228b66c82d4ad62d295d5731fc688a}
-      \strng{fullhash}{4114c3569d75e13b3a5a0f41d1e2b6e6}
-      \strng{fullhashraw}{4114c3569d75e13b3a5a0f41d1e2b6e6}
-      \strng{bibnamehash}{f0228b66c82d4ad62d295d5731fc688a}
-      \strng{authorbibnamehash}{f0228b66c82d4ad62d295d5731fc688a}
-      \strng{authornamehash}{f0228b66c82d4ad62d295d5731fc688a}
-      \strng{authorfullhash}{4114c3569d75e13b3a5a0f41d1e2b6e6}
-      \strng{authorfullhashraw}{4114c3569d75e13b3a5a0f41d1e2b6e6}
-      \field{sortinit}{F}
-      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Mit der Entwicklung des Web 2.0. sind digitale Medien und Netzwerke zum Teil unseres Alltags geworden. Von Facebook und Twitter zu YouTube und Blogspot: Soziale, kulturelle, religiöse, ökonomische und politische Räume entwickeln sich mittlerweile auch im weltumspannenden Netz, erlauben die Verständigung über die gegenwärtige Situation und lassen die einstige Unterscheidung zwischen ‚online und offline-Welten‘, dem ‚virtuellen‘ und dem ‚realen, physischen‘ Raum obsolet werden. Diese digitalen Räume werden inzwischen nicht mehr als abgegrenzt betrachtet, sondern vielmehr als Kontinuum sozialer Felder verstanden, die von unterschiedlichen Praktiken und transnationaler Kommunikation gekennzeichnet sind.}
-      \field{isbn}{978-3-658-08357-1}
-      \field{month}{3}
-      \field{note}{Google-Books-ID: rRDUDwAAQBAJ}
-      \field{title}{Handbuch {Soziale} {Praktiken} und {Digitale} {Alltagswelten}}
-      \field{year}{2020}
-      \true{nocite}
-      \keyw{Social Science / Media Studies,Social Science / Sociology / General,Social Science / Sociology of Religion}
-    \endentry
-    \entry{gauger_arbeitswelten_2020}{report}{}{}
-      \name{author}{3}{}{%
-        {{hash=b4175971e463802883b8d34082986c02}{%
-           family={Gauger},
-           familyi={G\bibinitperiod},
-           given={Felix},
-           giveni={F\bibinitperiod}}}%
-        {{hash=7f4b5b976dd2242a0f45f1e9fa5be84c}{%
-           family={Pfnür},
-           familyi={P\bibinitperiod},
-           given={Andreas},
-           giveni={A\bibinitperiod}}}%
-        {{hash=af3402dc93a5928d0faf309ea408b25c}{%
-           family={Skarabi},
-           familyi={S\bibinitperiod},
-           given={Jan},
-           giveni={J\bibinitperiod}}}%
-      }
-      \list{institution}{1}{%
-        {Technische Universität Darmstadt, Forschungscenter Betriebliche Immobilienwirtschaft}%
-      }
-      \list{language}{1}{%
-        {ger}%
-      }
-      \list{location}{1}{%
-        {Darmstadt}%
-      }
-      \strng{namehash}{5699a528bbc16ba4dd7efaaf3d4bc79b}
-      \strng{fullhash}{5699a528bbc16ba4dd7efaaf3d4bc79b}
-      \strng{fullhashraw}{5699a528bbc16ba4dd7efaaf3d4bc79b}
-      \strng{bibnamehash}{5699a528bbc16ba4dd7efaaf3d4bc79b}
-      \strng{authorbibnamehash}{5699a528bbc16ba4dd7efaaf3d4bc79b}
-      \strng{authornamehash}{5699a528bbc16ba4dd7efaaf3d4bc79b}
-      \strng{authorfullhash}{5699a528bbc16ba4dd7efaaf3d4bc79b}
-      \strng{authorfullhashraw}{5699a528bbc16ba4dd7efaaf3d4bc79b}
-      \field{sortinit}{G}
-      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Die nachfolgende Zusammenfassung der Studie "Nutzerpräferenzen von Coworking Spaces" zeigt die Bedeutung von Flexible Office Space auf und arbeitet präferierte Charakteristiken und Attribute der flexiblen Arbeitsplätze heraus. Die Ergebnisse wurden über eine empirische Befragung in deutschen Coworking Spaces im Frühjahr 2019 erhoben und anschließend wissenschaftlich ausgewertet.}
-      \field{number}{39}
-      \field{title}{Arbeitswelten im {Wandel}: {Coworking} {Spaces}. {Eine} empirische {Befragung} der {Eigenschaften} und {Nutzerpräferenzen} von {Coworking} {Spaces}}
-      \field{type}{Arbeitspapiere zur immobilienwirtschaftlichen {Forschung} und {Praxis}}
-      \field{year}{2020}
-      \true{nocite}
-      \verb{urlraw}
-      \verb http://hdl.handle.net/10419/223375
-      \endverb
-      \verb{url}
-      \verb http://hdl.handle.net/10419/223375
-      \endverb
-      \keyw{650,Arbeitsgestaltung,Arbeitsgruppe,Arbeitsplatz,Befragung}
-    \endentry
-    \entry{libbe_memorandum_2020}{report}{}{}
-      \name{author}{16}{}{%
-        {{hash=5fcf113fdae78325b5850234c24133f3}{%
-           family={Libbe},
-           familyi={L\bibinitperiod},
-           given={Jens},
-           giveni={J\bibinitperiod}}}%
-        {{hash=983a74d5adf58264a242c3c9ff157ddc}{%
-           family={Bendlin},
-           familyi={B\bibinitperiod},
-           given={Lena},
-           giveni={L\bibinitperiod}}}%
-        {{hash=855ea6b9ef95c42055750ca4de7863dc}{%
-           family={Riechel},
-           familyi={R\bibinitperiod},
-           given={Robert},
-           giveni={R\bibinitperiod}}}%
-        {{hash=a4afbfb7027e86d1267942bea53b5ce7}{%
-           family={Bartke},
-           familyi={B\bibinitperiod},
-           given={Stephan},
-           giveni={S\bibinitperiod}}}%
-        {{hash=7acda647f05e2d1bb4167291a838071a}{%
-           family={Eckert},
-           familyi={E\bibinitperiod},
-           given={Karl},
-           giveni={K\bibinitperiod}}}%
-        {{hash=efc079b98954bc81e652fbe161cea337}{%
-           family={Fahrenkrug},
-           familyi={F\bibinitperiod},
-           given={Katrin},
-           giveni={K\bibinitperiod}}}%
-        {{hash=4375ba92539445bcbc71b0a03a91e9c5}{%
-           family={Melzer},
-           familyi={M\bibinitperiod},
-           given={Michael},
-           giveni={M\bibinitperiod}}}%
-        {{hash=627dab50a4b43ac44cb31494c9b8e8d8}{%
-           family={Blecken},
-           familyi={B\bibinitperiod},
-           given={Lutke},
-           giveni={L\bibinitperiod}}}%
-        {{hash=c6658a7a3eab49eec938536e64f39a5b}{%
-           family={Reiss},
-           familyi={R\bibinitperiod},
-           given={Julia},
-           giveni={J\bibinitperiod}}}%
-        {{hash=417e17300a48521d899ed37617fee3b9}{%
-           family={Bock},
-           familyi={B\bibinitperiod},
-           given={Stephanie},
-           giveni={S\bibinitperiod}}}%
-        {{hash=2a97cdadd0203226d1f2334156d866b9}{%
-           family={Abt},
-           familyi={A\bibinitperiod},
-           given={Jan},
-           giveni={J\bibinitperiod}}}%
-        {{hash=8b44caf9b05b206657be79a0292c9d1a}{%
-           family={Diringer},
-           familyi={D\bibinitperiod},
-           given={Julia},
-           giveni={J\bibinitperiod}}}%
-        {{hash=042184aadc5a647decf8e86c4f7b23e6}{%
-           family={Wendler},
-           familyi={W\bibinitperiod},
-           given={Katja},
-           giveni={K\bibinitperiod}}}%
-        {{hash=230af52c5cb354b9a252e45fb2285db8}{%
-           family={Koller},
-           familyi={K\bibinitperiod},
-           given={Michaela},
-           giveni={M\bibinitperiod}}}%
-        {{hash=347b1fe0517750e43a8745f999c9e01d}{%
-           family={Gräbe},
-           familyi={G\bibinitperiod},
-           given={Gudrun},
-           giveni={G\bibinitperiod}}}%
-        {{hash=a481250d70465139219920b6a2bd45e7}{%
-           family={Ferber},
-           familyi={F\bibinitperiod},
-           given={Uwe},
-           giveni={U\bibinitperiod}}}%
-      }
-      \strng{namehash}{ea8e0a481b59399910dfff0483b6fec9}
-      \strng{fullhash}{36ca807815f7e26a7b828dea30e3e868}
-      \strng{fullhashraw}{36ca807815f7e26a7b828dea30e3e868}
-      \strng{bibnamehash}{ea8e0a481b59399910dfff0483b6fec9}
-      \strng{authorbibnamehash}{ea8e0a481b59399910dfff0483b6fec9}
-      \strng{authornamehash}{ea8e0a481b59399910dfff0483b6fec9}
-      \strng{authorfullhash}{36ca807815f7e26a7b828dea30e3e868}
-      \strng{authorfullhashraw}{36ca807815f7e26a7b828dea30e3e868}
-      \field{sortinit}{L}
-      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
+      \field{day}{19}
+      \field{langid}{english}
       \field{month}{7}
-      \field{title}{Memorandum {Post}-{Corona}-{Stadt}; {Für} eine suffiziente und resiliente {Entwicklung} von {Städten} und {Regionen}}
-      \field{type}{techreport}
-      \field{year}{2020}
-      \true{nocite}
+      \field{title}{European Rover Challenge 2026. Rules}
+      \field{version}{Rev.~3}
+      \field{year}{2026}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://roverchallenge.eu
+      \endverb
+      \verb{url}
+      \verb https://roverchallenge.eu
+      \endverb
+    \endentry
+    \entry{ercRequirements2026}{manual}{}{}
+      \list{organization}{1}{%
+        {European Space Foundation}%
+      }
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{note}{Anhang zum Regelwerk, Excel-Datei}
+      \field{title}{European Rover Challenge 2026. Appendix 3 -- Requirements}
+      \field{version}{Rev.~2}
+      \field{year}{2026}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://roverchallenge.eu
+      \endverb
+      \verb{url}
+      \verb https://roverchallenge.eu
+      \endverb
+    \endentry
+    \entry{petersonQuadcopterVsHexacopter}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=01445191c1ead0abb05ab9727b48dad8}{%
+           family={Peterson},
+           familyi={P\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Rc Things}%
+      }
+      \strng{namehash}{01445191c1ead0abb05ab9727b48dad8}
+      \strng{fullhash}{01445191c1ead0abb05ab9727b48dad8}
+      \strng{fullhashraw}{01445191c1ead0abb05ab9727b48dad8}
+      \strng{bibnamehash}{01445191c1ead0abb05ab9727b48dad8}
+      \strng{authorbibnamehash}{01445191c1ead0abb05ab9727b48dad8}
+      \strng{authornamehash}{01445191c1ead0abb05ab9727b48dad8}
+      \strng{authorfullhash}{01445191c1ead0abb05ab9727b48dad8}
+      \strng{authorfullhashraw}{01445191c1ead0abb05ab9727b48dad8}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{american}
+      \field{title}{Quadcopter vs Hexacopter}
+      \field{urlday}{30}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://rcthing.com/quadcopter-vs-hexacopter/
+      \endverb
+      \verb{url}
+      \verb https://rcthing.com/quadcopter-vs-hexacopter/
+      \endverb
     \endentry
     \entry{mishraDifferentTypesDrone2021}{online}{}{}
       \name{author}{1}{}{%
@@ -418,8 +113,8 @@
       \strng{authornamehash}{dc7a4705c851606ae70566c08d8b0668}
       \strng{authorfullhash}{dc7a4705c851606ae70566c08d8b0668}
       \strng{authorfullhashraw}{dc7a4705c851606ae70566c08d8b0668}
-      \field{sortinit}{M}
-      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{day}{27}
@@ -439,169 +134,66 @@
       \verb https://circuitdigest.com/article/different-types-of-drone-frames-monocopter-to-octocopter
       \endverb
     \endentry
-    \entry{oneclickVDIUnd2019}{online}{}{}
+    \entry{bonvaeroQuadcopterDrones}{online}{}{}
       \name{author}{1}{}{%
-        {{hash=c72772e8853acf38054708c98e89a9b5}{%
-           family={{oneclick}},
-           familyi={o\bibinitperiod}}}%
+        {{hash=47ec1bd73bf9d047c1a73e7e5e0dcf84}{%
+           family={{Bonvaero}},
+           familyi={B\bibinitperiod}}}%
       }
-      \strng{namehash}{c72772e8853acf38054708c98e89a9b5}
-      \strng{fullhash}{c72772e8853acf38054708c98e89a9b5}
-      \strng{fullhashraw}{c72772e8853acf38054708c98e89a9b5}
-      \strng{bibnamehash}{c72772e8853acf38054708c98e89a9b5}
-      \strng{authorbibnamehash}{c72772e8853acf38054708c98e89a9b5}
-      \strng{authornamehash}{c72772e8853acf38054708c98e89a9b5}
-      \strng{authorfullhash}{c72772e8853acf38054708c98e89a9b5}
-      \strng{authorfullhashraw}{c72772e8853acf38054708c98e89a9b5}
-      \field{sortinit}{o}
-      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{day}{5}
-      \field{langid}{ngerman}
-      \field{month}{6}
-      \field{title}{VDI und DaaS: Vor- und Nachteile}
-      \field{urlday}{23}
-      \field{urlmonth}{4}
-      \field{urlyear}{2023}
-      \field{year}{2019}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \true{nocite}
-      \verb{urlraw}
-      \verb https://oneclick-cloud.com/de/blog/trends/vdi-und-daas-vor-und-nachteile/
-      \endverb
-      \verb{url}
-      \verb https://oneclick-cloud.com/de/blog/trends/vdi-und-daas-vor-und-nachteile/
-      \endverb
-    \endentry
-    \entry{petersonQuadcopterVsHexacopter}{online}{}{}
-      \name{author}{1}{}{%
-        {{hash=01445191c1ead0abb05ab9727b48dad8}{%
-           family={Peterson},
-           familyi={P\bibinitperiod}}}%
-      }
-      \list{organization}{1}{%
-        {Rc Things}%
-      }
-      \strng{namehash}{01445191c1ead0abb05ab9727b48dad8}
-      \strng{fullhash}{01445191c1ead0abb05ab9727b48dad8}
-      \strng{fullhashraw}{01445191c1ead0abb05ab9727b48dad8}
-      \strng{bibnamehash}{01445191c1ead0abb05ab9727b48dad8}
-      \strng{authorbibnamehash}{01445191c1ead0abb05ab9727b48dad8}
-      \strng{authornamehash}{01445191c1ead0abb05ab9727b48dad8}
-      \strng{authorfullhash}{01445191c1ead0abb05ab9727b48dad8}
-      \strng{authorfullhashraw}{01445191c1ead0abb05ab9727b48dad8}
-      \field{sortinit}{P}
-      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \strng{namehash}{47ec1bd73bf9d047c1a73e7e5e0dcf84}
+      \strng{fullhash}{47ec1bd73bf9d047c1a73e7e5e0dcf84}
+      \strng{fullhashraw}{47ec1bd73bf9d047c1a73e7e5e0dcf84}
+      \strng{bibnamehash}{47ec1bd73bf9d047c1a73e7e5e0dcf84}
+      \strng{authorbibnamehash}{47ec1bd73bf9d047c1a73e7e5e0dcf84}
+      \strng{authornamehash}{47ec1bd73bf9d047c1a73e7e5e0dcf84}
+      \strng{authorfullhash}{47ec1bd73bf9d047c1a73e7e5e0dcf84}
+      \strng{authorfullhashraw}{47ec1bd73bf9d047c1a73e7e5e0dcf84}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{langid}{american}
-      \field{title}{Quadcopter vs Hexacopter}
+      \field{title}{Quadcopter Drones: The Ultimate Guide}
       \field{urlday}{30}
       \field{urlmonth}{10}
       \field{urlyear}{2026}
       \field{urldateera}{ce}
       \verb{urlraw}
-      \verb https://rcthing.com/quadcopter-vs-hexacopter/
+      \verb https://bonvaero.com/quadcopter-drones/
       \endverb
       \verb{url}
-      \verb https://rcthing.com/quadcopter-vs-hexacopter/
+      \verb https://bonvaero.com/quadcopter-drones/
       \endverb
     \endentry
-    \entry{rineyHexacopterVsQuadcopter2026}{online}{}{}
+    \entry{alliedcnWhatIsFDM3DPrinting}{online}{}{}
       \name{author}{1}{}{%
-        {{hash=774659b3f285b6c08f2d848cec956707}{%
-           family={Riney},
-           familyi={R\bibinitperiod},
-           given={Glenn},
-           giveni={G\bibinitperiod}}}%
+        {{hash=1a09fa06b090db9a80320f6fbed8c4b1}{%
+           family={{Allied}},
+           familyi={A\bibinitperiod}}}%
       }
-      \list{organization}{1}{%
-        {Extreme Fliers}%
-      }
-      \strng{namehash}{774659b3f285b6c08f2d848cec956707}
-      \strng{fullhash}{774659b3f285b6c08f2d848cec956707}
-      \strng{fullhashraw}{774659b3f285b6c08f2d848cec956707}
-      \strng{bibnamehash}{774659b3f285b6c08f2d848cec956707}
-      \strng{authorbibnamehash}{774659b3f285b6c08f2d848cec956707}
-      \strng{authornamehash}{774659b3f285b6c08f2d848cec956707}
-      \strng{authorfullhash}{774659b3f285b6c08f2d848cec956707}
-      \strng{authorfullhashraw}{774659b3f285b6c08f2d848cec956707}
-      \field{sortinit}{R}
-      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{day}{16}
-      \field{langid}{american}
-      \field{month}{9}
-      \field{title}{Hexacopter vs Quadcopter: What's the Difference and How to Choose?}
-      \field{urlday}{30}
-      \field{urlmonth}{10}
-      \field{urlyear}{2026}
-      \field{year}{2026}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \true{nocite}
-      \verb{urlraw}
-      \verb https://www.extremefliers.com/hexacopter-vs-quadcopter/
-      \endverb
-      \verb{url}
-      \verb https://www.extremefliers.com/hexacopter-vs-quadcopter/
-      \endverb
-    \endentry
-    \entry{noauthor_studie_nodate}{misc}{}{}
-      \list{language}{1}{%
-        {de}%
-      }
-      \field{sortinit}{S}
-      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Laut einer Studie war der Umstieg aufs Homeoffice zu Beginn der Coronakrise für 59 Prozent der Befragten Neuland. Neben technischen Schwierigkeiten hätten viele Beschäftigte aber ein viel größeres Problem gehabt, sagte Laura Seinsche von der Universität zu Köln im Dlf: ihre Chefs.}
-      \field{journaltitle}{Deutschlandfunk}
-      \field{title}{Studie zu {Homeoffice} und {Corona} - {Beschäftigte} fürchten um {Karrierechancen}}
-      \field{urlday}{1}
-      \field{urlmonth}{12}
-      \field{urlyear}{2021}
-      \field{urldateera}{ce}
-      \true{nocite}
-      \verb{urlraw}
-      \verb https://www.deutschlandfunk.de/studie-zu-homeoffice-und-corona-beschaeftigte-fuerchten-um-100.html
-      \endverb
-      \verb{url}
-      \verb https://www.deutschlandfunk.de/studie-zu-homeoffice-und-corona-beschaeftigte-fuerchten-um-100.html
-      \endverb
-    \endentry
-    \entry{unmannedtechQuadcopterFrameDesign}{online}{}{}
-      \name{author}{1}{}{%
-        {{hash=160c6c0a0170778396a66e2dde77baf7}{%
-           family={{Unmanned Tech}},
-           familyi={U\bibinitperiod}}}%
-      }
-      \strng{namehash}{160c6c0a0170778396a66e2dde77baf7}
-      \strng{fullhash}{160c6c0a0170778396a66e2dde77baf7}
-      \strng{fullhashraw}{160c6c0a0170778396a66e2dde77baf7}
-      \strng{bibnamehash}{160c6c0a0170778396a66e2dde77baf7}
-      \strng{authorbibnamehash}{160c6c0a0170778396a66e2dde77baf7}
-      \strng{authornamehash}{160c6c0a0170778396a66e2dde77baf7}
-      \strng{authorfullhash}{160c6c0a0170778396a66e2dde77baf7}
-      \strng{authorfullhashraw}{160c6c0a0170778396a66e2dde77baf7}
-      \field{sortinit}{U}
-      \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
+      \strng{namehash}{1a09fa06b090db9a80320f6fbed8c4b1}
+      \strng{fullhash}{1a09fa06b090db9a80320f6fbed8c4b1}
+      \strng{fullhashraw}{1a09fa06b090db9a80320f6fbed8c4b1}
+      \strng{bibnamehash}{1a09fa06b090db9a80320f6fbed8c4b1}
+      \strng{authorbibnamehash}{1a09fa06b090db9a80320f6fbed8c4b1}
+      \strng{authornamehash}{1a09fa06b090db9a80320f6fbed8c4b1}
+      \strng{authorfullhash}{1a09fa06b090db9a80320f6fbed8c4b1}
+      \strng{authorfullhashraw}{1a09fa06b090db9a80320f6fbed8c4b1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{langid}{american}
-      \field{title}{Quadcopter Frame Design: H-Frame vs X-Frame vs True-X Configuration}
+      \field{title}{What is FDM 3D Printing?}
       \field{urlday}{30}
       \field{urlmonth}{10}
       \field{urlyear}{2026}
       \field{urldateera}{ce}
-      \true{nocite}
       \verb{urlraw}
-      \verb https://www.unmannedtechshop.co.uk/de/blogs/knowledge-base/quadcopter-frame-design-h-frame-vs-x-frame-vs-true-x-configuration
+      \verb https://alliedcn.com/what-is-fdm-3d-printing/
       \endverb
       \verb{url}
-      \verb https://www.unmannedtechshop.co.uk/de/blogs/knowledge-base/quadcopter-frame-design-h-frame-vs-x-frame-vs-true-x-configuration
+      \verb https://alliedcn.com/what-is-fdm-3d-printing/
       \endverb
     \endentry
     \entry{wermaSignalsaeulen}{online}{}{}
@@ -618,8 +210,8 @@
       \strng{authornamehash}{2e2b40fa7d134e2e0eb8ad9362caaf40}
       \strng{authorfullhash}{2e2b40fa7d134e2e0eb8ad9362caaf40}
       \strng{authorfullhashraw}{2e2b40fa7d134e2e0eb8ad9362caaf40}
-      \field{sortinit}{W}
-      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{langid}{german}
@@ -628,12 +220,75 @@
       \field{urlmonth}{10}
       \field{urlyear}{2026}
       \field{urldateera}{ce}
-      \true{nocite}
       \verb{urlraw}
       \verb https://www.werma.com/produkte/signalsaeulen/
       \endverb
       \verb{url}
       \verb https://www.werma.com/produkte/signalsaeulen/
+      \endverb
+    \endentry
+    \entry{ws2812btds}{manual}{}{}
+      \list{organization}{1}{%
+        {WORLDSEMI CO., LIMITED}%
+      }
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{month}{1}
+      \field{title}{WS2812B Datasheet and Specifications. Intelligent Control LED Integrated Light Source}
+      \field{urlday}{16}
+      \field{urlmonth}{11}
+      \field{urlyear}{2026}
+      \field{version}{V1.0}
+      \field{year}{2016}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://cdn.shopify.com/s/files/1/0174/1800/files/WS2812B-LED-datasheet.pdf
+      \endverb
+      \verb{url}
+      \verb https://cdn.shopify.com/s/files/1/0174/1800/files/WS2812B-LED-datasheet.pdf
+      \endverb
+    \endentry
+    \entry{item24signale}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=3553ac4cfdcc042b84fddc410500a0d3}{%
+           family={Müller},
+           familyi={M\bibinitperiod},
+           given={Björn},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {item24}%
+      }
+      \strng{namehash}{3553ac4cfdcc042b84fddc410500a0d3}
+      \strng{fullhash}{3553ac4cfdcc042b84fddc410500a0d3}
+      \strng{fullhashraw}{3553ac4cfdcc042b84fddc410500a0d3}
+      \strng{bibnamehash}{3553ac4cfdcc042b84fddc410500a0d3}
+      \strng{authorbibnamehash}{3553ac4cfdcc042b84fddc410500a0d3}
+      \strng{authornamehash}{3553ac4cfdcc042b84fddc410500a0d3}
+      \strng{authorfullhash}{3553ac4cfdcc042b84fddc410500a0d3}
+      \strng{authorfullhashraw}{3553ac4cfdcc042b84fddc410500a0d3}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{30}
+      \field{langid}{german}
+      \field{month}{8}
+      \field{title}{Signaltechnik: Die Sprache der Farben in der Industrie}
+      \field{urlday}{16}
+      \field{urlmonth}{11}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://blog.item24.com/intralogistik/signaltechnik-die-sprache-der-farben-in-der-modernen-fertigung/
+      \endverb
+      \verb{url}
+      \verb https://blog.item24.com/intralogistik/signaltechnik-die-sprache-der-farben-in-der-modernen-fertigung/
       \endverb
     \endentry
   \enddatalist

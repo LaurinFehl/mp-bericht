@@ -4,60 +4,162 @@
 \section{Zusammenfassung}
 \label{sec:Zusammenfassung}
 
-Im Rahmen dieser Arbeit wurde ein neuer 3D-gedruckter Frame für die Drohne \gls{daedalus} entworfen und ein erster Entwurf der Integration einer \gls{led}-Statusanzeige entwickelt. Das Ziel des neuen Frames ist komplett erreicht worden, während die Statusanzeige bisher nur auf einem nicht flugfähigen System getestet werden konnte. Die Grundlage für eine weitere Integration ist jedoch geschaffen worden.
+In dieser Arbeit wurde ein neuer 3D-gedruckter Frame für die Drohne \gls{daedalus} entworfen.
+Außerdem wurde eine \gls{led}-Statusanzeige entwickelt und an der Drohne in Betrieb genommen.
+Der Frame wurde im Flug erprobt, die Statusanzeige bisher nur an der stehenden Drohne.
 
-Auf Basis der analysierten Daten aus den Flight-Logs wurde eine Verbesserung der Stabilität der Drohne und eine Reduzierung des Gesamtgewichtes identifiziert.
+Der neue Frame wurde in Autodesk Inventor konstruiert und gezielt für den \gls{fdm}-Druck ausgelegt, etwa durch die
+liegende Druckrichtung der Arme.
+Als Material wurde mithilfe eines morphologischen Kastens ein Polyamid gewählt.
+Eingesetzt wurde das vom Sponsor bereitgestellte carbonfaserverstärkte PA11-CF-SL.
+Es ist steif und hat eine um etwa \SI{7,5}{\percent} geringere Dichte als ASA.
+Die Füße bestehen aus TPU, nehmen bei harten Landungen Energie auf und tragen die LED-Streifen der Statusanzeige.
+In Freifalltests aus bis zu \SI{80}{\centi\metre} Höhe traten keine Schäden auf.
+Im ruhigen Schweben sank die Varianz der Beschleunigung gegenüber dem alten Frame etwa um den Faktor 15.
+Über den gesamten Flug sank die Vibrationsmetrik von 2,95 auf 1,63.
+Die Drohne hielt die Position auf \SI{0,15}{\metre} statt auf \SI{0,49}{\metre} genau, wobei auch der Flugmodus dazu
+beitrug.
+Als Schwächen zeigten sich eine leicht ungleiche Ausrichtung der Motoren, ein nach rechts verschobener Schwerpunkt und
+Verzug bei voll belegter Bauplatte.
+Die Drohne wiegt mit dem neuen Frame \SI{1650}{\gram} und ist damit \SI{27,9}{\percent} leichter als mit dem alten
+Frame.
+Ein einzelner Arm ist \SI{58,3}{\percent} leichter als der alte Arm aus Carbon.
 
-Der neue Frame wurde in Autodesk Inventor konstruiert und gezielt für den \gls{fdm}-Druck ausgelegt, etwa durch die liegende Druckrichtung der Motorarme. Als Material wurde mithilfe eines morphologischen Kastens ein Polyamid gewählt. Eingesetzt wurde das vom Sponsor bereitgestellte carbonfaserverstärkte PA11-CF-SL, das bei hoher Steifigkeit eine geringere Dichte als ASA besitzt. Die Füße bestehen aus TPU, nehmen die Energie bei harten Landungen auf und tragen zugleich die LED-Streifen der Statusanzeige. In Freifalltests aus bis zu \SI{80}{\centi\metre} Höhe traten keine Schäden auf. Im Flug sank die Varianz der Beschleunigung im ruhigen Schweben etwa um den Faktor 15, und die Drohne hielt Lage und Position genauer als mit dem alten Frame. Als Schwächen zeigten sich eine leicht ungleiche Ausrichtung der Motoren, ein nach rechts verschobener Schwerpunkt und Verzug bei voll belegter Bauplatte. Keiner dieser Punkte ist kritisch, und alle lassen sich mit geringem Aufwand beheben.
-
-Für die Statusanzeige wurde ein Zwei-Kanal-Modell entwickelt, das die Anforderung REQ-FUN-070 der \gls{erc} umsetzt. Ein Kanal zeigt ausschließlich an, ob die Drohne autonom fliegt, der zweite den Flugzustand und Fehler. Dadurch kann ein Fehler das Autonomiesignal nicht überdecken. Jedes Landebein trägt einen eigenen LED-Streifen an einer eigenen Datenleitung, angesteuert über den \gls{pio}-Block des Raspberry Pi 5. Die Software ist als \gls{ros}~2-Paket in drei Schichten aufgebaut und liest den Zustand der bestehenden Zustandsmaschine aus, ohne diese zu verändern. Mit einer eigens entwickelten \gls{sil}-Testumgebung konnte die Anzeige mit echter Hardware und dem echten Nachrichtenformat getestet werden, gesteuert über die Kommandozeile. Alle automatisierten Tests wurden bestanden, und die bisher an der Hardware geprüften Muster entsprachen dem erwarteten Verhalten. Für einen Einsatz im Flug muss als nächster Schritt die Ansteuerung der LEDs unter dem Betriebssystem des Flug-Stacks ermöglicht werden, da dieses den \gls{pio}-Block bisher nicht unterstützt.
+Für die Statusanzeige wurde ein Zwei-Kanal-Modell entwickelt, das die Anforderung REQ-FUN-070 der \gls{erc} umsetzt.
+Ein Kanal zeigt ausschließlich an, ob die Drohne autonom fliegt, der zweite den Flugzustand und Fehler.
+Ein Fehler kann das Autonomiesignal dadurch nicht überdecken.
+Jedes Landebein trägt einen eigenen LED-Streifen an einer eigenen Datenleitung, angesteuert über den \gls{pio}-Block
+des Raspberry Pi 5.
+Die Software ist als \gls{ros}~2-Paket in drei Schichten aufgebaut und liest den Zustand der bestehenden
+Zustandsmaschine aus, ohne diese zu verändern.
+Mit einer eigenen \gls{sil}-Testumgebung wurde die Anzeige mit echter Hardware und dem echten Nachrichtenformat
+getestet.
+Von den automatisierten Testfällen wurden 292 bestanden, einer wurde übersprungen, und keiner ist fehlgeschlagen.
+An der Hardware entsprachen alle 15 Zeilen der Testmatrix dem erwarteten Verhalten.
+Im Laborraum waren die Muster aus \SI{10}{\metre} erkennbar.
+Für einen Einsatz im Flug muss als nächster Schritt die Ansteuerung der LEDs unter dem Betriebssystem des Flug-Stacks
+ermöglicht werden, da dieses den \gls{pio}-Block bisher nicht unterstützt.
 
 \section{Ausblick}
 \label{sec:Ausblick}
 
-Ausblickend können verschiedene Ziele formuliert werden, um eine weitere erfolgreiche Einbindung in die Drohne zu erreichen. Die wichtigste Aufgabe ist, die Statusanzeige in den Flugbetrieb zu bringen. Dafür müssen die LEDs auch unter dem Flug-Stack ansteuerbar sein. Grundsätzlich kommen drei Wege in Frage: die Ansteuerung über SPI statt über den \gls{pio}-Block, ein zusätzlicher Mikrocontroller zwischen Raspberry Pi und LEDs oder der Umzug des Flug-Stacks von Ubuntu auf Raspberry Pi OS. Bei den ersten beiden Wegen muss nur die Treiberklasse hinter der Schnittstelle \texttt{LedStripDriver} ausgetauscht werden, beim dritten bleibt die LED-Software unverändert. Zuordnung, Decoder und LED-Knoten müssen in keinem Fall angepasst werden, sodass die bisherigen Testergebnisse gültig bleiben. Hier zeigt sich der Nutzen der Schichtenarchitektur aus Abschnitt~\ref{sec:LED_Software}. Die drei Wege sowie weitere offene Punkte werden im Folgenden nach Themengebieten geordnet beschrieben.
+Die wichtigste offene Aufgabe ist, die Statusanzeige in den Flugbetrieb zu bringen.
+Dafür kommen drei Wege in Frage, die unten unter Elektronik und Software beschrieben sind.
+Bei allen drei Wegen bleiben Zuordnung, Decoder und LED-Knoten unverändert, sodass die bisherigen Testergebnisse gültig
+bleiben.
+Hier zeigt sich der Nutzen der Schichtenarchitektur aus Abschnitt~\ref{sec:LED_Software}.
 
     \subsection{Hardware}
     \label{sec:Ausblick_Hardware}
 
-    \begin{description}[style=nextline]
-        \item[Gedruckte Baseplate] Bisher wird die bestehende Baseplate weiterverwendet, deren vorgegebene Bohrungen die Konstruktion der übrigen Bauteile einschränken. So liegen die Schrauben des Flight Controllers verdeckt, und die Halterung von Flight Controller und Raspberry Pi sitzt zusammen mit dem \gls{esc}-Board zwischen den Platten der Baseplate (Abschnitt~\ref{sec:Erg_Frame_Wartung}). Eine selbst gedruckte Baseplate könnte die Befestigung von \gls{esc}-Board und Flight Controller frei gestalten, sodass beide ohne Öffnen der Baseplate erreichbar sind. Das würde die Wartbarkeit deutlich verbessern und zusätzlich Masse einsparen.
-        \item[Ausrichtung der Motoren] Die Flugdaten zeigen einen dauerhaften Gier-Versatz der Motorpaare (Abschnitt~\ref{sec:Erg_Frame_Flug}). Die Motorhalter sollten auf Rechtwinkligkeit zur Rahmenebene und die Arme auf Verdrehung geprüft werden. Bestätigt sich die Ursache, kann die Konstruktion der Motorhalter oder der Arme gezielt angepasst werden.
-        \item[Feste Position des Akkus] Ein Anschlag oder eine Markierung in der Batteriehalterung würde die Lage des Akkus festlegen. Damit ließen sich der nach rechts verschobene Schwerpunkt ausgleichen und die Schwankungen zwischen den Flügen vermeiden.
-        \item[Befestigung der Anbauteile] Um Schwingungen wie die einmalig gemessene bei \SI{37}{\hertz} zu vermeiden, sollten Landebeine, Antennen, Kabel und die Halterungen von Kamera und Raspberry Pi fest montiert werden. Die Steifigkeit der Arme und die Entkopplung des Flight Controllers dürfen dabei nicht verschlechtert werden, da sie den größten Vorteil des neuen Frames ausmachen.
-        \item[Lage des Entfernungsmessers] Am neuen Frame sitzt der Entfernungsmesser im Stand näher am Boden, als seine Mindestreichweite erlaubt. Im Flug ist das unkritisch, die Einbauhöhe sollte bei einer Überarbeitung der Halterung aber angepasst werden.
-        \item[Druck großer Bauteile] Um Verzug zu vermeiden, sollten große Bauteile nicht am Rand einer voll belegten Bauplatte gedruckt werden.
-    \end{description}
+    \paragraph{Gedruckte Baseplate}
+    Bisher wird die bestehende Baseplate weiterverwendet, deren vorgegebene Bohrungen die übrigen Bauteile einschränken
+    (Abschnitt~\ref{sec:Erg_Frame_Wartung}).
+    Eine selbst gedruckte Baseplate könnte die Befestigung von \gls{esc}-Board und Flight Controller frei gestalten.
+    Beide wären dann ohne Öffnen der Baseplate erreichbar.
+    Das würde die Wartbarkeit verbessern und könnte zusätzlich Masse einsparen.
+
+    \paragraph{Ausrichtung der Motoren}
+    Die Motorhalter sollten auf Rechtwinkligkeit zur Rahmenebene und die Arme auf Verdrehung geprüft werden
+    (Abschnitt~\ref{sec:Diskussion_Frame}).
+    Bestätigt sich eine Ursache, kann die Konstruktion der Motorhalter oder der Arme gezielt angepasst werden.
+
+    \paragraph{Feste Position des Akkus}
+    Ein Anschlag oder eine Markierung in der Akkuhalterung würde die Lage des Akkus festlegen.
+    Damit ließen sich der nach rechts verschobene Schwerpunkt ausgleichen und die Schwankungen zwischen den Flügen
+    vermeiden.
+
+    \paragraph{Befestigung der Anbauteile}
+    Um Schwingungen wie die einmalig gemessene bei \SI{37}{\hertz} zu vermeiden, sollten Landebeine, Antennen, Kabel und
+    die Halterungen von Kamera und Raspberry Pi fest montiert werden.
+    Steifigkeit der Arme und Entkopplung des Flight Controllers dürfen dabei nicht verschlechtert werden.
+
+    \paragraph{Lage des Entfernungsmessers}
+    Am neuen Frame sitzt der Entfernungsmesser im Stand näher am Boden, als seine Mindestreichweite erlaubt.
+    Im Flug ist das unkritisch, die Einbauhöhe sollte bei einer Überarbeitung der Halterung aber angepasst werden.
+
+    \paragraph{Druck großer Bauteile}
+    Um Verzug zu vermeiden, sollten große Bauteile nicht am Rand einer voll belegten Bauplatte gedruckt werden.
 
     \subsection{Elektronik}
     \label{sec:Ausblick_Elektronik}
 
-    \begin{description}[style=nextline]
-        \item[Ansteuerung über SPI] Die Datenleitungen der LED-Streifen werden auf die MOSI-Pins der SPI-Schnittstellen des Raspberry Pi umgelötet. SPI wird auch vom Ubuntu-Kernel unterstützt, sodass die LEDs unter dem Flug-Stack ansteuerbar wären. Dafür wird eine neue Treiberklasse benötigt.
-        \item[Mikrocontroller als LED-Treiber] Ein Mikrocontroller, zum Beispiel ein RP2040, wird per USB zwischen Raspberry Pi und LEDs geschaltet und erzeugt das zeitkritische Signal für die Streifen. Der Raspberry Pi sendet dann nur noch die Farben. Diese Lösung ist unabhängig vom Betriebssystem, benötigt aber ein zusätzliches Bauteil und eine eigene Firmware.
-        \item[Pegelwandler] Die LEDs werden bisher direkt mit dem \SI{3,3}{\volt}-Pegel des Raspberry Pi angesteuert. Ein Pegelwandler würde eine sichere Datenübertragung gewährleisten.
-        \item[Weiße LEDs zur Bodenbeleuchtung] Zusätzliche weiße LEDs an der Unterseite der Drohne könnten den Boden ausleuchten, damit auch bei Dunkelheit sicher geflogen werden kann. Davon könnte auch der Optical-Flow-Sensor profitieren, dessen Messqualität vom Licht und von der Textur des Bodens abhängt. % TODO: check whether the white LEDs should be driven by the LED node or switched separately
-        \item[Messung der Akkuspannung] In keinem der ausgewerteten Logs wurde die Akkuspannung aufgezeichnet. Dadurch kann der eingestellte Failsafe bei niedrigem Akkustand nie auslösen, und Schwebeschub sowie Motorwerte lassen sich nicht zwischen Flügen vergleichen. Das Power-Modul und seine Konfiguration sollten deshalb überprüft werden.
-    \end{description}
+    \paragraph{Ansteuerung über SPI}
+    Die Datenleitungen der LED-Streifen könnten auf die MOSI-Pins der \gls{spi}-Schnittstellen des Raspberry Pi
+    umgelötet werden.
+    \gls{spi} wird auch vom Ubuntu-Kernel unterstützt, sodass die LEDs unter dem Flug-Stack ansteuerbar wären.
+    Dafür ist nur eine neue Treiberklasse hinter der Schnittstelle \texttt{LedStripDriver} nötig.
+
+    \paragraph{Mikrocontroller als LED-Treiber}
+    Ein Mikrocontroller, zum Beispiel ein RP2040, könnte per \gls{usb} zwischen Raspberry Pi und LEDs geschaltet werden.
+    Er erzeugt dann das zeitkritische Signal für die Streifen, und der Raspberry Pi sendet nur noch die Farben.
+    Diese Lösung ist unabhängig vom Betriebssystem, benötigt aber ein zusätzliches Bauteil und eine eigene Firmware.
+    Auf dem Raspberry Pi muss auch hier nur die Treiberklasse ausgetauscht werden.
+
+    \paragraph{Pegelwandler}
+    Ein Pegelwandler zwischen Raspberry Pi und LEDs würde den Datenpegel auf die vom Datenblatt verlangte Höhe anheben.
+
+    \paragraph{Weiße LEDs zur Bodenbeleuchtung}
+    Zusätzliche weiße LEDs an der Unterseite der Drohne könnten den Boden ausleuchten, damit auch bei Dunkelheit sicher
+    geflogen werden kann.
+    Davon könnte auch der Optical-Flow-Sensor profitieren, dessen Messqualität vom Licht und von der Textur des Bodens
+    abhängt.
+    % TODO: check whether the white LEDs should be driven by the LED node or switched separately
+
+    \paragraph{Messung der Akkuspannung}
+    In keinem der ausgewerteten Logs wurde die Akkuspannung aufgezeichnet.
+    Dadurch kann der eingestellte Failsafe bei niedrigem Akkustand nicht auslösen.
+    Außerdem lassen sich Schwebeschub und Motorwerte nicht zwischen Flügen vergleichen.
+    Das Power-Modul und seine Konfiguration sollten deshalb überprüft werden.
 
     \subsection{Software}
     \label{sec:Ausblick_Software}
 
-    \begin{description}[style=nextline]
-        \item[Flug-Stack auf Raspberry Pi OS] Der Flug-Stack läuft derzeit unter Ubuntu 24.04, dessen Kernel den Treiber für den \gls{pio}-Block nicht enthält. Wird der Flug-Stack auf Raspberry Pi OS umgezogen, steht der \gls{pio}-Block direkt zur Verfügung, und an der LED-Software muss nichts geändert werden. ROS~2 Jazzy, MAVROS und die Zustandsmaschine können dort wie in der \gls{sil}-Testumgebung in einem Docker-Container betrieben werden (Abschnitt~\ref{sec:LED_SIL}). Der Container stellt die Ubuntu-Umgebung bereit, der Kernel von Raspberry Pi OS das Gerät \texttt{/dev/pio0}. Dieser Weg erfordert keine Änderung an der Hardware, bedeutet aber einen Umbau der gesamten Software-Umgebung der Drohne und muss deshalb mit dem Team abgestimmt werden.
-        \item[Start des LED-Knotens] Der LED-Knoten muss in die Startkonfiguration des Teams (\texttt{autonomy\_master}) aufgenommen werden, damit er im Flug automatisch startet.
-        \item[Watchdog] Stürzt der LED-Knoten ab, bleibt bisher das letzte Bild auf den LEDs stehen. Ein Watchdog sollte den Knoten überwachen und die Anzeige in diesem Fall abschalten oder neu starten.
-        \item[Unbekannter Flugmodus] Die Zustandsmaschine meldet einen unbekannten PX4-Modus bisher als \texttt{AUTO.LOITER} (Abschnitt~\ref{sec:Diskussion_Grenzen}). Ein eigener Wert \texttt{MODE\_UNKNOWN} im gemeinsamen Paket mit den Aufzählungstypen würde das beheben. Am LED-Code ist dafür keine Änderung nötig, die Änderung muss aber mit dem Verantwortlichen der Bodenstation abgestimmt werden.
-        \item[Lizenzen] Vor einer Weitergabe des LED-Pakets muss geklärt werden, ob die GPL-2-Lizenz der \gls{pio}-Bibliothek mit der Apache-2.0-Lizenz des Pakets vereinbar ist.
-        \item[Konfiguration der Flugaufzeichnung] Für aussagekräftigere Auswertungen sollten die Drehzahlen der Motoren über die bereits aktivierte DShot-Telemetrie mitgeloggt und für Vibrationsmessungen ein Profil mit höherer Aufzeichnungsrate verwendet werden. Außerdem sollte die abgeschaltete Unwucht-Erkennung wieder aktiviert und die in PX4 hinterlegte Rahmengeometrie mit den tatsächlichen Maßen abgeglichen werden.
-    \end{description}
+    \paragraph{Flug-Stack auf Raspberry Pi OS}
+    Wird der Flug-Stack von Ubuntu auf Raspberry Pi OS umgezogen, steht der \gls{pio}-Block direkt zur Verfügung.
+    An der LED-Software muss dann nichts geändert werden.
+    \gls{ros}~2 Jazzy, MAVROS und die Zustandsmaschine könnten dort wie in der \gls{sil}-Testumgebung in einem
+    Docker-Container laufen (Abschnitt~\ref{sec:LED_SIL}).
+    Dieser Weg erfordert keine Änderung an der Hardware.
+    Er bedeutet aber einen Umbau der gesamten Software-Umgebung der Drohne und muss deshalb mit dem Team abgestimmt
+    werden.
+
+    \paragraph{Start des LED-Knotens}
+    Der LED-Knoten muss in die Startkonfiguration des Teams (\texttt{autonomy\_master}) aufgenommen werden, damit er im
+    Flug automatisch startet.
+
+    \paragraph{Watchdog}
+    Ein Watchdog sollte den LED-Knoten überwachen und die Anzeige bei einem Absturz abschalten oder den Knoten neu
+    starten.
+
+    \paragraph{Unbekannter Flugmodus}
+    Ein eigener Wert \texttt{MODE\_UNKNOWN} im gemeinsamen Paket mit den Aufzählungstypen würde das Problem aus
+    Abschnitt~\ref{sec:Diskussion_Grenzen} beheben.
+    Am LED-Code ist dafür keine Änderung nötig.
+    Das gemeinsame Paket darf aber nur in Abstimmung mit dem Verantwortlichen der Bodenstation geändert werden.
+
+    \paragraph{Lizenzen}
+    Vor einer Weitergabe des LED-Pakets muss geklärt werden, ob die GPL-2-Lizenz der \gls{pio}-Bibliothek mit der
+    Apache-2.0-Lizenz des Pakets vereinbar ist.
+
+    \paragraph{Konfiguration der Flugaufzeichnung}
+    Für genauere Auswertungen sollten die Drehzahlen der Motoren über die bereits aktivierte DShot-Telemetrie
+    mitgeloggt werden.
+    Für Vibrationsmessungen sollte ein Profil mit höherer Aufzeichnungsrate verwendet werden.
+    Außerdem sollte die abgeschaltete Unwucht-Erkennung wieder aktiviert werden.
+    Die in PX4 hinterlegte Rahmengeometrie sollte mit den tatsächlichen Maßen abgeglichen werden.
 
     \subsection{Tests und Validierung}
     \label{sec:Ausblick_Tests}
 
-    \begin{description}[style=nextline]
-        \item[Offene Funktionstests] Die noch offenen Zeilen der Testmatrix (Tabelle~\ref{tab:Erg_LED_Matrix}) sollten an der Hardware geprüft werden, insbesondere die Zeilen 10 und 11, die REQ-FUN-070 direkt belegen.
-        \item[Sichtbarkeitstest] Der in Abschnitt~\ref{sec:Eval_LED_Sicht} beschriebene Test bei Tageslicht und Dunkelheit steht noch aus. Er soll zeigen, ob die Muster aus \SI{10}{\metre} erkennbar sind und Gelb von Grün unterscheidbar bleibt.
-        \item[Flugtest der Statusanzeige] Sobald die Anzeige im Flug betrieben werden kann, sollte ein Flugtest die Lücken der \gls{sil}-Testumgebung schließen. Er würde zeigen, ob die echte Zustandsmaschine die getesteten Zustände im Flug erzeugt und ob sie bei einem Absturz von MAVROS den Fehler \texttt{FC\_ERROR} rechtzeitig setzt.
-        \item[Kontrollflug nach Anpassungen am Frame] Nach der Prüfung der Motorausrichtung und der Festlegung der Akkuposition reicht ein kurzer Schwebeflug, um zu prüfen, ob sich die Verhältnisse der Motorpaare dem Wert 1 annähern.
-    \end{description}
+    \paragraph{Sichtbarkeit bei Tageslicht und Dunkelheit}
+    Der Sichtbarkeitstest fand bisher nur im Laborraum statt.
+    Ein Test bei Tageslicht im Freien und bei Dunkelheit steht noch aus (REQ-DES-060, REQ-ENV-040).
+
+    \paragraph{Flugtest der Statusanzeige}
+    Sobald die Anzeige im Flug betrieben werden kann, sollte ein Flugtest die Lücken der \gls{sil}-Testumgebung
+    schließen (Abschnitt~\ref{sec:Eval_LED_Flug}).
+
+    \paragraph{Kontrollflug nach Anpassungen am Frame}
+    Nach der Prüfung der Motorausrichtung und der Festlegung der Akkuposition reicht ein kurzer Schwebeflug.
+    Er zeigt, ob sich die Verhältnisse der Motorpaare dem Wert 1 annähern.

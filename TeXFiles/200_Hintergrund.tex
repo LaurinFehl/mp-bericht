@@ -1,67 +1,103 @@
-\chapter{Hintergrund}
+\chapter{Wettbewerb und Anforderungen}
 \label{ch:Hintergrund}
 
-Um einen Überblick der Motivation, Aufbauweise und Integration zu geben, werden im folgenden die wichtigsten Punkte ausführlich beschrieben. Dabei werden der Wettbewerb, das \gls{frost}-Labor, die Drohne und die Grundlagen behandelt.
+Die Anforderungen an Frame und Statusanzeige ergeben sich vor allem aus dem Wettbewerb, für den die Drohne gebaut wird.
+Dieses Kapitel stellt deshalb zuerst die \gls{erc} vor und leitet danach die Anforderungen ab.
 
-
-\section{Die \glsentrylong{erc}}
+\section{Die European Rover Challenge}
 \label{sec:ERC}
 
-Jedes Jahr im September veranstaltet die AGH-University of Kraków in Kollaboration mit der European-Space-Foundation die \glsentrylong{erc}. Dabei treten aus 124 Registrierungen aus 29 Ländern die besten 25 Teams gegeneinander an. Aufgeteilt in sieben Aufgaben wird das können der Teams mit ihrem Rover und der Drohne getestet.
-\subsection{Die Aufgaben des Wettbewerbs}
+Die \gls{erc} ist ein Wettbewerb der European Space Foundation, in dem studentische Teams Marsrover und Drohnen
+für Aufgaben nach dem Vorbild der Weltraumrobotik bauen~\cite{ercRules2026}.
+Die Ausgabe 2026 fand in Krakau auf dem Gelände der AGH University of Science and Technology statt.
+Für das Finale sind laut Regelwerk bis zu 20 Teams vorgesehen, die anhand ihrer Berichte ausgewählt werden.
+% [PRÜFEN] the old text named 124 registrations from 29 countries and 25 teams, not in the rules, add a source if kept
+Die Aufgaben gliedern sich in die Bereiche Science, Navigation, Maintenance und Probing sowie eine Präsentation.
+Die folgenden Aufgaben betreffen Rover und Drohne direkt~\cite{ercRules2026}.
+
 \begin{description}[style=nextline]
-    \item[Traverse Sub-Task] Der Rover navigiert autonom entlang mehrerer Wegpunkte, ohne dass dem Operator Kamerabilder zur Verfügung stehen. Die Steuerung erfolgt allein über Telemetrie. Der autonome Modus muss durch ein eigenes Anzeigemuster der Statusleuchte erkennbar sein, und nach der Aktivierung darf sich der Rover erst nach einer kurzen Wartezeit bewegen. Während der Fahrt ist der Eingriff des Operators gesperrt.
-
-    \item[Droning Sub-Task] Als Luftaufklärung für den Rover erkundet die Drohne autonom mehrere Sektoren eines Drohnenkäfigs. Anhand von ArUco-Markern bestimmt sie, in welchem Bereich sie sich befindet und bestimmt mit Bilderkennung wo vordefinierte Proben auf den Boden liegen und markiert diese. Diese Aufklärung darf drei mal innerhalb der gesetzten Zeit wiederholt werden.
-          nes Drehschalters, das
-    \item[Maintenance Task] Der Rover bedient mit seinem Manipulator ein Wartungspanel. Zu den Aufgaben gehören das Betätigen eines Hebel- und eiBedienen eines elektromagnetischen Schlosses und das vollständige Einstecken eines Netzsteckers in eine Buchse.
-
-    \item[Probing Task] Der Rover greift die vorgegebenen Probenobjekte (Probes), hält sie sicher und gibt sie kontrolliert wieder frei.
-
-    \item[Surface Sampling] Der Rover nimmt Regolith und Gesteinsproben auf und lagert sie in getrennten Behältern. Das Gewicht der Proben wird an Bord automatisch und möglichst genau bestimmt, ohne dass der Operator manuell eingreift. Anschließend werden die Proben ohne Verlust zur Ziellinie transportiert.
-
-    \item[Deep Sampling] Eine Bohreinheit entnimmt Bodenmaterial aus größerer Tiefe unterhalb der Oberfläche. Die entnommene Probenmenge muss eine Mindestmasse erreichen, die ebenfalls automatisch an Bord gemessen wird.
-
-    \item[Astro-Bio Sub-Task] Der Rover handhabt einen Flüssigkeitsbehälter ohne Verschütten und positioniert ein pH-Messgerät an einer vorgegebenen Messstelle.
+    \item[Traverse Sub-Task] Der Rover fährt vier von der Jury festgelegte Wegpunkte und anschließend einen Zielpunkt
+    an. Die volle Punktzahl gibt es nur, wenn er dabei ohne Videobild vollständig autonom fährt.
+    \item[Droning Sub-Task] Die Drohne hebt automatisch ab, erkennt einen Landeplatz mit ArUco-Marker und landet
+    präzise darauf. Die Mission wird dreimal wiederholt, wobei der Landeplatz jedes Mal zufällig innerhalb von
+    \SI{3}{\metre} um den Startplatz liegt. Zusatzpunkte gibt es für das Erkennen und Verorten von drei Proben im
+    Einsatzbereich.
+    \item[Maintenance Task] Der Rover bedient mit seinem Roboterarm ein Panel, das für Menschen ausgelegt ist. Er
+    stellt Hebel- und Drehschalter, steckt einen Stecker vom Typ IEC320 C14 in eine Buchse und legt eine Platte auf
+    einen Elektromagneten.
+    \item[Probing Task] Der Rover sucht drei Proben auf dem Mars Yard, verstaut sie in einem Behälter an Bord und
+    fährt damit zur Ziellinie.
+    \item[Surface Sampling] Der Rover nimmt Regolith- und Gesteinsproben auf. Das Gewicht der Proben wird an Bord
+    gemessen und an der Ziellinie von der Jury geprüft.
+    \item[Deep Sampling] Der Rover entnimmt eine Bodenprobe aus größerer Tiefe. Als Ziel gelten mehr als
+    \SI{100}{\gram} aus mehr als \SI{300}{\milli\metre} Tiefe, und auch hier wird das Gewicht an Bord gemessen.
+    \item[Astro-Bio Sub-Task] Das Team kalibriert ein pH-Messgerät und führt mit dem Rover eine Messung nach den
+    Regeln des Planetenschutzes durch.
 \end{description}
 
-\subsection{Anforderung und Rolle der Drohne}
-Beim Wettbewerb fliegt die Drohne in dem sogenannten Drohnenkäfig, ein 10x10x4 meter großer, mit Netzen an der Seite und einem Dach, abgeschirmten Quader. Durch EU-Richtlinien darf die Drohne nur in diesem Käfig autonom fliegen und sich frei bewegen. Der Drohnenpilot muss durchgehend Sichtkontakt halten und kann jederzeit eingreifen. Bei einem Notfallsignal oder Verbindungsverlust muss die Drohne selbstständig landen. Während der Akku zwischen den drei Versuchen getauscht werden darf, profitiert das Team von einem leichten und stabilen Aufbau des Frames um so Zeit zu sparen.
+\section{Rolle der Drohne und Anforderungen}
+\label{sec:Anforderungen}
 
-Aus den Regeln des Wettbewerbs ergeben sich für die Drohne die in Tabelle~\ref{tab:ERC_Anforderungen} zusammengefassten Anforderungen.
+Im Wettbewerb fliegt die Drohne im sogenannten Drohnenkäfig mit einer Größe von \SI{10}{\metre} $\times$
+\SI{10}{\metre} $\times$ \SI{4}{\metre}~\cite{ercRules2026}.
+Der Einsatzbereich ist eine Kreisfläche mit \SI{3}{\metre} Radius in der Mitte des Käfigs.
+Die Mission wird ausschließlich automatisch geflogen, manuelle Eingriffe werden mit Punktabzug bestraft.
+Vor der Aufgabe prüft die Jury in einem Preflight-Check die Sicherheitsfunktionen der Drohne.
+Der Pilot muss jederzeit in die manuelle Steuerung wechseln und eine automatische Landung auslösen können.
+Bei einem Verbindungsverlust, einem Problem mit Akku oder Stromversorgung und einem Fehler der Positionsbestimmung
+müssen Failsafe-Mechanismen greifen.
+Außerhalb des Käfigs gelten die polnischen und europäischen Regeln für Drohnenflüge.
+Die Drohne muss vom Team selbst aufgebaut sein, fertig gekaufte Drohnen sind nicht zugelassen.
+Vor dem Wettbewerb wird ihre Masse gemessen.
+Für die Vorbereitung hat jedes Team \SI{15}{\minute}, für die Ausführung \SI{30}{\minute}.
+Ein leichter und gut zugänglicher Aufbau des Frames erleichtert die Vorbereitung in dieser Zeit.
 
-\begin{table}[htbp]
+Die technischen Anforderungen an Rover und Drohne stehen in einer eigenen Liste im Anhang des
+Regelwerks~\cite{ercRules2026, ercRequirements2026}.
+Für die Statusanzeige ist REQ-FUN-070 die wichtigste davon:
+
+\begin{quote}
+    \glqq The rover and the drone shall emit visible signals when performing autonomy operations that are different
+    from the signals emitted when being controlled by the team.\grqq{}~\cite{ercRequirements2026}
+\end{quote}
+
+Gefordert ist damit ein unterscheidbares Signal zwischen autonomem Betrieb und Steuerung durch das Team.
+Eine bestimmte Farbe ist nicht vorgeschrieben.
+Weitere Anforderungen an die Anzeige stammen ebenfalls aus dieser Liste.
+Für den Frame enthält sie nur eine Obergrenze der Masse.
+Die übrigen Anforderungen an den Frame wurden in dieser Arbeit aus den Schwächen des alten Frames abgeleitet.
+Tabelle~\ref{tab:ERC_Anforderungen} fasst alle Anforderungen zusammen.
+
+\begin{table}[H]
     \centering
-    \caption{Aus den ERC-Regeln abgeleitete Anforderungen an die Drohne}
+    \caption{Anforderungen an Frame und Statusanzeige mit Herkunft und Abschnitt der Umsetzung}
     \label{tab:ERC_Anforderungen}
-    \begin{tabularx}{\textwidth}{l X X}
+    \small
+    \begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{2.3cm} X >{\raggedright\arraybackslash}p{2.0cm} l}
         \toprule
-        \textbf{Thema} & \textbf{Anforderung}                                             & \textbf{Konsequenz für diese Arbeit}        \\
+        \textbf{Kennung} & \textbf{Anforderung} & \textbf{Herkunft} & \textbf{Umsetzung} \\
         \midrule
-        Sicherheit     & Pilot kann jederzeit eingreifen; automatische Landung im Notfall & Zugänglichkeit der Elektronik im Frame      \\
-        Anzeige        & Zustand vor Bewegung und im autonomen Modus erkennbar            & LED-Statusanzeige (Abschnitt~\ref{sec:LED}) \\
-        Masse          & Obergrenze für die Gesamtmasse                                   & Leichtbau-Frame im FDM-Druck                \\
-        Betrieb        & Einsatz im Drohnenkäfig, wechselnde Lichtverhältnisse            & Sichtbarkeit der LEDs, robuste Konstruktion \\
+        \multicolumn{4}{l}{\textit{Frame}} \\
+        FR-01 & Die Gesamtmasse liegt unter der Obergrenze des Regelwerks von \textbf{5 kg}. & Regelwerk & \ref{sec:Frame} \\
+        FR-02 & Der Frame ist leichter als der alte Frame. & eigene & \ref{sec:Frame} \\
+        FR-03 & Der Fußabdruck der Drohne wird verkleinert. & eigene & \ref{sec:Frame_Konzept} \\
+        FR-04 & Alle Bauteile lassen sich auf den Druckern des Labors ohne Bauraumheizung drucken. & eigene & \ref{sec:Frame_FDM} \\
+        FR-05 & Einzelne Bauteile sind austauschbar, die Elektronik ist im eingebauten Zustand zugänglich. & eigene & \ref{sec:Frame_Integration} \\
+        FR-06 & Harte Landungen überstehen Frame und Füße ohne Schaden. & eigene & \ref{sec:Frame_FDM} \\
+        FR-07 & Der Frame verursacht im Flug geringere Vibrationen als der alte Frame. & eigene & \ref{sec:Frame_Konzept} \\
+        \midrule
+        \multicolumn{4}{l}{\textit{Statusanzeige}} \\
+        REQ-FUN-070 & Autonomer Betrieb und Steuerung durch das Team sind an unterschiedlichen Signalen erkennbar. & Regelwerk & \ref{sec:LED_ZweiKanal} \\
+        REQ-DES-150 & Die wichtigsten Systeme sind redundant ausgeführt. Jedes Landebein erhält einen eigenen LED-Streifen. & Regelwerk & \ref{sec:LED_Hardware} \\
+        REQ-OPS-090, REQ-OPS-100 & Nach dem Einschalten bzw. dem Befehl zum autonomen Betrieb vergehen \SI{5}{\second}, bevor die Drohne aktiv wird. Die Anzeige leuchtet bereits in diesem Zeitraum. & Regelwerk & \ref{sec:LED_Zuordnung} \\
+        REQ-ENV-040 & Die Drohne kann bei Kunstlicht und Dunkelheit betrieben werden. & Regelwerk & \ref{sec:LED_Hardware} \\
+        REQ-DES-060 & Die Anzeige ist bei Tageslicht aus \SI{10}{\metre} erkennbar. Formal gilt dies nur für den Rover und wird als Designziel übernommen. & Regelwerk & \ref{sec:LED_Konzept} \\
+        NAV-01 & Ein Navigationslicht zeigt die Ausrichtung der Drohne, links grün und rechts rot. & eigene & \ref{sec:LED_ZweiKanal} \\
         \bottomrule
     \end{tabularx}
 \end{table}
+% [PRÜFEN] FR-01 to FR-07 and NAV-01 are own identifiers derived from the text, check wording and add target values
 
-
-\section{Das FRoST-Labor}
-\label{sec:frost}
-
-Wie in Kapitel \ref{ch:Einfuehrung} erklärt, ermöglicht \gls{frost} ein erarbeiten von Projekten für Module der Studiengänge. Studierende profitieren dabei von der bereitgestellten Hardware und der Möglichkeit vor Ort mit anderen Kommilitonen zu arbeiten.
-
-Der Vorgänger \gls{icarus} diente zum entdecken und experimentieren neuer Technik und Software. Der alte Frame wurde aus geschnittenen Karbonplatten und -rohren zusammengebaut. Durch das große und schwere Design wurde jedoch ein neuer Frame benötigt der als Mechatronik-Projekt ausgeschrieben wurde.
-
-\section{Grundlagen 3D-Druck}
-\label{sec:Grundlagen}
-
-
-Beim 3D-Druck wird ein Bauteil nicht aus einem Block herausgearbeitet, sondern Schicht für Schicht aufgebaut. Man spricht deshalb auch von additiver Fertigung. Aus einem digitalen \gls{cad}-Modell berechnet eine Software die einzelnen Schichten, die der Drucker anschließend nacheinander herstellt.
-
-In dieser Arbeit kommt das \gls{fdm}-Verfahren zum Einsatz. Dabei wird ein Kunststoffdraht (Filament) in einem beheizten Druckkopf geschmolzen und in dünnen Bahnen auf eine Bauplattform aufgetragen. Das Material kühlt ab, erstarrt und verbindet sich mit der darunterliegenden Schicht. Das Verfahren ist vergleichsweise günstig und erlaubt es, auch komplexe Formen und Hohlräume herzustellen, die sich klassisch nur schwer fertigen lassen. Zudem können Bauteile schnell geändert und neu gedruckt werden, was für die Weiterentwicklung eines Drohnenframes vorteilhaft ist. 
-
-Vor jedem Drucken muss das \gls{cad}-Modell in einer Slicer-Software in einzelne Schichten zerlegt werden. Dabei werden Parameter wie Schichthöhe, Füllung, Wandstärke und Stützstrukturen festgelegt. Die Software erzeugt daraus einen G-Code, der die Bewegungen des Druckkopfes, der Bauplattform und die Extrusion des Materials steuert.
-
-Gedruckte Teile haben jedoch Eigenheiten, die bei der Konstruktion beachtet werden müssen. Ihre Festigkeit hängt unter anderem vom verwendeten Material und von der Ausrichtung beim Drucken ab. Auf diese Aspekte wird im Kapitel~\ref{ch:StandDerTechnik} genauer eingegangen.
+Nicht Bestandteil dieser Arbeit ist die Einhaltung der Wartezeit aus REQ-OPS-090 und REQ-OPS-100.
+Sie ist Aufgabe der Zustandsmaschine des Teams.
+Die Anzeige muss lediglich leuchten, sobald der autonome Betrieb befohlen ist.

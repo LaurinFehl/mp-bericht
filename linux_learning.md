@@ -69,6 +69,7 @@ Commands and shell concepts, logged on first use in this project.
 - `-i`: ignore upper/lower case
 - `-c`: only count matches
 - `-q`: quiet, print nothing, only set the exit code (`0` = found), handy in `if`/`&&`
+- `-a`: treat the file as text even if grep thinks it is binary (e.g. a LaTeX log in ISO-8859 with umlauts; without `-a` grep silently printed nothing), added 2026-11-16
 **Example:** `grep -n -A3 "item24signale\|ws2812btds" bibliography.bib`
 **First used:** 2026-11-10, checking whether the bib entries from the markdown file exist.
 
@@ -217,3 +218,33 @@ E
 **What it does:** Replaces text. `\(...\)` remembers a part of the match, `\1` inserts it again in the replacement. With `-i` the file is changed directly.
 **Example:** `sed -i 's/{\\falltest\([ABC]\)}/[angle=-90]{\\falltest\1}/' file.tex` (works for A, B and C in one go)
 **First used:** 2026-11-16, adding the rotation option to the three drop-test photos at once.
+
+## `cat -n`
+**What it does:** Prints a whole file. `-n` adds line numbers in front of every line.
+**Example:** `cat -n TeXFiles/500_Evaluation.tex`
+**First used:** 2026-11-16, reading every chapter with line numbers for the correction list.
+
+## `wc -l`
+**What it does:** Counts lines (`wc` = word count, `-l` = only lines). With several files it also prints a total.
+**Example:** `wc -l thesis.tex TeXFiles/*.tex`
+**First used:** 2026-11-16, checking how long each chapter file is before reading the whole report.
+
+## `sort` and `uniq -c`
+**What it does:** `sort` sorts lines alphabetically (`-u` drops duplicates, `-rn` sorts by number, largest first). `uniq -c` merges identical neighbouring lines and counts them, so it is almost always used after `sort`.
+**Example:** `grep -rhoE "\\cite\{[^}]+\}" TeXFiles | sort | uniq -c`
+**First used:** 2026-11-16, counting how often each source is cited.
+
+## `cmp`
+**What it does:** Compares two files byte by byte. Prints nothing and exits with `0` if they are identical, so it works well with `&&`.
+**Example:** `cmp a.md b.md && echo "identisch"`
+**First used:** 2026-11-16, checking whether two copies of `report_agent.md` were the same.
+
+## `git status --short` and `git branch`
+**What it does:** `git status --short` lists changed (`M`) and new (`??`) files in a compact form. `git branch` lists all branches, the current one has a `*`.
+**Example:** `git status --short; git branch`
+**First used:** 2026-11-16, checking that the work happens on the new branch `korrektur`.
+
+## `grep -o` and `grep -h`
+**What it does:** `-o` prints only the matching part of a line instead of the whole line. `-h` hides the file name in front of each match when searching several files.
+**Example:** `grep -rhoE "\\label\{fig:[^}]+\}" TeXFiles`
+**First used:** 2026-11-16, collecting all figure labels to find ones that are never referenced.

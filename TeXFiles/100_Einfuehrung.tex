@@ -1,26 +1,32 @@
-\chapter{Einführung}
+\chapter{Einleitung}
 \label{ch:Einfuehrung}
 
+Das \gls{frost}-Team ist ein studentisches Team der \gls{frauas}, das Robotersysteme entwickelt.
+Für seine Projekte schreibt das Team gezielt Bachelor- und Masterarbeiten aus.
+Ziel ist die Teilnahme an der \gls{erc}, einem internationalen Wettbewerb für Marsrover.
+Dort treten Teams mit einem selbst gebauten Rover und einer begleitenden Drohne in simulierten Missionen an.
+In den vergangenen Jahren bestand das Team vor allem aus Studierenden des Masterstudiengangs Mechatronik.
+Heute arbeiten dort Bachelor- und Masterstudierende der Mechatronik zusammen.
+Zeitweise ergänzen Studierende der Elektrotechnik und Austauschstudierende aus Vietnam das Team.
 
-\section{Das \glsentryshort{frost}-Labor}
-\label{sec:frostlabor}
+Die Drohne \gls{daedalus} wurde aus Komponenten des Holybro X500 V2 Kits aufgebaut. % [QUELLE?] Holybro X500 V2
+In der Drohnenaufgabe der \gls{erc} startet sie automatisch, erkennt mit Bildverarbeitung einen Landeplatz und landet
+präzise darauf~\cite{ercRules2026}.
+Zusätzlich kann sie Proben am Boden erkennen und deren Position bestimmen.
+Für diese Aufgabe braucht die Drohne einen stabilen und ruhigen Flug.
+Dafür sind die Ausrichtung der Motoren, die Masse, die Position der Kamera und geringe Vibrationen wichtig.
 
-Das \gls{frost}-Labor ist ein studentisches Team der \gls{frauas}, welches Robotersysteme entwickelt. Gezielt werden Projekte für Bachelor- und Masterarbeiten ausgeschrieben um an der \gls{erc} teilzunehmen, ein internationaler Wettbewerb, bei dem Teams Marsrover bauen und in simulierten Missionen antreten. Aufgeteilt in sieben verschiedene Aufgaben ein selbstgebauter Marsrover, begleitet von einer Drohne, treten 25 Teams gegeneinander an.
+Die Vorgänger Drohne, genannt \gls{icarus}, diente dem Team zum Erproben neuer Technik und Software.
+Sein Frame bestand aus zugeschnittenen Carbonplatten und -rohren.
+Dieser Frame war groß und schwer, daher wurde ein neuer Frame als Mechatronikprojekt ausgeschrieben.
+Außerdem verlangen die Anforderungen der \gls{erc}, dass die Drohne im autonomen Betrieb ein sichtbares Signal
+zeigt~\cite{ercRequirements2026}.
+Eine solche Anzeige besaß die Drohne bisher nicht.
 
-Während das Team in vergangen Jahren fast hauptsächlich aus Mechatronik Master Studenten bestand, ist zur heutigen Zeit ein Mix aus Mechatronik Bachelor- und Masterstudenten vorhanden. Weitere Elektrotechnik Bachelorstudenten, sowie Austauschstudenten aus Vietnam ergänzen von Zeit zur Zeit das Team.
+Ziel dieser Arbeit sind deshalb zwei Entwicklungen.
+Erstens wird ein neuer, leichterer Frame für die Drohne entwickelt und konstruiert, der für den \gls{fdm}-3D-Druck ausgelegt ist.
+Zweitens wird eine \gls{led}-Statusanzeige entwickelt, die den Zustand der Drohne und den autonomen Betrieb anzeigt.
+Nicht Bestandteil dieser Arbeit sind die Flugsoftware, die Zustandsmaschine des Teams und die Bildverarbeitung.
+Sie werden nur genutzt, soweit Frame und Anzeige davon abhängen.
 
-\subsection{Die \glsentryshort{daedalus}-Drohne}
-\label{sec:daedalusdrone}
-
-Die Drohne \gls{daedalus} wurde aus Komponenten von einem Holybro X500 V2 kit gebaut. Bei der Drohennaufgabe des \gls{erc}-Wettbewerbs wird aus der Luft eine Fläche abgeflogen und mit Computer-Vision nach Proben gescannt, welche für eine spätere Untersuchung von seitens des Rovers markiert werden. Dabei ist ein stabiler und ruhiger Flug wichtig, bei der die Ausrichtung der Motoren, das Gewicht, Kameraposition und Vibrationsvermeidung eine große Rolle spielen.
-
-
-
-
-% ...
-
-
-
-%Am Ende des Einführungskapitels ein kurzer Überblick über die kommenden Kapitel in einem Absatz (Beschreibung der Struktur der Thesis):
-
-%...
+Die Arbeit beginnt mit dem Wettbewerb, aus dem die Anforderungen an Frame und Anzeige abgeleitet werden. Danach folgt der Stand der Technik zu Multicoptern, FDM-Druck und Statusanzeigen. Auf dieser Grundlage werden die Konstruktion des Frames und die Entwicklung der Statusanzeige beschrieben. Anschließend wird festgelegt, wie beide geprüft werden, und die Ergebnisse werden dargestellt und diskutiert. Eine Zusammenfassung mit Ausblick schließt die Arbeit ab.
