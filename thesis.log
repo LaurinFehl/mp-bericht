@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/TeX Live for SUSE Linux) (preloaded format=pdflatex 2026.10.27)  16 NOV 2026 14:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/TeX Live for SUSE Linux) (preloaded format=pdflatex 2026.10.27)  16 NOV 2026 15:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1523,10 +1523,19 @@ LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 4
 (/usr/share/texmf/tex/latex/lm/ot1lmtt.fd
 File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-<Figures/000-misc/unterschrift.jpg, id=20, 209.28188pt x 48.18pt>
+Underfull \hbox (badness 7133) in paragraph at lines 48--48
+[]|\OT1/lmss/m/n/10.95 Claude (Opus 5.5)
+ []
+
+
+Underfull \hbox (badness 7133) in paragraph at lines 50--50
+[]|\OT1/lmss/m/n/10.95 Claude (Opus 5.5)
+ []
+
+<Figures/000-misc/unterschrift.jpg, id=21, 209.28188pt x 48.18pt>
 File: Figures/000-misc/unterschrift.jpg Graphic file (type jpg)
 <use Figures/000-misc/unterschrift.jpg>
-Package pdftex.def Info: Figures/000-misc/unterschrift.jpg  used on input line 64.
+Package pdftex.def Info: Figures/000-misc/unterschrift.jpg  used on input line 68.
 (pdftex.def)             Requested size: 142.26378pt x 32.75092pt.
 ) [2.2
 
@@ -1596,7 +1605,7 @@ chapter 3.
 [6.13
 
 ]
-<Figures/300-sdt/quad_konfigurationen.png, id=428, 752.8125pt x 280.04625pt>
+<Figures/300-sdt/quad_konfigurationen.png, id=429, 752.8125pt x 280.04625pt>
 File: Figures/300-sdt/quad_konfigurationen.png Graphic file (type png)
 <use Figures/300-sdt/quad_konfigurationen.png>
 Package pdftex.def Info: Figures/300-sdt/quad_konfigurationen.png  used on input line 48.
@@ -1606,7 +1615,7 @@ File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
 Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 63.
 (pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
  [7.14 <./Figures/300-sdt/quad_konfigurationen.png>]
-<Figures/300-sdt/fdm_printing.jpg, id=444, 903.375pt x 451.6875pt>
+<Figures/300-sdt/fdm_printing.jpg, id=445, 903.375pt x 451.6875pt>
 File: Figures/300-sdt/fdm_printing.jpg Graphic file (type jpg)
 <use Figures/300-sdt/fdm_printing.jpg>
 Package pdftex.def Info: Figures/300-sdt/fdm_printing.jpg  used on input line 70.
@@ -1625,7 +1634,7 @@ File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
 Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 107.
 (pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
  [9.16{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}]
-<Figures/300-sdt/maschinenampel.png, id=462, 401.5pt x 501.875pt>
+<Figures/300-sdt/maschinenampel.png, id=463, 401.5pt x 501.875pt>
 File: Figures/300-sdt/maschinenampel.png Graphic file (type png)
 <use Figures/300-sdt/maschinenampel.png>
 Package pdftex.def Info: Figures/300-sdt/maschinenampel.png  used on input line 119.
@@ -1637,7 +1646,7 @@ Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 1
 (pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
  [10.17 <./Figures/300-sdt/maschinenampel.png>]
 chapter 4.
-<Figures/400-em/drone_render.png, id=474, 1445.4pt x 813.0375pt>
+<Figures/400-em/drone_render.png, id=475, 1445.4pt x 813.0375pt>
 File: Figures/400-em/drone_render.png Graphic file (type png)
 <use Figures/400-em/drone_render.png>
 Package pdftex.def Info: Figures/400-em/drone_render.png  used on input line 18.
@@ -1656,12 +1665,12 @@ File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
 Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 71.
 (pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
  [12.19]
-<Figures/400-em/drone_cad_arme_dreieck_zeichnung.png, id=486, 966.61125pt x 388.45125pt>
+<Figures/400-em/drone_cad_arme_dreieck_zeichnung.png, id=487, 966.61125pt x 388.45125pt>
 File: Figures/400-em/drone_cad_arme_dreieck_zeichnung.png Graphic file (type png)
 <use Figures/400-em/drone_cad_arme_dreieck_zeichnung.png>
 Package pdftex.def Info: Figures/400-em/drone_cad_arme_dreieck_zeichnung.png  used on input line 83.
 (pdftex.def)             Requested size: 386.95901pt x 155.50813pt.
-<Figures/400-em/drone_motor_halter_highlight.png, id=491, 603.4545pt x 454.69875pt>
+<Figures/400-em/drone_motor_halter_highlight.png, id=492, 603.4545pt x 454.69875pt>
 File: Figures/400-em/drone_motor_halter_highlight.png Graphic file (type png)
 <use Figures/400-em/drone_motor_halter_highlight.png>
 Package pdftex.def Info: Figures/400-em/drone_motor_halter_highlight.png  used on input line 101.
@@ -1700,7 +1709,7 @@ File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
 Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 274.
 (pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
 [18.25]
-<Figures/400-em/drone_all_leds.jpg, id=547, 1695.33376pt x 1197.72469pt>
+<Figures/400-em/drone_all_leds.jpg, id=548, 1695.33376pt x 1197.72469pt>
 File: Figures/400-em/drone_all_leds.jpg Graphic file (type jpg)
 <use Figures/400-em/drone_all_leds.jpg>
 Package pdftex.def Info: Figures/400-em/drone_all_leds.jpg  used on input line 308.
@@ -1789,17 +1798,17 @@ chapter 6.
 [33.40
 
 ]
-<Figures/600-erg/drone_slicer_asa.png, id=691, 1423.56844pt x 757.32938pt>
+<Figures/600-erg/drone_slicer_asa.png, id=692, 1423.56844pt x 757.32938pt>
 File: Figures/600-erg/drone_slicer_asa.png Graphic file (type png)
 <use Figures/600-erg/drone_slicer_asa.png>
 Package pdftex.def Info: Figures/600-erg/drone_slicer_asa.png  used on input line 56.
 (pdftex.def)             Requested size: 232.17245pt x 123.50946pt.
-<Figures/600-erg/drone_slicer_pa11.png, id=692, 1420.55719pt x 747.54282pt>
+<Figures/600-erg/drone_slicer_pa11.png, id=693, 1420.55719pt x 747.54282pt>
 File: Figures/600-erg/drone_slicer_pa11.png Graphic file (type png)
 <use Figures/600-erg/drone_slicer_pa11.png>
 Package pdftex.def Info: Figures/600-erg/drone_slicer_pa11.png  used on input line 63.
 (pdftex.def)             Requested size: 232.17245pt x 122.17577pt.
-<Figures/600-erg/verzug_bauteil.jpg, id=695, 4015.0pt x 2260.445pt>
+<Figures/600-erg/verzug_bauteil.jpg, id=696, 4015.0pt x 2260.445pt>
 File: Figures/600-erg/verzug_bauteil.jpg Graphic file (type jpg)
 <use Figures/600-erg/verzug_bauteil.jpg>
 Package pdftex.def Info: Figures/600-erg/verzug_bauteil.jpg  used on input line 82.
@@ -1831,12 +1840,12 @@ File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
 Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 182.
 (pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
  [36.43]
-<Figures/600-erg/flight_review_acc_vibration_may.png, id=719, 584.1825pt x 505.13719pt>
+<Figures/600-erg/flight_review_acc_vibration_may.png, id=720, 584.1825pt x 505.13719pt>
 File: Figures/600-erg/flight_review_acc_vibration_may.png Graphic file (type png)
 <use Figures/600-erg/flight_review_acc_vibration_may.png>
 Package pdftex.def Info: Figures/600-erg/flight_review_acc_vibration_may.png  used on input line 187.
 (pdftex.def)             Requested size: 232.17245pt x 200.7564pt.
-<Figures/600-erg/flight_review_acc_vibration_sept.png, id=720, 581.92406pt x 505.13719pt>
+<Figures/600-erg/flight_review_acc_vibration_sept.png, id=721, 581.92406pt x 505.13719pt>
 File: Figures/600-erg/flight_review_acc_vibration_sept.png Graphic file (type png)
 <use Figures/600-erg/flight_review_acc_vibration_sept.png>
 Package pdftex.def Info: Figures/600-erg/flight_review_acc_vibration_sept.png  used on input line 194.
@@ -1930,10 +1939,10 @@ Here is how much of TeX's memory you used:
 pdfTeX warning (dest): name{https://logs.px4.io/} has been referenced but does not exist, replaced by a fixed one
 
 </usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss8.pfb></usr/share/texmf/fonts/type1/public/lm/lmss9.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtk10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt9.pfb>
-Output written on thesis.pdf (55 pages, 12099993 bytes).
+Output written on thesis.pdf (55 pages, 12100136 bytes).
 PDF statistics:
- 1223 PDF objects out of 1440 (max. 8388607)
- 1078 compressed objects within 11 object streams
+ 1224 PDF objects out of 1440 (max. 8388607)
+ 1079 compressed objects within 11 object streams
  223 named destinations out of 1000 (max. 500000)
  714 words of extra memory for PDF output out of 10000 (max. 10000000)
 
