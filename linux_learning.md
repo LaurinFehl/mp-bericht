@@ -248,3 +248,8 @@ E
 **What it does:** `-o` prints only the matching part of a line instead of the whole line. `-h` hides the file name in front of each match when searching several files.
 **Example:** `grep -rhoE "\\label\{fig:[^}]+\}" TeXFiles`
 **First used:** 2026-11-16, collecting all figure labels to find ones that are never referenced.
+
+## `mv -n`
+**What it does:** Moves or renames a file. `-n` (no-clobber) never overwrites an existing target file, so nothing gets lost by accident.
+**Example:** `mv -n Figures/000-misc/frost_logo_neu Figures/000-misc/frost_logo_neu.png`
+**First used:** 2026-11-16, adding the missing `.png` extension to the FRoST logo so LaTeX recognises the file type.

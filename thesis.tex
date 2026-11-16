@@ -158,10 +158,10 @@
 \ohead{
   \makebox[0.2\textwidth]{\raisebox{-1ex}{\hspace*{14ex}\includegraphics[width=0.1\textwidth]{\unilogo}}}
 }
-%\ifoot{\today}
-\cfoot[\pagemark]{\ThesisTitleShort} % [..] = Kapitelanfangsseiten (plain)
-%\ofoot{Seite \thepage ~von \ref{TotPages}}  % Seitennummer
-\ofoot{\pagemark} % Seitennummer
+% footer: university logo left, page number centre, FRoST logo right ([..] = chapter start pages)
+\ifoot[\raisebox{-0.5\height}{\includegraphics[height=7mm]{\unilogo}}]{\raisebox{-0.5\height}{\includegraphics[height=7mm]{\unilogo}}}
+\cfoot[\pagemark]{\pagemark}
+\ofoot[\raisebox{-0.5\height}{\includegraphics[height=6mm]{\frostlogo}}]{\raisebox{-0.5\height}{\includegraphics[height=6mm]{\frostlogo}}}
 \setlength{\mytopmargin}{\totalheightof{\usebox\headbox} +2cm}
 %Unterschied zwischen geraden/ungeraden Seiten (nur mit twoside):
 %\rehead{} % "e" für "even", also gerade Seiten
