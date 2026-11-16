@@ -197,3 +197,23 @@ E
 **What it does:** Looks at the content of a file (not its name) and says what type it really is, e.g. `PNG image data, 563 x 615`. Useful when an extension like `.png` might be wrong.
 **Example:** `file Figures/000-misc/platzhalter.png`
 **First used:** 2026-11-13, checking that the placeholder image is a real PNG before using it for the figures in chapter 6.
+
+## `sed -i 'N{/muster/d}'`
+**What it does:** Edits a file directly ("in place", `-i`) instead of only printing the result. `32{...}` limits the command to line 32, `/muster/` checks that the line contains the pattern, and `d` deletes the line. So the line is only deleted if it is really the expected one.
+**Example:** `sed -i '32{/FIgures\/400-em\/dronecad_arme/d}' TeXFiles/004_Figures.tex`
+**First used:** 2026-11-16, removing a duplicate `\dronearme` definition with a wrong path that broke the build.
+
+## `magick` (resize, crop, identify, append)
+**What it does:** ImageMagick's main command for editing images.
+- `magick in.jpg -auto-orient -resize 700x700 out.jpg`: turns the image upright using its EXIF rotation info, then shrinks it to fit into 700x700 px
+- `-crop 360x110+1430+425 +repage`: cuts out a 360x110 px rectangle starting at x=1430, y=425; `+repage` forgets the old canvas position
+- `-gravity NorthEast -crop 38%x50%+0+0`: crops relative to the top right corner, sizes in percent
+- `magick a.png b.png -append out.png`: stacks images vertically (`+append` = side by side)
+- `magick identify -format "%f %wx%h orient=%[EXIF:Orientation]\n" *.jpg`: prints file name, size and EXIF rotation (`6` = must be turned 90° clockwise)
+**Example:** `magick identify -format "%f %wx%h\n" Figures/600-erg/*.png`
+**First used:** 2026-11-16, previewing the new photos for chapter 6, reading the slicer masses and finding out why the phone photos appeared sideways in the PDF.
+
+## `sed 's/alt/neu/'` with groups
+**What it does:** Replaces text. `\(...\)` remembers a part of the match, `\1` inserts it again in the replacement. With `-i` the file is changed directly.
+**Example:** `sed -i 's/{\\falltest\([ABC]\)}/[angle=-90]{\\falltest\1}/' file.tex` (works for A, B and C in one go)
+**First used:** 2026-11-16, adding the rotation option to the three drop-test photos at once.

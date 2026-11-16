@@ -23,7 +23,7 @@ In diesem Kapitel werden die Entwickelten Methoden aufgearbeitet und im Detail b
     In Tabelle \ref{tab:Bauteile} sind alle konstruierten Bauteile aufgelistet und kurz erklärt. Für die Teile baseplate\_top und baseplate\_bottom, sowie motor\_link\_left und motor\_link\_right wurden Zeichnungen als Vorlage zum Ableiten der Teile benutzt. So konnte durch die Änderung einer Bemaßung in nur einer Zeichnung, beide Bauteile automatisch neu anpassen. 
 
 
-    \begin{table}[htbp]
+    \begin{table}[htbp][H]
         \centering
         \caption{Übersicht der gedruckten Bauteile des Frames}
         \label{tab:Bauteile}
@@ -67,11 +67,23 @@ In diesem Kapitel werden die Entwickelten Methoden aufgearbeitet und im Detail b
 
         \subsection{Konstruktionskonzept und Designentscheidungen}
 
-        Um die ersten Teile konstruieren zu können, musste eine Zielmaß, bzw. eine gewünschte Größe ausgesucht werden, welche die Drohne haben sollte. Das Ziel des neuen Frames war auch neben der Verbesserung des Gewichtes, eine Reduzierung des Fußabdruckes der Drohne. Der Abstand zwischen den Propellerblättern wurde verringert auf ein angemessenes Minimun. Durch eine Verkleinerung des Abstand beider Motorverbindungen von der baseplate zu den Motorhaltern hin, ergibt sich eine Schräge welche passend auf den Abstand der Motoren ausgerechnet wurde. Wie in Abbildung (hier ref) zu sehen ist, ergibt sich aus der Symmetrielinie der Arme ein Dreieck wo der Winkel $\alpha$ durch den Sinus berechnet werden kann. Abbildung (hier ref) zeigt das entstandene Dreieck und Formel (hier ref) berechnet den Winkel in Grad. Beim Anpassen der Motorarme, also eine Veränderung der Hypetnuse des Dreiecks, musste dann in der Ableitungsskizze der base\_link top und bottom, sowie in der Motorhalterung geändert werden. 
+        Um die ersten Teile konstruieren zu können, musste ein Zielmaß, bzw. eine gewünschte Größe ausgesucht werden, welche die Drohne haben sollte. Das Ziel des neuen Frames war neben der Verbesserung des Gewichtes auch eine Reduzierung des Fußabdruckes der Drohne. Der Abstand zwischen den Propellerblättern wurde auf ein angemessenes Minimum verringert. Durch eine Verkleinerung des Abstands beider Motorverbindungen von der baseplate zu den Motorhaltern hin ergibt sich eine Schräge, welche passend auf den Abstand der Motoren ausgerechnet wurde. Wie in Abbildung~\ref{fig:Arme_CAD} zu sehen ist, ergibt sich aus der Symmetrielinie der Arme ein Dreieck, in dem der Winkel $\alpha$ über den Sinus berechnet werden kann. Abbildung~\ref{fig:Arme_Zeichnung} zeigt das entstandene Dreieck mit seinen Maßen. An der baseplate liegen die Arme \SI{9}{\milli\meter} von der Symmetrielinie entfernt, am Motorhalter nur noch \SI{4}{\milli\meter}. Die Gegenkathete beträgt damit \SI{5}{\milli\meter}, die Hypotenuse ist die Armlänge von \SI{120}{\milli\meter}. Formel~\ref{eq:Armwinkel} berechnet daraus den Winkel in Grad.
 
-        % hier bild von cad der drohne
-        % hier bild von dreieck zeichnung
-        % hier formel
+        \begin{equation}
+            \alpha = \arcsin\left(\frac{a_{\text{Base}} - a_{\text{Motor}}}{l_{\text{Arm}}}\right)
+                   = \arcsin\left(\frac{\SI{9}{\milli\meter} - \SI{4}{\milli\meter}}{\SI{120}{\milli\meter}}\right)
+                   \approx \SI{2.39}{\degree}
+            \label{eq:Armwinkel}
+        \end{equation}
+
+        Dieser Winkel wurde anschließend für die Konstruktion der angrenzenden Bauteile verwendet. Beim Anpassen der Motorarme, also bei einer Veränderung der Hypotenuse des Dreiecks, mussten dann die Ableitungsskizze der base\_link top und bottom sowie die Motorhalterung geändert werden. % TODO: check part names (table uses link_top/link_bottom)
+
+        \begin{figure}[htbp]
+            \centering
+            \includegraphics[width=0.8\textwidth]{\dronearmeZeichnung}
+            \caption{Quadcopter-Konfigurationen H, Plus und X mit Drehrichtung der Motoren \cite{mishraDifferentTypesDrone2021}}
+            \label{fig:Quad_Konfigurationen}
+        \end{figure}
 
 
         \subsection{Auslegung für den FDM-Druck}     % Druckorientierung, Wandstärken, Stützstrukturen
@@ -79,10 +91,17 @@ In diesem Kapitel werden die Entwickelten Methoden aufgearbeitet und im Detail b
         Die Auslegung der Bauteile um die optimale Stabilität der vorgegebenen 3D-Druck-Geometrie führte zu sorgfältig ausgewählten besonderen Designentscheidungen. Diese Entscheidung können an drei Beispielen besonders klar dargstellt werden.
 
         \begin{description}[style=nextline]
-            \item[Motorarme:] Die Motorarme wurden im Vergleich zu den anderen Bauteilen liegend gedruckt, damit die Schichtlinien nicht in Richtung der am meisten aufzunehmenden Kraft liegen. Dadurch konnten auch Löcher für Schrauben so ausgelegt werden, dass die meiste Kraftaufnahme den Vorteil der Schichtrichtung nutzen konnte. (hier vielleicht zeichnung von cad screenshot und wirkende kräfte)
-            \item[Motorhalter:] Bei den Motorhaltern wurde ein spezieller Designtrick benutzt um den Stabilitätspin, an der Stelle zum montieren der Füße, besonders bruchsicher zu gestalten. Dazu wurde nicht normal ein Kreis von der Fläche aus extruiert, sondern davor ein größere Kreis ausgeschnitten um 2 mm. In diesem Auschnitt wurde der Pin dann extruiert und mit Rundungen die Kanten abgerundet. Durch die Konstruktionsbedingte Richtung für die Befestigung der Motoren, entstehen im schlimmsten Fall an diesem Stabilitätspin Scherkräfte. (hier noch bild von schnittansicht)
+            \item[Motorarme:] Die Motorarme wurden im Vergleich zu den anderen Bauteilen liegend gedruckt, damit die Schichtlinien nicht in Richtung der am meisten aufzunehmenden Kraft liegen. Dadurch konnten auch Löcher für Schrauben so ausgelegt werden, dass die meiste Kraftaufnahme den Vorteil der Schichtrichtung nutzen konnte. % TODO (optional): CAD screenshot of the arm with the acting forces
+            \item[Motorhalter:] Bei den Motorhaltern wurde ein spezieller Designtrick benutzt um den Stabilitätspin, an der Stelle zum montieren der Füße, besonders bruchsicher zu gestalten. Dazu wurde nicht normal ein Kreis von der Fläche aus extruiert, sondern davor ein größere Kreis ausgeschnitten um 2 mm. In diesem Auschnitt wurde der Pin dann extruiert und mit Rundungen die Kanten abgerundet. Durch die Konstruktionsbedingte Richtung für die Befestigung der Motoren, entstehen im schlimmsten Fall an diesem Stabilitätspin Scherkräfte. Abbildung~\ref{fig:Motorhalter_Schnitt} zeigt den Pin in einer Schnittansicht des Motorhalters.
             \item[Motorfuß:] Der Motorfuß ist im Vorfeld schon auf ein bestimmtes Material bedacht designed worden. Durch die Aufgabe, die Energie bei einer härteren Landung aufnehmen zu müssen, aber auch diese Energie nicht wieder zurückzugeben, ist das Material TPU ausgewählt worden. Ein durchsichtiges TPU war zur Zeit der Konstruktion im Bestand des \gls{frost}-Labors, weshalb entschieden wurde dieses zu benutzen und davon ab zu designen.  
         \end{description}
+
+        \begin{figure}[htbp]
+            \centering
+            \includegraphics[width=0.6\textwidth]{\motorhalter}
+            \caption{Schnittansicht des Motorhalters mit dem Stabilitätspin für die Befestigung des Motorfußes}
+            \label{fig:Motorhalter_Schnitt}
+        \end{figure}
 
         \subsection{Materialwahl}
 
@@ -255,7 +274,7 @@ In diesem Kapitel werden die Entwickelten Methoden aufgearbeitet und im Detail b
 
             Kommen gar keine gültigen Daten an, blitzt der ganze Streifen einschließlich des Navigationslichts mit \SI{5}{\hertz} rot. Für diesen Fall wurde bewusst ein eigenes Signal gewählt, da sich \glqq Fehler\grqq{} und \glqq keine Daten\grqq{} inhaltlich unterscheiden. Bei einem Fehler weiß die Drohne, dass etwas nicht stimmt, und meldet dies. Die Navigationslichter leuchten dann ruhig, und nur der Statuskanal blinkt rot. Bei fehlenden Daten ist dagegen nichts über den Zustand bekannt. Das Blitzen des gesamten Streifens kann von keinem Zustand erzeugt werden, den die Drohne tatsächlich meldet, und ist damit eindeutig. Tabelle~\ref{tab:LED_Fehlerfall} zeigt die Reaktion der Anzeige in den einzelnen Fällen.
 
-            \begin{table}[htbp]
+            \begin{table}[H]
                 \centering
                 \caption{Verhalten der Anzeige bei fehlenden oder ungültigen Daten}
                 \label{tab:LED_Fehlerfall}
@@ -280,11 +299,18 @@ In diesem Kapitel werden die Entwickelten Methoden aufgearbeitet und im Detail b
 
             \subsubsection{LED-Streifen und Anordnung an den Landebeinen}
 
-            Die Anzeige besteht aus 20 adressierbaren RGB-LEDs vom Typ WS2812B, aufgeteilt auf vier Streifen mit je fünf LEDs, also einen Streifen pro Landebein. Die Streifen werden in den dafür vorgesehenen Kanälen auf der Innenseite der Motorfüße befestigt (siehe Tabelle~\ref{tab:Bauteile}). Jede LED erwartet drei Byte Farbdaten in der Reihenfolge Grün, Rot, Blau. Farbreihenfolge und Pinbelegung wurden mit einem eigenen Inbetriebnahmewerkzeug (\texttt{led\_selftest}) an der Drohne bestätigt. Tabelle~\ref{tab:LED_GPIO} zeigt die Zuordnung der Beine zu den \gls{gpio}-Pins des Raspberry Pi.
+            Die Anzeige besteht aus 20 adressierbaren RGB-LEDs vom Typ WS2812B, aufgeteilt auf vier Streifen mit je fünf LEDs, also einen Streifen pro Landebein. Die Streifen werden in den dafür vorgesehenen Kanälen auf der Innenseite der Motorfüße befestigt (siehe Tabelle~\ref{tab:Bauteile}). Jede LED erwartet drei Byte Farbdaten in der Reihenfolge Grün, Rot, Blau. Farbreihenfolge und Pinbelegung wurden mit einem eigenen Inbetriebnahmewerkzeug (\texttt{led\_selftest}) an der Drohne bestätigt. Tabelle~\ref{tab:LED_GPIO} zeigt die Zuordnung der Beine zu den \gls{gpio}-Pins des Raspberry Pi. Abbildung~\ref{fig:LED_Drohne} zeigt die montierten Streifen an der Drohne.
 
-            % TODO: power supply (5 V source), cable routing, photo of a mounted strip
+            % TODO: power supply (5 V source), cable routing
 
-            \begin{table}[htbp]
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width=0.6\textwidth]{\dronelights} % photo has EXIF rotation, pdflatex ignores it
+                \caption{Drohne mit eingeschalteten LED-Streifen}
+                \label{fig:LED_Drohne}
+            \end{figure}
+
+            \begin{table}[H]
                 \centering
                 \caption{Zuordnung der Landebeine zu den GPIO-Pins (BCM-Nummerierung)}
                 \label{tab:LED_GPIO}
@@ -300,7 +326,7 @@ In diesem Kapitel werden die Entwickelten Methoden aufgearbeitet und im Detail b
                 \end{tabular}
             \end{table}
 
-            Der Raspberry Pi gibt seine Datensignale mit \SI{3,3}{\volt} aus. Das liegt unter der Schaltschwelle, die das Datenblatt der LEDs bei einer Versorgung mit \SI{5}{\volt} angibt~\cite{ws2812btds}. Ein Pegelwandler vom Typ 74AHCT125 mit einem Gatter pro Bein ist deshalb vorgesehen, zum Zeitpunkt dieser Arbeit aber noch nicht verbaut (siehe Abschnitt~\ref{sec:Erg_LED}).
+            Der Raspberry Pi gibt seine Datensignale mit \SI{3,3}{\volt} aus. Das liegt unteren Bereich der Schaltschwelle, die das Datenblatt der LEDs bei einer Versorgung mit \SI{5}{\volt} angibt~\cite{ws2812btds}. Ein Pegelwandler ist deshalb vorgesehen, zum Zeitpunkt dieser Arbeit aber noch nicht verbaut (siehe Abschnitt~\ref{sec:Erg_LED}).
 
             \subsubsection{Ansteuerung über den PIO-Block des RP1}
 

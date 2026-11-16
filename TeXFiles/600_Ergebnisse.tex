@@ -47,21 +47,20 @@ In diesem Kapitel werden die Ergebnisse der in Kapitel~\ref{ch:Evaluation} besch
             \end{tabularx}
         \end{table}
 
-        Um den Einfluss des Filaments zu bewerten, wurde die Masse desselben Arms in der Slicersoftware für beide Filamente berechnet, einmal für ASA und einmal für das gesponsorte PA11-CF-SL. Abbildung~\ref{fig:Erg_Slicer_Masse} zeigt beide Berechnungen. Für den Arm aus ASA ergibt sich eine Masse von \textbf{XX}\,g, für den Arm aus PA11-CF-SL eine Masse von \textbf{XX}\,g. Das entspricht einer Ersparnis von \textbf{XX}\,\%. Allein aus den Dichten der beiden Filamente aus Abschnitt~\ref{sec:Frame} wäre bei gleichem Volumen eine Ersparnis von etwa \SI{7,5}{\percent} zu erwarten.
-        % TODO: if the slicer result differs noticeably from 7.5 %, explain why (different profiles, infill, wall count)
+        Um den Einfluss des Filaments zu bewerten, wurde die Masse desselben Arms in der Slicersoftware für beide Filamente berechnet, einmal für ASA und einmal für das gesponsorte PA11-CF-SL. Abbildung~\ref{fig:Erg_Slicer_Masse} zeigt beide Berechnungen. Für den Arm aus ASA ergibt sich eine Masse von \SI{37,98}{\gram}, für den Arm aus PA11-CF-SL eine Masse von \SI{35,71}{\gram}. Das entspricht einer Ersparnis von etwa \SI{6}{\percent}. Allein aus den Dichten der beiden Filamente aus Abschnitt~\ref{sec:Frame} wäre bei gleichem Volumen eine Ersparnis von etwa \SI{7,5}{\percent} zu erwarten. Der Unterschied ergibt sich daraus, dass der Slicer mit zwei verschiedenen Filamentprofilen rechnet. Für PA11-CF-SL verbraucht er \SI{14,99}{\metre} Filament statt \SI{15,48}{\metre} für ASA, und die Masse pro Meter Filament unterscheidet sich nur um etwa \SI{3}{\percent}. Die im Filamentprofil hinterlegten Dichten entsprechen also nicht genau den Herstellerangaben. Die Größenordnung der Ersparnis bestätigt sich dennoch. % TODO: check the density stored in both slicer filament profiles
 
         \begin{figure}[htbp]
             \centering
             \begin{subfigure}[t]{0.48\textwidth}
                 \centering
-                \includegraphics[width=\linewidth]{\platzhalter} % TODO: slicer screenshot ASA
+                \includegraphics[width=\linewidth]{\slicerASA}
                 \caption{ASA}
                 \label{fig:Erg_Slicer_ASA}
             \end{subfigure}
             \hfill
             \begin{subfigure}[t]{0.48\textwidth}
                 \centering
-                \includegraphics[width=\linewidth]{\platzhalter} % TODO: slicer screenshot PA11-CF-SL
+                \includegraphics[width=\linewidth]{\slicerPA}
                 \caption{PA11-CF-SL}
                 \label{fig:Erg_Slicer_PA11}
             \end{subfigure}
@@ -75,12 +74,12 @@ In diesem Kapitel werden die Ergebnisse der in Kapitel~\ref{ch:Evaluation} besch
         Der Druck der Bauteile verlief dank der vom Sponsor bereitgestellten Druckprofile schnell und unkompliziert. Angepasst werden musste lediglich die in Kapitel~\ref{ch:Methoden} beschriebene Düsentemperatur. Verzug, das sogenannte Warping, trat nur auf, wenn die Bauplatte voll belegt war. Eine mögliche Ursache ist die ungleichmäßige Temperaturverteilung des beheizten Druckbetts, das am Rand um bis zu \SI{10}{\kelvin} kühler sein kann als in der Mitte. % TODO: cite source (e.g. thermal camera video of a heated bed)
         Bauteile am Rand einer voll belegten Platte kühlen dadurch ungleichmäßig ab und verziehen sich eher.
 
-        Die angestrebten Toleranzen wurden größtenteils eingehalten. Lediglich einige Bauteile mit leichtem Verzug lagen außerhalb der Toleranz. Da es sich um einen Thermoplast handelt, konnten diese Abweichungen jedoch durch gezieltes Erwärmen und Nachrichten der Bauteile behoben werden. Abbildung~\ref{fig:Erg_Warping} zeigt ein Beispiel für ein leicht verzogenes Bauteil.
+        Die angestrebten Toleranzen wurden größtenteils eingehalten. Lediglich einige Bauteile mit leichtem Verzug lagen außerhalb der Toleranz. Da es sich um einen Thermoplast handelt, konnten diese Abweichungen jedoch durch gezieltes Erwärmen und Nachrichten der Bauteile behoben werden. Abbildung~\ref{fig:Erg_Warping} zeigt ein Beispiel für ein leicht verzogenes Bauteil. Das flache Bauteil liegt auf einer ebenen Fläche, hebt sich aber an einem Ende sichtbar von ihr ab.
         % TODO: result of the heat-set insert check (screws fit?) and of the test assembly, if you want to mention it
 
         \begin{figure}[htbp]
             \centering
-            \includegraphics[width=0.5\textwidth]{\platzhalter} % TODO: photo of a slightly warped part
+            \includegraphics[width=0.6\textwidth]{\verzugBauteil}
             \caption{Leicht verzogenes Bauteil nach dem Druck auf einer voll belegten Bauplatte}
             \label{fig:Erg_Warping}
         \end{figure}
@@ -88,26 +87,25 @@ In diesem Kapitel werden die Ergebnisse der in Kapitel~\ref{ch:Evaluation} besch
         \subsection{Mechanische Belastbarkeit}
         \label{sec:Erg_Frame_Mechanik}
 
-        Die mechanische Belastbarkeit des neuen Frames wurde mit Freifalltests aus festgelegten Höhen und einer anschließenden Sichtprüfung untersucht. Besonders geachtet wurde dabei auf die Batteriehalterung und auf die Füße aus TPU mit den LED-Streifen. Die Motoren waren während der Tests ausgeschaltet, sodass die Drohne ohne jede Regelung fiel. Tabelle~\ref{tab:Erg_Falltest} zeigt die Fallhöhen und das Ergebnis der einzelnen Tests.
+        Die mechanische Belastbarkeit des neuen Frames wurde mit Freifalltests aus festgelegten Höhen und einer anschließenden Sichtprüfung untersucht. Besonders geachtet wurde dabei auf die Batteriehalterung und auf die Füße aus TPU mit den LED-Streifen. Die Motoren waren während der Tests ausgeschaltet, sodass die Drohne ohne jede Regelung fiel. Die Fallhöhe wurde jeweils an einem Maßband neben der Drohne abgelesen. Tabelle~\ref{tab:Erg_Falltest} zeigt die Fallhöhen, die Ausgangslage der Drohne und das Ergebnis der einzelnen Tests. % TODO: say which point of the drone the height refers to (e.g. bottom of the feet)
 
         \begin{table}[htbp]
             \centering
             \caption{Ergebnisse der Freifalltests}
             \label{tab:Erg_Falltest}
             \renewcommand{\tabularxcolumn}[1]{m{#1}} % vertically centre text next to the photos
-            \begin{tabularx}{\textwidth}{c >{\centering\arraybackslash}m{3.6cm} X}
+            \begin{tabularx}{\textwidth}{c >{\centering\arraybackslash}m{3.0cm} X}
                 \toprule
                 \textbf{Fallhöhe} & \textbf{Aufnahme} & \textbf{Beobachtung} \\
                 \midrule
-                \SI{10}{\centi\metre} & \includegraphics[width=3.4cm]{\platzhalter} & Gerade Landung auf allen vier Füßen. Keine sichtbare Verformung, keine Schäden an Batteriehalterung, Füßen oder LED-Streifen. \\
+                \SI{20}{\centi\metre} & \includegraphics[angle=-90,origin=c,width=2.8cm]{\falltestA} & Gerade Landung auf allen vier Füßen. Keine sichtbare Verformung, keine Schäden an Batteriehalterung, Füßen oder LED-Streifen. \\
                 \midrule
-                \SI{30}{\centi\metre} & \includegraphics[width=3.4cm]{\platzhalter} & Gerade Landung auf allen vier Füßen. Keine sichtbare Verformung, keine Schäden an Batteriehalterung, Füßen oder LED-Streifen. \\
+                \SI{50}{\centi\metre} & \includegraphics[angle=-90,origin=c,width=2.8cm]{\falltestB} & Gerade Landung auf allen vier Füßen. Keine sichtbare Verformung, keine Schäden an Batteriehalterung, Füßen oder LED-Streifen. \\
                 \midrule
-                \SI{80}{\centi\metre} & \includegraphics[width=3.4cm]{\platzhalter} & Die Drohne kommt während des Falls durch ein leichtes Ungleichgewicht ins Taumeln und landet schief. Danach steht sie wieder auf allen vier Füßen. Keine Schäden. \\
+                \SI{80}{\centi\metre} & \includegraphics[angle=-90,origin=c,width=2.8cm]{\falltestC} & Die Drohne kommt während des Falls durch ein leichtes Ungleichgewicht ins Taumeln und landet schief. Danach steht sie wieder auf allen vier Füßen. Keine Schäden. \\
                 \bottomrule
             \end{tabularx}
         \end{table}
-        % TODO: replace placeholders with photos of the drone next to a measuring tape
 
         Bei keiner der Fallhöhen traten Brüche, bleibende Verformungen oder gelöste Verbindungen auf. Das Taumeln bei \SI{80}{\centi\metre} ist keine Schwäche des Frames. Ohne laufende Motoren kann ein kleines Ungleichgewicht, etwa durch die Lage des Akkus, während des Falls nicht ausgeglichen werden. Im Flugbetrieb würde die Regelung die Lage bis zum Aufsetzen halten. Auch die schiefe Landung überstand der Frame ohne Schäden.
 
@@ -180,37 +178,30 @@ In diesem Kapitel werden die Ergebnisse der in Kapitel~\ref{ch:Evaluation} besch
             \end{tabularx}
         \end{table}
 
-        Die deutlichste Verbesserung zeigt sich bei den Vibrationen. Im ruhigen Schweben sank die Varianz der Beschleunigung etwa um den Faktor 15, die der Drehrate um den Faktor 3 bis 5. Auch über den gesamten Flug halbierte sich die Vibrationsmetrik der Beschleunigung nahezu. Abbildung~\ref{fig:Erg_Vibration} zeigt die Vibrationen beider Flüge. Die Ursache liegt sehr wahrscheinlich in steiferen Armen und einer besseren Entkopplung des Flight Controllers im neuen Frame. Da der Regler weniger Rauschen ausgleichen muss, schwanken auch die Stellwerte der Motoren weniger. Die Lage wird im ruhigen Schweben genauer gehalten, und die Position hält die Drohne auf \SI{0,15}{\metre} genau statt auf \SI{0,49}{\metre}. Ein Teil dieser Verbesserung ist allerdings auf den Flugmodus zurückzuführen. Im Mai flog ein Pilot im Modus \texttt{POSCTL}, im September hielt der Autopilot die Position im Modus \texttt{AUTO.LOITER}.
+        Die deutlichste Verbesserung zeigt sich bei den Vibrationen. Im ruhigen Schweben sank die Varianz der Beschleunigung etwa um den Faktor 15, die der Drehrate um den Faktor 3 bis 5. Auch über den gesamten Flug halbierte sich die Vibrationsmetrik der Beschleunigung nahezu. Abbildung~\ref{fig:Erg_Vibration} zeigt die Vibrationen beider Flüge. Oben ist jeweils die Rohbeschleunigung in den drei Achsen dargestellt, unten die Vibrationsmetrik von Flight Review. Beim alten Frame streut die Beschleunigung während des gesamten Flugs deutlich stärker, und die Vibrationsmetrik liegt durchgehend bei etwa \SI{3}{\metre\per\second\squared}. Beim neuen Frame liegt sie im freien Flug nur bei etwa \SIrange{1,5}{2}{\metre\per\second\squared}. Beide Flüge liegen damit im grün hinterlegten Bereich, den Flight Review als unkritisch einstuft. Die großen Ausschläge am Ende der Flüge stammen nicht vom Frame. Beim alten Frame entstehen sie bei der Landung, beim neuen Frame beim Kontakt mit dem Fangnetz. Zu beachten ist außerdem, dass die y-Achsen der beiden Rohbeschleunigungen leicht unterschiedlich skaliert sind. Die Ursache liegt sehr wahrscheinlich in steiferen Armen und einer besseren Entkopplung des Flight Controllers im neuen Frame. Da der Regler weniger Rauschen ausgleichen muss, schwanken auch die Stellwerte der Motoren weniger. Die Lage wird im ruhigen Schweben genauer gehalten, und die Position hält die Drohne auf \SI{0,15}{\metre} genau statt auf \SI{0,49}{\metre}. Ein Teil dieser Verbesserung ist allerdings auf den Flugmodus zurückzuführen. Im Mai flog ein Pilot im Modus \texttt{POSCTL}, im September hielt der Autopilot die Position im Modus \texttt{AUTO.LOITER}.
 
         \begin{figure}[htbp]
             \centering
             \begin{subfigure}[t]{0.48\textwidth}
                 \centering
-                \includegraphics[width=\linewidth]{\platzhalter} % TODO: Flight Review plot, old frame (log_521)
+                \includegraphics[width=\linewidth]{\vibrationAlt}
                 \caption{Alter Frame (Mai)}
                 \label{fig:Erg_Vibration_alt}
             \end{subfigure}
             \hfill
             \begin{subfigure}[t]{0.48\textwidth}
                 \centering
-                \includegraphics[width=\linewidth]{\platzhalter} % TODO: Flight Review plot, new frame (log_753)
-                \caption{Neuer Frame (Wettbewerbsflug 3)}
+                \includegraphics[width=\linewidth]{\vibrationNeu}
+                \caption{Neuer Frame (Wettbewerbsflug 3), Ausschläge am Ende durch das Fangnetz}
                 \label{fig:Erg_Vibration_neu}
             \end{subfigure}
-            \caption{Vibrationen im Flug, ausgewertet mit Flight Review}
+            \caption{Rohbeschleunigung (oben) und Vibrationsmetrik (unten) im Flug, ausgewertet mit Flight Review}
             \label{fig:Erg_Vibration}
         \end{figure}
 
         Der Schwebeschub sank leicht von 0,55 auf 0,52 bis 0,53, die Drohne hat damit etwas mehr Schubreserve. Da in keinem der Logs die Akkuspannung aufgezeichnet wurde, lässt sich jedoch nicht trennen, ob dies am leichteren Frame oder an einem volleren Akku liegt. In keinem Flug gerieten die Motoren im ruhigen Schweben in die Sättigung, und der Allocator konnte jedes angeforderte Drehmoment umsetzen.
 
-        Gegenüber dem alten Frame zeigt der neue Frame jedoch eine schlechtere Ausrichtung der Motoren. Abbildung~\ref{fig:Erg_Motoren} zeigt die Stellwerte der vier Motoren im Flug. Die im Uhrzeigersinn drehenden Motoren arbeiten im neuen Frame dauerhaft \SIrange{12}{21}{\percent} mehr als die gegenläufigen. Der Regler muss also ständig ein Giermoment ausgleichen. Beim alten Frame trat dieser Versatz ebenfalls auf, aber schwächer und mit umgekehrtem Vorzeichen. Abgeschätzt entspricht der gemessene Versatz einer Verkippung der Motoren in Umfangsrichtung von insgesamt etwa \ang{1} bis \ang{3}. Mögliche Ursachen sind Motorhalter, die nicht genau rechtwinklig zur Rahmenebene stehen, oder Arme, die sich unter Last verdrehen. Zusätzlich tragen die rechten Motoren in allen drei Flügen \SIrange{5}{8}{\percent} mehr als die linken. Das entspricht einer Verschiebung des Schwerpunkts um etwa \SIrange{0,4}{1,1}{\centi\metre} nach rechts. Das Verhältnis zwischen vorderen und hinteren Motoren schwankte zwischen den Flügen eines Tages, was auf eine wechselnde Position des Akkus hindeutet. Kritisch sind diese Abweichungen nicht, da die Regelung noch ausreichend Reserve hat.
-
-        \begin{figure}[htbp]
-            \centering
-            \includegraphics[width=0.8\textwidth]{\platzhalter} % TODO: Flight Review plot "Actuator Outputs" of the new frame (log_753)
-            \caption{Stellwerte der vier Motoren im Flug mit dem neuen Frame}
-            \label{fig:Erg_Motoren}
-        \end{figure}
+        Gegenüber dem alten Frame zeigt der neue Frame jedoch eine schlechtere Ausrichtung der Motoren. Die im Uhrzeigersinn drehenden Motoren arbeiten im neuen Frame dauerhaft \SIrange{12}{21}{\percent} mehr als die gegenläufigen. Der Regler muss also ständig ein Giermoment ausgleichen. Beim alten Frame trat dieser Versatz ebenfalls auf, aber schwächer und mit umgekehrtem Vorzeichen. Abgeschätzt entspricht der gemessene Versatz einer Verkippung der Motoren in Umfangsrichtung von insgesamt etwa \ang{1} bis \ang{3}. Mögliche Ursachen sind Motorhalter, die nicht genau rechtwinklig zur Rahmenebene stehen, oder Arme, die sich unter Last verdrehen. Zusätzlich tragen die rechten Motoren in allen drei Flügen \SIrange{5}{8}{\percent} mehr als die linken. Das entspricht einer Verschiebung des Schwerpunkts um etwa \SIrange{0,4}{1,1}{\centi\metre} nach rechts. Das Verhältnis zwischen vorderen und hinteren Motoren schwankte zwischen den Flügen eines Tages, was auf eine wechselnde Position des Akkus hindeutet. Kritisch sind diese Abweichungen nicht, da die Regelung noch ausreichend Reserve hat.
 
         Im ersten Wettbewerbsflug trat außerdem eine Schwingung mit fester Frequenz von \SI{37}{\hertz} auf der Rollachse auf, die unabhängig von der Motordrehzahl war. In den beiden folgenden Flügen fehlte sie. Eine feste Frequenz ohne Bezug zur Drehzahl deutet auf ein lockeres oder weich befestigtes Bauteil hin, das zwischen den Flügen nachgezogen oder anders verlegt wurde, etwa ein Landebein, eine Antenne oder ein Kabel.
 
