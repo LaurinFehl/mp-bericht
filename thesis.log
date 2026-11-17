@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/TeX Live for SUSE Linux) (preloaded format=pdflatex 2026.10.27)  16 NOV 2026 19:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/TeX Live for SUSE Linux) (preloaded format=pdflatex 2026.10.27)  17 NOV 2026 21:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1469,7 +1469,30 @@ File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
 
 
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc} <./Figures/000-misc/fra-uas_logo.pdf> <./Figures/000-misc/frost_logo_neu.png>]) (./TeXFiles/002_NDNotice.tex) (./TeXFiles/003_Declaration.tex
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc} <./Figures/000-misc/fra-uas_logo.pdf> <./Figures/000-misc/frost_logo_neu.png>]) (./TeXFiles/010_Kurzfassung.tex) (./TeXFiles/002_NDNotice.tex) (./TeXFiles/003_Declaration.tex
+File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
+<use Figures/000-misc/fra-uas_logo.pdf>
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 5.
+(pdftex.def)             Requested size: 39.78093pt x 19.91692pt.
+File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
+<use Figures/000-misc/frost_logo_neu.png>
+Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 5.
+(pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
+
+
+Package scrlayer-scrpage Warning: \footheight to low.
+(scrlayer-scrpage)                At least 19.91692pt needed,
+(scrlayer-scrpage)                but only 17.0pt found.
+(scrlayer-scrpage)                I'll enlarge \footheight, for further
+(scrlayer-scrpage)                processing, but you should do this yourself,
+(scrlayer-scrpage)                e.g., using
+(scrlayer-scrpage)                  \setlength{\footheight}{19.91692pt}
+(scrlayer-scrpage)                in your preamble.
+(scrlayer-scrpage)                I'll also increase \footskip on input line 5.
+
+[2.2
+
+]
 Underfull \hbox (badness 1874) in paragraph at lines 25--33
 []\T1/lmss/m/n/10.95 Ich ha-be zur Er-stel-lung der Prü-fungs-ar-beit KI-gestützte Schreib-werk-zeu-ge und/oder an-de-re KI-
  []
@@ -1504,20 +1527,12 @@ Underfull \hbox (badness 7133) in paragraph at lines 49--49
 []|\T1/lmss/m/n/10.95 Claude (Opus 5.5)
  []
 
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 54.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 54.
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 54.
-(/usr/share/texmf/tex/latex/lm/t1lmtt.fd
-File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-<Figures/000-misc/unterschrift.jpg, id=25, 209.28188pt x 48.18pt>
+<Figures/000-misc/unterschrift.jpg, id=45, 209.28188pt x 48.18pt>
 File: Figures/000-misc/unterschrift.jpg Graphic file (type jpg)
 <use Figures/000-misc/unterschrift.jpg>
 Package pdftex.def Info: Figures/000-misc/unterschrift.jpg  used on input line 68.
 (pdftex.def)             Requested size: 142.26378pt x 32.75092pt.
-) [2.2
+) [3.3
 
  <./Figures/000-misc/unterschrift.jpg>] (./thesis.toc
 File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
@@ -1528,51 +1543,39 @@ File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
 <use Figures/000-misc/frost_logo_neu.png>
 Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 77.
 (pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
-
-
-Package scrlayer-scrpage Warning: \footheight to low.
-(scrlayer-scrpage)                At least 19.91692pt needed,
-(scrlayer-scrpage)                but only 17.0pt found.
-(scrlayer-scrpage)                I'll enlarge \footheight, for further
-(scrlayer-scrpage)                processing, but you should do this yourself,
-(scrlayer-scrpage)                e.g., using
-(scrlayer-scrpage)                  \setlength{\footheight}{19.91692pt}
-(scrlayer-scrpage)                in your preamble.
-(scrlayer-scrpage)                I'll also increase \footskip on input line 77.
-
-[1.3
+ [1.4
 
 ])
 \tf@toc=\write9
 \openout9 = `thesis.toc'.
 
 Package babel Info: 'ngerman' activates 'german' shorthands.
-(babel)             Reported on input line 322.
+(babel)             Reported on input line 323.
 File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
 <use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 322.
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 323.
 (pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
 File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
 <use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 322.
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 323.
 (pdftex.def)             Requested size: 39.78093pt x 19.91692pt.
 File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
 <use Figures/000-misc/frost_logo_neu.png>
-Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 322.
+Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 323.
 (pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
- [2.4] (./thesis.lof)
+ [2.5] (./thesis.lof)
 \tf@lof=\write10
 \openout10 = `thesis.lof'.
 
 File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
 <use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 324.
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 325.
 (pdftex.def)             Requested size: 39.78093pt x 19.91692pt.
 File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
 <use Figures/000-misc/frost_logo_neu.png>
-Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 324.
+Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 325.
 (pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
- [3.5
+ [3.6
 
 
 ] (./thesis.lot)
@@ -1581,29 +1584,31 @@ Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line
 
 File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
 <use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 326.
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 327.
 (pdftex.def)             Requested size: 39.78093pt x 19.91692pt.
 File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
 <use Figures/000-misc/frost_logo_neu.png>
-Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 326.
+Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 327.
 (pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
- [4.6
+ [4.7
 
 
 ] (./thesis.acr)
 File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
 <use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 330.
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 331.
 (pdftex.def)             Requested size: 39.78093pt x 19.91692pt.
 File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
 <use Figures/000-misc/frost_logo_neu.png>
-Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 330.
+Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 331.
 (pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
- [5.7
+ [5.8
 
 
 
-] (./TeXFiles/010_Kurzfassung.tex) (./TeXFiles/100_Einfuehrung.tex
+] (./TeXFiles/100_Einfuehrung.tex
+chapter 1.
+) (./TeXFiles/200_Hintergrund.tex
 File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
 <use Figures/000-misc/fra-uas_logo.pdf>
 Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 1.
@@ -1617,38 +1622,25 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has b
 <to be read again> 
                    \relax 
 l.1 \chapter
-            {Einleitung} [1.8
+            {Wettbewerb und Anforderungen} [1.9
 
-
-]
-chapter 1.
-) (./TeXFiles/200_Hintergrund.tex
-File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
-<use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 1.
-(pdftex.def)             Requested size: 39.78093pt x 19.91692pt.
-File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
-<use Figures/000-misc/frost_logo_neu.png>
-Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 1.
-(pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1 \chapter
-            {Wettbewerb und Anforderungen} [2.9
 
 ]
 chapter 2.
 File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
 <use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 54.
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 25.
 (pdftex.def)             Requested size: 39.78093pt x 19.91692pt.
 File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
 <use Figures/000-misc/frost_logo_neu.png>
-Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 54.
+Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 25.
 (pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
-[3.10
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.25 
+      [2.10
 
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}]) (./TeXFiles/300_StandDerTechnik.tex
 File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
@@ -1663,90 +1655,88 @@ File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
 <use Figures/000-misc/frost_logo_neu.png>
 Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 1.
 (pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
- [4.11]
-File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
-<use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 1.
-(pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
-File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
-<use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 1.
-(pdftex.def)             Requested size: 39.78093pt x 19.91692pt.
-File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
-<use Figures/000-misc/frost_logo_neu.png>
-Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 1.
-(pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
- [5.12]
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1 \chapter
+            {Stand der Technik} [3.11]
 chapter 3.
 File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
 <use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 71.
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 43.
 (pdftex.def)             Requested size: 39.78093pt x 19.91692pt.
 File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
 <use Figures/000-misc/frost_logo_neu.png>
-Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 71.
+Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 43.
 (pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
-[6.13
+[4.12
 
 ]
-<Figures/300-sdt/quad_konfigurationen.png, id=553, 752.8125pt x 280.04625pt>
+<Figures/300-sdt/quad_konfigurationen.png, id=549, 752.8125pt x 280.04625pt>
 File: Figures/300-sdt/quad_konfigurationen.png Graphic file (type png)
 <use Figures/300-sdt/quad_konfigurationen.png>
-Package pdftex.def Info: Figures/300-sdt/quad_konfigurationen.png  used on input line 74.
+Package pdftex.def Info: Figures/300-sdt/quad_konfigurationen.png  used on input line 46.
 (pdftex.def)             Requested size: 386.95901pt x 143.95407pt.
 File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
 <use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 111.
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 67.
 (pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
 File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
 <use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 111.
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 67.
 (pdftex.def)             Requested size: 39.78093pt x 19.91692pt.
 File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
 <use Figures/000-misc/frost_logo_neu.png>
-Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 111.
+Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 67.
 (pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
- [7.14 <./Figures/300-sdt/quad_konfigurationen.png>]
-<Figures/300-sdt/fdm_printing.jpg, id=566, 903.375pt x 451.6875pt>
+ [5.13 <./Figures/300-sdt/quad_konfigurationen.png>]
+<Figures/300-sdt/fdm_printing.jpg, id=564, 903.375pt x 451.6875pt>
 File: Figures/300-sdt/fdm_printing.jpg Graphic file (type jpg)
 <use Figures/300-sdt/fdm_printing.jpg>
-Package pdftex.def Info: Figures/300-sdt/fdm_printing.jpg  used on input line 114.
+Package pdftex.def Info: Figures/300-sdt/fdm_printing.jpg  used on input line 70.
 (pdftex.def)             Requested size: 386.95901pt x 193.48436pt.
 File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
 <use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 159.
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 95.
 (pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
 File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
 <use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 159.
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 95.
 (pdftex.def)             Requested size: 39.78093pt x 19.91692pt.
 File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
 <use Figures/000-misc/frost_logo_neu.png>
-Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 159.
+Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 95.
 (pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
- [8.15 <./Figures/300-sdt/fdm_printing.jpg>]
-LaTeX Font Info:    Trying to load font information for TS1+lmss on input line 194.
+ [6.14 <./Figures/300-sdt/fdm_printing.jpg>]
+LaTeX Font Info:    Trying to load font information for TS1+lmss on input line 112.
  (/usr/share/texmf/tex/latex/lm/ts1lmss.fd
 File: ts1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-<Figures/300-sdt/maschinenampel.png, id=587, 401.5pt x 501.875pt>
-File: Figures/300-sdt/maschinenampel.png Graphic file (type png)
-<use Figures/300-sdt/maschinenampel.png>
-Package pdftex.def Info: Figures/300-sdt/maschinenampel.png  used on input line 221.
-(pdftex.def)             Requested size: 95.77348pt x 119.71729pt.
+<Figures/600-erg/infrarot_x1c.jpg, id=583, 642.4pt x 481.8pt>
+File: Figures/600-erg/infrarot_x1c.jpg Graphic file (type jpg)
+<use Figures/600-erg/infrarot_x1c.jpg>
+Package pdftex.def Info: Figures/600-erg/infrarot_x1c.jpg  used on input line 118.
+(pdftex.def)             Requested size: 193.47581pt x 145.10718pt.
 File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
 <use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 228.
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 122.
 (pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
 File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
 <use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 228.
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 122.
 (pdftex.def)             Requested size: 39.78093pt x 19.91692pt.
 File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
 <use Figures/000-misc/frost_logo_neu.png>
-Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 228.
+Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 122.
 (pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
- [9.16{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}]) (./TeXFiles/400_EntwickelteMethoden.tex
+ [7.15{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}]
+<Figures/300-sdt/maschinenampel.png, id=594, 401.5pt x 501.875pt>
+File: Figures/300-sdt/maschinenampel.png Graphic file (type png)
+<use Figures/300-sdt/maschinenampel.png>
+Package pdftex.def Info: Figures/300-sdt/maschinenampel.png  used on input line 146.
+(pdftex.def)             Requested size: 95.77348pt x 119.71729pt.
+) (./TeXFiles/400_EntwickelteMethoden.tex
 File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
 <use Figures/000-misc/fra-uas_logo.pdf>
 Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 1.
@@ -1759,24 +1749,391 @@ File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
 <use Figures/000-misc/frost_logo_neu.png>
 Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 1.
 (pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
- [10.17 <./Figures/300-sdt/maschinenampel.png>]
-chapter 4.
-<Figures/400-em/drone_render.png, id=612, 1445.4pt x 813.0375pt>
-File: Figures/400-em/drone_render.png Graphic file (type png)
-<use Figures/400-em/drone_render.png>
-Package pdftex.def Info: Figures/400-em/drone_render.png  used on input line 20.
-(pdftex.def)             Requested size: 290.2211pt x 163.24973pt.
+ [8.16 <./Figures/600-erg/infrarot_x1c.jpg> <./Figures/300-sdt/maschinenampel.png>]
 File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
 <use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 72.
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 1.
+(pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
+File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
+<use Figures/000-misc/fra-uas_logo.pdf>
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 1.
 (pdftex.def)             Requested size: 39.78093pt x 19.91692pt.
 File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
 <use Figures/000-misc/frost_logo_neu.png>
-Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 72.
+Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 1.
 (pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
-[11.18
+ [9.17]
+chapter 4.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 9.
+(/usr/share/texmf/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+<Figures/400-em/drone_render.png, id=615, 1445.4pt x 813.0375pt>
+File: Figures/400-em/drone_render.png Graphic file (type png)
+<use Figures/400-em/drone_render.png>
+Package pdftex.def Info: Figures/400-em/drone_render.png  used on input line 13.
+(pdftex.def)             Requested size: 290.2211pt x 163.24973pt.
+File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
+<use Figures/000-misc/fra-uas_logo.pdf>
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 61.
+(pdftex.def)             Requested size: 39.78093pt x 19.91692pt.
+File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
+<use Figures/000-misc/frost_logo_neu.png>
+Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 61.
+(pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
+ [10.18
 
  <./Figures/400-em/drone_render.png>]
+File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
+<use Figures/000-misc/fra-uas_logo.pdf>
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 66.
+(pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
+File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
+<use Figures/000-misc/fra-uas_logo.pdf>
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 66.
+(pdftex.def)             Requested size: 39.78093pt x 19.91692pt.
+File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
+<use Figures/000-misc/frost_logo_neu.png>
+Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 66.
+(pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
+ [11.19]
+<Figures/400-em/drone_cad_arme_dreieck_zeichnung.png, id=627, 966.61125pt x 388.45125pt>
+File: Figures/400-em/drone_cad_arme_dreieck_zeichnung.png Graphic file (type png)
+<use Figures/400-em/drone_cad_arme_dreieck_zeichnung.png>
+Package pdftex.def Info: Figures/400-em/drone_cad_arme_dreieck_zeichnung.png  used on input line 79.
+(pdftex.def)             Requested size: 386.95901pt x 155.50813pt.
+<Figures/400-em/drone_motor_halter_highlight.png, id=630, 603.4545pt x 454.69875pt>
+File: Figures/400-em/drone_motor_halter_highlight.png Graphic file (type png)
+<use Figures/400-em/drone_motor_halter_highlight.png>
+Package pdftex.def Info: Figures/400-em/drone_motor_halter_highlight.png  used on input line 97.
+(pdftex.def)             Requested size: 290.2211pt x 218.68307pt.
+File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
+<use Figures/000-misc/fra-uas_logo.pdf>
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 101.
+(pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
+File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
+<use Figures/000-misc/fra-uas_logo.pdf>
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 101.
+(pdftex.def)             Requested size: 39.78093pt x 19.91692pt.
+File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
+<use Figures/000-misc/frost_logo_neu.png>
+Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 101.
+(pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
+ [12.20{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc} <./Figures/400-em/drone_cad_arme_dreieck_zeichnung.png>]
+File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
+<use Figures/000-misc/fra-uas_logo.pdf>
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 137.
+(pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
+File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
+<use Figures/000-misc/fra-uas_logo.pdf>
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 137.
+(pdftex.def)             Requested size: 39.78093pt x 19.91692pt.
+File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
+<use Figures/000-misc/frost_logo_neu.png>
+Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 137.
+(pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
+ [13.21 <./Figures/400-em/drone_motor_halter_highlight.png>]
+File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
+<use Figures/000-misc/fra-uas_logo.pdf>
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 166.
+(pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
+File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
+<use Figures/000-misc/fra-uas_logo.pdf>
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 166.
+(pdftex.def)             Requested size: 39.78093pt x 19.91692pt.
+File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
+<use Figures/000-misc/frost_logo_neu.png>
+Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 166.
+(pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
+ [14.22] (./Figures/400-em/led_belegung.tex)
+File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
+<use Figures/000-misc/fra-uas_logo.pdf>
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 193.
+(pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
+File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
+<use Figures/000-misc/fra-uas_logo.pdf>
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 193.
+(pdftex.def)             Requested size: 39.78093pt x 19.91692pt.
+File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
+<use Figures/000-misc/frost_logo_neu.png>
+Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 193.
+(pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
+ [15.23]
+Underfull \hbox (badness 4144) in paragraph at lines 239--239
+[]|\T1/lmtt/m/n/10.95 EMERGENCY_LANDING\T1/lmss/m/n/10.95 , Sys-tem-feh-ler, Missi-ons-feh-ler
+ []
+
+File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
+<use Figures/000-misc/fra-uas_logo.pdf>
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 241.
+(pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
+File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
+<use Figures/000-misc/fra-uas_logo.pdf>
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 241.
+(pdftex.def)             Requested size: 39.78093pt x 19.91692pt.
+File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
+<use Figures/000-misc/frost_logo_neu.png>
+Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 241.
+(pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
+[16.24]
+File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
+<use Figures/000-misc/fra-uas_logo.pdf>
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 285.
+(pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
+File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
+<use Figures/000-misc/fra-uas_logo.pdf>
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 285.
+(pdftex.def)             Requested size: 39.78093pt x 19.91692pt.
+File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
+<use Figures/000-misc/frost_logo_neu.png>
+Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 285.
+(pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
+ [17.25]
+<Figures/400-em/drone_all_leds.jpg, id=691, 1695.33376pt x 1197.72469pt>
+File: Figures/400-em/drone_all_leds.jpg Graphic file (type jpg)
+<use Figures/400-em/drone_all_leds.jpg>
+Package pdftex.def Info: Figures/400-em/drone_all_leds.jpg  used on input line 296.
+(pdftex.def)             Requested size: 290.2211pt x 205.03601pt.
+File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
+<use Figures/000-misc/fra-uas_logo.pdf>
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 316.
+(pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
+File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
+<use Figures/000-misc/fra-uas_logo.pdf>
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 316.
+(pdftex.def)             Requested size: 39.78093pt x 19.91692pt.
+File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
+<use Figures/000-misc/frost_logo_neu.png>
+Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 316.
+(pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
+ [18.26 <./Figures/400-em/drone_all_leds.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 335--336
+[] \T1/lmss/bx/n/10.95 Schich-ten-ar-chi-tek-tur[][] \T1/lmss/m/n/10.95 Die Soft-wa-re ist als [][][]Ro-bot Ope-ra-ting Sys-tem (ROS)[][] 2-Paket
+ []
+
+
+Underfull \hbox (badness 1210) in paragraph at lines 335--336
+\T1/lmss/m/n/10.95 (\T1/lmtt/m/n/10.95 icarus_led_controller\T1/lmss/m/n/10.95 ) in Py-thon um-ge-setzt und läuft un-ter [][][]ROS[][] 2 Jaz-zy. Sie ist in drei
+ []
+
+File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
+<use Figures/000-misc/fra-uas_logo.pdf>
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 340.
+(pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
+File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
+<use Figures/000-misc/fra-uas_logo.pdf>
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 340.
+(pdftex.def)             Requested size: 39.78093pt x 19.91692pt.
+File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
+<use Figures/000-misc/frost_logo_neu.png>
+Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 340.
+(pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
+[19.27]
+File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
+<use Figures/000-misc/fra-uas_logo.pdf>
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 373.
+(pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
+File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
+<use Figures/000-misc/fra-uas_logo.pdf>
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 373.
+(pdftex.def)             Requested size: 39.78093pt x 19.91692pt.
+File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
+<use Figures/000-misc/frost_logo_neu.png>
+Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 373.
+(pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
+ [20.28]
+File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
+<use Figures/000-misc/fra-uas_logo.pdf>
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 400.
+(pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
+File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
+<use Figures/000-misc/fra-uas_logo.pdf>
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 400.
+(pdftex.def)             Requested size: 39.78093pt x 19.91692pt.
+File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
+<use Figures/000-misc/frost_logo_neu.png>
+Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 400.
+(pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
+ [21.29] (./Figures/400-em/led_sil_architektur.tex)
+File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
+<use Figures/000-misc/fra-uas_logo.pdf>
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 426.
+(pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
+File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
+<use Figures/000-misc/fra-uas_logo.pdf>
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 426.
+(pdftex.def)             Requested size: 39.78093pt x 19.91692pt.
+File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
+<use Figures/000-misc/frost_logo_neu.png>
+Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 426.
+(pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
+ [22.30]
+File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
+<use Figures/000-misc/fra-uas_logo.pdf>
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 435.
+(pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
+File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
+<use Figures/000-misc/fra-uas_logo.pdf>
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 435.
+(pdftex.def)             Requested size: 39.78093pt x 19.91692pt.
+File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
+<use Figures/000-misc/frost_logo_neu.png>
+Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 435.
+(pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
+ [23.31]
+File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
+<use Figures/000-misc/fra-uas_logo.pdf>
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 458.
+(pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
+File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
+<use Figures/000-misc/fra-uas_logo.pdf>
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 458.
+(pdftex.def)             Requested size: 39.78093pt x 19.91692pt.
+File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
+<use Figures/000-misc/frost_logo_neu.png>
+Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 458.
+(pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
+ [24.32]) (./TeXFiles/500_Evaluation.tex
+File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
+<use Figures/000-misc/fra-uas_logo.pdf>
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 1.
+(pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
+File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
+<use Figures/000-misc/fra-uas_logo.pdf>
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 1.
+(pdftex.def)             Requested size: 39.78093pt x 19.91692pt.
+File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
+<use Figures/000-misc/frost_logo_neu.png>
+Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 1.
+(pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
+ [25.33]
+chapter 5.
+File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
+<use Figures/000-misc/fra-uas_logo.pdf>
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 40.
+(pdftex.def)             Requested size: 39.78093pt x 19.91692pt.
+File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
+<use Figures/000-misc/frost_logo_neu.png>
+Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 40.
+(pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
+[26.34
+
+]
+File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
+<use Figures/000-misc/fra-uas_logo.pdf>
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 73.
+(pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
+File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
+<use Figures/000-misc/fra-uas_logo.pdf>
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 73.
+(pdftex.def)             Requested size: 39.78093pt x 19.91692pt.
+File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
+<use Figures/000-misc/frost_logo_neu.png>
+Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 73.
+(pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
+ [27.35]
+LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 106.
+File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
+<use Figures/000-misc/fra-uas_logo.pdf>
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 108.
+(pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
+File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
+<use Figures/000-misc/fra-uas_logo.pdf>
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 108.
+(pdftex.def)             Requested size: 39.78093pt x 19.91692pt.
+File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
+<use Figures/000-misc/frost_logo_neu.png>
+Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 108.
+(pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
+ [28.36]
+Underfull \hbox (badness 10000) in paragraph at lines 151--151
+[]|\T1/lmtt/m/n/9 sil state=EMERGENCY_LANDING mode=AUTO.LAND
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 151--151
+[]|\T1/lmtt/m/n/9 sil state=A_SYS_ERROR mode=MANUAL
+ []
+
+File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
+<use Figures/000-misc/fra-uas_logo.pdf>
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 154.
+(pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
+File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
+<use Figures/000-misc/fra-uas_logo.pdf>
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 154.
+(pdftex.def)             Requested size: 39.78093pt x 19.91692pt.
+File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
+<use Figures/000-misc/frost_logo_neu.png>
+Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 154.
+(pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
+[29.37]) (./TeXFiles/600_Ergebnisse.tex
+File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
+<use Figures/000-misc/fra-uas_logo.pdf>
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 1.
+(pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
+File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
+<use Figures/000-misc/fra-uas_logo.pdf>
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 1.
+(pdftex.def)             Requested size: 39.78093pt x 19.91692pt.
+File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
+<use Figures/000-misc/frost_logo_neu.png>
+Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 1.
+(pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
+ [30.38]
+File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
+<use Figures/000-misc/fra-uas_logo.pdf>
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 1.
+(pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
+File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
+<use Figures/000-misc/fra-uas_logo.pdf>
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 1.
+(pdftex.def)             Requested size: 39.78093pt x 19.91692pt.
+File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
+<use Figures/000-misc/frost_logo_neu.png>
+Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 1.
+(pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
+ [31.39]
+chapter 6.
+<Figures/600-erg/drone_slicer_asa.png, id=853, 280.79906pt x 419.31656pt>
+File: Figures/600-erg/drone_slicer_asa.png Graphic file (type png)
+<use Figures/600-erg/drone_slicer_asa.png>
+Package pdftex.def Info: Figures/600-erg/drone_slicer_asa.png  used on input line 32.
+(pdftex.def)             Requested size: 193.47581pt x 288.91284pt.
+<Figures/600-erg/drone_slicer_pa11.png, id=854, 275.52937pt x 419.31656pt>
+File: Figures/600-erg/drone_slicer_pa11.png Graphic file (type png)
+<use Figures/600-erg/drone_slicer_pa11.png>
+Package pdftex.def Info: Figures/600-erg/drone_slicer_pa11.png  used on input line 39.
+(pdftex.def)             Requested size: 193.47581pt x 294.45372pt.
+File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
+<use Figures/000-misc/fra-uas_logo.pdf>
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 46.
+(pdftex.def)             Requested size: 39.78093pt x 19.91692pt.
+File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
+<use Figures/000-misc/frost_logo_neu.png>
+Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 46.
+(pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
+[32.40
+
+]
+<Figures/600-erg/verzug_bauteil.jpg, id=861, 4015.0pt x 2260.445pt>
+File: Figures/600-erg/verzug_bauteil.jpg Graphic file (type jpg)
+<use Figures/600-erg/verzug_bauteil.jpg>
+Package pdftex.def Info: Figures/600-erg/verzug_bauteil.jpg  used on input line 54.
+(pdftex.def)             Requested size: 290.2211pt x 163.38655pt.
+File: Figures/600-erg/drone_20cm.jpg Graphic file (type jpg)
+<use Figures/600-erg/drone_20cm.jpg>
+Package pdftex.def Info: Figures/600-erg/drone_20cm.jpg  used on input line 79.
+(pdftex.def)             Requested size: 79.6678pt x 61.18735pt.
+File: Figures/600-erg/drone_50cm.jpg Graphic file (type jpg)
+<use Figures/600-erg/drone_50cm.jpg>
+Package pdftex.def Info: Figures/600-erg/drone_50cm.jpg  used on input line 79.
+(pdftex.def)             Requested size: 79.6678pt x 80.0387pt.
+File: Figures/600-erg/drone_80cm.jpg Graphic file (type jpg)
+<use Figures/600-erg/drone_80cm.jpg>
+Package pdftex.def Info: Figures/600-erg/drone_80cm.jpg  used on input line 79.
+(pdftex.def)             Requested size: 79.6678pt x 109.46523pt.
 File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
 <use Figures/000-misc/fra-uas_logo.pdf>
 Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 81.
@@ -1789,406 +2146,56 @@ File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
 <use Figures/000-misc/frost_logo_neu.png>
 Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 81.
 (pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
- [12.19]
-<Figures/400-em/drone_cad_arme_dreieck_zeichnung.png, id=624, 966.61125pt x 388.45125pt>
-File: Figures/400-em/drone_cad_arme_dreieck_zeichnung.png Graphic file (type png)
-<use Figures/400-em/drone_cad_arme_dreieck_zeichnung.png>
-Package pdftex.def Info: Figures/400-em/drone_cad_arme_dreieck_zeichnung.png  used on input line 104.
-(pdftex.def)             Requested size: 386.95901pt x 155.50813pt.
-<Figures/400-em/drone_motor_halter_highlight.png, id=627, 603.4545pt x 454.69875pt>
-File: Figures/400-em/drone_motor_halter_highlight.png Graphic file (type png)
-<use Figures/400-em/drone_motor_halter_highlight.png>
-Package pdftex.def Info: Figures/400-em/drone_motor_halter_highlight.png  used on input line 134.
-(pdftex.def)             Requested size: 290.2211pt x 218.68307pt.
+ [33.41 <./Figures/600-erg/drone_slicer_asa.png> <./Figures/600-erg/drone_slicer_pa11.png>]
 File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
 <use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 139.
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 105.
 (pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
 File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
 <use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 139.
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 105.
 (pdftex.def)             Requested size: 39.78093pt x 19.91692pt.
 File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
 <use Figures/000-misc/frost_logo_neu.png>
-Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 139.
+Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 105.
 (pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
- [13.20{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc} <./Figures/400-em/drone_cad_arme_dreieck_zeichnung.png>]
+ [34.42 <./Figures/600-erg/verzug_bauteil.jpg> <./Figures/600-erg/drone_20cm.jpg> <./Figures/600-erg/drone_50cm.jpg> <./Figures/600-erg/drone_80cm.jpg>]
 File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
 <use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 183.
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 144.
 (pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
 File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
 <use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 183.
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 144.
 (pdftex.def)             Requested size: 39.78093pt x 19.91692pt.
 File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
 <use Figures/000-misc/frost_logo_neu.png>
-Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 183.
+Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 144.
 (pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
- [14.21 <./Figures/400-em/drone_motor_halter_highlight.png>]
-File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
-<use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 249.
-(pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
-File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
-<use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 249.
-(pdftex.def)             Requested size: 39.78093pt x 19.91692pt.
-File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
-<use Figures/000-misc/frost_logo_neu.png>
-Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 249.
-(pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
- [15.22] (./Figures/400-em/led_belegung.tex)
-File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
-<use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 306.
-(pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
-File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
-<use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 306.
-(pdftex.def)             Requested size: 39.78093pt x 19.91692pt.
-File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
-<use Figures/000-misc/frost_logo_neu.png>
-Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 306.
-(pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
- [16.23]
-Underfull \hbox (badness 4144) in paragraph at lines 389--389
-[]|\T1/lmtt/m/n/10.95 EMERGENCY_LANDING\T1/lmss/m/n/10.95 , Sys-tem-feh-ler, Missi-ons-feh-ler
- []
-
-File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
-<use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 391.
-(pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
-File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
-<use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 391.
-(pdftex.def)             Requested size: 39.78093pt x 19.91692pt.
-File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
-<use Figures/000-misc/frost_logo_neu.png>
-Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 391.
-(pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
-[17.24]
-File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
-<use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 454.
-(pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
-File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
-<use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 454.
-(pdftex.def)             Requested size: 39.78093pt x 19.91692pt.
-File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
-<use Figures/000-misc/frost_logo_neu.png>
-Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 454.
-(pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
- [18.25]
-<Figures/400-em/drone_all_leds.jpg, id=688, 1695.33376pt x 1197.72469pt>
-File: Figures/400-em/drone_all_leds.jpg Graphic file (type jpg)
-<use Figures/400-em/drone_all_leds.jpg>
-Package pdftex.def Info: Figures/400-em/drone_all_leds.jpg  used on input line 483.
-(pdftex.def)             Requested size: 290.2211pt x 205.03601pt.
-File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
-<use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 504.
-(pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
-File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
-<use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 504.
-(pdftex.def)             Requested size: 39.78093pt x 19.91692pt.
-File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
-<use Figures/000-misc/frost_logo_neu.png>
-Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 504.
-(pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
- [19.26 <./Figures/400-em/drone_all_leds.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 551--554
-[] \T1/lmss/bx/n/10.95 Schich-ten-ar-chi-tek-tur[][] \T1/lmss/m/n/10.95 Die Soft-wa-re ist als [][][]Ro-bot Ope-ra-ting Sys-tem (ROS)[][] 2-Paket
- []
-
-
-Underfull \hbox (badness 1210) in paragraph at lines 551--554
-\T1/lmss/m/n/10.95 (\T1/lmtt/m/n/10.95 icarus_led_controller\T1/lmss/m/n/10.95 ) in Py-thon um-ge-setzt und läuft un-ter [][][]ROS[][] 2 Jaz-zy. Sie ist in drei
- []
-
-File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
-<use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 560.
-(pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
-File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
-<use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 560.
-(pdftex.def)             Requested size: 39.78093pt x 19.91692pt.
-File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
-<use Figures/000-misc/frost_logo_neu.png>
-Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 560.
-(pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
-[20.27]
-File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
-<use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 643.
-(pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
-File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
-<use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 643.
-(pdftex.def)             Requested size: 39.78093pt x 19.91692pt.
-File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
-<use Figures/000-misc/frost_logo_neu.png>
-Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 643.
-(pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
- [21.28]
-File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
-<use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 700.
-(pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
-File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
-<use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 700.
-(pdftex.def)             Requested size: 39.78093pt x 19.91692pt.
-File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
-<use Figures/000-misc/frost_logo_neu.png>
-Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 700.
-(pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
- [22.29] (./Figures/400-em/led_sil_architektur.tex)
-File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
-<use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 763.
-(pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
-File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
-<use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 763.
-(pdftex.def)             Requested size: 39.78093pt x 19.91692pt.
-File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
-<use Figures/000-misc/frost_logo_neu.png>
-Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 763.
-(pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
- [23.30]
-File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
-<use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 799.
-(pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
-File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
-<use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 799.
-(pdftex.def)             Requested size: 39.78093pt x 19.91692pt.
-File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
-<use Figures/000-misc/frost_logo_neu.png>
-Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 799.
-(pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
- [24.31]
-File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
-<use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 855.
-(pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
-File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
-<use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 855.
-(pdftex.def)             Requested size: 39.78093pt x 19.91692pt.
-File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
-<use Figures/000-misc/frost_logo_neu.png>
-Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 855.
-(pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
- [25.32]) (./TeXFiles/500_Evaluation.tex
-File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
-<use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 1.
-(pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
-File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
-<use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 1.
-(pdftex.def)             Requested size: 39.78093pt x 19.91692pt.
-File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
-<use Figures/000-misc/frost_logo_neu.png>
-Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 1.
-(pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
- [26.33]
-chapter 5.
-File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
-<use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 60.
-(pdftex.def)             Requested size: 39.78093pt x 19.91692pt.
-File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
-<use Figures/000-misc/frost_logo_neu.png>
-Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 60.
-(pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
-[27.34
-
-]
-File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
-<use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 123.
-(pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
-File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
-<use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 123.
-(pdftex.def)             Requested size: 39.78093pt x 19.91692pt.
-File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
-<use Figures/000-misc/frost_logo_neu.png>
-Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 123.
-(pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
- [28.35]
-LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 172.
-File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
-<use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 181.
-(pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
-File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
-<use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 181.
-(pdftex.def)             Requested size: 39.78093pt x 19.91692pt.
-File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
-<use Figures/000-misc/frost_logo_neu.png>
-Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 181.
-(pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
- [29.36]
-Underfull \hbox (badness 10000) in paragraph at lines 247--247
-[]|\T1/lmtt/m/n/9 sil state=EMERGENCY_LANDING mode=AUTO.LAND
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 247--247
-[]|\T1/lmtt/m/n/9 sil state=A_SYS_ERROR mode=MANUAL
- []
-
-File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
-<use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 250.
-(pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
-File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
-<use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 250.
-(pdftex.def)             Requested size: 39.78093pt x 19.91692pt.
-File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
-<use Figures/000-misc/frost_logo_neu.png>
-Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 250.
-(pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
-[30.37]) (./TeXFiles/600_Ergebnisse.tex
-File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
-<use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 1.
-(pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
-File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
-<use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 1.
-(pdftex.def)             Requested size: 39.78093pt x 19.91692pt.
-File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
-<use Figures/000-misc/frost_logo_neu.png>
-Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 1.
-(pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
- [31.38]
-File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
-<use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 1.
-(pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
-File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
-<use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 1.
-(pdftex.def)             Requested size: 39.78093pt x 19.91692pt.
-File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
-<use Figures/000-misc/frost_logo_neu.png>
-Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 1.
-(pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
- [32.39]
-chapter 6.
-<Figures/600-erg/drone_slicer_asa.png, id=848, 280.79906pt x 419.31656pt>
-File: Figures/600-erg/drone_slicer_asa.png Graphic file (type png)
-<use Figures/600-erg/drone_slicer_asa.png>
-Package pdftex.def Info: Figures/600-erg/drone_slicer_asa.png  used on input line 47.
-(pdftex.def)             Requested size: 193.47581pt x 288.91284pt.
-<Figures/600-erg/drone_slicer_pa11.png, id=849, 275.52937pt x 419.31656pt>
-File: Figures/600-erg/drone_slicer_pa11.png Graphic file (type png)
-<use Figures/600-erg/drone_slicer_pa11.png>
-Package pdftex.def Info: Figures/600-erg/drone_slicer_pa11.png  used on input line 54.
-(pdftex.def)             Requested size: 193.47581pt x 294.45372pt.
-File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
-<use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 62.
-(pdftex.def)             Requested size: 39.78093pt x 19.91692pt.
-File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
-<use Figures/000-misc/frost_logo_neu.png>
-Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 62.
-(pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
-[33.40
-
-]
-<Figures/600-erg/verzug_bauteil.jpg, id=856, 4015.0pt x 2260.445pt>
-File: Figures/600-erg/verzug_bauteil.jpg Graphic file (type jpg)
-<use Figures/600-erg/verzug_bauteil.jpg>
-Package pdftex.def Info: Figures/600-erg/verzug_bauteil.jpg  used on input line 77.
-(pdftex.def)             Requested size: 290.2211pt x 163.38655pt.
-File: Figures/600-erg/drone_20cm.jpg Graphic file (type jpg)
-<use Figures/600-erg/drone_20cm.jpg>
-Package pdftex.def Info: Figures/600-erg/drone_20cm.jpg  used on input line 108.
-(pdftex.def)             Requested size: 79.6678pt x 61.18735pt.
-File: Figures/600-erg/drone_50cm.jpg Graphic file (type jpg)
-<use Figures/600-erg/drone_50cm.jpg>
-Package pdftex.def Info: Figures/600-erg/drone_50cm.jpg  used on input line 108.
-(pdftex.def)             Requested size: 79.6678pt x 80.0387pt.
-File: Figures/600-erg/drone_80cm.jpg Graphic file (type jpg)
-<use Figures/600-erg/drone_80cm.jpg>
-Package pdftex.def Info: Figures/600-erg/drone_80cm.jpg  used on input line 108.
-(pdftex.def)             Requested size: 79.6678pt x 109.46523pt.
-File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
-<use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 110.
-(pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
-File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
-<use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 110.
-(pdftex.def)             Requested size: 39.78093pt x 19.91692pt.
-File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
-<use Figures/000-misc/frost_logo_neu.png>
-Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 110.
-(pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
- [34.41 <./Figures/600-erg/drone_slicer_asa.png> <./Figures/600-erg/drone_slicer_pa11.png>]
-File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
-<use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 135.
-(pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
-File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
-<use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 135.
-(pdftex.def)             Requested size: 39.78093pt x 19.91692pt.
-File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
-<use Figures/000-misc/frost_logo_neu.png>
-Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 135.
-(pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
- [35.42 <./Figures/600-erg/verzug_bauteil.jpg> <./Figures/600-erg/drone_20cm.jpg> <./Figures/600-erg/drone_50cm.jpg> <./Figures/600-erg/drone_80cm.jpg>]
-File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
-<use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 197.
-(pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
-File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
-<use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 197.
-(pdftex.def)             Requested size: 39.78093pt x 19.91692pt.
-File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
-<use Figures/000-misc/frost_logo_neu.png>
-Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 197.
-(pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
- [36.43]
-<Figures/600-erg/flight_review_acc_vibration_may.png, id=884, 584.1825pt x 505.13719pt>
+ [35.43]
+<Figures/600-erg/flight_review_acc_vibration_may.png, id=889, 584.1825pt x 505.13719pt>
 File: Figures/600-erg/flight_review_acc_vibration_may.png Graphic file (type png)
 <use Figures/600-erg/flight_review_acc_vibration_may.png>
-Package pdftex.def Info: Figures/600-erg/flight_review_acc_vibration_may.png  used on input line 202.
+Package pdftex.def Info: Figures/600-erg/flight_review_acc_vibration_may.png  used on input line 149.
 (pdftex.def)             Requested size: 232.17245pt x 200.7564pt.
-<Figures/600-erg/flight_review_acc_vibration_sept.png, id=885, 581.92406pt x 505.13719pt>
+<Figures/600-erg/flight_review_acc_vibration_sept.png, id=890, 581.92406pt x 505.13719pt>
 File: Figures/600-erg/flight_review_acc_vibration_sept.png Graphic file (type png)
 <use Figures/600-erg/flight_review_acc_vibration_sept.png>
-Package pdftex.def Info: Figures/600-erg/flight_review_acc_vibration_sept.png  used on input line 209.
+Package pdftex.def Info: Figures/600-erg/flight_review_acc_vibration_sept.png  used on input line 156.
 (pdftex.def)             Requested size: 232.17245pt x 201.53487pt.
 File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
 <use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 255.
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 179.
 (pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
 File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
 <use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 255.
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 179.
 (pdftex.def)             Requested size: 39.78093pt x 19.91692pt.
 File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
 <use Figures/000-misc/frost_logo_neu.png>
-Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 255.
+Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 179.
 (pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
- [37.44 <./Figures/600-erg/flight_review_acc_vibration_may.png> <./Figures/600-erg/flight_review_acc_vibration_sept.png>]) (./TeXFiles/650_Diskussion.tex
+ [36.44 <./Figures/600-erg/flight_review_acc_vibration_may.png> <./Figures/600-erg/flight_review_acc_vibration_sept.png>]) (./TeXFiles/700_Diskussion.tex
 File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
 <use Figures/000-misc/fra-uas_logo.pdf>
 Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 1.
@@ -2201,50 +2208,32 @@ File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
 <use Figures/000-misc/frost_logo_neu.png>
 Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 1.
 (pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
- [38.45]
+ [37.45]
 chapter 7.
-<Figures/600-erg/infrarot_x1c.jpg, id=909, 642.4pt x 481.8pt>
-File: Figures/600-erg/infrarot_x1c.jpg Graphic file (type jpg)
-<use Figures/600-erg/infrarot_x1c.jpg>
-Package pdftex.def Info: Figures/600-erg/infrarot_x1c.jpg  used on input line 25.
-(pdftex.def)             Requested size: 193.47581pt x 145.10718pt.
 File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
 <use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 49.
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 28.
 (pdftex.def)             Requested size: 39.78093pt x 19.91692pt.
 File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
 <use Figures/000-misc/frost_logo_neu.png>
-Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 49.
+Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 28.
 (pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
-[39.46
+[38.46
 
- <./Figures/600-erg/infrarot_x1c.jpg>]
+]
 File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
 <use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 115.
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 77.
 (pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
 File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
 <use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 115.
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 77.
 (pdftex.def)             Requested size: 39.78093pt x 19.91692pt.
 File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
 <use Figures/000-misc/frost_logo_neu.png>
-Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 115.
+Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 77.
 (pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
- [40.47]
-File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
-<use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 153.
-(pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
-File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
-<use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 153.
-(pdftex.def)             Requested size: 39.78093pt x 19.91692pt.
-File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
-<use Figures/000-misc/frost_logo_neu.png>
-Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 153.
-(pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
- [41.48]) (./TeXFiles/700_Zusammenfassung.tex
+ [39.47]) (./TeXFiles/800_Zusammenfassung.tex
 File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
 <use Figures/000-misc/fra-uas_logo.pdf>
 Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 1.
@@ -2257,8 +2246,23 @@ File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
 <use Figures/000-misc/frost_logo_neu.png>
 Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 1.
 (pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
- [42.49]
+ [40.48]
 chapter 8.
+File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
+<use Figures/000-misc/fra-uas_logo.pdf>
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 26.
+(pdftex.def)             Requested size: 39.78093pt x 19.91692pt.
+File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
+<use Figures/000-misc/frost_logo_neu.png>
+Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 26.
+(pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
+[41.49
+
+]
+File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
+<use Figures/000-misc/fra-uas_logo.pdf>
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 62.
+(pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
 File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
 <use Figures/000-misc/fra-uas_logo.pdf>
 Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 62.
@@ -2267,52 +2271,37 @@ File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
 <use Figures/000-misc/frost_logo_neu.png>
 Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 62.
 (pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
-[43.50
-
-]
-File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
-<use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 115.
-(pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
-File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
-<use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 115.
-(pdftex.def)             Requested size: 39.78093pt x 19.91692pt.
-File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
-<use Figures/000-misc/frost_logo_neu.png>
-Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 115.
-(pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
- [44.51]
-Underfull \hbox (badness 10000) in paragraph at lines 128--130
+ [42.50]
+Underfull \hbox (badness 10000) in paragraph at lines 64--65
 [] \T1/lmss/bx/n/10.95 Start des LED-Knotens[][] \T1/lmss/m/n/10.95 Der LED-Knoten muss in die Start-kon-fi-gu-ra-ti-on des Teams
  []
 
 )
 File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
 <use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 350.
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 351.
 (pdftex.def)             Requested size: 48.37263pt x 24.2077pt.
 File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
 <use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 350.
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 351.
 (pdftex.def)             Requested size: 39.78093pt x 19.91692pt.
 File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
 <use Figures/000-misc/frost_logo_neu.png>
-Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 350.
+Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 351.
 (pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
- [45.52]
+ [43.51]
 chapter without number
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10.95> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 351.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 352.
 File: Figures/000-misc/fra-uas_logo.pdf Graphic file (type pdf)
 <use Figures/000-misc/fra-uas_logo.pdf>
-Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 357.
+Package pdftex.def Info: Figures/000-misc/fra-uas_logo.pdf  used on input line 358.
 (pdftex.def)             Requested size: 39.78093pt x 19.91692pt.
 File: Figures/000-misc/frost_logo_neu.png Graphic file (type png)
 <use Figures/000-misc/frost_logo_neu.png>
-Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 357.
+Package pdftex.def Info: Figures/000-misc/frost_logo_neu.png  used on input line 358.
 (pdftex.def)             Requested size: 52.89084pt x 17.07164pt.
-[46.53
+[44.52
 
 
 ] (./thesis.aux)
@@ -2325,18 +2314,18 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 53584 strings out of 467525
- 1158119 string characters out of 5428467
- 2206498 words of memory out of 5000000
- 81408 multiletter control sequences out of 15000+600000
+ 53576 strings out of 467525
+ 1158042 string characters out of 5428467
+ 2206629 words of memory out of 5000000
+ 81402 multiletter control sequences out of 15000+600000
  714212 words of font info for 101 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 108i,25n,117p,11240b,3258s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,25n,117p,11240b,3259s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss8.pfb></usr/share/texmf/fonts/type1/public/lm/lmss9.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtk10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt9.pfb>
-Output written on thesis.pdf (53 pages, 7088236 bytes).
+Output written on thesis.pdf (52 pages, 7088082 bytes).
 PDF statistics:
- 1380 PDF objects out of 1440 (max. 8388607)
- 1197 compressed objects within 12 object streams
- 260 named destinations out of 1000 (max. 500000)
+ 1382 PDF objects out of 1440 (max. 8388607)
+ 1200 compressed objects within 12 object streams
+ 258 named destinations out of 1000 (max. 500000)
  692 words of extra memory for PDF output out of 10000 (max. 10000000)
 

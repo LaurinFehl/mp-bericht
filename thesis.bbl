@@ -60,6 +60,46 @@
       \verb https://roverchallenge.eu
       \endverb
     \endentry
+    \entry{getfpvHistoryFPV}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=bf04125762d7c816e98f79ec8cededf0}{%
+           family={Hawks},
+           familyi={H\bibinitperiod},
+           given={Kevin},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {GetFPV Learn}%
+      }
+      \strng{namehash}{bf04125762d7c816e98f79ec8cededf0}
+      \strng{fullhash}{bf04125762d7c816e98f79ec8cededf0}
+      \strng{fullhashraw}{bf04125762d7c816e98f79ec8cededf0}
+      \strng{bibnamehash}{bf04125762d7c816e98f79ec8cededf0}
+      \strng{authorbibnamehash}{bf04125762d7c816e98f79ec8cededf0}
+      \strng{authornamehash}{bf04125762d7c816e98f79ec8cededf0}
+      \strng{authorfullhash}{bf04125762d7c816e98f79ec8cededf0}
+      \strng{authorfullhashraw}{bf04125762d7c816e98f79ec8cededf0}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{7}
+      \field{langid}{american}
+      \field{month}{9}
+      \field{title}{The History of FPV: A Journey Through Time}
+      \field{urlday}{16}
+      \field{urlmonth}{11}
+      \field{urlyear}{2026}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.getfpv.com/learn/fpv-essentials/the-history-of-fpv-a-journey-through-time/
+      \endverb
+      \verb{url}
+      \verb https://www.getfpv.com/learn/fpv-essentials/the-history-of-fpv-a-journey-through-time/
+      \endverb
+    \endentry
     \entry{petersonQuadcopterVsHexacopter}{online}{}{}
       \name{author}{1}{}{%
         {{hash=01445191c1ead0abb05ab9727b48dad8}{%
@@ -179,8 +219,8 @@
       \strng{authornamehash}{1a09fa06b090db9a80320f6fbed8c4b1}
       \strng{authorfullhash}{1a09fa06b090db9a80320f6fbed8c4b1}
       \strng{authorfullhashraw}{1a09fa06b090db9a80320f6fbed8c4b1}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{langid}{american}

@@ -1,9 +1,7 @@
 \chapter{Ergebnisse}
 \label{ch:Ergebnisse}
 
-Dieses Kapitel stellt die Ergebnisse der Prüfungen aus Kapitel~\ref{ch:Evaluation} dar.
-Die Gliederung folgt der Evaluation, sodass jedem Abschnitt dort ein Abschnitt mit den Ergebnissen gegenübersteht.
-Die Deutung der Ergebnisse folgt in Kapitel~\ref{ch:Diskussion}.
+Dieses Kapitel stellt die Ergebnisse der Prüfungen aus Kapitel~\ref{ch:Evaluation} dar. Die Gliederung folgt der Evaluation, sodass jedem Abschnitt dort ein Abschnitt mit den Ergebnissen gegenübersteht. Die Deutung der Ergebnisse folgt in Kapitel~\ref{ch:Diskussion}.
 
     \section{Ergebnisse des Frames}
     \label{sec:Erg_Frame}
@@ -13,32 +11,19 @@ Die Deutung der Ergebnisse folgt in Kapitel~\ref{ch:Diskussion}.
 
         Die Drohne mit dem neuen Frame wiegt einschließlich Elektronik, Akku und Anbauteilen \SI{1650}{\gram}.
         
-        Laut dem Final Report für die \gls{erc} wog die Drohne mit dem alten Frame \SI{2290}{\gram}.
-        Die relative Massenersparnis $\Delta m$ ergibt sich aus
-        %
+        Laut dem Final Report für die \gls{erc} wog die Drohne mit dem alten Frame \SI{2290}{\gram}. Die relative Massenersparnis $\Delta m$ ergibt sich aus %
         \begin{equation}
             \Delta m = \frac{m_{\mathrm{alt}} - m_{\mathrm{neu}}}{m_{\mathrm{alt}}} \cdot \SI{100}{\percent} ,
             \label{eq:Massenersparnis}
         \end{equation}
         %
-        wobei $m_{\mathrm{alt}}$ und $m_{\mathrm{neu}}$ die Gesamtmassen der Drohne mit altem und neuem Frame sind.
-        Nach Gleichung~\eqref{eq:Massenersparnis} beträgt die Ersparnis \SI{27,9}{\percent}.
+        wobei $m_{\mathrm{alt}}$ und $m_{\mathrm{neu}}$ die Gesamtmassen der Drohne mit altem und neuem Frame sind. Nach Gleichung~\eqref{eq:Massenersparnis} beträgt die Ersparnis \SI{27,9}{\percent}.
 
-        Ein Vergleich einzelner Bauteile ist nur eingeschränkt möglich, da sich der Aufbau beider Frames grundlegend
-        unterscheidet.
-        Als Vergleichsgröße eignet sich jedoch ein einzelner Arm.
-        Beim alten Frame besteht ein Arm aus einem einzigen Zuschnitt aus Carbonplatte, beim neuen Frame aus mehreren
-        gedruckten Bauteilen.
+        Ein Vergleich einzelner Bauteile ist nur eingeschränkt möglich, da sich der Aufbau beider Frames grundlegend unterscheidet. Als Vergleichsgröße eignet sich jedoch ein einzelner Arm. Beim alten Frame besteht ein Arm aus einem einzigen Zuschnitt aus Carbonplatte, beim neuen Frame aus mehreren gedruckten Bauteilen.
 
-        Der alte Arm wiegt \SI{85,7}{\gram}, der neue Arm aus PA11-CF-SL \SI{35,7}{\gram}.
-        Das entspricht einer Ersparnis von \SI{58,3}{\percent}.
+        Der alte Arm wiegt \SI{85,7}{\gram}, der neue Arm aus PA11-CF-SL \SI{35,7}{\gram}. Das entspricht einer Ersparnis von \SI{58,3}{\percent}.
 
-        In der Slicersoftware wurde die Masse desselben Arms für beide Filamente berechnet.
-        Abbildung~\ref{fig:Erg_Slicer_Masse} zeigt beide Berechnungen.
-        Für den Arm aus ASA ergibt sich eine Masse von \SI{37,98}{\gram}, für den Arm aus PA11-CF-SL von
-        \SI{35,71}{\gram}.
-        Das entspricht einer Ersparnis von etwa \SI{6}{\percent}.
-        Der Slicer verbraucht dabei für PA11-CF-SL \SI{14,99}{\metre} Filament und für ASA \SI{15,48}{\metre}.
+        In der Slicersoftware wurde die Masse desselben Arms für beide Filamente berechnet. Abbildung~\ref{fig:Erg_Slicer_Masse} zeigt beide Berechnungen. Für den Arm aus ASA ergibt sich eine Masse von \SI{37,98}{\gram}, für den Arm aus PA11-CF-SL von \SI{35,71}{\gram}. Das entspricht einer Ersparnis von etwa \SI{6}{\percent}. Der Slicer verbraucht dabei für PA11-CF-SL \SI{14,99}{\metre} Filament und für ASA \SI{15,48}{\metre}.
 
         \begin{figure}[H]
             \centering
@@ -55,40 +40,26 @@ Die Deutung der Ergebnisse folgt in Kapitel~\ref{ch:Diskussion}.
                 \caption{PA11-CF-SL}
                 \label{fig:Erg_Slicer_PA11}
             \end{subfigure}
-            \caption{Berechnung eines Arms im Slicer. Die Tabelle rechts oben zeigt Druckzeit und Filamentverbrauch je
-            Linientyp, darunter die Gesamtmasse (eigene Darstellung).}
+            \caption{Berechnung eines Arms im Slicer. Die Tabelle rechts oben zeigt Druckzeit und Filamentverbrauch je Linientyp, darunter die Gesamtmasse (eigene Darstellung).}
             \label{fig:Erg_Slicer_Masse}
         \end{figure}
 
         \subsection{Maßhaltigkeit und Montage}
         \label{sec:Erg_Frame_Montage}
 
-        Mit den vom Sponsor bereitgestellten Druckprofilen verlief der Druck der Bauteile schnell und ohne Probleme.
-        Angepasst werden musste nur die Düsentemperatur (Abschnitt~\ref{sec:Frame_Fertigung}).
-        Verzug, das sogenannte Warping, trat nur auf, wenn die Bauplatte voll belegt war.
-        Die angestrebten Toleranzen wurden größtenteils eingehalten.
-        Einige Bauteile mit leichtem Verzug lagen außerhalb der Toleranz.
-        Durch gezieltes Erwärmen und Nachrichten ließen sich diese Abweichungen beheben.
-        Abbildung~\ref{fig:Erg_Warping} zeigt ein Beispiel für ein leicht verzogenes Bauteil.
-        % TODO: result of the heat-set insert check (screws fit?) and of the test assembly
+        Mit den vom Sponsor bereitgestellten Druckprofilen verlief der Druck der Bauteile schnell und ohne Probleme. Angepasst werden musste nur die Düsentemperatur (Abschnitt~\ref{sec:Frame_Fertigung}). Verzug, das sogenannte Warping, trat nur auf, wenn die Bauplatte voll belegt war. Die angestrebten Toleranzen wurden größtenteils eingehalten. Einige Bauteile mit leichtem Verzug lagen außerhalb der Toleranz. Durch gezieltes Erwärmen und Nachrichten ließen sich diese Abweichungen beheben. Abbildung~\ref{fig:Erg_Warping} zeigt ein Beispiel für ein leicht verzogenes Bauteil. % TODO: result of the heat-set insert check (screws fit?) and of the test assembly
 
         \begin{figure}[htbp]
             \centering
             \includegraphics[width=0.6\textwidth]{\verzugBauteil}
-            \caption{Leicht verzogenes Bauteil nach dem Druck auf einer voll belegten Bauplatte. Das flache Bauteil liegt
-            auf einer ebenen Fläche und hebt sich an einem Ende sichtbar von ihr ab (eigene Darstellung).}
+            \caption{Leicht verzogenes Bauteil nach dem Druck auf einer voll belegten Bauplatte. Das flache Bauteil liegt auf einer ebenen Fläche und hebt sich an einem Ende sichtbar von ihr ab (eigene Darstellung).}
             \label{fig:Erg_Warping}
         \end{figure}
 
         \subsection{Mechanische Belastbarkeit}
         \label{sec:Erg_Frame_Mechanik}
 
-        Die Fallhöhe wurde jeweils an einem Maßband neben der Drohne abgelesen.
-        % TODO: say which point of the drone the height refers to (e.g. bottom of the feet)
-        Tabelle~\ref{tab:Erg_Falltest} zeigt die Fallhöhen, die Ausgangslage der Drohne und die Beobachtungen.
-        Bei keiner der drei Fallhöhen traten Brüche, bleibende Verformungen oder gelöste Verbindungen auf.
-        Bei \SI{80}{\centi\metre} geriet die Drohne während des Falls ins Taumeln und landete schief.
-        Auch diese Landung überstand der Frame ohne Schäden.
+        Die Fallhöhe wurde jeweils an einem Maßband neben der Drohne abgelesen. Tabelle~\ref{tab:Erg_Falltest} zeigt die Fallhöhen, die Ausgangslage der Drohne und die Beobachtungen. Bei keiner der drei Fallhöhen traten Brüche, bleibende Verformungen oder gelöste Verbindungen auf. Bei \SI{80}{\centi\metre} geriet die Drohne während des Falls ins Taumeln und landete schief. Auch diese Landung überstand der Frame ohne Schäden. % TODO: say which point of the drone the height refers to (e.g. bottom of the feet)
 
         \begin{table}[H]
             \centering
@@ -111,8 +82,7 @@ Die Deutung der Ergebnisse folgt in Kapitel~\ref{ch:Diskussion}.
         \subsection{Fertigungsaufwand}
         \label{sec:Erg_Frame_Fertigung}
 
-        Tabelle~\ref{tab:Erg_Fertigung} zeigt die Dauer der einzelnen Schritte für einen vollständigen Frame.
-        Maschinenzeit und Arbeitszeit sind getrennt aufgeführt.
+        Tabelle~\ref{tab:Erg_Fertigung} zeigt die Dauer der einzelnen Schritte für einen vollständigen Frame. Maschinenzeit und Arbeitszeit sind getrennt aufgeführt.
 
 
         \begin{table}[H]
@@ -133,30 +103,17 @@ Die Deutung der Ergebnisse folgt in Kapitel~\ref{ch:Diskussion}.
             \end{tabularx}
         \end{table}
 
-        Die Montage an der Drohne dauerte am längsten, da viele verschiedene Schrauben und Bauteile verbunden werden
-        müssen.
-        Bei Bauteilen mit vielen Kanten ließen sich Mauseohren und Brims schwerer entfernen als bei flachen, rechteckigen
-        Bauteilen.
-        Die Einschmelzgewinde ließen sich bei allen Bauteilen einfach einsetzen.
+        Die Montage an der Drohne dauerte am längsten, da viele verschiedene Schrauben und Bauteile verbunden werden müssen. Bei Bauteilen mit vielen Kanten ließen sich Mauseohren und Brims schwerer entfernen als bei flachen, rechteckigen Bauteilen. Die Einschmelzgewinde ließen sich bei allen Bauteilen einfach einsetzen.
 
         \subsection{Wartbarkeit}
         \label{sec:Erg_Frame_Wartung}
 
-        Die meisten Bauteile des neuen Frames lassen sich mit wenigen Schrauben in kurzer Zeit austauschen.
-        Zwei Bauteile mussten jedoch an die vorgegebenen Bohrungen der Baseplate angepasst werden.
-        Dadurch liegen die Schrauben des Flight Controllers verdeckt.
-        Die gemeinsame Halterung von Flight Controller und Raspberry Pi liegt zusammen mit dem \gls{esc}-Board zwischen
-        den beiden Platten der Baseplate. % [PRÜFEN] between baseplate_top and baseplate_bottom?
-        Um diese Halterung zu tauschen, muss die Baseplate geöffnet werden.
-        Die \gls{usb}-Anschlüsse von Flight Controller und Raspberry Pi bleiben im eingebauten Zustand zugänglich.
-        Beide Geräte lassen sich also ohne Demontage anschließen.
+        Die meisten Bauteile des neuen Frames lassen sich mit wenigen Schrauben in kurzer Zeit austauschen. Zwei Bauteile mussten jedoch an die vorgegebenen Bohrungen der Baseplate angepasst werden. Dadurch liegen die Schrauben des Flight Controllers verdeckt. Die gemeinsame Halterung von Flight Controller und Raspberry Pi liegt zusammen mit dem \gls{esc}-Board zwischen den beiden Platten der Baseplate. Um diese Halterung zu tauschen, muss die Baseplate geöffnet werden. Die \gls{usb}-Anschlüsse von Flight Controller und Raspberry Pi bleiben im eingebauten Zustand zugänglich. Beide Geräte lassen sich also ohne Demontage anschließen. % [PRÜFEN] between baseplate_top and baseplate_bottom?
 
         \subsection{Flugtests}
         \label{sec:Erg_Frame_Flug}
 
-        Tabelle~\ref{tab:Erg_Flugvergleich} fasst die Kennwerte der Flüge zusammen.
-        Die Werte für den neuen Frame sind als Bereich über die drei Wettbewerbsflüge angegeben, sofern nicht anders
-        vermerkt.
+        Tabelle~\ref{tab:Erg_Flugvergleich} fasst die Kennwerte der Flüge zusammen. Die Werte für den neuen Frame sind als Bereich über die drei Wettbewerbsflüge angegeben, sofern nicht anders vermerkt.
 
         \begin{table}[H]
             \centering
@@ -183,17 +140,7 @@ Die Deutung der Ergebnisse folgt in Kapitel~\ref{ch:Diskussion}.
             \end{tabularx}
         \end{table}
 
-        Die größte Veränderung zeigt sich bei den Vibrationen.
-        Im ruhigen Schweben sank die Varianz der Beschleunigung etwa um den Faktor 15, die der Drehrate um den Faktor
-        3 bis 5.
-        Über den gesamten Flug sank die Vibrationsmetrik der Beschleunigung von 2,95 auf 1,63.
-        Abbildung~\ref{fig:Erg_Vibration} zeigt die Vibrationen beider Flüge.
-        Beim alten Frame streut die Beschleunigung während des gesamten Flugs stärker, und die Vibrationsmetrik liegt
-        durchgehend bei etwa \SI{3}{\metre\per\second\squared}.
-        Beim neuen Frame liegt sie im freien Flug bei etwa \SIrange{1,5}{2}{\metre\per\second\squared}.
-        Beide Flüge liegen damit im grün hinterlegten Bereich, den Flight Review als unkritisch einstuft.
-        Die großen Ausschläge am Ende der Flüge entstehen beim alten Frame bei der Landung und beim neuen Frame beim
-        Kontakt mit dem Fangnetz.
+        Die größte Veränderung zeigt sich bei den Vibrationen. Im ruhigen Schweben sank die Varianz der Beschleunigung etwa um den Faktor 15, die der Drehrate um den Faktor 3 bis 5. Über den gesamten Flug sank die Vibrationsmetrik der Beschleunigung von 2,95 auf 1,63. Abbildung~\ref{fig:Erg_Vibration} zeigt die Vibrationen beider Flüge. Beim alten Frame streut die Beschleunigung während des gesamten Flugs stärker und die Vibrationsmetrik liegt durchgehend bei etwa \SI{3}{\metre\per\second\squared}. Beim neuen Frame liegt sie im freien Flug bei etwa \SIrange{1,5}{2}{\metre\per\second\squared}. Beide Flüge liegen damit im grün hinterlegten Bereich, den Flight Review als unkritisch einstuft. Die großen Ausschläge am Ende der Flüge entstehen beim alten Frame bei der Landung und beim neuen Frame beim Kontakt mit dem Fangnetz.
 
         \begin{figure}[H]
             \centering
@@ -210,29 +157,15 @@ Die Deutung der Ergebnisse folgt in Kapitel~\ref{ch:Diskussion}.
                 \caption{Neuer Frame (Wettbewerbsflug 3), Ausschläge am Ende durch das Fangnetz}
                 \label{fig:Erg_Vibration_neu}
             \end{subfigure}
-            \caption{Rohbeschleunigung in den drei Achsen (oben) und Vibrationsmetrik (unten) im Flug, ausgewertet mit
-            Flight Review. Die y-Achsen der Rohbeschleunigung sind unterschiedlich skaliert (eigene Darstellung).}
+            \caption{Rohbeschleunigung in den drei Achsen (oben) und Vibrationsmetrik (unten) im Flug, ausgewertet mit Flight Review. Die y-Achsen der Rohbeschleunigung sind unterschiedlich skaliert (eigene Darstellung).}
             \label{fig:Erg_Vibration}
         \end{figure}
 
-        Die Lage wurde im ruhigen Schweben genauer gehalten, der \gls{rms}-Lagefehler sank auf
-        \ang{0,6} bis \ang{1,2}.
-        Beim Halten der Position lag das 95.~Perzentil der Abweichung bei \SI{0,15}{\metre} statt \SI{0,49}{\metre}.
-        Der Schwebeschub sank leicht von 0,55 auf 0,52 bis 0,53.
-        In keinem Flug gerieten die Motoren im ruhigen Schweben in die Sättigung.
-        Der Allocator setzte das angeforderte Drehmoment zu \SI{100}{\percent} um.
-        In keinem der Logs wurde die Akkuspannung aufgezeichnet.
+        Die Lage wurde im ruhigen Schweben genauer gehalten, der \gls{rms}-Lagefehler sank auf \ang{0,6} bis \ang{1,2}. Beim Halten der Position lag das 95.~Perzentil der Abweichung bei \SI{0,15}{\metre} statt \SI{0,49}{\metre}. Der Schwebeschub sank leicht von 0,55 auf 0,52 bis 0,53. In keinem Flug gerieten die Motoren im ruhigen Schweben in die Sättigung. Der Allocator setzte das angeforderte Drehmoment zu \SI{100}{\percent} um. In keinem der Logs wurde die Akkuspannung aufgezeichnet.
 
-        Bei der Ausrichtung der Motoren schnitt der neue Frame schlechter ab als der alte.
-        Die im Uhrzeigersinn drehenden Motoren arbeiteten im neuen Frame dauerhaft \SIrange{12}{21}{\percent} mehr als
-        die gegenläufigen.
-        Beim alten Frame trat dieser Versatz ebenfalls auf, aber schwächer und mit umgekehrtem Vorzeichen.
-        Außerdem trugen die rechten Motoren in allen drei Flügen \SIrange{5}{8}{\percent} mehr als die linken.
-        Das Verhältnis zwischen vorderen und hinteren Motoren schwankte zwischen den Flügen eines Tages.
+        Bei der Ausrichtung der Motoren schnitt der neue Frame schlechter ab als der alte. Die im Uhrzeigersinn drehenden Motoren arbeiteten im neuen Frame dauerhaft \SIrange{12}{21}{\percent} mehr als die gegenläufigen. Beim alten Frame trat dieser Versatz ebenfalls auf, aber schwächer und mit umgekehrtem Vorzeichen. Außerdem trugen die rechten Motoren in allen drei Flügen \SIrange{5}{8}{\percent} mehr als die linken. Das Verhältnis zwischen vorderen und hinteren Motoren schwankte zwischen den Flügen eines Tages.
 
-        Im ersten Wettbewerbsflug trat eine Schwingung mit fester Frequenz von \SI{37}{\hertz} auf der Rollachse auf.
-        Sie war unabhängig von der Motordrehzahl.
-        In den beiden folgenden Flügen trat sie nicht mehr auf.
+        Im ersten Wettbewerbsflug trat eine Schwingung mit fester Frequenz von \SI{37}{\hertz} auf der Rollachse auf. Sie war unabhängig von der Motordrehzahl. In den beiden folgenden Flügen trat sie nicht mehr auf.
 
     \section{Ergebnisse der Statusanzeige}
     \label{sec:Erg_LED}
@@ -240,34 +173,18 @@ Die Deutung der Ergebnisse folgt in Kapitel~\ref{ch:Diskussion}.
         \subsection{Automatisierte Tests der Anzeigelogik}
         \label{sec:Erg_LED_Tests}
 
-        Die Testsuite aus Abschnitt~\ref{sec:Eval_LED_Tests} wurde während der Entwicklung fortlaufend ausgeführt,
-        insbesondere nach jeder größeren Änderung an der Anzeigelogik.
-        Nach der letzten Überarbeitung der Anzeigemuster wurden 292 Testfälle bestanden, einer wurde übersprungen, und
-        keiner ist fehlgeschlagen.
-        Vor dieser Überarbeitung waren es 262 bestandene Testfälle.
-        Die Differenz entspricht den Tests, die für die neuen Muster hinzugekommen sind.
-        Beide Regressionstests für REQ-FUN-070 und für den Absturz von MAVROS wurden bestanden.
+        Die Testsuite aus Abschnitt~\ref{sec:Eval_LED_Tests} wurde während der Entwicklung fortlaufend ausgeführt, insbesondere nach jeder größeren Änderung an der Anzeigelogik. Nach der letzten Überarbeitung der Anzeigemuster wurden 292 Testfälle bestanden, einer wurde übersprungen und keiner ist fehlgeschlagen. Vor dieser Überarbeitung waren es 262 bestandene Testfälle. Die Differenz entspricht den Tests, die für die neuen Muster hinzugekommen sind. Beide Regressionstests für REQ-FUN-070 und für den Absturz von MAVROS wurden bestanden.
 
-        Übersprungen wurde ein Kompatibilitätstest mit dem Nachrichtenparser der Bodenstationsoberfläche des Teams.
-        Dieser Test setzt voraus, dass das Paket der Oberfläche installiert ist, was auf dem Testrechner nicht der Fall war.
-        Dass der LED-Knoten das Nachrichtenformat der Zustandsmaschine korrekt liest, zeigt unabhängig davon der Test mit
-        dem echten Encoder.
+        Übersprungen wurde ein Kompatibilitätstest mit dem Nachrichtenparser der Bodenstationsoberfläche des Teams. Dieser Test setzt voraus, dass das Paket der Oberfläche installiert ist, was auf dem Testrechner nicht der Fall war. Dass der LED-Knoten das Nachrichtenformat der Zustandsmaschine korrekt liest, zeigt unabhängig davon der Test mit dem echten Encoder.
 
         \subsection{Funktionstest an der Hardware}
         \label{sec:Erg_LED_SIL}
 
-        Die Hardware wurde während der Arbeit schrittweise in Betrieb genommen und getestet.
-        Zunächst wurden Pinbelegung und Farbreihenfolge mit \texttt{led\_selftest} an der Drohne geprüft.
-        Nach der Überarbeitung der Anzeigemuster wurde der neue Stand mit der Testmatrix aus
-        Tabelle~\ref{tab:Eval_LED_Matrix} geprüft.
-        Tabelle~\ref{tab:Erg_LED_Matrix} zeigt das Ergebnis je Zeile.
-        Alle 15 Zeilen entsprachen dem erwarteten Verhalten.
-        Das Lauflicht lief in der richtigen Richtung über die Beine.
+        Die Hardware wurde während der Arbeit schrittweise in Betrieb genommen und getestet. Zunächst wurden Pinbelegung und Farbreihenfolge mit \texttt{led\_selftest} an der Drohne geprüft. Nach der Überarbeitung der Anzeigemuster wurde der neue Stand mit der Testmatrix aus Tabelle~\ref{tab:Eval_LED_Matrix} geprüft. Tabelle~\ref{tab:Erg_LED_Matrix} zeigt das Ergebnis je Zeile. Alle 15 Zeilen entsprachen dem erwarteten Verhalten. Das Lauflicht lief in der richtigen Richtung über die Beine.
 
         \begin{table}[H]
             \centering
-            \caption{Ergebnisse des Funktionstests in der \gls{sil}-Testumgebung, Zeilennummern nach
-            Tabelle~\ref{tab:Eval_LED_Matrix}}
+            \caption{Ergebnisse des Funktionstests in der \gls{sil}-Testumgebung, Zeilennummern nach Tabelle~\ref{tab:Eval_LED_Matrix}}
             \label{tab:Erg_LED_Matrix}
             \small
             \begin{tabularx}{\textwidth}{r X l}
@@ -294,22 +211,15 @@ Die Deutung der Ergebnisse folgt in Kapitel~\ref{ch:Diskussion}.
         \end{table}
        
 
-        Laut Protokoll des LED-Knotens zeigte die Anzeige direkt nach dem Start einmal das Signal für fehlende Daten.
-        Zu diesem Zeitpunkt war noch keine Nachricht angekommen.
-        Danach stand sie ruhig im Zustand \texttt{REST}, und nur die Navigationslichter leuchteten.
-        Auch das entspricht dem Verhalten aus Tabelle~\ref{tab:LED_Fehlerfall}.
+        Laut Protokoll des LED-Knotens zeigte die Anzeige direkt nach dem Start einmal das Signal für fehlende Daten. Zu diesem Zeitpunkt war noch keine Nachricht angekommen. Danach stand sie ruhig im Zustand \texttt{REST} und nur die Navigationslichter leuchteten. Auch das entspricht dem Verhalten aus Tabelle~\ref{tab:LED_Fehlerfall}.
 
         \subsection{Sichtbarkeit und Unterscheidbarkeit}
         \label{sec:Erg_LED_Sicht}
         
 
-        Der Sichtbarkeitstest wurde im Laborraum durchgeführt.
-        Die Muster waren dort aus \SI{10}{\metre} Entfernung erkennbar.
-        Durch die Form der Füße waren die \glspl{led} von Autonomie- und Statuskanal getrennt voneinander zu sehen.
-        Gelb ließ sich von Grün unterscheiden.
+        Der Sichtbarkeitstest wurde im Laborraum durchgeführt. Die Muster waren dort aus \SI{10}{\metre} Entfernung erkennbar. Durch die Form der Füße waren die \glspl{led} von Autonomie- und Statuskanal getrennt voneinander zu sehen. Gelb ließ sich von Grün unterscheiden.
 
         \subsection{Übertragbarkeit auf den Flugbetrieb}
         \label{sec:Erg_LED_Flug}
 
-        Ein Test im Flugbetrieb wurde aus den in Abschnitt~\ref{sec:LED_SIL} genannten Gründen nicht durchgeführt.
-        Alle Ergebnisse zur Statusanzeige stammen damit aus den automatisierten Tests und der \gls{sil}-Testumgebung.
+        Ein Test im Flugbetrieb wurde aus den in Abschnitt~\ref{sec:LED_SIL} genannten Gründen nicht durchgeführt. Alle Ergebnisse zur Statusanzeige stammen damit aus den automatisierten Tests und der \gls{sil}-Testumgebung.

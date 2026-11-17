@@ -1,134 +1,134 @@
 \babel@toc {american}{}\relax 
 \babel@toc {ngerman}{}\relax 
-\contentsline {chapter}{\numberline {1}Einleitung}{2}{chapter.1}%
-\contentsline {chapter}{\numberline {2}Wettbewerb und Anforderungen}{3}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Die European Rover Challenge}{3}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Rolle der Drohne und Anforderungen}{3}{section.2.2}%
-\contentsline {chapter}{\numberline {3}Stand der Technik}{6}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Drohnenplattformen und Frames}{6}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Bauformen von Multicoptern}{6}{subsection.3.1.1}%
-\contentsline {paragraph}{\nonumberline Hexacopter}{6}{paragraph*.10}%
-\contentsline {paragraph}{\nonumberline Quadcopter}{6}{paragraph*.11}%
-\contentsline {subsection}{\numberline {3.1.2}Vergleich von Quadcopter-Konfigurationen}{6}{subsection.3.1.2}%
-\contentsline {subsection}{\numberline {3.1.3}Kommerzielle Frames und Bausätze}{7}{subsection.3.1.3}%
-\contentsline {section}{\numberline {3.2}Fertigung im FDM-3D-Druck}{7}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Funktionsprinzip}{7}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Materialien in Filamentform}{8}{subsection.3.2.2}%
-\contentsline {paragraph}{\nonumberline PLA}{8}{paragraph*.15}%
-\contentsline {paragraph}{\nonumberline PET-G}{8}{paragraph*.16}%
-\contentsline {paragraph}{\nonumberline ABS}{8}{paragraph*.17}%
-\contentsline {paragraph}{\nonumberline ASA}{9}{paragraph*.18}%
-\contentsline {paragraph}{\nonumberline PA}{9}{paragraph*.19}%
-\contentsline {paragraph}{\nonumberline TPU}{9}{paragraph*.20}%
-\contentsline {subsection}{\numberline {3.2.3}Konstruktionsrichtlinien}{9}{subsection.3.2.3}%
-\contentsline {subsection}{\numberline {3.2.4}Schwächen und Grenzen}{9}{subsection.3.2.4}%
-\contentsline {section}{\numberline {3.3}Zustandsanzeigen bei Drohnen}{9}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Statusanzeigen und Zustandsmaschinen}{10}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}LED-Systeme und Ansteuerung}{10}{subsection.3.3.2}%
-\contentsline {section}{\numberline {3.4}Fazit und Ableitung}{10}{section.3.4}%
-\contentsline {chapter}{\numberline {4}Entwickelte Methoden}{11}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Konstruktion des 3D-gedruckten Frames}{11}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Konstruktionskonzept und Designentscheidungen}{13}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Auslegung für den FDM-Druck}{13}{subsection.4.1.2}%
-\contentsline {paragraph}{\nonumberline Arme}{13}{paragraph*.25}%
-\contentsline {paragraph}{\nonumberline Motorhalter}{13}{paragraph*.26}%
-\contentsline {paragraph}{\nonumberline Motorfuß}{14}{paragraph*.28}%
-\contentsline {subsection}{\numberline {4.1.3}Materialwahl}{14}{subsection.4.1.3}%
-\contentsline {paragraph}{\nonumberline PET-G für Abdeckungen}{15}{paragraph*.30}%
-\contentsline {paragraph}{\nonumberline ASA für einen günstigen Frame}{15}{paragraph*.31}%
-\contentsline {paragraph}{\nonumberline PA für einen belastbaren, aber teuren Frame}{15}{paragraph*.32}%
-\contentsline {subsection}{\numberline {4.1.4}Integration der Komponenten}{15}{subsection.4.1.4}%
-\contentsline {subsection}{\numberline {4.1.5}Fertigung und Montage}{15}{subsection.4.1.5}%
-\contentsline {section}{\numberline {4.2}LED-Statusanzeige}{16}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Konzept und Zustandsdefinition}{16}{subsection.4.2.1}%
-\contentsline {paragraph}{\nonumberline Farbwahl}{16}{paragraph*.33}%
-\contentsline {paragraph}{\nonumberline Zwei-Kanal-Modell}{16}{paragraph*.34}%
-\contentsline {subsection}{\numberline {4.2.2}Zuordnung von Zuständen zu Anzeigemustern}{17}{subsection.4.2.2}%
-\contentsline {paragraph}{\nonumberline Verhalten bei fehlenden oder ungültigen Daten}{18}{paragraph*.38}%
-\contentsline {subsection}{\numberline {4.2.3}Hardware}{19}{subsection.4.2.3}%
-\contentsline {paragraph}{\nonumberline LED-Streifen und Anordnung an den Landebeinen}{19}{paragraph*.40}%
-\contentsline {paragraph}{\nonumberline Ansteuerung über den PIO-Block des RP1}{20}{paragraph*.43}%
-\contentsline {paragraph}{\nonumberline Fehlerisolation durch getrennte Datenleitungen}{20}{paragraph*.44}%
-\contentsline {subsection}{\numberline {4.2.4}Software der Statusanzeige}{20}{subsection.4.2.4}%
-\contentsline {paragraph}{\nonumberline Schichtenarchitektur}{20}{paragraph*.45}%
-\contentsline {paragraph}{\nonumberline Auslesen des Zustands-Topics}{21}{paragraph*.46}%
-\contentsline {paragraph}{\nonumberline Zeitsteuerung und Blinkmuster}{22}{paragraph*.48}%
-\contentsline {paragraph}{\nonumberline Robustheit im Betrieb}{22}{paragraph*.49}%
-\contentsline {subsection}{\numberline {4.2.5}Anbindung an den Flight Controller}{22}{subsection.4.2.5}%
-\contentsline {paragraph}{\nonumberline Datenpfad vom Flight Controller zum LED-Knoten}{22}{paragraph*.50}%
-\contentsline {paragraph}{\nonumberline Bestimmung des Autonomiezustands aus dem PX4-Flugmodus}{23}{paragraph*.51}%
-\contentsline {subsection}{\numberline {4.2.6}Software-in-the-Loop-Testumgebung}{23}{subsection.4.2.6}%
-\contentsline {paragraph}{\nonumberline Motivation}{23}{paragraph*.52}%
-\contentsline {paragraph}{\nonumberline Aufbau}{23}{paragraph*.53}%
-\contentsline {paragraph}{\nonumberline Simulierter Zustandsgeber}{24}{paragraph*.55}%
-\contentsline {paragraph}{\nonumberline Bedienung über die Kommandozeile}{25}{paragraph*.56}%
-\contentsline {paragraph}{\nonumberline Aussagekraft und Grenzen}{25}{paragraph*.57}%
-\contentsline {chapter}{\numberline {5}Evaluation}{27}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Vorgehen und Bewertungskriterien}{27}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Evaluation des Frames}{27}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Masse}{27}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Maßhaltigkeit und Montage}{28}{subsection.5.2.2}%
-\contentsline {subsection}{\numberline {5.2.3}Mechanische Belastbarkeit}{28}{subsection.5.2.3}%
-\contentsline {subsection}{\numberline {5.2.4}Fertigungsaufwand}{28}{subsection.5.2.4}%
-\contentsline {subsection}{\numberline {5.2.5}Wartbarkeit}{28}{subsection.5.2.5}%
-\contentsline {subsection}{\numberline {5.2.6}Flugtests}{28}{subsection.5.2.6}%
-\contentsline {paragraph}{\nonumberline Ruhiges Schweben}{28}{paragraph*.59}%
-\contentsline {paragraph}{\nonumberline Gesamter Flug}{29}{paragraph*.60}%
-\contentsline {section}{\numberline {5.3}Evaluation der Statusanzeige}{29}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Automatisierte Tests der Anzeigelogik}{29}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}Funktionstest an der Hardware}{30}{subsection.5.3.2}%
-\contentsline {subsection}{\numberline {5.3.3}Sichtbarkeit und Unterscheidbarkeit}{31}{subsection.5.3.3}%
-\contentsline {subsection}{\numberline {5.3.4}Übertragbarkeit auf den Flugbetrieb}{32}{subsection.5.3.4}%
-\contentsline {chapter}{\numberline {6}Ergebnisse}{33}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Ergebnisse des Frames}{33}{section.6.1}%
-\contentsline {subsection}{\numberline {6.1.1}Masse}{33}{subsection.6.1.1}%
-\contentsline {subsection}{\numberline {6.1.2}Maßhaltigkeit und Montage}{34}{subsection.6.1.2}%
-\contentsline {subsection}{\numberline {6.1.3}Mechanische Belastbarkeit}{34}{subsection.6.1.3}%
-\contentsline {subsection}{\numberline {6.1.4}Fertigungsaufwand}{35}{subsection.6.1.4}%
-\contentsline {subsection}{\numberline {6.1.5}Wartbarkeit}{36}{subsection.6.1.5}%
-\contentsline {subsection}{\numberline {6.1.6}Flugtests}{36}{subsection.6.1.6}%
-\contentsline {section}{\numberline {6.2}Ergebnisse der Statusanzeige}{37}{section.6.2}%
-\contentsline {subsection}{\numberline {6.2.1}Automatisierte Tests der Anzeigelogik}{37}{subsection.6.2.1}%
-\contentsline {subsection}{\numberline {6.2.2}Funktionstest an der Hardware}{38}{subsection.6.2.2}%
-\contentsline {subsection}{\numberline {6.2.3}Sichtbarkeit und Unterscheidbarkeit}{38}{subsection.6.2.3}%
-\contentsline {subsection}{\numberline {6.2.4}Übertragbarkeit auf den Flugbetrieb}{38}{subsection.6.2.4}%
-\contentsline {chapter}{\numberline {7}Diskussion}{39}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Bewertung des Frames}{39}{section.7.1}%
-\contentsline {paragraph}{\nonumberline Masse}{39}{paragraph*.70}%
-\contentsline {paragraph}{\nonumberline Maßhaltigkeit}{39}{paragraph*.71}%
-\contentsline {paragraph}{\nonumberline Mechanische Belastbarkeit}{39}{paragraph*.73}%
-\contentsline {paragraph}{\nonumberline Vibrationen und Flugverhalten}{39}{paragraph*.74}%
-\contentsline {paragraph}{\nonumberline Ausrichtung der Motoren und Schwerpunkt}{40}{paragraph*.75}%
-\contentsline {paragraph}{\nonumberline Schwingung bei \SI {37}{\hertz }}{40}{paragraph*.76}%
-\contentsline {section}{\numberline {7.2}Bewertung der Statusanzeige}{40}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Erfüllung der Anforderungen}{40}{section.7.3}%
-\contentsline {section}{\numberline {7.4}Probleme und Grenzen}{41}{section.7.4}%
-\contentsline {chapter}{\numberline {8}Zusammenfassung und Ausblick}{43}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Zusammenfassung}{43}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Ausblick}{43}{section.8.2}%
-\contentsline {subsection}{\numberline {8.2.1}Hardware}{43}{subsection.8.2.1}%
-\contentsline {paragraph}{\nonumberline Gedruckte Baseplate}{43}{paragraph*.78}%
-\contentsline {paragraph}{\nonumberline Ausrichtung der Motoren}{44}{paragraph*.79}%
-\contentsline {paragraph}{\nonumberline Feste Position des Akkus}{44}{paragraph*.80}%
-\contentsline {paragraph}{\nonumberline Befestigung der Anbauteile}{44}{paragraph*.81}%
-\contentsline {paragraph}{\nonumberline Lage des Entfernungsmessers}{44}{paragraph*.82}%
-\contentsline {paragraph}{\nonumberline Druck großer Bauteile}{44}{paragraph*.83}%
-\contentsline {subsection}{\numberline {8.2.2}Elektronik}{44}{subsection.8.2.2}%
-\contentsline {paragraph}{\nonumberline Ansteuerung über SPI}{44}{paragraph*.84}%
-\contentsline {paragraph}{\nonumberline Mikrocontroller als LED-Treiber}{44}{paragraph*.85}%
-\contentsline {paragraph}{\nonumberline Pegelwandler}{44}{paragraph*.86}%
-\contentsline {paragraph}{\nonumberline Weiße LEDs zur Bodenbeleuchtung}{44}{paragraph*.87}%
-\contentsline {paragraph}{\nonumberline Messung der Akkuspannung}{45}{paragraph*.88}%
-\contentsline {subsection}{\numberline {8.2.3}Software}{45}{subsection.8.2.3}%
-\contentsline {paragraph}{\nonumberline Flug-Stack auf Raspberry Pi OS}{45}{paragraph*.89}%
-\contentsline {paragraph}{\nonumberline Start des LED-Knotens}{45}{paragraph*.90}%
-\contentsline {paragraph}{\nonumberline Watchdog}{45}{paragraph*.91}%
-\contentsline {paragraph}{\nonumberline Unbekannter Flugmodus}{45}{paragraph*.92}%
-\contentsline {paragraph}{\nonumberline Lizenzen}{45}{paragraph*.93}%
-\contentsline {paragraph}{\nonumberline Konfiguration der Flugaufzeichnung}{45}{paragraph*.94}%
-\contentsline {subsection}{\numberline {8.2.4}Tests und Validierung}{45}{subsection.8.2.4}%
-\contentsline {paragraph}{\nonumberline Sichtbarkeit bei Tageslicht und Dunkelheit}{45}{paragraph*.95}%
-\contentsline {paragraph}{\nonumberline Flugtest der Statusanzeige}{45}{paragraph*.96}%
-\contentsline {paragraph}{\nonumberline Kontrollflug nach Anpassungen am Frame}{45}{paragraph*.97}%
-\contentsline {chapter}{\nonumberline Literatur}{46}{chapter*.98}%
+\contentsline {chapter}{\numberline {1}Einleitung}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Wettbewerb und Anforderungen}{2}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Die European Rover Challenge}{2}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Rolle der Drohne und Anforderungen}{2}{section.2.2}%
+\contentsline {chapter}{\numberline {3}Stand der Technik}{4}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Drohnenplattformen und Frames}{4}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Bauformen von Multicoptern}{4}{subsection.3.1.1}%
+\contentsline {paragraph}{\nonumberline Hexacopter}{4}{paragraph*.10}%
+\contentsline {paragraph}{\nonumberline Quadcopter}{4}{paragraph*.11}%
+\contentsline {subsection}{\numberline {3.1.2}Vergleich von Quadcopter-Konfigurationen}{4}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Kommerzielle Frames und Bausätze}{5}{subsection.3.1.3}%
+\contentsline {section}{\numberline {3.2}Fertigung im FDM-3D-Druck}{5}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Funktionsprinzip}{5}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Materialien in Filamentform}{6}{subsection.3.2.2}%
+\contentsline {paragraph}{\nonumberline PLA}{6}{paragraph*.15}%
+\contentsline {paragraph}{\nonumberline PET-G}{6}{paragraph*.16}%
+\contentsline {paragraph}{\nonumberline ABS}{6}{paragraph*.17}%
+\contentsline {paragraph}{\nonumberline ASA}{7}{paragraph*.18}%
+\contentsline {paragraph}{\nonumberline PA}{7}{paragraph*.19}%
+\contentsline {paragraph}{\nonumberline TPU}{7}{paragraph*.20}%
+\contentsline {subsection}{\numberline {3.2.3}Konstruktionsrichtlinien}{7}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}Schwächen und Grenzen}{7}{subsection.3.2.4}%
+\contentsline {section}{\numberline {3.3}Zustandsanzeigen bei Drohnen}{8}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Statusanzeigen und Zustandsmaschinen}{8}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}LED-Systeme und Ansteuerung}{8}{subsection.3.3.2}%
+\contentsline {section}{\numberline {3.4}Fazit und Ableitung}{9}{section.3.4}%
+\contentsline {chapter}{\numberline {4}Entwickelte Methoden}{10}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Konstruktion des 3D-gedruckten Frames}{10}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Konstruktionskonzept und Designentscheidungen}{12}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Auslegung für den FDM-Druck}{12}{subsection.4.1.2}%
+\contentsline {paragraph}{\nonumberline Arme}{12}{paragraph*.26}%
+\contentsline {paragraph}{\nonumberline Motorhalter}{12}{paragraph*.27}%
+\contentsline {paragraph}{\nonumberline Motorfuß}{13}{paragraph*.29}%
+\contentsline {subsection}{\numberline {4.1.3}Materialwahl}{13}{subsection.4.1.3}%
+\contentsline {paragraph}{\nonumberline PET-G für Abdeckungen}{14}{paragraph*.31}%
+\contentsline {paragraph}{\nonumberline ASA für einen günstigen Frame}{14}{paragraph*.32}%
+\contentsline {paragraph}{\nonumberline PA für einen belastbaren, aber teuren Frame}{14}{paragraph*.33}%
+\contentsline {subsection}{\numberline {4.1.4}Integration der Komponenten}{14}{subsection.4.1.4}%
+\contentsline {subsection}{\numberline {4.1.5}Fertigung und Montage}{14}{subsection.4.1.5}%
+\contentsline {section}{\numberline {4.2}LED-Statusanzeige}{15}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Konzept und Zustandsdefinition}{15}{subsection.4.2.1}%
+\contentsline {paragraph}{\nonumberline Farbwahl}{15}{paragraph*.34}%
+\contentsline {paragraph}{\nonumberline Zwei-Kanal-Modell}{15}{paragraph*.35}%
+\contentsline {subsection}{\numberline {4.2.2}Zuordnung von Zuständen zu Anzeigemustern}{16}{subsection.4.2.2}%
+\contentsline {paragraph}{\nonumberline Verhalten bei fehlenden oder ungültigen Daten}{17}{paragraph*.39}%
+\contentsline {subsection}{\numberline {4.2.3}Hardware}{18}{subsection.4.2.3}%
+\contentsline {paragraph}{\nonumberline LED-Streifen und Anordnung an den Landebeinen}{18}{paragraph*.41}%
+\contentsline {paragraph}{\nonumberline Ansteuerung über den PIO-Block des RP1}{19}{paragraph*.44}%
+\contentsline {paragraph}{\nonumberline Fehlerisolation durch getrennte Datenleitungen}{19}{paragraph*.45}%
+\contentsline {subsection}{\numberline {4.2.4}Software der Statusanzeige}{19}{subsection.4.2.4}%
+\contentsline {paragraph}{\nonumberline Schichtenarchitektur}{19}{paragraph*.46}%
+\contentsline {paragraph}{\nonumberline Auslesen des Zustands-Topics}{20}{paragraph*.47}%
+\contentsline {paragraph}{\nonumberline Zeitsteuerung und Blinkmuster}{21}{paragraph*.49}%
+\contentsline {paragraph}{\nonumberline Robustheit im Betrieb}{21}{paragraph*.50}%
+\contentsline {subsection}{\numberline {4.2.5}Anbindung an den Flight Controller}{21}{subsection.4.2.5}%
+\contentsline {paragraph}{\nonumberline Datenpfad vom Flight Controller zum LED-Knoten}{21}{paragraph*.51}%
+\contentsline {paragraph}{\nonumberline Bestimmung des Autonomiezustands aus dem PX4-Flugmodus}{22}{paragraph*.52}%
+\contentsline {subsection}{\numberline {4.2.6}Software-in-the-Loop-Testumgebung}{22}{subsection.4.2.6}%
+\contentsline {paragraph}{\nonumberline Motivation}{22}{paragraph*.53}%
+\contentsline {paragraph}{\nonumberline Aufbau}{22}{paragraph*.54}%
+\contentsline {paragraph}{\nonumberline Simulierter Zustandsgeber}{23}{paragraph*.56}%
+\contentsline {paragraph}{\nonumberline Bedienung über die Kommandozeile}{24}{paragraph*.57}%
+\contentsline {paragraph}{\nonumberline Aussagekraft und Grenzen}{24}{paragraph*.58}%
+\contentsline {chapter}{\numberline {5}Evaluation}{26}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Vorgehen und Bewertungskriterien}{26}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Evaluation des Frames}{26}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Masse}{26}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Maßhaltigkeit und Montage}{27}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Mechanische Belastbarkeit}{27}{subsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.2.4}Fertigungsaufwand}{27}{subsection.5.2.4}%
+\contentsline {subsection}{\numberline {5.2.5}Wartbarkeit}{27}{subsection.5.2.5}%
+\contentsline {subsection}{\numberline {5.2.6}Flugtests}{27}{subsection.5.2.6}%
+\contentsline {paragraph}{\nonumberline Ruhiges Schweben}{27}{paragraph*.60}%
+\contentsline {paragraph}{\nonumberline Gesamter Flug}{28}{paragraph*.61}%
+\contentsline {section}{\numberline {5.3}Evaluation der Statusanzeige}{28}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Automatisierte Tests der Anzeigelogik}{28}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Funktionstest an der Hardware}{29}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}Sichtbarkeit und Unterscheidbarkeit}{30}{subsection.5.3.3}%
+\contentsline {subsection}{\numberline {5.3.4}Übertragbarkeit auf den Flugbetrieb}{31}{subsection.5.3.4}%
+\contentsline {chapter}{\numberline {6}Ergebnisse}{32}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Ergebnisse des Frames}{32}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Masse}{32}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}Maßhaltigkeit und Montage}{33}{subsection.6.1.2}%
+\contentsline {subsection}{\numberline {6.1.3}Mechanische Belastbarkeit}{33}{subsection.6.1.3}%
+\contentsline {subsection}{\numberline {6.1.4}Fertigungsaufwand}{34}{subsection.6.1.4}%
+\contentsline {subsection}{\numberline {6.1.5}Wartbarkeit}{35}{subsection.6.1.5}%
+\contentsline {subsection}{\numberline {6.1.6}Flugtests}{35}{subsection.6.1.6}%
+\contentsline {section}{\numberline {6.2}Ergebnisse der Statusanzeige}{36}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Automatisierte Tests der Anzeigelogik}{36}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Funktionstest an der Hardware}{37}{subsection.6.2.2}%
+\contentsline {subsection}{\numberline {6.2.3}Sichtbarkeit und Unterscheidbarkeit}{37}{subsection.6.2.3}%
+\contentsline {subsection}{\numberline {6.2.4}Übertragbarkeit auf den Flugbetrieb}{37}{subsection.6.2.4}%
+\contentsline {chapter}{\numberline {7}Diskussion}{38}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Bewertung des Frames}{38}{section.7.1}%
+\contentsline {paragraph}{\nonumberline Masse}{38}{paragraph*.71}%
+\contentsline {paragraph}{\nonumberline Maßhaltigkeit}{38}{paragraph*.72}%
+\contentsline {paragraph}{\nonumberline Mechanische Belastbarkeit}{38}{paragraph*.73}%
+\contentsline {paragraph}{\nonumberline Vibrationen und Flugverhalten}{38}{paragraph*.74}%
+\contentsline {paragraph}{\nonumberline Ausrichtung der Motoren und Schwerpunkt}{38}{paragraph*.75}%
+\contentsline {paragraph}{\nonumberline Schwingung bei \SI {37}{\hertz }}{39}{paragraph*.76}%
+\contentsline {section}{\numberline {7.2}Bewertung der Statusanzeige}{39}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Erfüllung der Anforderungen}{39}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Probleme und Grenzen}{39}{section.7.4}%
+\contentsline {chapter}{\numberline {8}Zusammenfassung und Ausblick}{41}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Zusammenfassung}{41}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Ausblick}{41}{section.8.2}%
+\contentsline {subsection}{\numberline {8.2.1}Hardware}{41}{subsection.8.2.1}%
+\contentsline {paragraph}{\nonumberline Gedruckte Baseplate}{41}{paragraph*.78}%
+\contentsline {paragraph}{\nonumberline Ausrichtung der Motoren}{42}{paragraph*.79}%
+\contentsline {paragraph}{\nonumberline Feste Position des Akkus}{42}{paragraph*.80}%
+\contentsline {paragraph}{\nonumberline Befestigung der Anbauteile}{42}{paragraph*.81}%
+\contentsline {paragraph}{\nonumberline Lage des Entfernungsmessers}{42}{paragraph*.82}%
+\contentsline {paragraph}{\nonumberline Druck großer Bauteile}{42}{paragraph*.83}%
+\contentsline {subsection}{\numberline {8.2.2}Elektronik}{42}{subsection.8.2.2}%
+\contentsline {paragraph}{\nonumberline Ansteuerung über SPI}{42}{paragraph*.84}%
+\contentsline {paragraph}{\nonumberline Mikrocontroller als LED-Treiber}{42}{paragraph*.85}%
+\contentsline {paragraph}{\nonumberline Pegelwandler}{42}{paragraph*.86}%
+\contentsline {paragraph}{\nonumberline Weiße LEDs zur Bodenbeleuchtung}{42}{paragraph*.87}%
+\contentsline {paragraph}{\nonumberline Messung der Akkuspannung}{42}{paragraph*.88}%
+\contentsline {subsection}{\numberline {8.2.3}Software}{43}{subsection.8.2.3}%
+\contentsline {paragraph}{\nonumberline Flug-Stack auf Raspberry Pi OS}{43}{paragraph*.89}%
+\contentsline {paragraph}{\nonumberline Start des LED-Knotens}{43}{paragraph*.90}%
+\contentsline {paragraph}{\nonumberline Watchdog}{43}{paragraph*.91}%
+\contentsline {paragraph}{\nonumberline Unbekannter Flugmodus}{43}{paragraph*.92}%
+\contentsline {paragraph}{\nonumberline Lizenzen}{43}{paragraph*.93}%
+\contentsline {paragraph}{\nonumberline Konfiguration der Flugaufzeichnung}{43}{paragraph*.94}%
+\contentsline {subsection}{\numberline {8.2.4}Tests und Validierung}{43}{subsection.8.2.4}%
+\contentsline {paragraph}{\nonumberline Sichtbarkeit bei Tageslicht und Dunkelheit}{43}{paragraph*.95}%
+\contentsline {paragraph}{\nonumberline Flugtest der Statusanzeige}{43}{paragraph*.96}%
+\contentsline {paragraph}{\nonumberline Kontrollflug nach Anpassungen am Frame}{43}{paragraph*.97}%
+\contentsline {chapter}{\nonumberline Literatur}{44}{chapter*.98}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

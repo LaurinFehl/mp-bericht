@@ -1,74 +1,38 @@
 \chapter{Wettbewerb und Anforderungen}
 \label{ch:Hintergrund}
 
-Die Anforderungen an Frame und Statusanzeige ergeben sich vor allem aus dem Wettbewerb, für den die Drohne gebaut wird.
-Dieses Kapitel stellt deshalb zuerst die \gls{erc} vor und leitet danach die Anforderungen ab.
+Die Anforderungen an Frame und Statusanzeige ergeben sich vor allem aus dem Wettbewerb, für den die Drohne gebaut wird. Dieses Kapitel stellt deshalb zuerst die \gls{erc} vor und leitet danach die Anforderungen ab.
 
 \section{Die European Rover Challenge}
 \label{sec:ERC}
 
-Die \gls{erc} ist ein Wettbewerb der European Space Foundation, in dem studentische Teams Marsrover und Drohnen
-für Aufgaben nach dem Vorbild der Weltraumrobotik bauen~\cite{ercRules2026}.
-Die Ausgabe 2026 fand in Krakau auf dem Gelände der AGH University of Science and Technology statt.
-Für das Finale sind laut Regelwerk bis zu 20 Teams vorgesehen, die anhand ihrer Berichte ausgewählt werden.
-% [PRÜFEN] the old text named 124 registrations from 29 countries and 25 teams, not in the rules, add a source if kept
-Die Aufgaben gliedern sich in die Bereiche Science, Navigation, Maintenance und Probing sowie eine Präsentation.
-Die folgenden Aufgaben betreffen Rover und Drohne direkt~\cite{ercRules2026}.
+Die \gls{erc} ist ein Wettbewerb der European Space Foundation, in dem studentische Teams Marsrover und Drohnen für Aufgaben nach dem Vorbild der Weltraumrobotik bauen~\cite{ercRules2026}. Die Ausgabe 2026 fand in Krakau auf dem Gelände der AGH University of Science and Technology statt. Für das Finale sind laut Regelwerk bis zu 20 Teams vorgesehen, die anhand ihrer Berichte ausgewählt werden. Die Aufgaben gliedern sich in die Bereiche Science, Navigation, Maintenance und Probing sowie eine Präsentation. Die folgenden Aufgaben betreffen Rover und Drohne direkt~\cite{ercRules2026}. % [PRÜFEN] the old text named 124 registrations from 29 countries and 25 teams, not in the rules, add a source if kept
 
 \begin{description}[style=nextline]
-    \item[Traverse Sub-Task] Der Rover fährt vier von der Jury festgelegte Wegpunkte und anschließend einen Zielpunkt
-    an. Die volle Punktzahl gibt es nur, wenn er dabei ohne Videobild vollständig autonom fährt.
-    \item[Droning Sub-Task] Die Drohne hebt automatisch ab, erkennt einen Landeplatz mit ArUco-Marker und landet
-    präzise darauf. Die Mission wird dreimal wiederholt, wobei der Landeplatz jedes Mal zufällig innerhalb von
-    \SI{3}{\metre} um den Startplatz liegt. Zusatzpunkte gibt es für das Erkennen und Verorten von drei Proben im
-    Einsatzbereich.
-    \item[Maintenance Task] Der Rover bedient mit seinem Roboterarm ein Panel, das für Menschen ausgelegt ist. Er
-    stellt Hebel- und Drehschalter, steckt einen Stecker vom Typ IEC320 C14 in eine Buchse und legt eine Platte auf
-    einen Elektromagneten.
-    \item[Probing Task] Der Rover sucht drei Proben auf dem Mars Yard, verstaut sie in einem Behälter an Bord und
-    fährt damit zur Ziellinie.
-    \item[Surface Sampling] Der Rover nimmt Regolith- und Gesteinsproben auf. Das Gewicht der Proben wird an Bord
-    gemessen und an der Ziellinie von der Jury geprüft.
-    \item[Deep Sampling] Der Rover entnimmt eine Bodenprobe aus größerer Tiefe. Als Ziel gelten mehr als
-    \SI{100}{\gram} aus mehr als \SI{300}{\milli\metre} Tiefe, und auch hier wird das Gewicht an Bord gemessen.
-    \item[Astro-Bio Sub-Task] Das Team kalibriert ein pH-Messgerät und führt mit dem Rover eine Messung nach den
-    Regeln des Planetenschutzes durch.
+    \item[Traverse Sub-Task] Der Rover fährt vier von der Jury festgelegte Wegpunkte und anschließend einen Zielpunkt an. Die volle Punktzahl gibt es nur, wenn er dabei ohne Videobild vollständig autonom fährt.
+    \item[Droning Sub-Task] Die Drohne hebt automatisch ab, erkennt einen Landeplatz mit ArUco-Marker und landet präzise darauf. Die Mission wird dreimal wiederholt, wobei der Landeplatz jedes Mal zufällig innerhalb von \SI{3}{\metre} um den Startplatz liegt. Zusatzpunkte gibt es für das Erkennen und Verorten von drei Proben im Einsatzbereich.
+    \item[Maintenance Task] Der Rover bedient mit seinem Roboterarm ein Panel, das für Menschen ausgelegt ist. Er stellt Hebel- und Drehschalter, steckt einen Stecker vom Typ IEC320 C14 in eine Buchse und legt eine Platte auf einen Elektromagneten.
+    \item[Probing Task] Der Rover sucht drei Proben auf dem Mars Yard, verstaut sie in einem Behälter an Bord und fährt damit zur Ziellinie.
+    \item[Surface Sampling] Der Rover nimmt Regolith- und Gesteinsproben auf. Das Gewicht der Proben wird an Bord gemessen und an der Ziellinie von der Jury geprüft.
+    \item[Deep Sampling] Der Rover entnimmt eine Bodenprobe aus größerer Tiefe. Als Ziel gelten mehr als \SI{100}{\gram} aus mehr als \SI{300}{\milli\metre} Tiefe und auch hier wird das Gewicht an Bord gemessen.
+    \item[Astro-Bio Sub-Task] Das Team kalibriert ein pH-Messgerät und führt mit dem Rover eine Messung nach den Regeln des Planetenschutzes durch.
 \end{description}
 
 \section{Rolle der Drohne und Anforderungen}
 \label{sec:Anforderungen}
 
-Im Wettbewerb fliegt die Drohne im sogenannten Drohnenkäfig mit einer Größe von \SI{10}{\metre} $\times$
-\SI{10}{\metre} $\times$ \SI{4}{\metre}~\cite{ercRules2026}.
-Der Einsatzbereich ist eine Kreisfläche mit \SI{3}{\metre} Radius in der Mitte des Käfigs.
-Die Mission wird ausschließlich automatisch geflogen, manuelle Eingriffe werden mit Punktabzug bestraft.
-Vor der Aufgabe prüft die Jury in einem Preflight-Check die Sicherheitsfunktionen der Drohne.
-Der Pilot muss jederzeit in die manuelle Steuerung wechseln und eine automatische Landung auslösen können.
-Bei einem Verbindungsverlust, einem Problem mit Akku oder Stromversorgung und einem Fehler der Positionsbestimmung
-müssen Failsafe-Mechanismen greifen.
-Außerhalb des Käfigs gelten die polnischen und europäischen Regeln für Drohnenflüge.
-Die Drohne muss vom Team selbst aufgebaut sein, fertig gekaufte Drohnen sind nicht zugelassen.
-Vor dem Wettbewerb wird ihre Masse gemessen.
-Für die Vorbereitung hat jedes Team \SI{15}{\minute}, für die Ausführung \SI{30}{\minute}.
-Ein leichter und gut zugänglicher Aufbau des Frames erleichtert die Vorbereitung in dieser Zeit.
+Im Wettbewerb fliegt die Drohne im sogenannten Drohnenkäfig mit einer Größe von \SI{10}{\metre} $\times$ \SI{10}{\metre} $\times$ \SI{4}{\metre}~\cite{ercRules2026}. Der Einsatzbereich ist eine Kreisfläche mit \SI{3}{\metre} Radius in der Mitte des Käfigs. Die Mission wird ausschließlich automatisch geflogen, manuelle Eingriffe werden mit Punktabzug bestraft. Vor der Aufgabe prüft die Jury in einem Preflight-Check die Sicherheitsfunktionen der Drohne. Der Pilot muss jederzeit in die manuelle Steuerung wechseln und eine automatische Landung auslösen können. Bei einem Verbindungsverlust, einem Problem mit Akku oder Stromversorgung und einem Fehler der Positionsbestimmung müssen Failsafe-Mechanismen greifen. Außerhalb des Käfigs gelten die polnischen und europäischen Regeln für Drohnenflüge. Die Drohne muss vom Team selbst aufgebaut sein, fertig gekaufte Drohnen sind nicht zugelassen. Vor dem Wettbewerb wird ihre Masse gemessen. Für die Vorbereitung hat jedes Team \SI{15}{\minute}, für die Ausführung \SI{30}{\minute}. Ein leichter und gut zugänglicher Aufbau des Frames erleichtert die Vorbereitung in dieser Zeit.
 
-Die technischen Anforderungen an Rover und Drohne stehen in einer eigenen Liste im Anhang des
-Regelwerks~\cite{ercRules2026, ercRequirements2026}.
-Für die Statusanzeige ist REQ-FUN-070 die wichtigste davon:
+Die technischen Anforderungen an Rover und Drohne stehen in einer eigenen Liste im Anhang des Regelwerks~\cite{ercRules2026, ercRequirements2026}. Für die Statusanzeige ist REQ-FUN-070 die wichtigste davon:
 
 \begin{quote}
     \glqq The rover and the drone shall emit visible signals when performing autonomy operations that are different
     from the signals emitted when being controlled by the team.\grqq{}~\cite{ercRequirements2026}
 \end{quote}
 
-Gefordert ist damit ein unterscheidbares Signal zwischen autonomem Betrieb und Steuerung durch das Team.
-Eine bestimmte Farbe ist nicht vorgeschrieben.
-Weitere Anforderungen an die Anzeige stammen ebenfalls aus dieser Liste.
-Für den Frame enthält sie nur eine Obergrenze der Masse.
-Die übrigen Anforderungen an den Frame wurden in dieser Arbeit aus den Schwächen des alten Frames abgeleitet.
-Tabelle~\ref{tab:ERC_Anforderungen} fasst alle Anforderungen zusammen.
+Gefordert ist damit ein unterscheidbares Signal zwischen autonomem Betrieb und Steuerung durch das Team. Eine bestimmte Farbe ist nicht vorgeschrieben. Weitere Anforderungen an die Anzeige stammen ebenfalls aus dieser Liste. Für den Frame enthält sie nur eine Obergrenze der Masse. Die übrigen Anforderungen an den Frame wurden in dieser Arbeit aus den Schwächen des alten Frames abgeleitet. Tabelle~\ref{tab:ERC_Anforderungen} fasst alle Anforderungen zusammen.
 
-\begin{table}[H]
+\begin{table}[htbp]
     \centering
     \caption{Anforderungen an Frame und Statusanzeige mit Herkunft und Abschnitt der Umsetzung}
     \label{tab:ERC_Anforderungen}
@@ -98,6 +62,4 @@ Tabelle~\ref{tab:ERC_Anforderungen} fasst alle Anforderungen zusammen.
 \end{table}
 % [PRÜFEN] FR-01 to FR-07 and NAV-01 are own identifiers derived from the text, check wording and add target values
 
-Nicht Bestandteil dieser Arbeit ist die Einhaltung der Wartezeit aus REQ-OPS-090 und REQ-OPS-100.
-Sie ist Aufgabe der Zustandsmaschine des Teams.
-Die Anzeige muss lediglich leuchten, sobald der autonome Betrieb befohlen ist.
+Nicht Bestandteil dieser Arbeit ist die Einhaltung der Wartezeit aus REQ-OPS-090 und REQ-OPS-100. Sie ist Aufgabe der Zustandsmaschine des Teams. Die Anzeige muss lediglich leuchten, sobald der autonome Betrieb befohlen ist.

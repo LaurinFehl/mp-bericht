@@ -176,8 +176,6 @@ Weitere Muster, die vermieden werden:
 - Verweise mit `\cref{...}` (Paket `cleveref`) oder `Abb.~\ref{...}`, einheitlich. Labels mit Präfix (`fig:`,
   `tab:`, `sec:`, `eq:`).
 - Einheiten mit `siunitx`, zum Beispiel `\qty{5}{\milli\metre}`.
-- Quelltext lesbar halten: höchstens 15 bis 18 Wörter pro Zeile, harte Grenze 120 Zeichen. Geänderte Absätze
-  komplett neu umbrechen. Ausnahmen sind Tabellenzeilen, URLs und unteilbare Formeln.
 - Kompilieren mit `latexmk -pdf [main].tex` und Warnungen zu undefinierten Verweisen oder Zitaten beheben.
 
 ### Nur bei Word
